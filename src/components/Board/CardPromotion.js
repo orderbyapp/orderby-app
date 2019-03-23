@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Plus from '../../sources/vectorpaint.svg'
 
 class CardPromotion extends Component {
 
@@ -18,12 +17,11 @@ class CardPromotion extends Component {
                  <h5 className="card-title card-promotion-title">{this.props.title}</h5>
                  <div className='info-promotion'>
                   <p className="card-promotion-text">
-                    <i class="fa fa-calendar mr-2 pink"></i>
+                    <i className="fa fa-calendar mr-2 pink"></i>
                     <span className='card-text-span-promotion'>{this.props.date}</span>
                   </p>
                  </div>
-                 <div className='add-promotion-card'><a className='button-more-promotions'><span className="more-icon-promotions">+</span></a></div>
-
+                 <div className='add-promotion-card'><div className='button-more-promotions'><span className="more-icon-promotions">+</span></div></div>
               </div>
               <div className='price-promotion-card'>{this.props.price} €</div>
           </div>

@@ -7,7 +7,7 @@ import Promotions from '../../data/promotions.json'
 class PromotionList extends Component {
   render() {
     const renderCards = Promotions.map( prom => {
-      return <CardPromotion {...prom}></CardPromotion>
+      return <CardPromotion key={prom.key} {...prom}></CardPromotion>
     })
     return (
       <div className="card-list-div">

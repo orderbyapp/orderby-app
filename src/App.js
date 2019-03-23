@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './sources/logo.svg'
 import './App.css';
-import Intro from './components/Intro/Intro'
-import Loader from './components/Loader/Loader'
-import Button from './components/Utilities/Button'
+// import Intro from './components/Intro/Intro'
+// import Loader from './components/Loader/Loader'
+// import Button from './components/Utilities/Button'
 import Board from './components/Board/Board'
 
 class App extends Component {

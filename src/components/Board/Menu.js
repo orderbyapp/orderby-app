@@ -26,12 +26,12 @@ class Menu extends Component {
               <div class="nav-link" href="#">Pagar por la APP</div>
             </li>
             <li class="nav-item p-1  close-nav-tag">
-            <a href="javascript:void(0)" onClick={this.props.closeBoard}>
+            <div onClick={this.props.closeBoard}>
               <div class="nav-link disabled flex-close-nav" href="#" >
                 <i className={`fa fa-times white-cross`} onClick={this.closeCard}></i>
                 <span className="close-text-nav">Cerrar</span>
               </div>
-              </a>
+              </div>
             </li>
           </ul>
           </div>

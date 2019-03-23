@@ -22,7 +22,6 @@
   outline: none;
   cursor: pointer;
   transition: box-shadow 0.2s;
-  
 }
 
 .pure-material-button-contained::-moz-focus-inner {
@@ -113,6 +112,6 @@
   margin-right: 15px;
   display: flex;
   align-items: flex-end;
-  align-content: end;
+  align-content: flex-end;
   justify-content: flex-end;
 }

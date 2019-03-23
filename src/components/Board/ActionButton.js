@@ -6,7 +6,7 @@ class ActionsButton extends Component {
   render() {
     return (
       <div className='container-button-more'>
-        <button class="pure-material-button-contained" onClick={this.props.activeMenuBoard}><img className='more-icon-actionbutton' alt='more' src={Plus}/></button>
+        <button className="pure-material-button-contained" onClick={this.props.activeMenuBoard}><img className='more-icon-actionbutton' alt='more' src={Plus}/></button>
       </div>
     );
   }
