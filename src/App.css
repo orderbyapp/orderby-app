@@ -1,0 +1,27 @@
+body{
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.pink{
+  color:#fe3569;
+}
+
+.white{
+  color: white;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.fixed {
+ position: fixed;
+ z-index: 10000000;
+}
+.container-button-more button{
+  outline: none !important;
+}
+
+.absolute{
+  position: absolute !important;
+}

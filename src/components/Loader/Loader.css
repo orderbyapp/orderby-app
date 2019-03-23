@@ -1,0 +1,10 @@
+.center-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+.text-intro-loading{
+ margin-bottom: 20%;
+}

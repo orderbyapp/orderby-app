@@ -1,0 +1,8 @@
+{
+    "env": {},
+    "dependencies": {
+        "dmitrymorozoff.react-spinners-kit/sphere": "0.0.1"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
+}
