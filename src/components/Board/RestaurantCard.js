@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
+import {getRestaurants} from '../../services/RestaurantService'
 
 class RestaurantCard extends Component {
 
@@ -11,6 +12,12 @@ class RestaurantCard extends Component {
     } 
   }
 
+  componentDidMount = () => {
+    getRestaurants()
+      .then( rest => console.log(rest),
+      (error => console.log(error))
+      )
+  }
 
   render() {
     return (

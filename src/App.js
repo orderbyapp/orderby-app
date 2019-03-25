@@ -46,9 +46,9 @@ class App extends Component {
                 <i class="fa fa-chevron-down"></i>
               </button>  */}
         {/* <Intro></Intro> */}
-        <Loader></Loader>
+        {/* <Loader></Loader> */}
         {/* <Button color='btn btn-order-by' width='w-100' border='border-pink' text='Ver carta'></Button> */}
-         {/* <Board></Board>  */}
+         <Board></Board> 
          {/* <OrderBoard></OrderBoard> */}
       </div>
     );
