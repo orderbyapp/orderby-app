@@ -33,16 +33,18 @@ class OrderBoard extends Component {
       <img alt='pinkshapebg' src={PinkShapeBg} className='pinkshapebg'></img>
       { this.state.menuActive && 
           <Fragment>
-            <div className='black-blur margin-top' >
+            <div className='black-blur margin-top-16' >
               <div onClick={this.changeBoard} className='wrap-close' >
               </div>
               <Menu closeBoard={this.changeBoard}></Menu>
             </div>
           </Fragment>
         } 
-        <div className='container'>
-        {renderCards}
-        </div> 
+        <div className='container-top-margin'>
+          <div className='container'>
+          {renderCards}
+          </div> 
+        </div>
         <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>
       </div>
     );

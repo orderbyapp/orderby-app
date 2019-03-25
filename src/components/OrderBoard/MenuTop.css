@@ -1,17 +1,24 @@
 
 .container-menu{
   position: fixed;
-  height: 50px;
   z-index: 10000;
   width: 100%;
   display: flex;
   align-items: center;
   background-color: #fe3569;
+  z-index: 10000000;
 }
 
+.padding-menu-nav{
+  padding: 17px !important;
+}
 .top-menu{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+}
+
+.top-menu span{
+  font-size: 29px;
 }
