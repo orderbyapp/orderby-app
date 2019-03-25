@@ -48,8 +48,8 @@ class App extends Component {
         {/* <Intro></Intro> */}
         {/* <Loader></Loader> */}
         {/* <Button color='btn btn-order-by' width='w-100' border='border-pink' text='Ver carta'></Button> */}
-         {/* <Board></Board>  */}
-         <OrderBoard></OrderBoard>
+         <Board></Board> 
+         {/* <OrderBoard></OrderBoard> */}
       </div>
     );
   }
