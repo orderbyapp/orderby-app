@@ -1,0 +1,17 @@
+
+.container-menu{
+  position: fixed;
+  height: 50px;
+  z-index: 10000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fe3569;
+}
+
+.top-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
