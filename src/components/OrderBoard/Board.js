@@ -39,13 +39,15 @@ class OrderBoard extends Component {
               <Menu closeBoard={this.changeBoard}></Menu>
             </div>
           </Fragment>
-        } 
+        }
+      <div  className={this.state.menuActive ? 'blur' : ''} > 
         <div className='container-top-margin'>
           <div className='container'>
           {renderCards}
           </div> 
         </div>
         <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>
+      </div>
       </div>
     );
   }

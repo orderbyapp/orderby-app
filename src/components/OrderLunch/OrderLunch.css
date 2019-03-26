@@ -13,7 +13,7 @@
 
 .over-flow-order{
   width: 100%;
-  max-height: 200px;
+  max-height: 35vh;
   overflow: scroll;
 }
 
@@ -72,9 +72,18 @@
   border-radius: 100px;
 }
 
+.button-more-promotions{
+  margin-bottom: -1px;
+}
+
+.absolute-buttons-order{
+  position: absolute;
+  width: calc(100% - 33px);
+  bottom: 16px;
+}
+
 @media (max-width: 320px) {
   .over-flow-order{
-   
     width: 100%;
     max-height: 100px;
     overflow: scroll;

@@ -5,8 +5,38 @@
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #fe3569;
   z-index: 10000000;
+}
+
+span.step-bg {
+  border: 2px solid white;
+  background: #fe3569;
+  border-radius: 100px !important;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff !important;
+  display: inline-block;
+  font-weight: 300;
+  padding: 6px;
+  font-size: 1rem !important;
+  line-height: 0.85em;
+  margin-right: 5px;
+  text-align: center;
+  width: 28px; 
+}
+.flex-and-align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transparent{
+  background-color: transparent;
+}
+
+.pink-nav{
+  
+  background-color: #fe3569;
 }
 
 .padding-menu-nav{
