@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import './MenuTop.css'
 import Slidemenu from '../Slidemenu/Slidemenu'
 import OrderLunch from '../OrderLunch/OrderLunch'
+import ContentOrder from '../OrderLunch/ContentOrder';
 
 class MenuTop extends Component {
   state = {
@@ -17,6 +18,7 @@ class MenuTop extends Component {
         open: this.state.order.open ? false : true}
     }, () => console.log(this.state.order.open))
   }
+
   render() {
     return (
       <div>  
@@ -32,9 +34,7 @@ class MenuTop extends Component {
           <Fragment>
             <OrderLunch>
             {this.state.order.open && 
-              <button onClick={this.orderVisibility}>
-                <i class="fa fa-chevron-up"></i>
-              </button> 
+             <ContentOrder visibilityMenu={this.orderVisibility}></ContentOrder>
               }
             </OrderLunch>
           </Fragment>

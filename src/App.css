@@ -26,12 +26,3 @@ body{
   position: absolute !important;
 }
 
-.react-slidedown.my-dropdown-slidedown{
-  position: fixed !important;
-  width: 100%;
-  z-index: 1100000000000000000;
-}
-.react-slidedown {
-  transition-duration: 0.2s !important;
-  transition-timing-function: ease-in-out;
-}

@@ -8,6 +8,7 @@ import Button from './components/Utilities/Button'
 import Board from './components/Board/Board'
 import Slidemenu from './components/Slidemenu/Slidemenu' 
 import OrderLunch from './components/OrderLunch/OrderLunch';
+import ListProducts from './components/ListProducts/ListProducts';
 
 
 
@@ -21,7 +22,8 @@ class App extends Component {
         {/* <Loader></Loader> */}
         {/* <Button color='btn btn-order-by' width='w-100' border='border-pink' text='Ver carta'></Button> */}
          {/* <Board></Board>  */}
-         <OrderBoard></OrderBoard>
+         {/* <OrderBoard></OrderBoard> */}
+         <ListProducts></ListProducts>
       </div>
     );
   }

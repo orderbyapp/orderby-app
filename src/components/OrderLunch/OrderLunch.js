@@ -5,8 +5,7 @@ class OrderLunch extends Component {
   render() {
     return (
       <div>
-        <div className='menu-dropdown'>
-            <h1>prueba</h1>
+        <div className='menu-dropdown curved-in container'>
             {this.props.children}
         </div> 
       </div>
