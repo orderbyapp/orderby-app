@@ -6,10 +6,35 @@ import './Products.css'
 import Menu from '../Board/Menu'
 import ActionsButton from '../Board/ActionButton'
 import Parapicarimg from '../../sources/parapicar.jpg'
+import ProductModalDetail from './ProductModalDetail'
 
 class ListProducts extends Component {
   state = {
-    menuActive : false
+    menuActive : false,
+    modal : {
+      product : {},
+      show : false
+    }
+  }
+
+  modalDetail = (e) => {
+    console.log()
+    this.setState({
+     modal : {
+       ...this.modal,
+       product : {...e},
+       show : !this.state.modal.show ? true : false
+     }
+    }, () => console.log(this.state.modal.product))
+  }
+
+  closeModal = () => {
+    this.setState({
+      modal : {
+        ...this.modal,
+        show : !this.state.modal.show ? true : false
+      }
+     })
   }
 
 
@@ -21,7 +46,7 @@ class ListProducts extends Component {
   
   render() {
     const renderCards =  Promotions.map( ctg => {
-      return <ProductItem {...ctg}></ProductItem>
+      return <ProductItem modalOn={this.modalDetail} {...ctg}></ProductItem>
      })
     return (
       <div>
@@ -36,7 +61,6 @@ class ListProducts extends Component {
         } 
         <MenuTop></MenuTop>
         <div  className={this.state.menuActive ? 'blur' : ''} > 
-
         <div>
           <img className='w-100 image-top-list' src={Parapicarimg}></img>
         </div>
@@ -49,6 +73,8 @@ class ListProducts extends Component {
         </div>
         <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>
         </div>
+       {this.state.modal.show && 
+       <ProductModalDetail {...this.state.modal.product} closeModal={this.closeModal}></ProductModalDetail>}
       </div>
     );
   }

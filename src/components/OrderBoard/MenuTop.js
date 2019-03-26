@@ -49,7 +49,7 @@ class MenuTop extends Component {
         <div className='container padding-menu-nav'>
           <nav className='top-menu'>
             <span className="material-icons white">arrow_back</span>
-           <div className='flex-and-align'> <span class="step-bg">2</span> <span className="material-icons white"><a onClick={this.orderVisibility}>shopping_cart</a></span></div>
+           <div className='flex-and-align'> <span className="step-bg">2</span> <span className="material-icons white"><a onClick={this.orderVisibility}>shopping_cart</a></span></div>
           </nav>
         </div>
       </div>

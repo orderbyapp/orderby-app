@@ -34,7 +34,7 @@ class Board extends Component {
             </div>
           </Fragment>
         }
-        <div  className={this.state.menuActive ? 'blur' : ''} > 
+        <div className={this.state.menuActive ? 'blur' : ''} > 
           <div>
             <img alt='shapepink' src={pinkShape} className='w-100 absolute image-board-bag'></img>
             <RestaurantCard></RestaurantCard>
