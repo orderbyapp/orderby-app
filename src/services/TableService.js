@@ -14,9 +14,12 @@ export const getTableById = (id) => http.get(`/tables/${id}`)
     return table;
   });
 
-// export default {
-//   getTableById,
-// }
+export const onTableChange = () => table$.asObservable();
+
+export default {
+  getTableById,
+  onTableChange
+}
 
 // export const getTable = () => http.get(`/tables`).then( response => response.data)
 // export const createTable = () => http.post(`/tables`).then( response => response.data)

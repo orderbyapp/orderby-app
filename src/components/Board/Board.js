@@ -9,6 +9,8 @@ import ActionsButton from '../MenuSide/ActionButton';
 import Menu from '../MenuSide/Menu';
 import MenuTop from '../MenuTop/MenuTop';
 import {Link} from 'react-router-dom'
+import { withTableConsumer } from '../../contexts/TableStore';
+import { tableService } from '../../services'
 
 
 // Requerir el Observable
@@ -18,13 +20,29 @@ import {Link} from 'react-router-dom'
 class Board extends Component {
 
   state = {
-    menuActive : false
+    menuActive : false,
+    table: {}
   }
+  tableSubscription = undefined
+
 
   changeBoard = () => {
     this.setState({
       menuActive: this.state.menuActive ? false : true
     },() => console.log(this.state))
+  }
+
+  componentDidMount() {
+    tableService.getTableById()
+      .then(table => this.setState({ table: table }))
+    
+      this.tableSubscription = tableService.onTableChange().subscribe(
+      table => this.setState({ table: table }, () => console.log(this.state.table))
+    );
+  }
+
+  componentWillUnmount() {
+    this.tableSubscription.unsubscribe();
   }
 
   render() {
@@ -56,5 +74,4 @@ class Board extends Component {
     );
   }
 }
-
-export default Board;
+export default withTableConsumer(Board)
