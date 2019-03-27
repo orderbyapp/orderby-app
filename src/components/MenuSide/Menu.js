@@ -15,19 +15,19 @@ class Menu extends Component {
         <div className='row'>
           <div className='col-3'></div>
           <div className='col-9 menu-absolute slide-in-blurred-right'>
-          <ul class="nav flex-column list-menu">
-            <li class="nav-item p-2 border-bottom">
-              <div class="nav-link">Llamar al Camarero</div>
+          <ul className="nav flex-column list-menu">
+            <li className="nav-item p-2 border-bottom">
+              <div className="nav-link">Llamar al Camarero</div>
             </li>
-            <li class="nav-item p-2 border-bottom">
-              <div class="nav-link" href="#">Pedir Cuenta</div>
+            <li className="nav-item p-2 border-bottom">
+              <div className="nav-link" href="#">Pedir Cuenta</div>
             </li>
-            <li class="nav-item p-2 border-bottom">
-              <div class="nav-link" href="#">Pagar por la APP</div>
+            <li className="nav-item p-2 border-bottom">
+              <div className="nav-link" href="#">Pagar por la APP</div>
             </li>
-            <li class="nav-item p-1  close-nav-tag">
+            <li className="nav-item p-1  close-nav-tag">
             <div onClick={this.props.closeBoard}>
-              <div class="nav-link disabled flex-close-nav" href="#" >
+              <div className="nav-link disabled flex-close-nav" href="#" >
                 <i className={`fa fa-times white-cross`} onClick={this.closeCard}></i>
                 <span className="close-text-nav">Cerrar</span>
               </div>
