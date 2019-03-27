@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import MenuTop from '../OrderBoard/MenuTop';
+import MenuTop from '../MenuTop/MenuTop';
 import ProductItem from './ProductItem';
 import Promotions from '../../data/promotions.json'
 import './Products.css'
-import Menu from '../Board/Menu'
-import ActionsButton from '../Board/ActionButton'
+import Menu from '../MenuSide/Menu'
+import ActionsButton from '../MenuSide/ActionButton'
 import Parapicarimg from '../../sources/parapicar.jpg'
 import ProductModalDetail from './ProductModalDetail'
 
@@ -45,7 +45,7 @@ class ListProducts extends Component {
   }
   
   render() {
-    const renderCards =  Promotions.map( ctg => {
+    const renderCards = Promotions.map( ctg => {
       return <ProductItem modalOn={this.modalDetail} {...ctg}></ProductItem>
      })
     return (
@@ -60,21 +60,21 @@ class ListProducts extends Component {
           </Fragment>
         } 
         <MenuTop></MenuTop>
-        <div  className={this.state.menuActive ? 'blur' : ''} > 
-        <div>
-          <img className='w-100 image-top-list' src={Parapicarimg}></img>
-        </div>
-        <div className='pt-3 container'>
-          <div className=' text-center '>
-            <h5 className='m-0 p-0'>Products</h5>
-            <hr className='border-dark pb-2'></hr>
+        <div  className={this.state.menuActive ? 'blur' : ''} >
+          <div>
+            <img className='w-100 image-top-list' src={Parapicarimg}></img>
           </div>
-          {renderCards}
+          <div className='pt-3 container'>
+            <div className=' text-center '>
+              <h5 className='m-0 p-0'>Products</h5>
+              <hr className='border-dark pb-2'></hr>
+            </div>
+            {renderCards}
+          </div>
+          <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>
         </div>
-        <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>
-        </div>
-       {this.state.modal.show && 
-       <ProductModalDetail {...this.state.modal.product} closeModal={this.closeModal}></ProductModalDetail>}
+         {this.state.modal.show && 
+          <ProductModalDetail {...this.state.modal.product} closeModal={this.closeModal}></ProductModalDetail>}
       </div>
     );
   }

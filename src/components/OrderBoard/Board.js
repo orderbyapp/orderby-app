@@ -2,12 +2,16 @@ import React, { Component, Fragment } from 'react';
 import './Board.css'
 import FoodTypeCard from './FoodTypeCard';
 import Categories from  '../../data/categories.json'
-import ActionsButton from '../Board/ActionButton';
-import Menu from '../Board/Menu'
-import MenuTop from '../OrderBoard/MenuTop'
+import ActionsButton from '../MenuSide/ActionButton';
+import Menu from '../MenuSide/Menu'
+import MenuTop from '../MenuTop/MenuTop'
 import '../Board/Board.css'
-import '../Board/Menu.css'
+import '../MenuSide/Menu.css'
 import PinkShapeBg from '../../sources/pinkshapebg.svg'
+
+
+// funciones para hacer la order y el menu ir llenando de productos
+// links para ir a para picar, comida, entrantes, postres...
 
 class OrderBoard extends Component {
   state = {

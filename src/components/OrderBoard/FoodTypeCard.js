@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import './FoodTypeCard.css'
+import {Link} from 'react-router-dom'
+
 
 class FoodTypeCard extends Component {
   render() {
     return (
       <div>
+        <Link to={'/menulist'}>
         <div className="card mt-3 category-card-food" style={{backgroundImage: `url(${this.props.image})`}}>
           
         <div className='background-card'></div>
@@ -14,6 +17,7 @@ class FoodTypeCard extends Component {
             <p className="card-text">{this.props.description}</p>
           </div>
         </div>
+        </Link>
       </div>
     );
   }

@@ -3,6 +3,7 @@ import './MenuTop.css'
 import Slidemenu from '../Slidemenu/Slidemenu'
 import OrderLunch from '../OrderLunch/OrderLunch'
 import ContentOrder from '../OrderLunch/ContentOrder';
+import { withRouter } from "react-router-dom";
 
 class MenuTop extends Component {
   state = {
@@ -21,27 +22,27 @@ class MenuTop extends Component {
     })
   }
 
+  onClickBack = () =>{
+    
+    this.props.history.goBack() 
+  }
+
+  scrollNavChange = () => {
+    let positionScroll = window.scrollY;
+    this.setState({
+      position: positionScroll
+    }, () => { if(this.state.position >= 50){this.setState({color: 'pink-nav'})
+      } else { this.setState({color: 'transparent'})}
+    })
+  }
+
   componentDidMount = () => {
-    window.addEventListener('scroll', function(e) {
-      let positionScroll = window.scrollY;
-      this.setState({
-        position: positionScroll
-      }, () => {
-        if(this.state.position >= 50){
-          this.setState({
-            color: 'pink-nav'
-          })
-        } else {
-          this.setState({
-            color: 'transparent'
-          })
-        }
-      })
-    }.bind(this));
+    console.log()
+    window.addEventListener('scroll', this.scrollNavChange.bind(this));
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener('scroll',false);
+    window.removeEventListener('scroll',this.scrollNavChange.bind(this));
   }
 
   render() {
@@ -50,7 +51,9 @@ class MenuTop extends Component {
       <div className={`container-menu ${this.state.color} ${this.props.colorFix ? 'pink-nav' : ''} margin-top-16`}>
         <div className='container padding-menu-nav'>
           <nav className='top-menu'>
-            <span className="material-icons white">arrow_back</span>
+          {this.props.history.location.pathname !== "/board" ?  
+          <div onClick={this.onClickBack}><span className="material-icons white" >arrow_back</span></div> :
+          <div><span className="material-icons pink" >arrow_back</span></div>}  
            <div className='flex-and-align'> <span className="step-bg">2</span> <span className="material-icons white"><a onClick={this.orderVisibility}>shopping_cart</a></span></div>
           </nav>
         </div>
@@ -68,5 +71,4 @@ class MenuTop extends Component {
     );
   }
 }
-
-export default MenuTop;
+export default withRouter( MenuTop);

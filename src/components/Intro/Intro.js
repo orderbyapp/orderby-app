@@ -10,7 +10,8 @@ import blue from '../../sources/oval.svg'
 import text from '../../sources/logo.svg'
 import './Intro.css'
 
-
+// Hay que crear un observable donde venga: Restaurante, Mesa, Menu y Camarero
+// Despues que se haya creado el observable, hay que hacer un set-time-out y que redirija a las promociones, al primer board.
 
 class Intro extends Component {
     render() {
