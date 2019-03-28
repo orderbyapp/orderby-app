@@ -1,58 +1,40 @@
 [{
-  "title": "Para picar",
-  "description": "descripcion",
+  "title": "Bebidas",
+  "description": "Las mejores cervezas artesanales tiradas",
   "key": 1,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
+  "image0": "/categories/bebidas.jpg",
+  "image1": "/categories/bebidas@2x.jpg",
+  "image3": "/categories/bebidas@3x.jpg"
 },
 {
   "title": "Para picar",
-  "description": "descripcion",
+  "description": "Algo para compartir en la mejor compañía",
   "key": 2,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-},{
-  "title": "Para picar",
-  "description": "descripcion",
+  "image0": "/categories/parapicar.jpg",
+  "image1": "/categories/parapicar@2x.jpg",
+  "image3": "/categories/parapicar@3x.jpg"
+},
+{
+  "title": "Platos fríos",
+  "description": "Verde que te quiero verde, lo mejor para cuidarse",
   "key": 3,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-},{
-  "title": "Para picar",
-  "description": "descripcion",
+  "image0": "/categories/platosfrios.jpg",
+  "image1": "/categories/platosfrios@2x.jpg",
+  "image3": "/categories/platosfrios@3x.jpg"
+},
+{
+  "title": "Platos calientes",
+  "description": "Los mejores platos solo para ti, a nuestra manera",
   "key": 4,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-},{
-  "title": "Para picar",
-  "description": "descripcion",
+  "image0": "/categories/burguer-menu.jpg",
+  "image1": "/categories/burguer-menu@2x.jpg",
+  "image3": "/categories/burguer-menu@3x.jpg"
+},
+{
+  "title": "Happy ending",
+  "description": "Para terminar un toque dulce",
   "key": 5,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-},{
-  "title": "Para picar",
-  "description": "descripcion",
-  "key": 6,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-},{
-  "title": "Para picar",
-  "description": "descripcion",
-  "key": 7,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-},{
-  "title": "Para picar",
-  "description": "descripcion",
-  "key":8,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-},{
-  "title": "Para picar",
-  "description": "descripcion",
-  "key": 9,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-},{
-  "title": "Para picar",
-  "description": "descripcion",
-  "key": 10,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-},{
-  "title": "Para picar",
-  "description": "descripcion",
-  "key": 11,
-  "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-}
-]
+  "image0": "/categories/happyending.jpg",
+  "image1": "/categories/happyending@2x.jpg",
+  "image3": "/categories/happyending@3x.jpg"
+}]

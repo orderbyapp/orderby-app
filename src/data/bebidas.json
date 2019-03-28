@@ -1,0 +1,136 @@
+[{
+  "title": "Bitter Rosso",
+  "description": "bebidas",
+  "key": 1,
+  "image0": "/bebidas/bitterrosso.jpg",
+  "image1": "/bebidas/bitterrosso@2x.jpg",
+  "image2": "/bebidas/bitterrosso@3x.jpg"
+},
+{
+  "title": "Clara con limón",
+  "description": "bebidas",
+  "key": 2,
+  "image0": "/bebidas/claraconlimon.jpg",
+  "image1": "/bebidas/claraconlimon@2x.jpg",
+  "image2": "/bebidas/claraconlimon@3x.jpg"
+},
+{
+  "title": "Coca-cola",
+  "description": "bebidas",
+  "key": 3,
+  "image0": "/bebidas/cocacola.jpg",
+  "image1": "/bebidas/cocacola@2x.jpg",
+  "image2": "/bebidas/cocacola@3x.jpg"
+},
+{
+  "title": "Coca-cola-Zero",
+  "description": "bebidas",
+  "key": 4,
+  "image0": "/bebidas/cocacola.jpg",
+  "image1": "/bebidas/cocacola@2x.jpg",
+  "image2": "/bebidas/cocacola@3x.jpg"
+},
+{
+  "title": "Coca-cola-Zero-Zero",
+  "description": "bebidas",
+  "key": 5,
+  "image0": "/bebidas/cocacola.jpg",
+  "image1": "/bebidas/cocacola@2x.jpg",
+  "image2": "/bebidas/cocacola@3x.jpg"
+},
+{
+  "title": "Coca-cola-light",
+  "description": "bebidas",
+  "key": 6,
+  "image0": "/bebidas/cocacola.jpg",
+  "image1": "/bebidas/cocacola@2x.jpg",
+  "image2": "/bebidas/cocacola@3x.jpg"
+},
+{
+  "title": "Copa de cerveza",
+  "description": "bebidas",
+  "key": 7,
+  "image0": "/bebidas/copa.jpg",
+  "image1": "/bebidas/copa@2x.jpg",
+  "image2": "/bebidas/copa@3x.jpg"
+},
+{
+  "title": "Copa de cerveza sin alcohol",
+  "description": "bebidas",
+  "key": 8,
+  "image0": "/bebidas/copa.jpg",
+  "image1": "/bebidas/copa@2x.jpg",
+  "image2": "/bebidas/copa@3x.jpg"
+},
+{
+  "title": "Coronita",
+  "description": "bebidas",
+  "key": 9,
+  "image0": "/bebidas/coronita.jpg",
+  "image1": "/bebidas/coronita@2x.jpg",
+  "image2": "/bebidas/coronita@3x.jpg"
+},
+{
+  "title": "Delirium",
+  "description": "bebidas",
+  "key": 10,
+  "image0": "/bebidas/delirium.jpg",
+  "image1": "/bebidas/delirium@2x.jpg",
+  "image2": "/bebidas/delirium@3x.jpg"
+},
+{
+  "title": "Fanta Naranja",
+  "description": "bebidas",
+  "key": 11,
+  "image0": "/bebidas/fanta.jpg",
+  "image1": "/bebidas/fanta@2x.jpg",
+  "image2": "/bebidas/fanta@3x.jpg"
+},
+{
+  "title": "Jarra Cerveza",
+  "description": "bebidas",
+  "key": 12,
+  "image0": "/bebidas/jarra.jpg",
+  "image1": "/bebidas/jarra@2x.jpg",
+  "image2": "/bebidas/jarra@3x.jpg"
+},
+{
+  "title": "Jarra Cerveza Sin Alcohol",
+  "description": "bebidas",
+  "key": 13,
+  "image0": "/bebidas/jarra.jpg",
+  "image1": "/bebidas/jarra@2x.jpg",
+  "image2": "/bebidas/jarra@3x.jpg"
+},
+{
+  "title": "Jarra Cerveza con Limón",
+  "description": "bebidas",
+  "key": 14,
+  "image0": "/bebidas/jarraconlimon.jpg",
+  "image1": "/bebidas/jarraconlimon@2x.jpg",
+  "image2": "/bebidas/jarraconlimon@3x.jpg"
+},
+{
+  "title": "La Virgen",
+  "description": "bebidas",
+  "key": 15,
+  "image0": "/bebidas/lavirgen.jpg",
+  "image1": "/bebidas/lavirgen@2x.jpg",
+  "image2": "/bebidas/lavirgen@3x.jpg"
+},
+{
+  "title": "sprite",
+  "description": "bebidas",
+  "key": 16,
+  "image0": "/bebidas/mahou.jpg",
+  "image1": "/bebidas/mahou@2x.jpg",
+  "image2": "/bebidas/mahou@3x.jpg"
+},
+{
+  "title": "Sprite",
+  "description": "bebidas",
+  "key": 17,
+  "image0": "/bebidas/sprite.jpg",
+  "image1": "/bebidas/sprite@2x.jpg",
+  "image2": "/bebidas/sprite@3x.jpg"
+}]
