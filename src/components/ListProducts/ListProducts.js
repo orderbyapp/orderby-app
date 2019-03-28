@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import MenuTop from '../MenuTop/MenuTop';
 import ProductItem from './ProductItem';
-import Promotions from '../../data/promotions.json'
+import Promotions from '../../data/drinks.json'
 import './Products.css'
 import Menu from '../MenuSide/Menu'
 import ActionsButton from '../MenuSide/ActionButton'
