@@ -1,7 +1,6 @@
 body{
   font-family: 'Poppins', sans-serif !important;
 }
-
 .pink{
   color:#fe3569;
 }
@@ -11,11 +10,15 @@ body{
 .white{
   color: white;
 }
-
 .absolute{
   position: absolute;
 }
-
+.light-grey{
+ color: #ccccd2;
+}
+.light-font{
+  font-size: 200;
+}
 .fixed {
  position: fixed;
  z-index: 10000000000000000;

@@ -8,7 +8,8 @@ const TableContext = React.createContext();
 class TableStore extends Component {
 
   state = {
-    table: {}
+    table: {},
+    waiter : {}
   }
   tableChangeSubscription = {}
 
@@ -37,6 +38,7 @@ class TableStore extends Component {
 }
 
 const withTableConsumer = (Component) => {
+
   return (props) => (
     <TableContext.Consumer>
       {(storeProps) => <Component {...props} {...storeProps}/>}

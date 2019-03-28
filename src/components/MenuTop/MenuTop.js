@@ -44,9 +44,6 @@ class MenuTop extends Component {
     window.addEventListener('scroll', this.scrollNavChange.bind(this));
   }
 
-  componentWillUnmount = () => {
-    window.removeEventListener('scroll',this.scrollNavChange.bind(this));
-  }
 
   render() {
     return (

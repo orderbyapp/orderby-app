@@ -17,7 +17,7 @@ class Intro extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="intro-bg">
+                <div className="intro-bg overflow-x-hidden">
                   <img alt='path-orange' src={orange} className="path-7 scale-in-bl"/>
                   <img alt='doggy-intro' src={doggo} className="doggo slide-in-blurred-bl"/>
                   <img alt='girl-intro' src={girl} className="girl slide-in-blurred-right"/>

@@ -67,6 +67,17 @@
 }
 
 
+.btn-border-pink-color-pink{
+  border:2px solid #fe3569 !important;
+  color: #fe3569 !important;
+  padding: 10px !important;
+  border-radius: 6px !important;
+  margin-top: 7px;
+}
+
+
+
+
 .btn-linear-white-bg-trans{
   margin-top: 7px;
   border: 2px solid white !important;
