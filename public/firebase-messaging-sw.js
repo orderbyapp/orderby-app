@@ -1,5 +1,6 @@
 importScripts('https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/5.8.4/firebase-messaging.js');
+importScripts('https://cdn.onesignal.com/sdks/OneSignalSDK.js');
 
 
 

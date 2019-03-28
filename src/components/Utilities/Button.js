@@ -11,9 +11,7 @@ class Button extends Component {
     text: this.props.text || ''
   }
 
-  
   render() {
-    console.log(this.state.color)
     return (
       <div>
         <button className={

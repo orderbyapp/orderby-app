@@ -37,6 +37,9 @@ class MenuTop extends Component {
   }
 
   componentDidMount = () => {
+
+      window.scrollTo(0, 0)
+    
     console.log()
     window.addEventListener('scroll', this.scrollNavChange.bind(this));
   }
@@ -52,7 +55,7 @@ class MenuTop extends Component {
         <div className='container padding-menu-nav'>
           <nav className='top-menu'>
           {this.props.history.location.pathname !== "/board" ?  
-          <div onClick={this.onClickBack}><span className="material-icons white" >arrow_back</span></div> :
+          <div onClick={this.onClickBack} className='d-flex'><span className="material-icons white" >arrow_back</span></div> :
           <div><span className="material-icons pink" >arrow_back</span></div>}  
            <div className='flex-and-align'> <span className="step-bg">2</span> <span className="material-icons white"><a onClick={this.orderVisibility}>shopping_cart</a></span></div>
           </nav>

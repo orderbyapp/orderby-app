@@ -7,7 +7,10 @@ import Board from './components/Board/Board'
 import ListProducts from './components/ListProducts/ListProducts';
 import { Switch, Route, Redirect} from 'react-router-dom'
 import Welcome from './components/OnBoard/Welcome'
+import PageShell from './components/PageShell/PageShell'
+
 // import { AnimatedSwitch } from 'react-router-transition';
+
 
 class App extends Component {
 
@@ -23,8 +26,8 @@ class App extends Component {
                 <Route exact path='/' component={Intro}></Route>
                 <Route exact path='/table/:id' component={Welcome}></Route>
                 <Route exact path='/loading' component={Loader}></Route>
-                <Route exact path='/board' component={Board}></Route>
-                <Route exact path='/orderboard' component={OrderBoard}></Route>
+                <Route exact path='/board' component={PageShell(Board)}></Route>
+                <Route exact path='/orderboard' component={PageShell(OrderBoard)}></Route>
                 <Route exact path='/menulist' component={ListProducts}></Route>
                 <Redirect to='/' />
               {/* </AnimatedSwitch> */}

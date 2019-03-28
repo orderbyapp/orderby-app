@@ -8,10 +8,10 @@ import Waiter  from '../WaiterInfo/Waiter'
 import ActionsButton from '../MenuSide/ActionButton';
 import Menu from '../MenuSide/Menu';
 import MenuTop from '../MenuTop/MenuTop';
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import { withTableConsumer } from '../../contexts/TableStore';
 import { tableService } from '../../services'
-
+import {getWaiterById} from '../../services/waitersService'
 
 // Requerir el Observable
 // Link para la carta
@@ -21,10 +21,11 @@ class Board extends Component {
 
   state = {
     menuActive : false,
-    table: {}
+    table: {},
+    waiter: {},
+    restaurant:{}
   }
   tableSubscription = undefined
-
 
   changeBoard = () => {
     this.setState({
@@ -32,23 +33,29 @@ class Board extends Component {
     },() => console.log(this.state))
   }
 
-  componentDidMount() {
-    tableService.getTableById()
-      .then(table => this.setState({ table: table }))
-    
+  componentDidMount() {   
+      window.scrollTo(0, 0) 
       this.tableSubscription = tableService.onTableChange().subscribe(
-      table => this.setState({ table: table }, () => console.log(this.state.table))
+      table => this.setState({ 
+        table: table,
+        restaurant : table.restaurant,
+        waiterId : table.restaurant.waiters[0] }, () => {
+          getWaiterById(this.state.waiterId)
+          .then(response => this.setState({ waiter: response}))
+      })
     );
   }
 
-  componentWillUnmount() {
+  componentWillUnmount() {   
+    window.scrollTo(0, 0) 
     this.tableSubscription.unsubscribe();
   }
 
   render() {
+
     return (
       <Fragment>
-        <Waiter blur={this.state.menuActive}></Waiter>
+        <Waiter blur={this.state.menuActive} {...this.state.waiter}></Waiter>
         <MenuTop colorFix ></MenuTop>
         { this.state.menuActive && 
           <Fragment>
@@ -62,7 +69,8 @@ class Board extends Component {
         <div className={this.state.menuActive ? 'blur' : ''} > 
           <div className='pt-5'>
             <img alt='shapepink' src={pinkShape} className='w-100 absolute image-board-bag'></img>
-            <RestaurantCard></RestaurantCard>
+            <RestaurantCard {...this.state.restaurant} tableNumber={this.state.table.tableNumber}></RestaurantCard>
+            
             <div className='container'>
               <Link to={`/orderboard`}><ButtonOrder color='btn btn-order-by' width='w-100' border='border-pink' text='Ver carta'></ButtonOrder></Link>
               <PromotionList></PromotionList>
@@ -74,4 +82,4 @@ class Board extends Component {
     );
   }
 }
-export default withTableConsumer(Board)
+export default withRouter(withTableConsumer(Board))

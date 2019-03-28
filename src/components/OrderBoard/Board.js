@@ -24,7 +24,9 @@ class OrderBoard extends Component {
       menuActive: this.state.menuActive ? false : true
     },() => console.log(this.state))
   }
-  
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   render() {
     const renderCards =  Categories.map( ctg => {

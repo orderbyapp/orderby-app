@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getTableById } from '../../services/TableService'
+import Intro from '../Intro/Intro';
 
 export default class Welcome extends Component {
   state = {
@@ -8,21 +9,18 @@ export default class Welcome extends Component {
 
   componentDidMount = () => {
     getTableById(this.props.match.params.id)
-      .then(response => {this.setState({ table: response[0] }, () => console.log(this.state.table))},
+      .then(response => {this.setState({ table: response }, () => console.log(this.state.table))},
       err => {if(err){  
         this.setState({
           error: true
         })
       }}
-     ) 
+    )
   }
 
   render = ()=> {
     return(
-      <div>
-        craeting your table
-      </div>
-      
+      <Intro></Intro> 
     )
   }
 }

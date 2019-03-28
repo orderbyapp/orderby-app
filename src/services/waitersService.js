@@ -7,5 +7,7 @@ const http = axios.create ({
   withCredentials: true
 })
 
+export const getWaiterById = (id) => http.get(`/waiters/${id}`).then(response => response.data) 
 export const firebaseWaiters = (waiter) => http.put(`/waiters/${waiter.id}`, waiter)
+
 // cuando el camarero abra su pagina tenemos que guardar su token para las notificaciones push

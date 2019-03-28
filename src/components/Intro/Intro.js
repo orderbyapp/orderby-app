@@ -18,12 +18,12 @@ class Intro extends Component {
         return (
             <React.Fragment>
                 <div className="intro-bg">
-                  <img alt='path-orange' src={orange} class="path-7 scale-in-bl"/>
-                  <img alt='doggy-intro' src={doggo} class="doggo slide-in-blurred-bl"/>
-                  <img alt='girl-intro' src={girl} class="girl slide-in-blurred-right"/>
-                  <img alt='yellow-intro' src={yellow} class="path-6 scale-in-tr"/>
-                  <img alt='blue-intro' src={blue} class="path-3 scale-in-left "/>
-                  <img alt='text-intro' src={text} class="text-intro-logo flip-in-diag-2-br"/>
+                  <img alt='path-orange' src={orange} className="path-7 scale-in-bl"/>
+                  <img alt='doggy-intro' src={doggo} className="doggo slide-in-blurred-bl"/>
+                  <img alt='girl-intro' src={girl} className="girl slide-in-blurred-right"/>
+                  <img alt='yellow-intro' src={yellow} className="path-6 scale-in-tr"/>
+                  <img alt='blue-intro' src={blue} className="path-3 scale-in-left "/>
+                  <img alt='text-intro' src={text} className="text-intro-logo flip-in-diag-2-br"/>
                 </div>
             </React.Fragment>
         );
