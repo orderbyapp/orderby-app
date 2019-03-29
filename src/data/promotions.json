@@ -1,57 +1,27 @@
  [{
      "title": "2x1 en Raciones",
-     "date": "Jueves a Sábados",
+     "date": "Jueves",
      "price": 5,
      "key": 1,
-     "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
+     "image0": "/promotions/2-x-1-enraciones.jpg",
+     "image1": "/promotions/2-x-1-enraciones@2x.jpg",
+     "image2": "/promotions/2-x-1-enraciones@3x.jpg"
    },
    {
-     "title": "2x1 en Raciones",
-     "date": "Jueves a Sábados",
-     "price": 5,
+     "title": "Burger Menu",
+     "date": "Lunes a Viernes a mediodía",
+     "price": 8,
      "key": 2,
-     "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
+     "image0": "/promotions/burguer-menu.jpg",
+     "image1": "/promotions/burguer-menu@2x.jpg",
+     "image2": "/promotions/burguer-menu@3x.jpg"
    }, {
-     "title": "2x1 en Raciones",
-     "date": "Jueves a Sábados",
-     "price": 5,
+     "title": "Cubo de cerveza + ración",
+     "date": "Lunes a Viernes",
+     "price": 6,
      "key": 3,
-     "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-   }, {
-     "title": "2x1 en Raciones",
-     "date": "Jueves a Sábados",
-     "price": 4,
-     "key": 4,
-     "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-   }, {
-     "title": "2x1 en Raciones",
-     "date": "Jueves a Sábados",
-     "price": 5,
-     "key": 5,
-     "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-   }, {
-     "title": "2x1 en Raciones",
-     "date": "Jueves a Sábados",
-     "price": 5,
-     "key": 6,
-     "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-   }, {
-     "title": "2x1 en Raciones",
-     "date": "Jueves a Sábados",
-     "price": 5,
-     "key": 7,
-     "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-   }, {
-     "title": "2x1 en Raciones",
-     "date": "Jueves a Sábados",
-     "price": 5,
-     "key": 8,
-     "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
-   }, {
-     "title": "2x1 en Raciones",
-     "date": "Jueves a Sábados",
-     "price": 5,
-     "key": 9,
-     "image": "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da?$Homepage_600x330$"
+     "image0": "/promotions/cubodecerveza-racion.jpg",
+     "image1": "/promotions/cubodecerveza-racion@2x.jpg",
+     "image2": "/promotions/cubodecerveza-racion@3x.jpg"
    }
  ]
