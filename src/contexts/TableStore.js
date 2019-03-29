@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 import { tableService } from '../services/index'
 
-
 const TableContext = React.createContext();
 
 class TableStore extends Component {

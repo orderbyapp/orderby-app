@@ -29,8 +29,16 @@ class Board extends Component {
 
   changeBoard = () => {
     this.setState({
-      menuActive: this.state.menuActive ? false : true
-    },() => console.log(this.state))
+      menuActive: this.state.menuActive ? false : true,
+      table : tableService.updateTable('43567890'),
+      orders : this.state.table.orders
+    }, () => {
+      console.log(this.state)
+    })
+  }
+
+  componentWillMount(){
+
   }
 
   componentDidMount() {   
@@ -38,6 +46,7 @@ class Board extends Component {
       this.tableSubscription = tableService.onTableChange().subscribe(
       table => this.setState({ 
         table: table,
+        orders : table.orders,
         restaurant : table.restaurant,
         waiterId : table.restaurant.waiters[0] }, () => {
           getWaiterById(this.state.waiterId)
@@ -47,7 +56,6 @@ class Board extends Component {
   }
 
   componentWillUnmount() {   
-    window.scrollTo(0, 0) 
     this.tableSubscription.unsubscribe();
   }
 
@@ -68,6 +76,7 @@ class Board extends Component {
         }
         <div className={this.state.menuActive ? 'blur' : ''} > 
           <div className='pt-5'>
+        
             <img alt='shapepink' src={pinkShape} className='w-100 absolute image-board-bag'></img>
             <RestaurantCard {...this.state.restaurant} tableNumber={this.state.table.tableNumber}></RestaurantCard>
             

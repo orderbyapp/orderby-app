@@ -2,35 +2,23 @@
 import http from './base-http-service';
 import { BehaviorSubject } from 'rxjs';
 
-const CURRENT_TABLE_KEY = 'current-table';
+const CURRENT_ORDER_KEY = 'current-order';
 
-let table = JSON.parse(localStorage.getItem(CURRENT_TABLE_KEY) || '{}')
-const table$ = new BehaviorSubject(table);
+let order = JSON.parse(localStorage.getItem(CURRENT_ORDER_KEY) || '{}')
+const order$ = new BehaviorSubject(order);
 
 export const getTableById = (id) => http.get(`/tables/${id}`)
   .then(response => {
-    table = response.data;
-    localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(table));
-    return table;
+    order = response.data.orders;
+    localStorage.setItem(CURRENT_ORDER_KEY, JSON.stringify(order));
+    return order;
   });
-
-export const updateTable = (newItem) => {
-  let tableUpdate = {
-    ...table,
-    orders : [newItem]
-  }
-  localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(tableUpdate)); 
-  return tableUpdate
-}
-
-
 
 export const onTableChange = () => table$.asObservable();
 
 export default {
   getTableById,
-  onTableChange,
-  updateTable
+  onTableChange
 }
 
 // export const getTable = () => http.get(`/tables`).then( response => response.data)
