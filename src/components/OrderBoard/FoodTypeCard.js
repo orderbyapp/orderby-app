@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 
 class FoodTypeCard extends Component {
   render() {
-    console.log(this.props)
     return (
       <div>
         <Link to={'/menulist'}>
