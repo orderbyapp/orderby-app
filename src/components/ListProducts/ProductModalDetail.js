@@ -57,8 +57,7 @@ class ProductModalDetail extends Component {
           <h5 className='product-price-modal'>{product.price} €</h5>
         </div>
         <div className='container mt-3'>
-        <p className='text-center description-product-modal'>Licenses are valid for one year from the date of purchase.
-            When asking for support with any purchased.</p>
+        <p className='text-center description-product-modal'>.</p>
         </div>
         <div className='instrucciones-especiales-title'>
           <p className='container light-font title-special-text'>INSTRUCCIONES ESPECIALES</p>
