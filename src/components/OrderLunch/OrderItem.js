@@ -8,7 +8,7 @@ class OrderItem extends Component {
 
   componentDidMount = () => {
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
-      this.setState({ table: table },()=>console.log(this.state))
+      this.setState({ table: table })
   )};
 
   componentWillUnmount() {

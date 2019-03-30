@@ -2,8 +2,22 @@ import React, { Component } from 'react';
 import OrderItem from './OrderItem';
 import TotalCount from './TotalCount';
 import OrderButtons from './OrderButtons';
+import TableService from "../../services/TableService";
 
 class ContentOrder extends Component {
+  state = {
+    table: null
+  }
+
+  componentDidMount = () => {
+    this.tableSubscription = TableService.onTableChange().subscribe(table =>
+      this.setState({ table: table })
+  )};
+
+  componentWillUnmount() {
+    this.tableSubscription.unsubscribe();
+  }
+
   render() {
     return (
       <div>
@@ -15,7 +29,7 @@ class ContentOrder extends Component {
           <div className='over-flow-order'>
             <OrderItem></OrderItem>
           </div>
-          <TotalCount></TotalCount>
+          <TotalCount {...this.state.table}></TotalCount>
           <div >
             <OrderButtons></OrderButtons>
           </div>
