@@ -11,17 +11,24 @@ export const getTableById = (id) => http.get(`/tables/${id}`)
   .then(response => {
     table = response.data;
     localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(table));
+    table$.next(table);
     return table;
   });
 
-export const updateTable = (newItem) => {
-  let tableUpdate = {
-    ...table,
-    orders : [newItem]
-  }
-  localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(tableUpdate)); 
-  return tableUpdate
+export const updateTable = (newTable) => {
+  localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(newTable));
+  table$.next(newTable);
 }
+
+// export const updateTable = (newItem) => {
+//   let tableUpdate = {
+//     ...table,
+//     orders : [newItem]
+//   }
+//   localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(tableUpdate));
+//   table$.next(table);
+//   return tableUpdate
+// }
 
 
 

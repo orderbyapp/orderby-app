@@ -18,14 +18,13 @@ class ListProducts extends Component {
   }
 
   modalDetail = (e) => {
-    console.log()
     this.setState({
      modal : {
        ...this.modal,
        product : {...e},
        show : !this.state.modal.show ? true : false
      }
-    }, () => console.log(this.state.modal.product))
+    })
   }
 
   closeModal = () => {
@@ -46,7 +45,7 @@ class ListProducts extends Component {
   
   render() {
     const renderCards = Promotions.map( ctg => {
-      return <ProductItem modalOn={this.modalDetail} {...ctg}></ProductItem>
+      return <ProductItem modalOn={this.modalDetail} {...ctg} />
      })
     return (
       <div>
@@ -59,7 +58,7 @@ class ListProducts extends Component {
             </div>
           </Fragment>
         } 
-        <MenuTop></MenuTop>
+        <MenuTop />
         <div  className={this.state.menuActive ? 'blur' : ''} >
           <div>
             <img className='w-100 image-top-list' src={Parapicarimg}></img>

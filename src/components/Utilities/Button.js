@@ -12,9 +12,10 @@ class Button extends Component {
   }
 
   render() {
+    const { onClick } = this.props;
     return (
       <div>
-        <button className={
+        <button onClick={onClick} className={
           `${this.state.color} ${this.state.border} ${this.state.width} ${this.state.borderColor}`
           }>{this.state.text}</button>
       </div>

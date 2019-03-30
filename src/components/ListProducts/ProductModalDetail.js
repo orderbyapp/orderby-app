@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import './Input.css'
 import Button from '../Utilities/Button';
+import { tableService } from '../../services'
 
 class ProductModalDetail extends Component {
   state = {
     class : '',
     product : {...this.props},
-    quantity : 0
+    quantity : 0,
+    table:{},
   }
 
   closeModal = () => {
-    console.log(this.state.product)
     this.setState({
       class : 'fade-out-bottom'
     }, () => setTimeout(() => {this.props.closeModal()}, 300))
@@ -39,8 +40,35 @@ class ProductModalDetail extends Component {
     e.preventDefault()
   }
 
+  addProduct = () => {
+    // product: id, quantity, instructions, price
+    const { product, quantity, instruction } = this.state;
+    const productToAdd = {
+      id: product.id,
+      name: product.name,
+      quantity,
+      instruction,
+      price: product.price
+    }
+    const newTable = {...this.state.table};
+    newTable.orders.push(productToAdd);
+  
+    tableService.updateTable(newTable);
+  }
+  componentDidMount() {
+    this.tableSubscription = tableService.onTableChange().subscribe(
+      table => this.setState({ 
+        table: table,
+      })
+    );
+  }
+
+  componentWillUnmount() {   
+    this.tableSubscription.unsubscribe();
+  }
+
   render() {
-    const product = this.state.product
+    const { product } = this.state;
     return (      
       <div className={`modal-detail ${this.state.class}`}>   
         <div className='div-image-detail' style={{backgroundImage: `url(${product.image0})`}}>
@@ -84,7 +112,7 @@ class ProductModalDetail extends Component {
           </div>
         </div>
         <div className='container contain-button-add'>
-          <Button color='btn btn-order-by' border='border-pink'  width='w-100' text='Añadir al pedido'></Button>
+          <Button color='btn btn-order-by' border='border-pink' onClick={this.addProduct} width='w-100' text='Añadir al pedido' />
         </div>
       </div>
     );

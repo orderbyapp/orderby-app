@@ -2,14 +2,14 @@
   "title": "Bocata calamares",
   "description": "El mejor bocata de Madrid, pan super crujiente",
   "category": "entrante",
-  "key": 1,
+  "id": 1,
   "price": 8,
   "image0": "/foods/bocata_calamares.png"
 },
 {
   "title": "Hamburguesa XXL",
   "description": "Hamburguesa XXL",
-  "key": 2,
+  "id": 2,
   "price": 12,
   "image0": "/foods/burguer_menu.jpg"
 },
@@ -17,7 +17,7 @@
   "title": "Finger chips",
   "description": "Fingers de pollo",
   "category": "entrante",
-  "key": 3,
+  "id": 3,
   "price": 7,
   "image0": "/foods/fingerchips.jpg"
 },
@@ -25,7 +25,7 @@
   "title": "Patatas bravas",
   "description": "Ración de bravas",
   "category": "entrante",
-  "key": 4,
+  "id": 4,
   "price": 8,
   "image0": "/foods/patatasbravas.jpg"
 },
@@ -33,7 +33,7 @@
   "title": "Huevos trufados",
   "description": "Ración de huevos trufados",
   "category": "entrante",
-  "key": 5,
+  "id": 5,
   "price": 9,
   "image0": "/foods/huevostrufados.jpg"
 },
@@ -41,7 +41,7 @@
   "title": "La pizza más fina",
   "description": "La pizza mas fina del mundo",
   "category": "plato frio",
-  "key": 6,
+  "id": 6,
   "price": 9,
   "image0": "/foods/lapizzamasfina.jpg"
 },
@@ -49,7 +49,7 @@
   "title": "Patatas a nuestra manera",
   "description": "Patatas hechas con nuestra salsa secreta",
   "category": "entrante",
-  "key": 7,
+  "id": 7,
   "price": 5,
   "image0": "/foods/patatasbravasanuestramanera.jpg"
 },
@@ -57,7 +57,7 @@
   "title": "Mini burguer de wagyu",
   "description": "Un pequeño bocado de gran calidad",
   "category": "entrante",
-  "key": 8,
+  "id": 8,
   "price": 7,
   "image0": "/foods/miniburguerdewagtu.jpg"
 }]

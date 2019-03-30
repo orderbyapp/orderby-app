@@ -8,10 +8,10 @@ import Waiter  from '../WaiterInfo/Waiter'
 import ActionsButton from '../MenuSide/ActionButton';
 import Menu from '../MenuSide/Menu';
 import MenuTop from '../MenuTop/MenuTop';
-import {Link, withRouter} from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { withTableConsumer } from '../../contexts/TableStore';
 import { tableService } from '../../services'
-import {getWaiterById} from '../../services/waitersService'
+import { getWaiterById } from '../../services/waitersService'
 
 // Requerir el Observable
 // Link para la carta
@@ -30,16 +30,11 @@ class Board extends Component {
   changeBoard = () => {
     this.setState({
       menuActive: this.state.menuActive ? false : true,
-      table : tableService.updateTable('43567890'),
+      table : tableService.updateTable('87798978'),
       orders : this.state.table.orders
-    }, () => {
-      console.log(this.state)
     })
   }
 
-  componentWillMount(){
-
-  }
 
   componentDidMount() {   
       window.scrollTo(0, 0) 

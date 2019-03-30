@@ -9,24 +9,23 @@ import '../Board/Board.css'
 import '../MenuSide/Menu.css'
 import PinkShapeBg from '../../sources/pinkshapebg.svg'
 
-
 // funciones para hacer la order y el menu ir llenando de productos
 // links para ir a para picar, comida, entrantes, postres...
 
 class OrderBoard extends Component {
   state = {
-    menuActive : false
+    menuActive : false,
+    table: {},
+    orders:{}
   }
 
 
   changeBoard = () => {
     this.setState({
       menuActive: this.state.menuActive ? false : true
-    },() => console.log(this.state))
+    })
   }
-  componentDidMount() {
-    window.scrollTo(0, 0)
-  }
+ 
 
   render() {
     const renderCards =  Categories.map( ctg => {
@@ -52,6 +51,7 @@ class OrderBoard extends Component {
           {renderCards}
           </div> 
         </div>
+        {this.state.table.orders}
         <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>
       </div>
       </div>
