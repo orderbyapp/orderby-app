@@ -58,7 +58,8 @@ class ListProducts extends Component {
   render() {
     const renderCards = Foods.map( food => {
       if((this.state.orders.map(product => product.title)).includes(food.title)){
-        return <h2>ya lo has pedido</h2>
+        const currentOrder = this.state.orders.filter(currentFood => currentFood.title === food.title)
+        return <ProductItem modalOn={this.modalDetail} {...currentOrder} />
       }
       return <ProductItem modalOn={this.modalDetail} {...food} />
      })
