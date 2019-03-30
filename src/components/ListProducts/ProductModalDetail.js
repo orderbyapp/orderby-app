@@ -43,7 +43,7 @@ class ProductModalDetail extends Component {
     const product = this.state.product
     return (      
       <div className={`modal-detail ${this.state.class}`}>   
-        <div className='div-image-detail' style={{backgroundImage: `url(${product.image2})`}}>
+        <div className='div-image-detail' style={{backgroundImage: `url(${product.image0})`}}>
           <div className='bg-image-detail-color'>     
           </div>
         </div>
@@ -52,6 +52,9 @@ class ProductModalDetail extends Component {
         </button> 
         <div className='mt-4'>
           <h5 className='product-title-modal'>{product.title}</h5>
+        </div>
+        <div className='mt-3'>
+          <h5 className='product-price-modal'>{product.description}</h5>
         </div>
         <div className='mt-3'>
           <h5 className='product-price-modal'>{product.price} €</h5>
