@@ -7,7 +7,7 @@ class ProductModalDetail extends Component {
   state = {
     class : '',
     product : {...this.props},
-    quantity : 0,
+    quantity : 1,
     table:{},
   }
 
@@ -19,7 +19,7 @@ class ProductModalDetail extends Component {
 
   handleInputChange = (e) =>{
     this.setState({
-      instruction : e.value
+      instruction : e.target.value
     })
   }
 
@@ -42,10 +42,11 @@ class ProductModalDetail extends Component {
 
   addProduct = () => {
     // product: id, quantity, instructions, price
-    const { product, quantity, instruction } = this.state;
+    const { product, quantity, instruction} = this.state;
     const productToAdd = {
       id: product.id,
-      name: product.name,
+      title: product.title,
+      image: product.image0,
       quantity,
       instruction,
       price: product.price
@@ -55,11 +56,12 @@ class ProductModalDetail extends Component {
   
     tableService.updateTable(newTable);
   }
+
   componentDidMount() {
     this.tableSubscription = tableService.onTableChange().subscribe(
       table => this.setState({ 
         table: table,
-      })
+      }, () => console.log("did", this.state.table))
     );
   }
 

@@ -12,7 +12,6 @@ class ProductItem extends Component {
     return (
       <Fragment>
 
-     
       <div>
         <div className="" onClick={this.modalOn}>
             <div className="row no-gutters">

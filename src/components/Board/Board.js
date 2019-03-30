@@ -55,7 +55,6 @@ class Board extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <Fragment>
         <Waiter blur={this.state.menuActive} {...this.state.waiter}></Waiter>

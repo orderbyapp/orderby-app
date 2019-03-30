@@ -38,16 +38,17 @@ class MenuTop extends Component {
   }
 
   componentDidMount = () => {
-
-      window.scrollTo(0, 0)
-    
-    console.log()
+    window.scrollTo(0, 0)
     window.addEventListener('scroll', this.scrollNavChange.bind(this));
     this.tableSubscription = TableService.onTableChange().subscribe(
       table => this.setState({ 
         table: table,
       })
     );
+  }
+
+  componentWillUnmount() {   
+    this.tableSubscription.unsubscribe();
   }
 
 

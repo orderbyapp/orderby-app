@@ -14,7 +14,6 @@ class ContentOrder extends Component {
           </div>
           <div className='over-flow-order'>
             <OrderItem></OrderItem>
-            <OrderItem></OrderItem>
           </div>
           <TotalCount></TotalCount>
           <div >
