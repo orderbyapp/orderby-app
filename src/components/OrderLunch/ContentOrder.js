@@ -27,9 +27,9 @@ class ContentOrder extends Component {
              <span onClick={this.props.visibilityMenu} className="material-icons white close-menu-content">clear</span>
           </div>
           <div className='over-flow-order'>
-            <OrderItem></OrderItem>
+            <OrderItem {...this.state.table}></OrderItem>
           </div>
-          <TotalCount {...this.state.table}></TotalCount>
+            <TotalCount {...this.state.table}></TotalCount>
           <div >
             <OrderButtons></OrderButtons>
           </div>
