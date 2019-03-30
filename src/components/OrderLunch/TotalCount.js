@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class TotalCount extends Component {
   totalOrder = () => {
     const props = this.props; 
-    const total = props.orders && props.orders.map(product => product.price).reduce((a, b) =>  a + b)
+    const total = props.orders && props.orders.map(product => product.quantity * product.price).reduce((a, b) =>  a  + b)
     return total
   }
 

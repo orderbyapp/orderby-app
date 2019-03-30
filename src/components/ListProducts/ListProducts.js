@@ -1,12 +1,14 @@
 import React, { Component, Fragment } from 'react';
 import MenuTop from '../MenuTop/MenuTop';
 import ProductItem from './ProductItem';
-import Promotions from '../../data/foods.json'
+import Foods from '../../data/foods.json'
 import './Products.css'
 import Menu from '../MenuSide/Menu'
 import ActionsButton from '../MenuSide/ActionButton'
 import Parapicarimg from '../../sources/parapicar.jpg'
 import ProductModalDetail from './ProductModalDetail'
+import TableService from "../../services/TableService";
+
 
 class ListProducts extends Component {
   state = {
@@ -14,7 +16,17 @@ class ListProducts extends Component {
     modal : {
       product : {},
       show : false
-    }
+    },
+    orders : []
+  }
+
+  componentDidMount = () => {
+    this.tableSubscription = TableService.onTableChange().subscribe(table =>
+      this.setState({ table: table, orders : table.orders }, () => console.log(this.state.orders.map(product => product.title)))
+  )};
+
+  componentWillUnmount() {
+    this.tableSubscription.unsubscribe();
   }
 
   modalDetail = (e) => {
@@ -44,8 +56,11 @@ class ListProducts extends Component {
   }
   
   render() {
-    const renderCards = Promotions.map( ctg => {
-      return <ProductItem modalOn={this.modalDetail} {...ctg} />
+    const renderCards = Foods.map( food => {
+      if((this.state.orders.map(product => product.title)).includes(food.title)){
+        return <h2>ya lo has pedido</h2>
+      }
+      return <ProductItem modalOn={this.modalDetail} {...food} />
      })
     return (
       <div>

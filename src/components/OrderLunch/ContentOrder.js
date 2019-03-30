@@ -11,7 +11,8 @@ class ContentOrder extends Component {
 
   componentDidMount = () => {
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
-      this.setState({ table: table })
+      this.setState({ table: table, orders : table.orders }, () =>     console.log(this.state.orders.map( order=> order.title))
+)
   )};
 
   componentWillUnmount() {

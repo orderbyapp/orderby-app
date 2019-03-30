@@ -27,14 +27,14 @@ class OrderItem extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="price-object-order white">{product.price}</div>
+                <div className="price-object-order white">{product.price * product.quantity}€</div>
               </div>
             </div>
           );
         })
       );
     }
-    return null;
+    return null;  
   }
 }
 
