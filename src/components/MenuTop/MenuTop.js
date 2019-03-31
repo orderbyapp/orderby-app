@@ -16,11 +16,12 @@ class MenuTop extends Component {
   }
 
   orderVisibility = () => {
-    this.setState({
-      order : {
-        ...this.order,
-        open: this.state.order.open ? false : true}
-    })
+    this.state.table.orders.length > 0 &&
+      this.setState({
+        order : {
+          ...this.order,
+          open: this.state.order.open ? false : true}
+      })
   }
 
   onClickBack = () =>{
@@ -61,6 +62,7 @@ class MenuTop extends Component {
       return 0;
     }
     return (
+      
       <div>  
       <div className={`container-menu ${this.state.color} ${this.props.colorFix ? 'pink-nav' : ''} margin-top-16`}>
         <div className='container padding-menu-nav'>
