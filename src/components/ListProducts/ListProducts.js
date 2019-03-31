@@ -56,15 +56,13 @@ class ListProducts extends Component {
   }
   
   render() {
-    const renderCards = Foods.map( ctg => {
-      return <ProductItem modalOn={this.modalDetail} {...ctg} />})
-    // const renderCards = Foods.map( food => {
-    //   if((this.state.orders.map(product => product.title)).includes(food.title)){
-    //     const currentOrder = this.state.orders.filter(currentFood => currentFood.title === food.title)
-    //     return <ProductItem modalOn={this.modalDetail} {...currentOrder} />
-    //   }
-    //   return <ProductItem modalOn={this.modalDetail} {...food} />
-    //  })
+    const renderCards = Foods.map( food => {
+      if((this.state.orders.map(product => product.title)).includes(food.title)){        
+        const currentOrder = this.state.orders.filter(currentFood => currentFood.title === food.title)
+        return <ProductItem modalOn={this.modalDetail} ordered={true} {...currentOrder[0]} />
+      }
+      return <ProductItem modalOn={this.modalDetail} {...food} />
+     })
     return (
       <div>
         { this.state.menuActive && 
@@ -91,7 +89,7 @@ class ListProducts extends Component {
           <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>
         </div>
          {this.state.modal.show && 
-          <ProductModalDetail {...this.state.modal.product} {...this.props} closeModal={this.closeModal}></ProductModalDetail>}
+          <ProductModalDetail {...this.state.modal.product} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}></ProductModalDetail>}
       </div>
     );
   }

@@ -1,6 +1,6 @@
 .menu-dropdown{
   background-color: #26273d;
-  height: 100vh;
+  height: 100.1vh;
 }
 
 .button-close-div{
@@ -66,7 +66,7 @@
 }
 
 .image-product-order-item{
-  background-color:red;
+
   height: 43px;
   width: 43px;
   border-radius: 100px;

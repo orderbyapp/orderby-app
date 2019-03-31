@@ -9,6 +9,7 @@ class ProductItem extends Component {
     this.props.modalOn({...this.props})
   }
   render() {
+
     return (
       <Fragment>
       <div>
@@ -33,15 +34,22 @@ class ProductItem extends Component {
                         }
                         </div>
                       </div>
-                      <div className='add-promotion-card' >
-                        <div className='button-more-promotions'>
-                        <span className="more-icon-promotions" >+</span>
-                        </div>
+                      { this.props.ordered && 
+                         <div className='add-promotion-card-selected' >
+                          <div className='button-more-promotions'>
+                            <span className="more-icon-promotions" >+</span>
+                          </div>
+                        </div>}
+                        { !this.props.ordered &&    
+                        <div className='add-promotion-card' >
+                          <div className='button-more-promotions'>
+                            <span className="more-icon-promotions" >+</span>
+                          </div>
+                        </div>}
                       </div>
                     </div>
                 </div>
             </div>
-        </div>
       </div>
       <hr className='p-0 mt-3 mb-3 border-grew-hr'></hr>
       </Fragment>

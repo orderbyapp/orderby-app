@@ -9,6 +9,19 @@
   animation: fade-in-bottom 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+.add-promotion-card-selected{
+  width: 25px;
+  height: 25px;
+  background-color:#fe3569;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 100px;
+}
+
 .contain-button-add{
   position: fixed;
   bottom: 15px;
@@ -136,6 +149,7 @@
   font-size: 1rem;
   line-height: 1.4rem;
   font-weight: 200;
+  text-align: center;
 }
 
 .div-image-detail{
@@ -143,6 +157,7 @@
   height: 22%;
   position: relative;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 

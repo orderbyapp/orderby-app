@@ -70,7 +70,9 @@ class MenuTop extends Component {
           {this.props.history.location.pathname !== "/board" ?  
           <div onClick={this.onClickBack} className='d-flex'><span className="material-icons white" >arrow_back</span></div> :
           <div><span className="material-icons pink" >arrow_back</span></div>}  
-           <div className='flex-and-align'> <span className="step-bg">{getTableNum()}</span> <span className="material-icons white"><a onClick={this.orderVisibility}>shopping_cart</a></span></div>
+           <div className='flex-and-align'> 
+           <span className="step-bg">{getTableNum()}</span> 
+           <span className="material-icons white"><a onClick={this.orderVisibility}>shopping_cart</a></span></div>
           </nav>
         </div>
       </div>

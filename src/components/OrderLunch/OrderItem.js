@@ -14,7 +14,8 @@ class OrderItem extends Component {
                     <div className="image-product-order-item">
                       <img
                         className="image-product-order-item"
-                        src={product.image}
+                        alt={product.title}
+                        src={product.image0}
                       />
                     </div>
                     <div className="quantity-product-order-item ml-3">

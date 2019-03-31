@@ -17,7 +17,7 @@ class TotalCount extends Component {
     const order = Number(this.totalOrder());
     const iva = Number(this.totalIva())
 
-    return order + iva
+    return (order + iva).toFixed(2);
   }
 
   render() {
