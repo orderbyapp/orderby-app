@@ -52,12 +52,11 @@ class MenuTop extends Component {
     this.tableSubscription.unsubscribe();
   }
 
-
   render() {
     const { table } = this.state
     const getTableNum = () => {
       if (table) {
-        return table.orders.length;
+        return table.orders.map(product => product.quantity).reduce((a, b) =>  a  + b)
       }
       return 0;
     }

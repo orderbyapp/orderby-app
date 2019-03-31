@@ -55,6 +55,9 @@ class ProductModalDetail extends Component {
     newTable.orders.push(productToAdd);
   
     tableService.updateTable(newTable);
+    //console.log("add =>",this.props)
+    //this.props.history.push('/orderboard') nos valen las dos
+    this.props.history.goBack()
   }
 
   componentDidMount() {
