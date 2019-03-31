@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import OrderItem from './OrderItem';
+import OrderPayed from './OrderIPayed';
 import TotalCount from './TotalCount';
 import OrderButtons from './OrderButtons';
 import TableService from "../../services/TableService";
@@ -11,8 +12,7 @@ class ContentOrder extends Component {
 
   componentDidMount = () => {
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
-      this.setState({ table: table, orders : table.orders }, () =>     console.log(this.state.orders.map( order=> order.title))
-)
+      this.setState({ table: table })
   )};
 
   componentWillUnmount() {
@@ -34,6 +34,9 @@ class ContentOrder extends Component {
           <div >
             <OrderButtons></OrderButtons>
           </div>
+          {/* <div>
+            <OrderPayed></OrderPayed>
+          </div> */}
         </div>
         <div>
           

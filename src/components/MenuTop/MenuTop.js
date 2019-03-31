@@ -56,7 +56,8 @@ class MenuTop extends Component {
     const { table } = this.state
     const getTableNum = () => {
       if (table) {
-        return table.orders.map(product => product.quantity).reduce((a, b) =>  a  + b)
+        //return table.orders.map(product => product.quantity).reduce((a, b) =>  a + b)
+        return table.orders.length
       }
       return 0;
     }
