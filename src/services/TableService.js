@@ -16,7 +16,9 @@ export const getTableById = (id) => http.get(`/tables/${id}`)
   });
 export const getMenuList = (name) => http.get(`/menulist/${name}`)
   .then(response => response )
-  
+
+export const newOrder = (id, order) => http.post(`/orders/${id}`, order)
+  .then(response => response )
 
 export const updateTable = (newTable) => {
   localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(newTable));
@@ -40,7 +42,7 @@ export const onTableChange = () => table$.asObservable();
 export default {
   getTableById,
   getMenuList,
-
+  newOrder,
   onTableChange,
   updateTable
 }

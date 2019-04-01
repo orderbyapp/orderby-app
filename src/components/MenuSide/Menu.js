@@ -1,13 +1,47 @@
 import React, { Component } from 'react';
 import './Menu.css'
+import TableService from "../../services/TableService";
 
 
 class Menu extends Component {
-
+state = {
+  table : {}
+}
 
   closeCard = () => {
     this.props.closeCard()
   }
+
+  updateOrder = () => {
+    console.log('updateputo')
+  }
+
+  postOrder = () => {
+    const order = {
+      table : this.state.table.id,
+      products : this.state.table.orders
+    }
+    TableService.newOrder(order.table, order)
+      .then(response => {
+        this.setState({
+          table : {
+            ...this.state.table,
+            orderId : response.data.id
+          }
+        })
+        TableService.updateTable(this.state.table);
+      })
+  }
+
+  componentDidMount = () => {
+    this.tableSubscription = TableService.onTableChange().subscribe(table =>
+      this.setState({ table: table}))
+    };
+
+  componentWillUnmount() {
+    this.tableSubscription.unsubscribe();
+  }
+
 
   render() {
     return (
@@ -22,7 +56,9 @@ class Menu extends Component {
             <li className="nav-item p-2 border-bottom">
               <div className="nav-link" href="#">Pedir Cuenta</div>
             </li>
-            <li className="nav-item p-2 border-bottom">
+            <li className="nav-item p-2 border-bottom" onClick={
+              !this.state.table.orderId ? this.postOrder : this.updateOrder
+              }>
               <div className="nav-link" href="#">Pagar por la APP</div>
             </li>
             <li className="nav-item p-1  close-nav-tag">
