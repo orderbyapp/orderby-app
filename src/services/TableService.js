@@ -20,6 +20,10 @@ export const getMenuList = (name) => http.get(`/menulist/${name}`)
 export const newOrder = (id, order) => http.post(`/orders/${id}`, order)
   .then(response => response )
 
+export const updateOrder = (id, order) => http.put(`/orders/${id}`, order)
+  .then(response => response )
+  
+
 export const updateTable = (newTable) => {
   localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(newTable));
   table$.next(newTable);
@@ -44,7 +48,8 @@ export default {
   getMenuList,
   newOrder,
   onTableChange,
-  updateTable
+  updateTable,
+  updateOrder
 }
 
 // export const getTable = () => http.get(`/tables`).then( response => response.data)

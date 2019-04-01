@@ -13,7 +13,11 @@ state = {
   }
 
   updateOrder = () => {
-    console.log('updateputo')
+    const order = {
+      products : this.state.table.orders
+    }
+    TableService.updateOrder(this.state.table.orderId, order )
+      .then(response =>  console.log(response.data))
   }
 
   postOrder = () => {
