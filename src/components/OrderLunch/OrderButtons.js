@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 import Button from '../Utilities/Button';
 
 class OrderButtons extends Component {
+  editMenu = () => {
+    this.props.onClickEdit()
+  }
+
   render() {
     return (
       <div className='absolute-buttons-order'>
-        <Button color='btn btn-linear-white-bg-trans' text='Pedir la cuenta' width='w-100'></Button>
+      {this.props.editing &&  <Button color='btn btn-linear-white-bg-trans ' text='Dejar de editar' width='w-100' onClick={this.editMenu}></Button>
+}
+    {!this.props.editing &&  <Button color='btn btn-linear-white-bg-trans' text='Editar pedido' width='w-100' onClick={this.editMenu}></Button>
+}
         <div className="strike mt-2">
             <span className='white'>o</span>
         </div>

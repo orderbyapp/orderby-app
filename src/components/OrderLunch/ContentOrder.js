@@ -7,7 +7,8 @@ import TableService from "../../services/TableService";
 
 class ContentOrder extends Component {
   state = {
-    table: null
+    table: null,
+    editing: false,
   }
 
   componentDidMount = () => {
@@ -19,6 +20,13 @@ class ContentOrder extends Component {
     this.tableSubscription.unsubscribe();
   }
 
+  onClickEdit = () => {
+
+    this.setState({
+      editing :  this.state.editing ? false : true
+    }, () => console.log(this.state.editing))
+  }
+
   render() {
     return (
       <div>
@@ -28,11 +36,11 @@ class ContentOrder extends Component {
              <span onClick={this.props.visibilityMenu} className="material-icons white close-menu-content">clear</span>
           </div>
           <div className='over-flow-order'>
-            <OrderItem {...this.state.table}></OrderItem>
+            <OrderItem {...this.state.table} editing={this.state.editing}></OrderItem>
           </div>
             <TotalCount {...this.state.table}></TotalCount>
           <div >
-            <OrderButtons></OrderButtons>
+            <OrderButtons onClickEdit={this.onClickEdit} editing={this.state.editing}></OrderButtons>
           </div>
           {/* <div>
             <OrderPayed></OrderPayed>

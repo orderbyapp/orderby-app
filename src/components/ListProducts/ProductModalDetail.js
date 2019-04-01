@@ -127,7 +127,7 @@ class ProductModalDetail extends Component {
       const notify = () => toast(
       <div className='d-flex flex-row align-items-center' onClick={this.orderVisibilityModal}>
         <img className="image-product-order-item" alt={product.title} src={product.image0}/>
-         <div className='pl-3 max-width-200'><span className='white'>x</span><span className='white'>{product.quantity}</span> {product.title}</div>
+         <div className='pl-3 max-width-200'  ><span className='white'>x</span><span className='white'>{product.quantity}</span> {product.title}</div>
       </div>
       ,{
         className: css({

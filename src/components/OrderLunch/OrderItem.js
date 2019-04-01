@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './OrderItem.css'
 
 class OrderItem extends Component {
   render() {
@@ -28,8 +29,10 @@ class OrderItem extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="price-object-order white">{product.price * product.quantity}€</div>
-              </div>
+                {this.props.editing && <span className={`white ${'slide-in-blurred-right'} step-bg-2`}>
+                  <i class="material-icons white font-17">edit</i>
+                 </span>}
+                {!this.props.editing && <div className="price-object-order white ">{product.price * product.quantity}€</div>}              </div>
             </div>
           );
         })

@@ -12,7 +12,8 @@ class MenuTop extends Component {
       open : false
     },
     color: 'transparent',
-    position:  window.scrollY
+    position:  window.scrollY,
+    orders : []
   }
 
   orderVisibility = () => {
@@ -56,10 +57,10 @@ class MenuTop extends Component {
     const { table } = this.state
     const getTableNum = () => {
       if (table) {
-        //return table.orders.map(product => product.quantity).reduce((a, b) =>  a + b)
         return table.orders.length
+      } else {
+        return 0;
       }
-      return 0;
     }
     return (
       
