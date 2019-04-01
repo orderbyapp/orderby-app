@@ -111,7 +111,7 @@ class ProductModalDetail extends Component {
       draggable: TextTrackCueList,
       position: "top-center",
       className: 'toaster',
-      closeButton: <div><span class="material-icons white close-menu-content">clear</span></div>
+      closeButton: <div><span className="material-icons white close-menu-content">clear</span></div>
     
     });
     

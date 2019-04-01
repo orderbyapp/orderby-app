@@ -12,9 +12,9 @@ class ProductItem extends Component {
 
     return (
       <Fragment>
-      <div>
+      <div >
         <div className="" onClick={this.modalOn}>
-            <div className="row no-gutters">
+            <div className="row no-gutters" key={this.props.id}>
                 <div className="image-item-list" style={{backgroundImage: `url(${this.state.imageUrl})`}}>
                 </div>
                 <div className="col ">

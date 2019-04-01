@@ -50,6 +50,7 @@ class MenuTop extends Component {
 
   componentWillUnmount() {   
     this.tableSubscription.unsubscribe();
+    window.removeEventListener('scroll', this.scrollNavChange.bind(this))
   }
 
   render() {

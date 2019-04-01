@@ -10,14 +10,14 @@ class TotalCount extends Component {
   totalIva = () => {
     const total = this.totalOrder()
     const iva = total * 21 / 100
-    return iva.toFixed(2)
+    return (Math.ceil(iva)+Math.floor(iva))/2
   }
 
   totalCount = () => {
     const order = Number(this.totalOrder());
     const iva = Number(this.totalIva())
 
-    return (order + iva).toFixed(2);
+    return (order + iva);
   }
 
   render() {
