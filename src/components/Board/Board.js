@@ -30,8 +30,8 @@ class Board extends Component {
   changeBoard = () => {
     this.setState({
       menuActive: this.state.menuActive ? false : true,
-      table : tableService.updateTable('87798978'),
-      orders : this.state.table.orders
+      // table : tableService.updateTable('87798978'),
+      // orders : this.state.table.orders
     })
   }
 

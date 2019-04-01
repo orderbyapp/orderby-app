@@ -14,6 +14,9 @@ export const getTableById = (id) => http.get(`/tables/${id}`)
     table$.next(table);
     return table;
   });
+export const getMenuList = (name) => http.get(`/menulist/${name}`)
+  .then(response => response )
+  
 
 export const updateTable = (newTable) => {
   localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(newTable));
@@ -36,6 +39,8 @@ export const onTableChange = () => table$.asObservable();
 
 export default {
   getTableById,
+  getMenuList,
+
   onTableChange,
   updateTable
 }

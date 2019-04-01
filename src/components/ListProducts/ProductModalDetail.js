@@ -57,8 +57,6 @@ class ProductModalDetail extends Component {
     newTable.orders.push(productToAdd);
   
     tableService.updateTable(newTable);
-    //console.log("add =>",this.props)
-    //this.props.history.push('/orderboard') nos valen las dos
     this.closeModal()} else {
       this.deleteProduct()
     }
@@ -94,11 +92,7 @@ class ProductModalDetail extends Component {
       ...this.state.table,
       orders :  this.state.table.orders.filter(order => order.title !== this.props.title)
     };
-   
-  
     tableService.updateTable(newTable);
-    //console.log("add =>",this.props)
-    //this.props.history.push('/orderboard') nos valen las dos
     this.closeModal()
   }
 

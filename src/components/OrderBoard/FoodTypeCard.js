@@ -7,7 +7,7 @@ class FoodTypeCard extends Component {
   render() {
     return (
       <div>
-        <Link to={'/menulist'}>
+        <Link to={`/menulist/${this.props.name}`}>
         <div className="card mt-3 category-card-food" style={{backgroundImage: `url(${this.props.image0})`}}>
           
         <div className='background-card'></div>

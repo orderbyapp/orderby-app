@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import MenuTop from '../MenuTop/MenuTop';
 import ProductItem from './ProductItem';
-import Foods from '../../data/foods.json'
 import './Products.css'
 import Menu from '../MenuSide/Menu'
 import ActionsButton from '../MenuSide/ActionButton'
@@ -17,13 +16,17 @@ class ListProducts extends Component {
       product : {},
       show : false
     },
-    orders : []
+    orders : [],
+    list: []
   }
 
   componentDidMount = () => {
+   
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
-      this.setState({ table: table, orders : table.orders }, () => console.log(this.state.orders.map(product => product.title)))
-  )};
+      this.setState({ table: table, orders: table.orders},
+        () =>  TableService.getMenuList(this.props.match.params.name)
+        .then(response => this.setState({ list : response.data })))
+      )};
 
   componentWillUnmount() {
     this.tableSubscription.unsubscribe();
@@ -52,11 +55,12 @@ class ListProducts extends Component {
   changeBoard = () => {
     this.setState({
       menuActive: this.state.menuActive ? false : true
-    },() => console.log(this.state))
+    })
   }
   
   render() {
-    const renderCards = Foods.map( food => {
+  
+    const renderCards = this.state.list.map( food => {
       if((this.state.orders.map(product => product.title)).includes(food.title)){        
         const currentOrder = this.state.orders.filter(currentFood => currentFood.title === food.title)
         return <ProductItem modalOn={this.modalDetail} ordered={true} {...currentOrder[0]} />
@@ -81,15 +85,15 @@ class ListProducts extends Component {
           </div>
           <div className='pt-3 container'>
             <div className=' text-center '>
-              <h5 className='m-0 p-0'>Products</h5>
+              <h5 className='m-0 p-0'>{this.state.list[0] && this.state.list[0].category}</h5>
               <hr className='border-dark pb-2'></hr>
             </div>
             {renderCards}
           </div>
-          <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>
+          <ActionsButton activeMenuBoard={this.changeBoard}/>
         </div>
          {this.state.modal.show && 
-          <ProductModalDetail {...this.state.modal.product} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}></ProductModalDetail>}
+          <ProductModalDetail {...this.state.modal.product} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}/>}
       </div>
     );
   }

@@ -19,29 +19,27 @@ class OrderBoard extends Component {
     orders:{}
   }
 
-
   changeBoard = () => {
     this.setState({
       menuActive: this.state.menuActive ? false : true
     })
   }
  
-
   render() {
     const renderCards =  Categories.map( ctg => {
-      return <FoodTypeCard {...ctg}></FoodTypeCard>
+      return <FoodTypeCard {...ctg}/>
      })
      
     return (
       <div className='order-board-bg'>
-      <MenuTop></MenuTop>
+      <MenuTop/>
       <img alt='pinkshapebg' src={PinkShapeBg} className='pinkshapebg'></img>
       { this.state.menuActive && 
           <Fragment>
             <div className='black-blur margin-top-16' >
               <div onClick={this.changeBoard} className='wrap-close' >
               </div>
-              <Menu closeBoard={this.changeBoard}></Menu>
+              <Menu closeBoard={this.changeBoard}/>
             </div>
           </Fragment>
         }
@@ -52,7 +50,7 @@ class OrderBoard extends Component {
           </div> 
         </div>
         {this.state.table.orders}
-        <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>
+        <ActionsButton activeMenuBoard={this.changeBoard}/>
       </div>
       </div>
     );

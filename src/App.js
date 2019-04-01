@@ -27,7 +27,7 @@ class App extends Component {
                 <Route exact path='/loading' component={Loader}></Route>
                 <Route exact path='/board' component={Board}></Route>
                 <Route exact path='/orderboard' component={OrderBoard}></Route>
-                <Route exact path='/menulist' component={ListProducts}></Route>
+                <Route exact path='/menulist/:name' component={ListProducts}></Route>
                 <Redirect to='/' />
               {/* </AnimatedSwitch> */}
             </Switch>
