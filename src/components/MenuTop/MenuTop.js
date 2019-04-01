@@ -25,7 +25,6 @@ class MenuTop extends Component {
   }
 
   onClickBack = () =>{
-    
     this.props.history.goBack() 
   }
 

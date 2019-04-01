@@ -7,8 +7,12 @@ import ActionsButton from '../MenuSide/ActionButton'
 import Parapicarimg from '../../sources/parapicar.jpg'
 import ProductModalDetail from './ProductModalDetail'
 import TableService from "../../services/TableService";
-import { ToastContainer } from 'react-toastify';
-import { toast } from 'react-toastify';
+import Slidemenu from '../Slidemenu/Slidemenu'
+import OrderLunch from '../OrderLunch/OrderLunch'
+import ContentOrder from '../OrderLunch/ContentOrder';
+import '../MenuTop/MenuTop.css'
+
+
 import './Toast.css'
 
 class ListProducts extends Component {
@@ -19,7 +23,19 @@ class ListProducts extends Component {
       show : false
     },
     orders : [],
-    list: []
+    list: [],
+    order : {
+      open : false
+    },
+  }
+
+  orderVisibility = () => {
+    setTimeout(() => {
+      this.setState({
+        order : {
+          open: this.state.order.open ? false : true}
+      }, () => console.log(this.state.order))
+     }, 300)      
   }
 
   componentDidMount = () => {
@@ -65,8 +81,9 @@ class ListProducts extends Component {
     const renderCards = this.state.list.map( food => {
       if((this.state.orders.map(product => product.title)).includes(food.title)){        
         const currentOrder = this.state.orders.filter(currentFood => currentFood.title === food.title)
-        return <ProductItem modalOn={this.modalDetail} key={currentOrder.id} ordered={true} {...currentOrder[0]}/>
+        return <ProductItem modalOn={this.modalDetail} key={food.id} ordered={true} {...currentOrder[0]}/>
       }
+
       return <ProductItem modalOn={this.modalDetail} key={food.id} {...food} />
      })
     return (
@@ -81,7 +98,17 @@ class ListProducts extends Component {
           </Fragment>
         } 
         <MenuTop />
+      
         <div  className={this.state.menuActive ? 'blur' : ''} >
+          <Slidemenu open={this.state.order.open} >
+          <Fragment>
+            <OrderLunch>
+            {this.state.order.open && 
+             <ContentOrder visibilityMenu={this.orderVisibility}></ContentOrder>
+              }
+            </OrderLunch>
+          </Fragment>
+        </Slidemenu>
           <div>
             <img className='w-100 image-top-list' src={Parapicarimg}></img>
           </div>
@@ -93,9 +120,11 @@ class ListProducts extends Component {
             {renderCards}
           </div>
           <ActionsButton activeMenuBoard={this.changeBoard}/>
+          
         </div>
          {this.state.modal.show && 
-          <ProductModalDetail {...this.state.modal.product} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}/>}
+          <ProductModalDetail {...this.state.modal.product} openMenu={this.orderVisibility} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}/>}
+      
       </div>
     );
   }

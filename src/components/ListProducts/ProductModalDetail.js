@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './Input.css'
 import Button from '../Utilities/Button';
 import { tableService } from '../../services'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {css} from 'glamor'
+import CloseToast from './CloseToast';
 
 class ProductModalDetail extends Component {
   state = {
@@ -12,7 +13,12 @@ class ProductModalDetail extends Component {
     product : {...this.props},
     quantity : this.props.quantity || 1,
     table:{},
-    instruction: this.props.instruction || ''
+    instruction: this.props.instruction || '',
+
+  }
+
+  orderVisibilityModal = () => {
+    this.props.openMenu()
   }
 
 
@@ -105,27 +111,30 @@ class ProductModalDetail extends Component {
     this.closeModal()
   }
 
+  closeToasting = () => {
+    this.props.openMenu()
+  }
+
   createToast = (product) => {
     toast.configure({
-      autoClose: 40000,
-      draggable: TextTrackCueList,
+      autoClose: 4000,
+      draggable: true,
       position: "top-center",
       className: 'toaster',
-      closeButton: <div><span className="material-icons white close-menu-content">clear</span></div>
+      closeButton: <CloseToast/>
     
     });
-    
       const notify = () => toast(
-      <div>
+      <div className='d-flex flex-row align-items-center' onClick={this.orderVisibilityModal}>
         <img className="image-product-order-item" alt={product.title} src={product.image0}/>
-         x {product.quantity} {product.title}
-        </div>
+         <div className='pl-3 max-width-200'><span className='white'>x</span><span className='white'>{product.quantity}</span> {product.title}</div>
+      </div>
       ,{
         className: css({
           background: '#26273d !important'
         }),
         bodyClassName: css({
-          fontSize: '16px'
+          fontSize: '19px'
         }),
         progressClassName: css({
           background: "#fe3569 !important"
@@ -150,8 +159,6 @@ class ProductModalDetail extends Component {
   }
 
   render() {
-
-   
     const { product } = this.state;
     return (      
       <div className={`modal-detail ${this.state.class}`}>   
@@ -207,7 +214,7 @@ class ProductModalDetail extends Component {
         </div>
        }
         </div>
-
+  
       </div>
     );
   }
