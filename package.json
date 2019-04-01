@@ -8,6 +8,7 @@
     "dotenv-webpack": "^1.7.0",
     "firebase": "^5.9.1",
     "font-awesome": "^4.7.0",
+    "glamor": "^2.20.40",
     "material-design-icons": "^3.0.1",
     "material-icons": "^0.3.0",
     "react": "^16.8.4",
@@ -19,6 +20,7 @@
     "react-scripts": "2.1.8",
     "react-skeleton-loader": "^1.0.4",
     "react-slidedown": "^2.0.9",
+    "react-toastify": "^5.0.0-rc.5",
     "react-transition-group": "^2.7.1",
     "styled-components": "^4.1.3"
   },

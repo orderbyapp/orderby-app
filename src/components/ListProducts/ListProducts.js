@@ -7,7 +7,9 @@ import ActionsButton from '../MenuSide/ActionButton'
 import Parapicarimg from '../../sources/parapicar.jpg'
 import ProductModalDetail from './ProductModalDetail'
 import TableService from "../../services/TableService";
-
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import './Toast.css'
 
 class ListProducts extends Component {
   state = {

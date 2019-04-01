@@ -9,6 +9,7 @@
   animation: fade-in-bottom 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+
 .add-promotion-card-selected{
   width: 25px;
   height: 25px;

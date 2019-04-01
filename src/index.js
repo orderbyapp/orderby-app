@@ -8,6 +8,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'material-icons/iconfont/material-icons.css'
 import { initializeFirebase, askForPermissioToReceiveNotifications } from './push-notification';
 import { BrowserRouter} from 'react-router-dom'
+import 'react-toastify/dist/ReactToastify.min.css' 
 
 
 

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './Input.css'
 import Button from '../Utilities/Button';
 import { tableService } from '../../services'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {css} from 'glamor'
 
 class ProductModalDetail extends Component {
   state = {
@@ -11,6 +14,7 @@ class ProductModalDetail extends Component {
     table:{},
     instruction: this.props.instruction || ''
   }
+
 
   closeModal = () => {
     this.setState({
@@ -55,8 +59,11 @@ class ProductModalDetail extends Component {
     }
     const newTable = {...this.state.table};
     newTable.orders.push(productToAdd);
-  
+    
     tableService.updateTable(newTable);
+
+    this.createToast(productToAdd);
+
     this.closeModal()} else {
       this.deleteProduct()
     }
@@ -82,6 +89,8 @@ class ProductModalDetail extends Component {
 
     newTable.orders.splice(indexProduct, 1, productToAdd);
     tableService.updateTable(newTable);
+
+    this.createToast(productToAdd);
     this.closeModal()}else {
       this.deleteProduct()
     }
@@ -94,6 +103,37 @@ class ProductModalDetail extends Component {
     };
     tableService.updateTable(newTable);
     this.closeModal()
+  }
+
+  createToast = (product) => {
+    toast.configure({
+      autoClose: 40000,
+      draggable: TextTrackCueList,
+      position: "top-center",
+      className: 'toaster',
+      closeButton: <div><span class="material-icons white close-menu-content">clear</span></div>
+    
+    });
+    
+      const notify = () => toast(
+      <div>
+        <img className="image-product-order-item" alt={product.title} src={product.image0}/>
+         x {product.quantity} {product.title}
+        </div>
+      ,{
+        className: css({
+          background: '#26273d !important'
+        }),
+        bodyClassName: css({
+          fontSize: '16px'
+        }),
+        progressClassName: css({
+          background: "#fe3569 !important"
+        })
+      });
+
+      notify()
+      
   }
 
 
@@ -110,6 +150,8 @@ class ProductModalDetail extends Component {
   }
 
   render() {
+
+   
     const { product } = this.state;
     return (      
       <div className={`modal-detail ${this.state.class}`}>   
@@ -165,6 +207,7 @@ class ProductModalDetail extends Component {
         </div>
        }
         </div>
+
       </div>
     );
   }

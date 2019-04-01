@@ -1,0 +1,11 @@
+.toaster{
+  top: 0;
+  z-index: 1000000000!important;
+  position: fixed;
+}
+
+.toaster > div {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+}
