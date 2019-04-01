@@ -4,9 +4,9 @@ import TableService from "../../services/TableService";
 
 
 class Menu extends Component {
-state = {
-  table : {}
-}
+  state = {
+    table : {}
+  }
 
   closeCard = () => {
     this.props.closeCard()
