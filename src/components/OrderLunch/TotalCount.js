@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 
 class TotalCount extends Component {
-  totalOrder = () => {
+  totalCount = () => {
     const props = this.props; 
     const total = props.orders && props.orders.map(product => product.quantity * product.price).reduce((a, b) =>  a  + b)
     return total
   }
 
   totalIva = () => {
-    const total = this.totalOrder()
+    const total = this.totalCount()
     const iva = total * 21 / 100
-    return (Math.ceil(iva)+Math.floor(iva))/2
+    return iva.toFixed(2)
   }
 
-  totalCount = () => {
-    const order = Number(this.totalOrder());
+ 
+  totalOrder = () => {
+    const order = Number(this.totalCount());
     const iva = Number(this.totalIva())
 
-    return (order + iva);
+    return (order - iva);
   }
 
   render() {
