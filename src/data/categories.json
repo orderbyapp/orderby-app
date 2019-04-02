@@ -17,8 +17,8 @@
   "image3": "/categories/parapicar@3x.jpg"
 },
 {
-  "title": "Platos fríos",
-  "name":"frios",
+  "title": "Platos healty",
+  "name":"healty",
   "description": "Verde que te quiero verde, lo mejor para cuidarse",
   "key": 3,
   "image0": "/categories/platosfrios.jpg",
@@ -26,8 +26,8 @@
   "image3": "/categories/platosfrios@3x.jpg"
 },
 {
-  "title": "Platos calientes",
-  "name":"calientes",
+  "title": "Nuestros platos estrella",
+  "name":"estrella",
   "description": "Los mejores platos solo para ti, a nuestra manera",
   "key": 4,
   "image0": "/categories/burguer-menu.jpg",
@@ -36,7 +36,7 @@
 },
 {
   "title": "Happy ending",
-  "name":"happyending",
+  "name":"postres",
   "description": "Para terminar un toque dulce",
   "key": 5,
   "image0": "/categories/happyending.jpg",

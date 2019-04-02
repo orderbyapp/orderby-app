@@ -185,10 +185,12 @@ class ProductModalDetail extends Component {
         <div> 
           <form className='container'>
             <input 
+            placeholder='Instrucciones para cocina'
             type='text' 
             className='w-100 input-special-instruction'
             onChange={this.handleInputChange} 
             value={this.state.instruction}></input>
+            <hr className='mt-0 pt-0'></hr>
           </form> 
         </div>
         <div className='container-adder mt-3'>   

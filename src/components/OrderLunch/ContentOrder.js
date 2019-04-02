@@ -44,8 +44,8 @@ class ContentOrder extends Component {
       <div>
         <div className='pt-4'>
           <div className='button-close-div mb-4'>
-          <h5 className='pedido-title'>Tu pedido</h5>
-             <span onClick={this.props.visibilityMenu} className="material-icons white close-menu-content">clear</span>
+            <h5 className='pedido-title'>Tu pedido</h5>
+            <span onClick={this.props.visibilityMenu} className="material-icons white close-menu-content">clear</span>
           </div>
           <div className='over-flow-order'>
             <OrderItem {...this.state.table} editing={this.state.editing}></OrderItem>
@@ -58,16 +58,6 @@ class ContentOrder extends Component {
             <OrderPayed></OrderPayed>
           </div> */}
         </div>
-        <div>
-          
-        </div>
-        <Slidemenu open={this.state.order.open} >
-          <Fragment>
-            {this.state.order.open && 
-             <PayItem visibilityMenuCard={this.payCardVisibility} {...this.state}></PayItem>
-              }
-          </Fragment>
-        </Slidemenu>
       </div>
     );
   }

@@ -1,6 +1,18 @@
 .card-pay{
-  background-color: white;
+  border: 2px solid white;
+  color: white !important;
   padding: 15px;
   border-radius: 6px;
-  height: 70%;
+  /* width: calc(100% - 30px); */
+}
+.card-pay *{
+  color: white !important;
+}
+
+.classStripeElement {
+  width: 70%;
+  float: right;
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
 }

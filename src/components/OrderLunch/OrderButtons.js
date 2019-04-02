@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from '../Utilities/Button';
+import {Link} from 'react-router-dom'
 
 class OrderButtons extends Component {
   editMenu = () => {
@@ -19,7 +20,7 @@ class OrderButtons extends Component {
         <div className="strike mt-2">
             <span className='white'>o</span>
         </div>
-        <Button color='btn btn-pink-color-white' text='Pagar por la app' width='w-100' onClick={this.payOrder}/>
+        <Link className='btn btn-pink-color-white w-100' to='/payment' onClick={this.payOrder}>Pagar por la app</Link>
       </div>
     );
   }
