@@ -23,23 +23,10 @@ export const newOrder = (id, order) => http.post(`/orders/${id}`, order)
 export const updateOrder = (id, order) => http.put(`/orders/${id}`, order)
   .then(response => response )
   
-
 export const updateTable = (newTable) => {
   localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(newTable));
   table$.next(newTable);
 }
-
-// export const updateTable = (newItem) => {
-//   let tableUpdate = {
-//     ...table,
-//     orders : [newItem]
-//   }
-//   localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(tableUpdate));
-//   table$.next(table);
-//   return tableUpdate
-// }
-
-
 
 export const onTableChange = () => table$.asObservable();
 
@@ -52,8 +39,3 @@ export default {
   updateOrder
 }
 
-// export const getTable = () => http.get(`/tables`).then( response => response.data)
-// export const createTable = () => http.post(`/tables`).then( response => response.data)
-// export const getTableById = (id) => http.get(`/tables/${id}`).then(response => response.data) 
-// export const updateTableById = (table) => http.put(`/tables/${table.id}`, table)
-// export const deleteTableById = (table) => http.post(`/tables/${table.id}`, table)

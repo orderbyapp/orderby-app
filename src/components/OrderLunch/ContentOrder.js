@@ -1,19 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import OrderItem from './OrderItem';
-import OrderPayed from './OrderIPayed';
+import PayItem from './PayItem';
+//import OrderPayed from './OrderIPayed';
 import TotalCount from './TotalCount';
 import OrderButtons from './OrderButtons';
 import TableService from "../../services/TableService";
+import Slidemenu from '../Slidemenu/Slidemenu'
 
 class ContentOrder extends Component {
   state = {
+    order : {
+      open : false
+    },
     table: null,
     editing: false,
   }
 
+  payCardVisibility = () => {
+      this.setState({
+        order : {
+          open: this.state.order.open ? false : true}
+      })
+  }
+
+
   componentDidMount = () => {
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
-      this.setState({ table: table })
+      this.setState({ table: table }, () => console.log(this.state))
   )};
 
   componentWillUnmount() {
@@ -21,7 +34,6 @@ class ContentOrder extends Component {
   }
 
   onClickEdit = () => {
-
     this.setState({
       editing :  this.state.editing ? false : true
     }, () => console.log(this.state.editing))
@@ -40,7 +52,7 @@ class ContentOrder extends Component {
           </div>
             <TotalCount {...this.state.table}></TotalCount>
           <div >
-            <OrderButtons onClickEdit={this.onClickEdit} editing={this.state.editing}></OrderButtons>
+            <OrderButtons onClickEdit={this.onClickEdit}  visibilityMenuCard={this.payCardVisibility} editing={this.state.editing}></OrderButtons>
           </div>
           {/* <div>
             <OrderPayed></OrderPayed>
@@ -49,7 +61,13 @@ class ContentOrder extends Component {
         <div>
           
         </div>
-        
+        <Slidemenu open={this.state.order.open} >
+          <Fragment>
+            {this.state.order.open && 
+             <PayItem visibilityMenuCard={this.payCardVisibility} {...this.state}></PayItem>
+              }
+          </Fragment>
+        </Slidemenu>
       </div>
     );
   }

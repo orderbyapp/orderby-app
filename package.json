@@ -20,6 +20,7 @@
     "react-scripts": "2.1.8",
     "react-skeleton-loader": "^1.0.4",
     "react-slidedown": "^2.0.9",
+    "react-stripe-elements": "^2.0.3",
     "react-toastify": "^5.0.0-rc.5",
     "react-transition-group": "^2.7.1",
     "styled-components": "^4.1.3"

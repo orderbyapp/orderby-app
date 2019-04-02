@@ -30,7 +30,7 @@ class OrderItem extends Component {
                   </div>
                 </div>
                 {this.props.editing && <span className={`white ${'slide-in-blurred-right'} step-bg-2`}>
-                  <i class="material-icons white font-17">edit</i>
+                  <i className="material-icons white font-17">edit</i>
                  </span>}
                 {!this.props.editing && <div className="price-object-order white ">{product.price * product.quantity}€</div>}              </div>
             </div>
