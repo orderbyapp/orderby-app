@@ -4,7 +4,7 @@ class CloseToast extends Component {
   render() {
     return (
       <div className='mtop-Toastcross w-40px'>
-        <span className="material-icons white close-menu-content">clear</span>
+        <span className="material-icons white close-menu-content w-40px">clear</span>
       </div>
     );
   }

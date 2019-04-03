@@ -25,7 +25,20 @@ class CheckoutForm extends Component {
     return (
       <div className="checkout">
         <p>Introduzca los datos de su tarjeta</p>
-        <CardElement />
+        <CardElement style={{
+            base: {
+                iconColor: '#FFFFFF',
+                color: '#FFFFFF',
+                lineHeight: '40px',
+                fontWeight: 400,
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSize: '16px',
+
+                '::placeholder': {
+                    color: '#CFD7E0',
+                }
+            }
+        }} />
         <Button color='btn btn-pink-color-white' text='Pagar' width='w-100' onClick={this.submit}/>
       </div>
     );

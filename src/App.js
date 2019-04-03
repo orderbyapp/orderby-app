@@ -8,9 +8,11 @@ import ListProducts from './components/ListProducts/ListProducts';
 import { Switch, Route, Redirect} from 'react-router-dom'
 import Welcome from './components/OnBoard/Welcome'
 import Toast from './components/Toasts/Toast';
+import Payment from './components/Payment/Payment';
+
+
 // import PageShell from './components/PageShell/PageShell'
 // import { AnimatedSwitch } from 'react-router-transition';
-
 
 class App extends Component {
 
@@ -24,6 +26,7 @@ class App extends Component {
               atActive={{ opacity: 1 }}
               className="switch-wrapper"> */}
                 <Route exact path='/' component={Intro}></Route>
+                <Route exact path='/payment' component={Payment}></Route>
                 <Route exact path='/table/:id' component={Welcome}></Route>
                 <Route exact path='/loading' component={Loader}></Route>
                 <Route exact path='/board' component={Board}></Route>
