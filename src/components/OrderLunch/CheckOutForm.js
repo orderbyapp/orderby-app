@@ -23,7 +23,7 @@ class CheckoutForm extends Component {
   
     if (response.ok) 
     console.log('compra ok')
-    
+  
     
     this.setState({
       completedPay : true
