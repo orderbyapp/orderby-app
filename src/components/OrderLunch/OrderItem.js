@@ -2,10 +2,21 @@ import React, { Component } from "react";
 import './OrderItem.css'
 
 class OrderItem extends Component {
-
+  state = {
+    currentTarget : '',
+    fadeOut : ''
+  }
   handleClickDelete = (e) => {
     const productName = e.target.dataset.name
-    this.props.delete(productName)
+    this.setState({
+      currentTarget: e.target.dataset.name,
+      fadeOut: 'slide-out-blurred-left'
+    }, () => {
+      setTimeout(() => {
+        this.props.delete(productName)
+    }, 400)
+    })
+  
   }
 
   render() {
@@ -14,7 +25,7 @@ class OrderItem extends Component {
         this.props.orders &&
         this.props.orders.map(product => {
           return (
-            <div className="list-object-order" key={product.id}>
+            <div className={`${(this.state.currentTarget === product.title) ? this.state.fadeOut : ''} list-object-order`} key={product.id}>
               <div className=" item-object-flex border-bottom pb-2 pt-2 border-light">
                 <div>
                   <div className=" white item-object-flex">
