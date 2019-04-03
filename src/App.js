@@ -10,6 +10,8 @@ import { Switch, Route, Redirect} from 'react-router-dom'
 import Welcome from './components/OnBoard/Welcome'
 import Toast from './components/Toasts/Toast';
 import Payment from './components/Payment/Payment';
+import Thankyou from './components/Payment/Thankyou'
+
 //import { Forbidden, NotFound } from './components/Errors/Error';
 
 // import PageShell from './components/PageShell/PageShell'
@@ -26,6 +28,7 @@ class App extends Component {
               atLeave={{ opacity: 0 }}
               atActive={{ opacity: 1 }}
               className="switch-wrapper"> */}
+
                 <Route exact path='/' component={Intro}></Route>
                 <Route exact path="/login" component={Login} />
                 <Route exact path='/payment' component={Payment}></Route>
@@ -35,7 +38,9 @@ class App extends Component {
                 <Route exact path='/orderboard' component={OrderBoard}></Route>
                 <Route exact path='/menulist/:name' component={ListProducts}></Route>
                 <Route exact path='/toast' component={Toast}></Route>
-                {/* <Route exact path="/forbidden" component={Forbidden}/>
+                 {/* esta ahi que hacerla private*/} 
+                <Route exact path='/thankyou' component={Thankyou}></Route>
+                  {/* <Route exact path="/forbidden" component={Forbidden}/>
                 <Route exact path="/not-found" component={NotFound}/> */}
                 <Redirect to='/' />
 

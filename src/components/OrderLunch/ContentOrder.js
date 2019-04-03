@@ -67,7 +67,7 @@ class ContentOrder extends Component {
             { !this.state.noProducts && <TotalCount {...this.state.table}></TotalCount>}
             { this.state.noProducts && <h5 className='white'>Comienza a añadir productos</h5>}
           <div >
-            <OrderButtons onClickEdit={this.onClickEdit}  visibilityMenuCard={this.payCardVisibility} editing={this.state.editing}></OrderButtons>
+            <OrderButtons onClickEdit={this.onClickEdit} noProducts={this.state.noProducts}  visibilityMenuCard={this.payCardVisibility} editing={this.state.editing}></OrderButtons>
           </div>
           {/* <div>
             <OrderPayed></OrderPayed>
