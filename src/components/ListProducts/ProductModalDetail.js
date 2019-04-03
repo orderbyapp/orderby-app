@@ -150,7 +150,7 @@ class ProductModalDetail extends Component {
     this.tableSubscription = tableService.onTableChange().subscribe(
       table => this.setState({ 
         table: table,
-      }, () => console.log("did", this.state.table))
+      })
     );
   }
 

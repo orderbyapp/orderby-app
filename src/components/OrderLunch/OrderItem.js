@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import './OrderItem.css'
 
 class OrderItem extends Component {
+
+  handleClickDelete = (e) => {
+    const productName = e.target.dataset.name
+    this.props.delete(productName)
+  }
+
   render() {
     if (this.props.orders) {
       return (
@@ -29,8 +35,9 @@ class OrderItem extends Component {
                     </div>
                   </div>
                 </div>
-                {this.props.editing && <span className={`white ${'slide-in-blurred-right'} step-bg-2`}>
-                  <i className="material-icons white font-17">edit</i>
+                {this.props.editing && 
+                <span className={`white ${'slide-in-blurred-right'} step-bg-2`}>
+                  <i data-name={product.title} className="material-icons white font-17 close-editing-button" onClick={this.handleClickDelete}>close</i>
                  </span>}
                 {!this.props.editing && <div className="price-object-order white ">{product.price * product.quantity}€</div>}              </div>
             </div>

@@ -9,6 +9,10 @@
   animation: fade-in-bottom 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+.title-card-list{
+  max-width: 170px;
+}
+
 
 .add-promotion-card-selected{
   width: 25px;
@@ -26,7 +30,14 @@
 .contain-button-add{
   position: fixed;
   bottom: 15px;
+}
 
+.edit-white-selected{
+  margin-bottom: 1px;
+}
+
+.close-editing-button{
+  margin-top: 1px;
 }
 
 .container-adder{

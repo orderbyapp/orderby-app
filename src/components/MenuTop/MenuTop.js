@@ -24,6 +24,13 @@ class MenuTop extends Component {
           open: this.state.order.open ? false : true}
       })
   }
+  onOrderVisibility = () => {
+      this.setState({
+        order : {
+          ...this.order,
+          open: this.state.order.open ? false : true}
+      })
+  }
 
   onClickBack = () =>{
     this.props.history.goBack() 
@@ -39,7 +46,7 @@ class MenuTop extends Component {
   }
 
   componentDidMount = () => {
-    window.scrollTo(0, 0)
+      window.scrollTo(0, 0)
     window.addEventListener('scroll', this.scrollNavChange.bind(this));
     this.tableSubscription = TableService.onTableChange().subscribe(
       table => this.setState({ 
@@ -81,7 +88,7 @@ class MenuTop extends Component {
           <Fragment>
             <OrderLunch>
             {this.state.order.open && 
-             <ContentOrder visibilityMenu={this.orderVisibility}></ContentOrder>
+             <ContentOrder visibilityMenu={this.onOrderVisibility} table={this.state.table}></ContentOrder>
               }
             </OrderLunch>
           </Fragment>

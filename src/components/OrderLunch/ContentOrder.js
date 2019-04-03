@@ -12,8 +12,10 @@ class ContentOrder extends Component {
     order : {
       open : false
     },
+    orders :[], 
     table: null,
     editing: false,
+    noProducts : false
   }
 
   payCardVisibility = () => {
@@ -26,7 +28,7 @@ class ContentOrder extends Component {
 
   componentDidMount = () => {
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
-      this.setState({ table: table }, () => console.log(this.state))
+      this.setState({ table: table })
   )};
 
   componentWillUnmount() {
@@ -36,7 +38,19 @@ class ContentOrder extends Component {
   onClickEdit = () => {
     this.setState({
       editing :  this.state.editing ? false : true
-    }, () => console.log(this.state.editing))
+    })
+  }
+
+
+  deleteProduct = (name) => {
+    const newTable = {
+      ...this.state.table,
+      orders :  this.state.table.orders.filter(order => order.title !== name)
+    };
+    this.setState({
+      noProducts : newTable.orders.length === 0 ? true : false
+    })
+    TableService.updateTable(newTable);
   }
 
   render() {
@@ -48,9 +62,10 @@ class ContentOrder extends Component {
             <span onClick={this.props.visibilityMenu} className="material-icons white close-menu-content">clear</span>
           </div>
           <div className='over-flow-order'>
-            <OrderItem {...this.state.table} editing={this.state.editing}></OrderItem>
+            <OrderItem {...this.state.table} delete={this.deleteProduct} editing={this.state.editing}></OrderItem>
           </div>
-            <TotalCount {...this.state.table}></TotalCount>
+            { !this.state.noProducts && <TotalCount {...this.state.table}></TotalCount>}
+            { this.state.noProducts && <h5 className='white'>Comienza a añadir productos</h5>}
           <div >
             <OrderButtons onClickEdit={this.onClickEdit}  visibilityMenuCard={this.payCardVisibility} editing={this.state.editing}></OrderButtons>
           </div>
