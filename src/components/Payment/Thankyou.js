@@ -3,13 +3,18 @@ import GoodBye from '../../sources/mano.svg'
 import { withRouter } from "react-router-dom";
 import bgColors from '../../sources/fondo-pantalla-pago.svg'
 import './Thankyou.css'
+import TableService from "../../services/TableService";
+
 
 class Thankyou extends Component {
+
+  state = {
+    table : {}
+  }
 
  goHome = () =>{
     this.props.history.push('/board') 
   }
-
 
   render() {
     return (

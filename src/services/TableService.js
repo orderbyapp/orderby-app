@@ -28,6 +28,17 @@ export const updateTable = (newTable) => {
   table$.next(newTable);
 }
 
+export const cleanTable = (table) => {
+  const cleanTable = {
+    ...table,
+    orders : [],
+    orderId : ''
+  }
+
+  localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(cleanTable));
+  table$.next(cleanTable);
+}
+
 export const onTableChange = () => table$.asObservable();
 
 export default {
@@ -36,6 +47,7 @@ export default {
   newOrder,
   onTableChange,
   updateTable,
-  updateOrder
+  updateOrder,
+  cleanTable
 }
 

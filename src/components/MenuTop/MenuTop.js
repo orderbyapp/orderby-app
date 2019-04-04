@@ -7,14 +7,20 @@ import { withRouter } from "react-router-dom";
 import TableService from '../../services/TableService';
 
 class MenuTop extends Component {
-  state = {
-    order : {
-      open : false
-    },
-    color: 'transparent',
-    position:  window.scrollY,
-    orders : []
-  }
+
+
+  constructor(props){
+    super(props);
+    this.onScroll = this.onScroll.bind(this);
+    this.state = {
+      order : {
+        open : false
+      },
+      color: 'transparent',
+      position:  window.scrollY,
+      orders : []
+    }
+}
 
   orderVisibility = () => {
     this.state.table.orders.length > 0 &&
@@ -24,6 +30,7 @@ class MenuTop extends Component {
           open: this.state.order.open ? false : true}
       })
   }
+
   onOrderVisibility = () => {
       this.setState({
         order : {
@@ -36,7 +43,7 @@ class MenuTop extends Component {
     this.props.history.goBack() 
   }
 
-  scrollNavChange = () => {
+  onScroll = () => {
     let positionScroll = window.scrollY;
     this.setState({
       position: positionScroll
@@ -45,19 +52,19 @@ class MenuTop extends Component {
     })
   }
 
-  componentDidMount = () => {
-      window.scrollTo(0, 0)
-    window.addEventListener('scroll', this.scrollNavChange.bind(this));
+  componentDidMount() {
+    window.scrollTo(0, 0)
+    window.addEventListener('scroll', this.onScroll, false);
     this.tableSubscription = TableService.onTableChange().subscribe(
       table => this.setState({ 
         table: table,
       })
     );
-  }
+}
 
-  componentWillUnmount() {   
+  componentWillUnmount() {
     this.tableSubscription.unsubscribe();
-    window.removeEventListener('scroll', this.scrollNavChange.bind(this))
+      window.removeEventListener('scroll', this.onScroll, false);
   }
 
   render() {

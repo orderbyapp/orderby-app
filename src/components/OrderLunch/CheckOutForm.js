@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {CardElement, injectStripe} from 'react-stripe-elements';
 import Button from '../Utilities/Button';
 import {Redirect} from 'react-router-dom'
+import TableService from "../../services/TableService";
+
 
 class CheckoutForm extends Component {
   constructor(props) {
@@ -23,12 +25,28 @@ class CheckoutForm extends Component {
   
     if (response.ok) 
     console.log('compra ok')
-  
+    const cleanTable = {
+      ...this.state.table,
+      orders : [],
+      orderId : ''
+    }
+
+    TableService.cleanTable(cleanTable)
     
     this.setState({
       completedPay : true
     })
   }
+
+  componentDidMount = () => {
+    this.tableSubscription = TableService.onTableChange().subscribe(table =>
+      this.setState({ table: table}))
+    };
+
+  componentWillUnmount() {
+    this.tableSubscription.unsubscribe();
+  }
+
 
   render() {
     if(!this.state.completedPay){
