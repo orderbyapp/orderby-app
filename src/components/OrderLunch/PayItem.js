@@ -5,7 +5,6 @@ import './PayItem.css'
 
 class PayItem extends Component {
   render() {
-    console.log(this.props)
     return (
       <StripeProvider apiKey="pk_test_zcTEmEh9DNzx17DvNLibaUVS">
       <div className="card-pay">

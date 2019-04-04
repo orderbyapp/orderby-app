@@ -11,7 +11,7 @@ class OrderButtons extends Component {
     }
     editMenu = () => {
       this.props.onClickEdit()
-  }
+    }
     closeCard = () => {
       this.props.closeCard()
     }
@@ -60,7 +60,7 @@ class OrderButtons extends Component {
     render() {
       if(this.state.redirect){
         return(
-        <Redirect to='/payment'></Redirect>
+        <Redirect to='/payment'/>
         )
       } else {
         return (
@@ -84,7 +84,7 @@ class OrderButtons extends Component {
                     text='Pagar por la app'
                     onClick={
                       !this.state.table.orderId ? this.postOrder : this.updateOrder
-                      }></Button>}
+                      }/>}
             </div>
         );
                     }

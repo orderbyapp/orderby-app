@@ -39,7 +39,6 @@ class ListProducts extends Component {
   }
 
   componentDidMount = () => {
-   
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
       this.setState({ table: table, orders: table.orders},
         () =>  TableService.getMenuList(this.props.match.params.name)
@@ -77,7 +76,8 @@ class ListProducts extends Component {
   }
   
   render() {
-  
+    const { image, category } = this.props.location.state
+
     const renderCards = this.state.list.map( food => {
       if((this.state.orders.map(product => product.title)).includes(food.title)){        
         const currentOrder = this.state.orders.filter(currentFood => currentFood.title === food.title)
@@ -110,11 +110,11 @@ class ListProducts extends Component {
           </Fragment>
         </Slidemenu>
           <div>
-            <img className='w-100 image-top-list' src={Parapicarimg}></img>
+            <img className='w-100 image-top-list' src={image}></img>
           </div>
           <div className='pt-3 container'>
             <div className=' text-center '>
-              <h5 className='m-0 p-0'>{this.state.list[0] && this.state.list[0].category}</h5>
+              <h5 className='m-0 p-0'>{category}</h5>
               <hr className='border-dark pb-2'></hr>
             </div>
             {renderCards}

@@ -60,7 +60,7 @@ class MenuTop extends Component {
         table: table,
       })
     );
-}
+  }
 
   componentWillUnmount() {
     this.tableSubscription.unsubscribe();

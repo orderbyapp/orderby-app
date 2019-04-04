@@ -16,7 +16,6 @@ class OrderItem extends Component {
         this.props.delete(productName)
     }, 400)
     })
-  
   }
 
   render() {
