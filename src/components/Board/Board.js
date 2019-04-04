@@ -13,10 +13,6 @@ import { withTableConsumer } from '../../contexts/TableStore';
 import { tableService } from '../../services'
 import { getWaiterById } from '../../services/waitersService'
 
-// Requerir el Observable
-// Link para la carta
-// hay que poner menu carrito
-
 class Board extends Component {
 
   state = {
@@ -29,10 +25,17 @@ class Board extends Component {
 
   changeBoard = () => {
     this.setState({
-      menuActive: this.state.menuActive ? false : true,
+      menuActive: this.state.menuActive ? false : true
     })
   }
 
+  waiterVisibility = () => {
+    const newTable = {
+      ...this.state.table,
+      waiterInfo : true
+    }
+    tableService.updateTable(newTable)
+}
 
   componentDidMount() {   
       window.scrollTo(0, 0) 
@@ -41,9 +44,10 @@ class Board extends Component {
         table: table,
         orders : table.orders,
         restaurant : table.restaurant,
+        waiterInfo : table.waiterInfo || false,
         waiterId : table.restaurant.waiters[0] }, () => {
           getWaiterById(this.state.waiterId)
-          .then(response => this.setState({ waiter: response}))
+          .then(response => this.setState({ waiter: response }))
       })
     );
   }
@@ -55,7 +59,7 @@ class Board extends Component {
   render() {
     return (
       <Fragment>
-        <Waiter blur={this.state.menuActive} {...this.state.waiter}></Waiter>
+        {!this.state.waiterInfo && <Waiter blur={this.state.menuActive} {...this.state.waiter} waiterVisibility={this.waiterVisibility}/>}
         <MenuTop colorFix ></MenuTop>
         { this.state.menuActive && 
           <Fragment>

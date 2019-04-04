@@ -6,7 +6,7 @@ class Waiter extends Component {
 
   state = {
     imageUrl : imageWaiter,
-    classAnimated : 'slide-in-blurred-top',
+    classAnimated : 'slide-in-blurred-top'
   }
 
 
@@ -14,6 +14,8 @@ class Waiter extends Component {
     this.setState({
       classAnimated : 'slide-out-blurred-top' 
     })
+    this.props.waiterVisibility()
+    
   }
    
   render() { 
