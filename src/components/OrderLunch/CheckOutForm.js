@@ -4,7 +4,6 @@ import Button from '../Utilities/Button';
 import {Redirect} from 'react-router-dom'
 import TableService from "../../services/TableService";
 
-
 class CheckoutForm extends Component {
   constructor(props) {
     super(props);
@@ -14,38 +13,33 @@ class CheckoutForm extends Component {
     completedPay : false,
   }
 
-
   async submit(ev) {
     ev.preventDefault();
     let {token} = await this.props.stripe.createToken({name: "Name"});
-    let response = await fetch(`http://localhost:3001/orders/${this.props.table.orderId}/charge`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        // name: this.state.name,
-        // email: this.state.email,
-        // description: this.state.productData.description,
-        // amount: this.state.productData.price,
-        token: token.id
+    if(token){
+      let response = await fetch(`http://localhost:3001/orders/${this.props.table.orderId}/charge`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          token: token.id
+        })
+      });
+      
+      if (response.ok) 
+      console.log('compra ok')
+      const cleanTable = {
+        ...this.state.table,
+        orders : [],
+        orderId : ''
+      }
+      TableService.cleanTable(cleanTable)
+      
+      this.setState({
+        completedPay : true
       })
-    });
-    
-  
-    if (response.ok) 
-    console.log('compra ok')
-    const cleanTable = {
-      ...this.state.table,
-      orders : [],
-      orderId : ''
     }
-
-    TableService.cleanTable(cleanTable)
-    
-    this.setState({
-      completedPay : true
-    })
   }
 
   componentDidMount = () => {
@@ -59,17 +53,6 @@ class CheckoutForm extends Component {
 
 
   render() {
-
-   
-    //   return (<form onSubmit={this.onSubmit} >
-    //     <span>{ this.state.paymentError }</span><br />
-    //     <input type='text' data-stripe='number' placeholder='credit card number' /><br />
-    //     <input type='text' data-stripe='exp-month' placeholder='expiration month' /><br />
-    //     <input type='text' data-stripe='exp-year' placeholder='expiration year' /><br />
-    //     <input type='text' data-stripe='cvc' placeholder='cvc' /><br />
-    //     <input disabled={this.state.submitDisabled} type='submit' value='Purchase' />
-    //   </form>);
-    // }
 
     if(!this.state.completedPay){
       return (
