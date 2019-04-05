@@ -1,27 +1,25 @@
  [{
      "title": "2x1 en Raciones",
      "date": "Jueves",
+     "description": "Por favor, indicanos más abajo, que raciones eliges",
      "price": 5,
      "key": 1,
-     "image0": "/promotions/2-x-1-enraciones.jpg",
-     "image1": "/promotions/2-x-1-enraciones@2x.jpg",
-     "image2": "/promotions/2-x-1-enraciones@3x.jpg"
+     "image0": "/foods/fingerchips.jpg"
    },
    {
      "title": "Burger Menu",
      "date": "Lunes a Viernes a mediodía",
+     "description": "Menu con nuestra hamburguesa XXL",
      "price": 8,
      "key": 2,
-     "image0": "/promotions/burguer-menu.jpg",
-     "image1": "/promotions/burguer-menu@2x.jpg",
-     "image2": "/promotions/burguer-menu@3x.jpg"
-   }, {
+     "image0": "/foods/burguer_menu.jpg"
+   },
+   {
      "title": "Cubo de cerveza + ración",
      "date": "Lunes a Viernes",
+     "description": "Por favor, indicanos más abajo, que ración eliges",
      "price": 6,
      "key": 3,
-     "image0": "/promotions/cubodecerveza-racion.jpg",
-     "image1": "/promotions/cubodecerveza-racion@2x.jpg",
-     "image2": "/promotions/cubodecerveza-racion@3x.jpg"
+     "image0": "/promotions/cubodecerveza-racion@3x.jpg"
    }
  ]

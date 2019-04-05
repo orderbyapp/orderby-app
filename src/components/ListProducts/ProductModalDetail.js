@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import './Input.css'
 import Button from '../Utilities/Button';
 import { tableService } from '../../services'
@@ -20,7 +20,6 @@ class ProductModalDetail extends Component {
   orderVisibilityModal = () => {
     this.props.openMenu()
   }
-
 
   closeModal = () => {
     this.setState({

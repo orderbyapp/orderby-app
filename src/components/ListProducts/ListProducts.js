@@ -120,11 +120,9 @@ class ListProducts extends Component {
             {renderCards}
           </div>
           <ActionsButton activeMenuBoard={this.changeBoard}/>
-          
         </div>
          {this.state.modal.show && 
           <ProductModalDetail {...this.state.modal.product} openMenu={this.orderVisibility} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}/>}
-      
       </div>
     );
   }
