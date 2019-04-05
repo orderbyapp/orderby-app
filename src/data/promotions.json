@@ -3,7 +3,7 @@
      "date": "Jueves",
      "description": "Por favor, indicanos más abajo, que raciones eliges",
      "price": 5,
-     "key": 1,
+     "id": 61,
      "image0": "/foods/fingerchips.jpg"
    },
    {
@@ -11,7 +11,7 @@
      "date": "Lunes a Viernes a mediodía",
      "description": "Menu con nuestra hamburguesa XXL",
      "price": 8,
-     "key": 2,
+     "id": 62,
      "image0": "/foods/burguer_menu.jpg"
    },
    {
@@ -19,7 +19,7 @@
      "date": "Lunes a Viernes",
      "description": "Por favor, indicanos más abajo, que ración eliges",
      "price": 6,
-     "key": 3,
+     "id": 63,
      "image0": "/promotions/cubodecerveza-racion@3x.jpg"
    }
  ]

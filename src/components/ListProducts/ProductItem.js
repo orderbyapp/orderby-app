@@ -9,7 +9,6 @@ class ProductItem extends Component {
     this.props.modalOn({...this.props})
   }
   render() {
-
     return (
       <Fragment>
       <div >

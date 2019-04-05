@@ -22,7 +22,7 @@ class PromotionList extends Component {
       this.setState({
         order : {
           open: this.state.order.open ? false : true}
-      }, () => console.log(this.state.order))
+      })
      }, 300)      
   }
 
@@ -44,18 +44,33 @@ class PromotionList extends Component {
       }
      })
   }
-  render() {
-    const renderCards = Promotions.map( prom => {
-      return <CardPromotion modalOn={this.modalDetail} key={prom.key} {...prom}></CardPromotion>
+
+  changeBoard = () => {
+    this.setState({
+      menuActive: this.state.menuActive ? false : true
     })
-    return (
-      <div className="card-list-div">
-      <h5>Promociones</h5>
-        {renderCards}
-        {this.state.modal.show && 
-          <ProductModalDetail {...this.state.modal.product} openMenu={this.orderVisibility} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}/>}
-      </div>
-    );
+  }
+
+
+  render() {
+    if(this.props.orders){
+      const renderCards = Promotions.map( food => {
+        if((this.props.orders.map(product => product.title)).includes(food.title)){        
+          const currentOrder = this.props.orders.filter(currentFood => currentFood.title === food.title)
+          return <CardPromotion modalOn={this.modalDetail} key={food.id} ordered={true} {...currentOrder[0]}/>
+        }
+        return <CardPromotion modalOn={this.modalDetail} key={food.id} {...food} />
+       })
+      return (
+        <div className="card-list-div">
+        <h5>Promociones</h5>
+          {renderCards}
+          {this.state.modal.show && 
+            <ProductModalDetail {...this.state.modal.product} openMenu={this.orderVisibility} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}/>}
+        </div>
+      );
+    }
+    return null;  
   }
 }
 

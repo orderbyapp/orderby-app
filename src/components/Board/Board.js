@@ -78,7 +78,7 @@ class Board extends Component {
             
             <div className='container'>
               <Link to={`/orderboard`}><ButtonOrder color='btn btn-order-by' width='w-100' border='border-pink' text='Ver carta'></ButtonOrder></Link>
-              <PromotionList/>
+              <PromotionList {...this.state}/>
             </div>
           </div>
           <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>

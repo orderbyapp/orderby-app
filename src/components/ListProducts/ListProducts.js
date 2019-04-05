@@ -11,8 +11,6 @@ import Slidemenu from '../Slidemenu/Slidemenu'
 import OrderLunch from '../OrderLunch/OrderLunch'
 import ContentOrder from '../OrderLunch/ContentOrder';
 import '../MenuTop/MenuTop.css'
-
-
 import './Toast.css'
 
 class ListProducts extends Component {
@@ -34,7 +32,7 @@ class ListProducts extends Component {
       this.setState({
         order : {
           open: this.state.order.open ? false : true}
-      }, () => console.log(this.state.order))
+      })
      }, 300)      
   }
 
@@ -68,7 +66,6 @@ class ListProducts extends Component {
      })
   }
 
-
   changeBoard = () => {
     this.setState({
       menuActive: this.state.menuActive ? false : true
@@ -77,7 +74,6 @@ class ListProducts extends Component {
   
   render() {
     const { image, category } = this.props.location.state
-
     const renderCards = this.state.list.map( food => {
       if((this.state.orders.map(product => product.title)).includes(food.title)){        
         const currentOrder = this.state.orders.filter(currentFood => currentFood.title === food.title)
@@ -93,7 +89,7 @@ class ListProducts extends Component {
             <div className='black-blur margin-top-16' >
               <div onClick={this.changeBoard} className='wrap-close' >
               </div>
-              <Menu closeBoard={this.changeBoard}></Menu>
+              <Menu closeBoard={this.changeBoard}/>
             </div>
           </Fragment>
         } 
@@ -104,7 +100,7 @@ class ListProducts extends Component {
           <Fragment>
             <OrderLunch>
             {this.state.order.open && 
-             <ContentOrder visibilityMenu={this.orderVisibility}></ContentOrder>
+             <ContentOrder visibilityMenu={this.orderVisibility}/>
               }
             </OrderLunch>
           </Fragment>

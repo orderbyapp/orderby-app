@@ -21,7 +21,7 @@ class OrderButtons extends Component {
         products : this.state.table.orders
       }
       TableService.updateOrder(this.state.table.orderId, order )
-        .then(response =>  console.log(response.data))
+        .then(response => response.data)
         this.setState({
           redirect :  true
         })

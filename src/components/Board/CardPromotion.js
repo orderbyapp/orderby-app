@@ -47,6 +47,18 @@ class CardPromotion extends Component {
                   </div>
                   <div className='price-promotion-card'>{this.props.price} €</div>
               </div>
+              { this.props.ordered && 
+                  <div className='add-promotion-card-selected' >
+                    <div className='button-more-promotions d-flex'>
+                    <i className="material-icons white font-17 edit-white-selected">edit</i>
+                  </div>
+              </div>}
+              { !this.props.ordered &&    
+                  <div className='add-promotion-card' >
+                    <div className='button-more-promotions'>
+                    <span className="more-icon-promotions" >+</span>
+                  </div>
+              </div>}
           </div>
         </div> 
       </div> 

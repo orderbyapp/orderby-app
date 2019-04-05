@@ -18,8 +18,6 @@ class CheckoutForm extends Component {
   async submit(ev) {
     ev.preventDefault();
     let {token} = await this.props.stripe.createToken({name: "Name"});
-    console.log("token", token);
-    console.log("props", this.props)
     let response = await fetch(`http://localhost:3001/orders/${this.props.table.orderId}/charge`, {
       method: "POST",
       headers: {
@@ -95,7 +93,6 @@ class CheckoutForm extends Component {
         </div>
       );
     }
-    
     return (
     <Redirect to='/thankyou'></Redirect>
     );
