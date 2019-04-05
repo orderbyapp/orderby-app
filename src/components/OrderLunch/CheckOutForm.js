@@ -11,15 +11,27 @@ class CheckoutForm extends Component {
     this.submit = this.submit.bind(this);
   }
   state = {
-    completedPay : false
+    completedPay : false,
   }
 
+
   async submit(ev) {
+    ev.preventDefault();
     let {token} = await this.props.stripe.createToken({name: "Name"});
+    console.log("token", token);
+    console.log("props", this.props)
     let response = await fetch(`http://localhost:3001/orders/${this.props.table.orderId}/charge`, {
       method: "POST",
-      headers: {"Content-Type": "text/plain"},
-      body: token.id
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        // name: this.state.name,
+        // email: this.state.email,
+        // description: this.state.productData.description,
+        // amount: this.state.productData.price,
+        token: token.id
+      })
     });
     
   
@@ -49,6 +61,18 @@ class CheckoutForm extends Component {
 
 
   render() {
+
+   
+    //   return (<form onSubmit={this.onSubmit} >
+    //     <span>{ this.state.paymentError }</span><br />
+    //     <input type='text' data-stripe='number' placeholder='credit card number' /><br />
+    //     <input type='text' data-stripe='exp-month' placeholder='expiration month' /><br />
+    //     <input type='text' data-stripe='exp-year' placeholder='expiration year' /><br />
+    //     <input type='text' data-stripe='cvc' placeholder='cvc' /><br />
+    //     <input disabled={this.state.submitDisabled} type='submit' value='Purchase' />
+    //   </form>);
+    // }
+
     if(!this.state.completedPay){
       return (
         <div className="checkout">

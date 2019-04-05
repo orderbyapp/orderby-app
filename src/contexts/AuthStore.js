@@ -23,7 +23,8 @@ class AuthStore extends Component {
     this.setState({ user: user })
   }
 
-  isAuthenticated = () => this.state.user && this.state.user.email;
+  isAuthenticated = () => this.state.user && this.state.user.username;
+
   isWaiter = () => this.state.user && this.state.user.role === 'waiter'
 
   render(){
