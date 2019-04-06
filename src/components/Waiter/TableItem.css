@@ -1,0 +1,27 @@
+.background-card{
+  background-image: linear-gradient(to bottom, rgba(150,150,150, 0.3), #26273d);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.body-category-info{
+  z-index: 1000000;
+  color: white;
+}
+
+.category-card-food{
+  border: none !important;
+  border-radius: 6px !important;
+}
+
+.background-card{
+  border-radius: 6px;
+}
+
+.button-more-promotions{
+  margin-bottom: -1px;
+}

@@ -3,44 +3,47 @@ import {CardElement, injectStripe} from 'react-stripe-elements';
 import Button from '../Utilities/Button';
 import {Redirect} from 'react-router-dom'
 import TableService from "../../services/TableService";
+import PaymentService from "../../services/PaymentService";
 
 class CheckoutForm extends Component {
   constructor(props) {
     super(props);
-    this.submit = this.submit.bind(this);
   }
   state = {
-    completedPay : false,
+    completedPay : false
   }
 
-  async submit(ev) {
+  submit = (ev) => {
+    console.log(this.state.disable)
+    const { table } = this.state
     ev.preventDefault();
-    let {token} = await this.props.stripe.createToken({name: "Name"});
-    if(token){
-      let response = await fetch(`http://localhost:3001/orders/${this.props.table.orderId}/charge`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          token: token.id
+    if (this.props.stripe) {
+        this.props.stripe.createToken().then(({token}) => {
+      if(token){
+        const data = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            token: token.id
+          })
+        }
+        PaymentService.paymentOrder(table.orderId, data)
+        const cleanTable = {
+          ...this.state.table,
+          orders : [],
+          orderId : ''
+        }
+        TableService.cleanTable(cleanTable)
+        
+        this.setState({
+          completedPay : true
         })
-      });
-      
-      if (response.ok) 
-      console.log('compra ok')
-      const cleanTable = {
-        ...this.state.table,
-        orders : [],
-        orderId : ''
       }
-      TableService.cleanTable(cleanTable)
-      
-      this.setState({
-        completedPay : true
-      })
-    }
+    })
   }
+}
 
   componentDidMount = () => {
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
@@ -77,7 +80,7 @@ class CheckoutForm extends Component {
       );
     }
     return (
-    <Redirect to='/thankyou'></Redirect>
+    <Redirect to='/thankyou'/>
     );
   }
 }

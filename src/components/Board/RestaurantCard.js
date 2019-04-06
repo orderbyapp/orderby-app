@@ -15,7 +15,6 @@ class RestaurantCard extends Component {
     }
   }
 
-
   render() {
 
       return (

@@ -90,7 +90,7 @@ class Login extends Component {
   render() {
     const { isAuthenticated, errors, user, touch } = this.state
     if(isAuthenticated) {
-      return (<Redirect to="" />)
+      return (<Redirect to="/waiter" />)
     }
 
     return (

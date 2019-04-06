@@ -17,7 +17,7 @@ class Menu extends Component {
       products : this.state.table.orders
     }
     TableService.updateOrder(this.state.table.orderId, order )
-      .then(response =>  console.log(response.data))
+      .then(response =>  response.data)
   }
 
   postOrder = () => {
@@ -45,7 +45,6 @@ class Menu extends Component {
   componentWillUnmount() {
     this.tableSubscription.unsubscribe();
   }
-
 
   render() {
     return (

@@ -45,7 +45,8 @@ class Board extends Component {
         orders : table.orders,
         restaurant : table.restaurant,
         waiterInfo : table.waiterInfo || false,
-        waiterId : table.restaurant.waiters[0] }, () => {
+        waiterId : table.restaurant.waiters[0] },
+         () => {
           getWaiterById(this.state.waiterId)
           .then(response => this.setState({ waiter: response }))
       })
@@ -60,13 +61,13 @@ class Board extends Component {
     return (
       <Fragment>
         {!this.state.waiterInfo && <Waiter blur={this.state.menuActive} {...this.state.waiter} waiterVisibility={this.waiterVisibility}/>}
-        <MenuTop colorFix ></MenuTop>
+        <MenuTop colorFix />
         { this.state.menuActive && 
           <Fragment>
             <div className='black-blur' >
               <div onClick={this.changeBoard} className='wrap-close' >
               </div>
-              <Menu closeBoard={this.changeBoard}></Menu>
+              <Menu closeBoard={this.changeBoard}/>
             </div>
           </Fragment>
         }
@@ -74,14 +75,14 @@ class Board extends Component {
           <div className='pt-5'>
         
             <img alt='shapepink' src={pinkShape} className='w-100 absolute image-board-bag'></img>
-            <RestaurantCard {...this.state.restaurant} tableNumber={this.state.table.tableNumber}></RestaurantCard>
+            <RestaurantCard {...this.state.restaurant} tableNumber={this.state.table.tableNumber}/>
             
             <div className='container'>
-              <Link to={`/orderboard`}><ButtonOrder color='btn btn-order-by' width='w-100' border='border-pink' text='Ver carta'></ButtonOrder></Link>
+              <Link to={`/orderboard`}><ButtonOrder color='btn btn-order-by' width='w-100' border='border-pink' text='Ver carta'/></Link>
               <PromotionList {...this.state}/>
             </div>
           </div>
-          <ActionsButton activeMenuBoard={this.changeBoard}></ActionsButton>
+          <ActionsButton activeMenuBoard={this.changeBoard}/>
         </div>
       </Fragment>      
     );
