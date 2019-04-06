@@ -16,6 +16,7 @@ import TableRoute from './guards/TableRoute'
 // PageShell from './components/PageShell/PageShell' import { AnimatedSwitch }
 // from 'react-router-transition';
 import WaiterBoard from './components/Waiter/WaiterBoard';
+import TableDetail from './components/Waiter/TableDetail';
 
 class App extends Component {
 
@@ -34,6 +35,7 @@ class App extends Component {
                     <Route exact path="/waiter" component={WaiterBoard}/>
                     <TableRoute exact path='/payment' component={Payment}/>
                     <Route exact path='/table/:id' component={Welcome}/>
+                    <Route exact path='/waiter/:id' component={TableDetail}/>
                     <Route exact path='/loading' component={Loader}/>
                     <TableRoute exact path='/board' component={Board}/>
                     <TableRoute exact path='/orderboard' component={OrderBoard}/>

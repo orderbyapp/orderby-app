@@ -17,6 +17,9 @@ export const getTableById = (id) => http.get(`/tables/${id}`)
 export const getMenuList = (name) => http.get(`/menulist/${name}`)
   .then(response => response )
 
+export const getTables = () => http.get(`/tables`)
+  .then(response => response )
+
 export const newOrder = (id, order) => http.post(`/orders/${id}`, order)
   .then(response => response )
 
@@ -48,6 +51,7 @@ export default {
   onTableChange,
   updateTable,
   updateOrder,
-  cleanTable
+  cleanTable,
+  getTables
 }
 

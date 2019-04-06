@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom'
 import { withAuthConsumer } from '../../contexts/AuthStore'
 import { authService } from '../../services'
 import TableItem from './TableItem';
-
+import { tableService } from '../../services'
 
 class WaiterBoard extends Component {
 
@@ -12,13 +12,16 @@ class WaiterBoard extends Component {
   }
   userSubscription = undefined
 
-
   componentDidMount() {   
       this.userSubscription = authService.onUserChange().subscribe(
         user => this.setState({ 
           waiter: user
         })
       )
+      tableService.getTables()
+      .then(response => this.setState({
+        tables: response.data
+      }))
   }
 
   componentWillUnmount() {   
@@ -26,12 +29,11 @@ class WaiterBoard extends Component {
   }
 
   render() {
-    console.log("state",this.state)
-    if(this.state.waiter.table){
-      const {table} = this.state.waiter
-      const renderCards =  table.map( table => {
-        console.log(table)
-        return <TableItem key={table}/>
+
+    if(this.state.tables){
+      const {tables} = this.state
+      const renderCards =  tables.map( table => {
+        return <TableItem key={table.id} table={table}/>
        })
        return (
          <div>
@@ -43,7 +45,7 @@ class WaiterBoard extends Component {
        </div>
        </div>
        );
-    } else { return null}
+    } else { return null }
   }
 }
 export default withRouter(withAuthConsumer(WaiterBoard))
