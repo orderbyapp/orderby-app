@@ -8,6 +8,7 @@ import Login from './components/Auth/Login'
 import ListProducts from './components/ListProducts/ListProducts';
 import {Switch, Route, Redirect} from 'react-router-dom'
 import Welcome from './components/OnBoard/Welcome'
+import Instructions from './components/OnBoard/InstructionsQr'
 import Toast from './components/Toasts/Toast';
 import Payment from './components/Payment/Payment';
 import Thankyou from './components/Payment/Thankyou'
@@ -31,6 +32,7 @@ class App extends Component {
               className="switch-wrapper"> */}
 
                     <Route exact path='/' component={Intro}/>
+                    <Route exact path='/instructions' component={Instructions}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/waiter" component={WaiterBoard}/>
                     <TableRoute exact path='/payment' component={Payment}/>
