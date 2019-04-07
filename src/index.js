@@ -6,17 +6,20 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'material-icons/iconfont/material-icons.css'
-import { initializeFirebase, askForPermissioToReceiveNotifications } from './push-notification';
+//import { initializeFirebase, askForPermissioToReceiveNotifications } from './push-notification';
 import { BrowserRouter} from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.min.css' 
 import { TableStore } from './contexts/TableStore';
+import { AuthStore } from './contexts/AuthStore';
 
 
 
 ReactDOM.render(
   <BrowserRouter>
     <TableStore>
-      <App />
+        {/* <AuthStore> */}
+          <App />
+        {/* </AuthStore> */}
     </TableStore>
   </BrowserRouter>
 , document.getElementById('root'));

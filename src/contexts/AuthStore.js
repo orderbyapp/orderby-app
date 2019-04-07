@@ -23,16 +23,13 @@ class AuthStore extends Component {
     this.setState({ user: user })
   }
 
-  isAuthenticated = () => this.state.user && this.state.user.username;
-
-  isWaiter = () => this.state.user && this.state.user.role === 'waiter'
+  isAuthenticated = () => this.state.user.username;
 
   render(){
     return(
       <AuthContext.Provider value={{
         user: this.state.user,
-        isAuthenticated: this.isAuthenticated,
-        isWaiter: this.isWaiter,
+        isAuthenticated: this.isAuthenticated
       }}>
         {this.props.children}
       </AuthContext.Provider>
