@@ -6,44 +6,40 @@ import TableService from "../../services/TableService";
 import PaymentService from "../../services/PaymentService";
 
 class CheckoutForm extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     completedPay : false
   }
 
   submit = (ev) => {
-    console.log(this.state.disable)
     const { table } = this.state
     ev.preventDefault();
     if (this.props.stripe) {
         this.props.stripe.createToken().then(({token}) => {
-      if(token){
-        const data = {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            token: token.id
+        if(token){
+          const data = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              token: token.id
+            })
+          }
+          PaymentService.paymentOrder(table.orderId, data)
+          const cleanTable = {
+            ...this.state.table,
+            orders : [],
+            orderId : ''
+          }
+          TableService.cleanTable(cleanTable)
+          
+          this.setState({
+            completedPay : true
           })
         }
-        PaymentService.paymentOrder(table.orderId, data)
-        const cleanTable = {
-          ...this.state.table,
-          orders : [],
-          orderId : ''
-        }
-        TableService.cleanTable(cleanTable)
-        
-        this.setState({
-          completedPay : true
-        })
-      }
-    })
+      })
+    }
   }
-}
 
   componentDidMount = () => {
     this.tableSubscription = TableService.onTableChange().subscribe(table =>

@@ -9,7 +9,7 @@ class TotalCount extends Component {
 
   totalIva = () => {
     const total = this.totalCount()
-    const iva = total * 21 / 100
+    const iva = total * 10 / 100
     return iva.toFixed(2)
   }
 

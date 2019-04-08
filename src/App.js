@@ -13,7 +13,7 @@ import Toast from './components/Toasts/Toast';
 import Payment from './components/Payment/Payment';
 import Thankyou from './components/Payment/Thankyou'
 import TableRoute from './guards/TableRoute'
-import PrivateRoute from './guards/PrivateRoute'
+//import PrivateRoute from './guards/PrivateRoute'
 // import { Forbidden, NotFound } from './components/Errors/Error'; import
 // PageShell from './components/PageShell/PageShell' import { AnimatedSwitch }
 // from 'react-router-transition';

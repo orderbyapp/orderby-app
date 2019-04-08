@@ -4,7 +4,6 @@ import ProductItem from './ProductItem';
 import './Products.css'
 import Menu from '../MenuSide/Menu'
 import ActionsButton from '../MenuSide/ActionButton'
-import Parapicarimg from '../../sources/parapicar.jpg'
 import ProductModalDetail from './ProductModalDetail'
 import TableService from "../../services/TableService";
 import Slidemenu from '../Slidemenu/Slidemenu'

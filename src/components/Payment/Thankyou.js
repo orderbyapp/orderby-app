@@ -3,8 +3,6 @@ import GoodBye from '../../sources/mano.svg'
 import { withRouter } from "react-router-dom";
 import bgColors from '../../sources/fondo-pantalla-pago.svg'
 import './Thankyou.css'
-import TableService from "../../services/TableService";
-
 
 class Thankyou extends Component {
 
@@ -28,8 +26,7 @@ class Thankyou extends Component {
             <div className='bg-payment-thanks' style={{backgroundImage : `url(${bgColors})`}}>
               <div className='container payment-item'>
               <div className='w-100 text-center'>
-              <img className='paymobile-image mb-3 mt-3 wobble-hor-bottom ' src={GoodBye}></img>
-
+              <img className='paymobile-image mb-3 mt-3 wobble-hor-bottom ' src={GoodBye} alt='image1'/>
               </div>
                 <h5 className='mt-4 white '>¡Esperamos volver a verte pronto!</h5>
                 <h5 className=' white enjoyed'>El pago se ha realizado correctamente</h5>

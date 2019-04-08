@@ -1,11 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import OrderItem from './OrderItem';
-import PayItem from './PayItem';
 //import OrderPayed from './OrderIPayed';
 import TotalCount from './TotalCount';
 import OrderButtons from './OrderButtons';
 import TableService from "../../services/TableService";
-import Slidemenu from '../Slidemenu/Slidemenu'
+//import Slidemenu from '../Slidemenu/Slidemenu'
 
 class ContentOrder extends Component {
   state = {
