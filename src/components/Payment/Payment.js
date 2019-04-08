@@ -13,7 +13,7 @@ class Payment extends Component {
   }
 
   onClickBack = () =>{
-    this.props.history.goBack() 
+    this.props.history.push('/board') 
   }
 
   componentDidMount = () => {
