@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import CardPromotion from './CardPromotion';
 import './PromotionList.css'
 import './CardPromotion.css'
@@ -13,17 +13,6 @@ class PromotionList extends Component {
       show : false
     },
     orders : [],
-    order : {
-      open : false
-    },
-  }
-  orderVisibility = () => {
-    setTimeout(() => {
-      this.setState({
-        order : {
-          open: this.state.order.open ? false : true}
-      })
-     }, 300)      
   }
 
   modalDetail = (e) => {
@@ -51,7 +40,6 @@ class PromotionList extends Component {
     })
   }
 
-
   render() {
     if(this.props.orders){
       const renderCards = Promotions.map( food => {
@@ -66,7 +54,7 @@ class PromotionList extends Component {
         <h5>Promociones</h5>
           {renderCards}
           {this.state.modal.show && 
-            <ProductModalDetail {...this.state.modal.product} openMenu={this.orderVisibility} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}/>}
+            <ProductModalDetail {...this.state.modal.product} openMenu={this.props.orderVisibility} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}/>}
         </div>
       );
     }

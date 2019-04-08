@@ -1,17 +1,20 @@
 import React, { Component, Fragment } from 'react';
 import ButtonOrder from '../Utilities/Button'
 import pinkShape from '../../sources/shape-menu.svg'
-import RestaurantCard from './RestaurantCard';
+import RestaurantCard from './RestaurantCard'
 import './Board.css'
-import PromotionList from './PromotionList';
+import PromotionList from './PromotionList'
 import Waiter  from '../WaiterInfo/Waiter'
-import ActionsButton from '../MenuSide/ActionButton';
-import Menu from '../MenuSide/Menu';
-import MenuTop from '../MenuTop/MenuTop';
+import ActionsButton from '../MenuSide/ActionButton'
+import Menu from '../MenuSide/Menu'
+import MenuTop from '../MenuTop/MenuTop'
 import { Link, withRouter } from 'react-router-dom'
-import { withTableConsumer } from '../../contexts/TableStore';
+import { withTableConsumer } from '../../contexts/TableStore'
 import { tableService } from '../../services'
 import { getWaiterById } from '../../services/waitersService'
+import Slidemenu from '../Slidemenu/Slidemenu'
+import OrderLunch from '../OrderLunch/OrderLunch'
+import ContentOrder from '../OrderLunch/ContentOrder'
 
 class Board extends Component {
 
@@ -19,9 +22,21 @@ class Board extends Component {
     menuActive : false,
     table: {},
     waiter: {},
-    restaurant:{}
+    restaurant:{},
+    order : {
+      open : false
+    }
   }
   tableSubscription = undefined
+
+  orderVisibility = () => {
+    setTimeout(() => {
+      this.setState({
+        order : {
+          open: this.state.order.open ? false : true}
+      })
+     }, 300)      
+  }
 
   changeBoard = () => {
     this.setState({
@@ -71,6 +86,16 @@ class Board extends Component {
             </div>
           </Fragment>
         }
+        <div  className={this.state.menuActive ? 'blur' : ''} >
+          <Slidemenu open={this.state.order.open} >
+          <Fragment>
+            <OrderLunch>
+            {this.state.order.open && 
+             <ContentOrder visibilityMenu={this.orderVisibility}/>
+              }
+            </OrderLunch>
+          </Fragment>
+        </Slidemenu>
         <div className={this.state.menuActive ? 'blur' : ''} > 
           <div className='pt-5'>
         
@@ -79,10 +104,11 @@ class Board extends Component {
             
             <div className='container'>
               <Link to={`/orderboard`}><ButtonOrder color='btn btn-order-by' width='w-100' border='border-pink' text='Ver carta'/></Link>
-              <PromotionList {...this.state}/>
+              <PromotionList {...this.state} openMenu={this.orderVisibility}/>
             </div>
           </div>
           <ActionsButton activeMenuBoard={this.changeBoard}/>
+        </div>
         </div>
       </Fragment>      
     );

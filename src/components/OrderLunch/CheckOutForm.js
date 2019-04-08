@@ -14,31 +14,32 @@ class CheckoutForm extends Component {
     const { table } = this.state
     ev.preventDefault();
     if (this.props.stripe) {
-        this.props.stripe.createToken().then(({token}) => {
-        if(token){
-          const data = {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              token: token.id
+        this.props.stripe.createToken()
+        .then(({token}) => {
+          if(token){
+            const data = {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                token: token.id
+              })
+            }
+            PaymentService.paymentOrder(table.orderId, data)
+            const cleanTable = {
+              ...this.state.table,
+              orders : [],
+              orderId : ''
+            }
+            TableService.cleanTable(cleanTable)
+            
+            this.setState({
+              completedPay : true
             })
           }
-          PaymentService.paymentOrder(table.orderId, data)
-          const cleanTable = {
-            ...this.state.table,
-            orders : [],
-            orderId : ''
-          }
-          TableService.cleanTable(cleanTable)
-          
-          this.setState({
-            completedPay : true
-          })
-        }
-      })
-    }
+        })
+      }
   }
 
   componentDidMount = () => {
@@ -50,9 +51,7 @@ class CheckoutForm extends Component {
     this.tableSubscription.unsubscribe();
   }
 
-
   render() {
-
     if(!this.state.completedPay){
       return (
         <div className="checkout">
