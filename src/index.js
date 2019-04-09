@@ -15,7 +15,7 @@ import { AuthStore } from './contexts/AuthStore';
 
 
 ReactDOM.render(
-  <HashRouter basename='/orderby-app'>
+  <HashRouter basename={process.env.PUBLIC_URL} >
     <TableStore>
         {/* <AuthStore> */}
           <App />
