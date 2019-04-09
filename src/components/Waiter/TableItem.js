@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './TableItem.css'
 import {Link} from 'react-router-dom'
-import { tableService } from '../../services'
+// import { tableService } from '../../services'
 
 // pintamos las mesas para hacer luego link
 

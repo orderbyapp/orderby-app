@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import CardPromotion from './CardPromotion';
 import './PromotionList.css'
 import './CardPromotion.css'

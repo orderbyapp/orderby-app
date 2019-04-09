@@ -105,7 +105,7 @@ class ListProducts extends Component {
           </Fragment>
         </Slidemenu>
           <div>
-            <img className='w-100 image-top-list' src={image}></img>
+            <img className='w-100 image-top-list' src={image} alt="top-list"></img>
           </div>
           <div className='pt-3 container'>
             <div className=' text-center '>

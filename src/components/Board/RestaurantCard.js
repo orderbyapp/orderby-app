@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import { withTableConsumer } from '../../contexts/TableStore';
-import { tableService } from '../../services'
-import Skeleton from 'react-skeleton-loader';
+// import { tableService } from '../../services'
+// import Skeleton from 'react-skeleton-loader';
 
 
 class RestaurantCard extends Component {

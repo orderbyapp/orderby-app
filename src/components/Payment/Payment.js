@@ -36,7 +36,7 @@ class Payment extends Component {
 
         <div className='bg-payment'>
           <div className='container payment-item'>
-            <img className='paymobile-image mb-3 mt-3' src={PayMobile}></img>
+            <img className='paymobile-image mb-3 mt-3' src={PayMobile} alt="pay-img"></img>
             <h6 className='mt-4 mb-4 white enjoyed'>¡Esperamos que hayas disfrutado!</h6>
             <PayItem {...this.state}></PayItem>
           </div>
