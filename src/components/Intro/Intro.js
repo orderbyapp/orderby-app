@@ -26,7 +26,6 @@ class Intro extends Component {
                   <img alt='blue-intro' src={blue} className="path-3 scale-in-left "/>
                   <img alt='text-intro' src={text} className="text-intro-logo flip-in-diag-2-br"/>
                 </div>
-                <Link to='/login'>login</Link>
             </React.Fragment>
         );
     }

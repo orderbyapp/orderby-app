@@ -15,13 +15,13 @@ import { AuthStore } from './contexts/AuthStore';
 
 
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL} >
+  <HashRouter basename={process.env.PUBLIC_URL} >
     <TableStore>
         {/* <AuthStore> */}
           <App />
         {/* </AuthStore> */}
     </TableStore>
-  </BrowserRouter>
+  </HashRouter>
 , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
