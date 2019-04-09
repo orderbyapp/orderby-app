@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/perritocalientecliente@2x.ebbd432e.png"
   },
   {
-    "revision": "ea89840a41cecebd0726",
-    "url": "/orderby-app/static/css/main.9dcdfc97.chunk.css"
+    "revision": "2e85452d03fbbb2b7497",
+    "url": "/orderby-app/static/css/main.4d985404.chunk.css"
   },
   {
     "revision": "9c37281efdd1a1a84d4a",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/MaterialIcons-Regular.d41ae58d.ttf"
   },
   {
-    "revision": "d0f5cdcff7d87e2682a6",
-    "url": "/orderby-app/static/js/2.9ed6250b.chunk.js"
+    "revision": "4dfd6156850a0f754f9e",
+    "url": "/orderby-app/static/js/2.8d5b0c6b.chunk.js"
   },
   {
     "revision": "6090a6a032d1d9b9fabe62e06f8f196b",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/pinkshapebg.a5fdc7b5.svg"
   },
   {
-    "revision": "ea89840a41cecebd0726",
-    "url": "/orderby-app/static/js/main.60921d37.chunk.js"
+    "revision": "2e85452d03fbbb2b7497",
+    "url": "/orderby-app/static/js/main.1e0b56f7.chunk.js"
   },
   {
     "revision": "f82c5f5c004bbd629beaa04c86edb2b0",
@@ -100,11 +100,11 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/MaterialIcons-Regular.c38ebd3c.woff"
   },
   {
-    "revision": "d0f5cdcff7d87e2682a6",
-    "url": "/orderby-app/static/css/2.b2fc3c67.chunk.css"
+    "revision": "4dfd6156850a0f754f9e",
+    "url": "/orderby-app/static/css/2.d9f3e441.chunk.css"
   },
   {
-    "revision": "b169e21d67af2d8d7d2ce1c0445dfb39",
+    "revision": "0992b3dfca72ece42f5f15be3ec18dd7",
     "url": "/orderby-app/index.html"
   }
 ];
