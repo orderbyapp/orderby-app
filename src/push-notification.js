@@ -13,7 +13,7 @@ const config = {
 export const initializeFirebase = () => {
   firebase.initializeApp(config);
   navigator.serviceWorker
-    .register('/firebase-messaging-sw.js')
+    .register('../src/sources/firebase-messaging-sw.js')
     .then((registration) => {
       firebase.messaging().useServiceWorker(registration);
   });
@@ -25,7 +25,7 @@ export const askForPermissioToReceiveNotifications = async () => {
     await messaging.requestPermission();
     const token = await messaging.getToken();
     const waiter = {
-      id: "5c992fdaae879b2ab1e92e68", //harcodeado para que funcione, id del camarero
+      id: "5cab814d2f185f2ea8d45b83", //harcodeado para que funcione, id del camarero
       token: token
     }
     console.log('token de usuario: ', token);

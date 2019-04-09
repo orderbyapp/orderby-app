@@ -4,6 +4,7 @@ import { withAuthConsumer } from '../../contexts/AuthStore'
 import { authService } from '../../services'
 import TableItem from './TableItem';
 import { tableService } from '../../services'
+import { initializeFirebase, askForPermissioToReceiveNotifications } from '../../push-notification'
 
 class WaiterBoard extends Component {
 
@@ -22,11 +23,14 @@ class WaiterBoard extends Component {
       .then(response => this.setState({
         tables: response.data
       }))
-  }
+      initializeFirebase();
+      askForPermissioToReceiveNotifications();
+    }
 
   componentWillUnmount() {   
     this.userSubscription.unsubscribe();
   }
+  
 
   render() {
 
