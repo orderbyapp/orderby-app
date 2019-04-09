@@ -43,7 +43,7 @@ class WaiterBoard extends Component {
          <div>
          <h1>mesas</h1>
          <div className='container-top-margin'>
-         <div className='container'>
+         <div className='container row mx-auto'>
          {renderCards}
          </div> 
        </div>
