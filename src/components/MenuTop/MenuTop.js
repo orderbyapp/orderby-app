@@ -87,8 +87,10 @@ class MenuTop extends Component {
           <div><span className="material-icons pink" >arrow_back</span></div>}  
            <div className='flex-and-align'> 
            <span className="step-bg">{getTableNum()}</span> 
-           <span className="material-icons white"><a onClick={this.orderVisibility} // eslint-disable-line react/jsx-no-target-blank
-           >shopping_cart</a></span></div>
+           <span className="material-icons white">
+           {
+              // eslint-disable-line
+            }<a onClick={this.orderVisibility}>shopping_cart</a></span></div>
           </nav>
         </div>
       </div>
