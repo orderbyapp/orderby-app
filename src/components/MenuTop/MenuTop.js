@@ -88,9 +88,9 @@ class MenuTop extends Component {
            <div className='flex-and-align'> 
            <span className="step-bg">{getTableNum()}</span> 
            <span className="material-icons white">
-           {/* <a onClick={this.orderVisibility}>shopping_cart</a> */}
-            </span>
-            </div>
+           {
+              // eslint-disable-line
+            }<a onClick={this.orderVisibility}>shopping_cart</a></span></div>
           </nav>
         </div>
       </div>

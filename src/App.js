@@ -8,7 +8,7 @@ import Login from './components/Auth/Login'
 import ListProducts from './components/ListProducts/ListProducts';
 import {Switch, Route, Redirect} from 'react-router-dom'
 import Welcome from './components/OnBoard/Welcome'
-import Instructions from './components/OnBoard/Instructions'
+import Instructions from './components/OnBoard/InstructionsQr'
 import Toast from './components/Toasts/Toast';
 import Payment from './components/Payment/Payment';
 import Thankyou from './components/Payment/Thankyou'
