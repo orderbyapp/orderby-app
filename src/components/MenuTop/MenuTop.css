@@ -46,7 +46,7 @@ span.step-bg {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .top-menu span{
