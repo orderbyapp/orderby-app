@@ -42,7 +42,7 @@ openImageDialog() {
                     previewStyle={previewStyle}
                     onError={this.handleError}
                     onScan={this.handleScan}
-                  //legacyMode //activar para movil
+                    legacyMode //activar para movil
                 />
                 <p>{this.state.result}</p>
                 <input type="button" value="Submit QR Code" onClick={this.openImageDialog} />
