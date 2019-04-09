@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SphereSpinner from '../sphere/index';
+//import SphereSpinner from '../sphere/index';
 import './Loader.css'
 import text from '../../sources/logo.svg'
 
@@ -16,7 +16,7 @@ class Loader extends Component {
     return (
       <div>
         <div className="intro-bg center-flex bg-loader-intro">
-          <SphereSpinner color={this.state.color} size={100}></SphereSpinner>
+          {/* <SphereSpinner color={this.state.color} size={100}></SphereSpinner> */}
           <img alt='text-intro' src={text} className="text-intro-loading"/>
         </div>
       </div>

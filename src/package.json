@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "@bit/dmitrymorozoff.react-spinners-kit.sphere": "file:./components/sphere"
-  }
-}

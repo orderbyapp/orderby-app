@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'material-icons/iconfont/material-icons.css'
 //import { initializeFirebase, askForPermissioToReceiveNotifications } from './push-notification';
-import { BrowserRouter} from 'react-router-dom'
+import { BrowserRouter, HashRouter} from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.min.css' 
 import { TableStore } from './contexts/TableStore';
 import { AuthStore } from './contexts/AuthStore';
@@ -15,13 +15,13 @@ import { AuthStore } from './contexts/AuthStore';
 
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter basename='/orderby-app'>
     <TableStore>
         {/* <AuthStore> */}
           <App />
         {/* </AuthStore> */}
     </TableStore>
-  </BrowserRouter>
+  </HashRouter>
 , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
