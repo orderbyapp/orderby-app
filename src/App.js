@@ -19,6 +19,8 @@ import TableRoute from './guards/TableRoute'
 // from 'react-router-transition';
 import WaiterBoard from './components/Waiter/WaiterBoard';
 import TableDetail from './components/Waiter/TableDetail';
+import WaiterIntro from './components/Waiter/IntroWaiter';
+
 
 class App extends Component {
 
@@ -36,6 +38,8 @@ class App extends Component {
                     <Route exact path='/instructions' component={Instructions}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/waiter" component={WaiterBoard}/>
+                    <Route exact path="/waiterIntro" component={WaiterIntro}/>
+
                     <TableRoute exact path='/payment' component={Payment}/>
                     <Route exact path='/table/:id' component={Welcome}/>
                     <Route exact path='/waiter/:id' component={TableDetail}/>
