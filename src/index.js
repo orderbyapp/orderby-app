@@ -11,11 +11,12 @@ import { HashRouter} from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.min.css' 
 import { TableStore } from './contexts/TableStore';
 //import { AuthStore } from './contexts/AuthStore';
+import { PUBLIC_URL } from './constants'
 
 
 
 ReactDOM.render(
-  <HashRouter basename={process.env.PUBLIC_URL} >
+  <HashRouter basename={PUBLIC_URL} >
     <TableStore>
         {/* <AuthStore> */}
           <App />
