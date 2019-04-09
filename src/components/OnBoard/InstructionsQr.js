@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 
-
-
 export default class Instructions extends Component {
 
   constructor(props){
