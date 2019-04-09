@@ -3,7 +3,7 @@
   "name":"bebidas",
   "description": "Las mejores cervezas artesanales tiradas",
   "key": 1,
-  "image0": "/categories/bebidas.jpg",
+  "image0": "../sources/categories/bebidas.jpg",
   "image1": "/categories/bebidas@2x.jpg",
   "image3": "/categories/bebidas@3x.jpg"
 },

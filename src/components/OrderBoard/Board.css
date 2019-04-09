@@ -10,6 +10,11 @@
   width: 100vw !important;
   height: 100vh !important;
 }
+.black-blur .wrap-close{
+
+  z-index: 1000000000000000000000000 !important;
+
+}
 
 .container-top-margin{
   padding-top: 70px;
