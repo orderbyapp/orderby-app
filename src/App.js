@@ -15,26 +15,28 @@ import Thankyou from './components/Payment/Thankyou'
 import TableRoute from './guards/TableRoute'
 //import PrivateRoute from './guards/PrivateRoute'
 // import { Forbidden, NotFound } from './components/Errors/Error'; import
-// PageShell from './components/PageShell/PageShell' import { AnimatedSwitch }
-// from 'react-router-transition';
+// PageShell from './components/PageShell/PageShell' 
+import { spring, AnimatedRoute,AnimatedSwitch } from 'react-router-transition';
 import WaiterBoard from './components/Waiter/WaiterBoard';
 import TableDetail from './components/Waiter/TableDetail';
 import WaiterIntro from './components/Waiter/IntroWaiter';
 
 
 class App extends Component {
+    
 
     render() {
         return (
             <div className="App">
                 <Switch>
-                    {/* <AnimatedSwitch
+
+                <Route exact path='/' component={Intro}/>
+                    <AnimatedSwitch
               atEnter={{ opacity: 0 }}
               atLeave={{ opacity: 0 }}
               atActive={{ opacity: 1 }}
-              className="switch-wrapper"> */}
+              className="switch-wrapper">
 
-                    <Route exact path='/' component={Intro}/>
                     <Route exact path='/instructions' component={Instructions}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/waiter" component={WaiterBoard}/>
@@ -51,6 +53,7 @@ class App extends Component {
                     <TableRoute exact path='/thankyou' component={Thankyou}/> {/* <Route exact path="/forbidden" component={Forbidden}/>
                 <Route exact path="/not-found" component={NotFound}/> */}
                     <Redirect to='/'/> {/* </AnimatedSwitch> */}
+                    </AnimatedSwitch>
                 </Switch>
             </div>
         );
