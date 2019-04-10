@@ -20,7 +20,7 @@ class Thankyou extends Component {
             <div className='d-flex  absolute-payment-arrow container mt-4'>
               <span className="material-icons white" onClick={this.goHome} >arrow_back</span>
               <h5 className='white'>Pago vía app</h5>
-              <span className="material-icons pink" >arrow_back</span>
+              <span className="material-icons dark-blue" >arrow_back</span>
             </div>
             <div className='bg-payment-thanks'>
               <div className='container payment-item'>
