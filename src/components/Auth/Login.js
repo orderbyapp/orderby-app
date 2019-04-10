@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import authService from '../../services/AuthService'
+import './Login.css'
 
 //const EMAIL_PATTERN = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
@@ -94,44 +95,46 @@ class Login extends Component {
     }
 
     return (
-      <div className="row justify-content-center mt-5">
-        <div className="col-xs-12 col-sm-4">
+      <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-xs-12 col-sm-8">
+          <p className="">¡Hola de nuevo!</p>
           <form onSubmit={this.handleSubmit}>
-            <div className="mt-10">
+            <div className="mt-100">
               <div className="">
                 <label>Usuario</label>
               </div>
               <input type="text" 
-              className={`w-100 input-special-instruction ${touch.email && errors.email && 'is-invalid'}`} 
+              className={`form-control ${touch.username && errors.username && 'is-invalid'}`} 
               name="username" 
               placeholder="Introduce tu nombre de usuario" 
               onChange={this.handleChange} 
-              value={user.email} 
+              value={user.username} 
               onBlur={this.handleBlur} />
-              <div className="invalid-feedback">{errors.email}</div>
+              <div className="invalid-feedback">{errors.username}</div>
             </div>
-
             <div className="mt-3">
               <div className="">
                 <label>Tu contraseña</label>
               </div>
               <input type="password" 
-              className={`w-100 input-special-instruction ${touch.password && errors.password && 'is-invalid'}`} 
+              className={`form-control ${touch.password && errors.password && 'is-invalid'}`} 
               name="password" 
-              placeholder="Password" 
+              placeholder="Introduce tu contraseña" 
               onChange={this.handleChange} 
               value={user.password} 
               onBlur={this.handleBlur} />
               <div className="invalid-feedback">{errors.password}</div>
             </div>
 
-            <div className="from-actions">
-              <button type="submit" className="btn btn-success btn-block" disabled={!this.isValid()}>Continuar</button>
+            <div className="from-actions mt-5">
+              <button type="submit" className="box-btn" disabled={!this.isValid()}>Continuar</button>
             </div>
           </form>
-          <hr />
-          <p className="text-center"> <Link to="">¿Olvidaste tu contraseña?</Link></p>
+          {/* <hr />
+          <p className="text-center"> <Link to="">¿Olvidaste tu contraseña?</Link></p> */}
         </div>
+      </div>
       </div>
     )
   }
