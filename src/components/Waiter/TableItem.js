@@ -8,7 +8,7 @@ import  Seat  from '../../sources/asiento-orderby.svg'
 class TableItem extends Component {
   render() {
     const {table} = this.props;
-    console.log(table)
+    console.log("table ",table)
     return (
       <div className='col-xl-6 col-lg-6 col-md-6 col-xs-12 center-table'>
         <Link to={{
@@ -36,7 +36,7 @@ class TableItem extends Component {
           <div>{table.title}</div>
           <div className='table-info-inside ml-4'>
             <h6 className='t-d-none dark-blue mt-0 mb-0 pt-0'>Estado: <i>Pedido en Mesa</i></h6>
-            <p className='t-d-none dark-blue mt-0 pt-0'>Ocupada</p>
+            <p className='t-d-none dark-blue mt-0 pt-0'>{table.state}</p>
             <span className='light-grey mt-0 pt-0'>14:06</span>
           </div>
        </div>

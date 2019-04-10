@@ -24,8 +24,8 @@ class WaiterBoard extends Component {
       .then(response => this.setState({
         tables: response.data
       }))
-      initializeFirebase();
-      askForPermissioToReceiveNotifications();
+      // initializeFirebase();
+      // askForPermissioToReceiveNotifications();
     }
 
   componentWillUnmount() {   
@@ -43,10 +43,9 @@ class WaiterBoard extends Component {
        return (
          <div>
            <img className='waiters-top-yellow' src={svgTop}></img>
-<div className='absolute-text-top-waiters text-center'>
-<h3 className='mt-3'>MESAS</h3>
-
-</div>
+            <div className='absolute-text-top-waiters text-center'>
+            <h3 className='mt-3'>MESAS</h3>
+          </div>
          <div className='container-top-margin mt-5'>
          <div className='container row mx-auto mt-5'>
          {renderCards}
