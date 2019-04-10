@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
 import './FoodTypeCard.css'
 import {Link} from 'react-router-dom'
-
+import Skeleton from 'react-skeleton-loader';
 
 class FoodTypeCard extends Component {
+  state = {
+    loaded : false,
+  }
+
+  modalOn = () => {
+    this.props.modalOn({...this.props})
+  }
+
+  componentDidMount = () => {
+    setTimeout(() => {
+        this.setState({loaded: true})
+    }, 1000)
+  }
+
   render() {
+    if (this.state.loaded) {
     return (
       <div>
         <Link to={{ 
@@ -26,6 +41,13 @@ class FoodTypeCard extends Component {
         </Link>
       </div>
     );
+      } else {
+      return (
+        <div className='mt-3'>
+          <Skeleton width='100%' widthRandomness='0' borderRadius='6px' height='192px' color='grey'></Skeleton>
+        </div>
+      )
+  } 
   }
 }
 

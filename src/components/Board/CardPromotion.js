@@ -21,8 +21,8 @@ class CardPromotion extends Component {
       }, () => {
         this.setState({loaded: true})
       })
-  }, 1000)
-}
+    }, 1000)
+  }
 
   render() {
     if (this.state.loaded) {
