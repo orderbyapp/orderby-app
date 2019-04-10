@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './App.css';
 import OrderBoard from './components/OrderBoard/Board';
 import Intro from './components/Intro/Intro'
-import Loader from './components/Loader/Loader'
 import Board from './components/Board/Board'
 import Login from './components/Auth/Login'
 import ListProducts from './components/ListProducts/ListProducts';
@@ -39,7 +38,6 @@ class App extends Component {
                         <Route exact path="/waiterIntro" component={WaiterIntro}/>
                         <Route exact path='/table/:id' component={Welcome}/>
                         <Route exact path='/waiter/:id' component={TableDetail}/>
-                        <Route exact path='/loading' component={Loader}/>
                         <TableRoute exact path='/board' component={Board}/>
                         <TableRoute exact path='/orderboard' component={OrderBoard}/>
                         <TableRoute exact path='/menulist/:name' component={ListProducts}/>
