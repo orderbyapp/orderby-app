@@ -4,12 +4,13 @@
 }
 
 .bg-payment-thanks{
-  background-position:center;
+  background-position:top;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
   position: relative;
+  background: url('https://res.cloudinary.com/dwta0wgpp/image/upload/v1554911985/orderby/fondo-pantalla-pago.jpg')
 }
 
  @-webkit-keyframes wobble-hor-bottom {

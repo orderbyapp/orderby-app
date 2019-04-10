@@ -22,7 +22,7 @@ class Thankyou extends Component {
               <h5 className='white'>Pago vía app</h5>
               <span className="material-icons dark-blue" >arrow_back</span>
             </div>
-            <div className='bg-payment-thanks' style={{backgroundImage : `url(https://res.cloudinary.com/dwta0wgpp/image/upload/v1554911386/orderby/fondo-pantalla-pago.svg)`}}>
+            <div className='bg-payment-thanks'>
               <div className='container payment-item'>
               <div className='w-100 text-center'>
               <img className='paymobile-image mb-3 mt-3 wobble-hor-bottom ' src={GoodBye} alt='image1'/>
