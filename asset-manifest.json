@@ -1,17 +1,17 @@
 {
-  "main.css": "/orderby-app/static/css/main.8d2db14d.chunk.css",
-  "main.js": "/orderby-app/static/js/main.a7c4baa3.chunk.js",
-  "main.js.map": "/orderby-app/static/js/main.a7c4baa3.chunk.js.map",
+  "main.css": "/orderby-app/static/css/main.ca13d6e9.chunk.css",
+  "main.js": "/orderby-app/static/js/main.e9107060.chunk.js",
+  "main.js.map": "/orderby-app/static/js/main.e9107060.chunk.js.map",
   "runtime~main.js": "/orderby-app/static/js/runtime~main.ceb6a7df.js",
   "runtime~main.js.map": "/orderby-app/static/js/runtime~main.ceb6a7df.js.map",
   "static/css/2.8f395154.chunk.css": "/orderby-app/static/css/2.8f395154.chunk.css",
-  "static/js/2.e275b799.chunk.js": "/orderby-app/static/js/2.e275b799.chunk.js",
-  "static/js/2.e275b799.chunk.js.map": "/orderby-app/static/js/2.e275b799.chunk.js.map",
+  "static/js/2.3ad69613.chunk.js": "/orderby-app/static/js/2.3ad69613.chunk.js",
+  "static/js/2.3ad69613.chunk.js.map": "/orderby-app/static/js/2.3ad69613.chunk.js.map",
   "index.html": "/orderby-app/index.html",
-  "precache-manifest.3953db16a725bc089c0a16eec4bd4c2d.js": "/orderby-app/precache-manifest.3953db16a725bc089c0a16eec4bd4c2d.js",
+  "precache-manifest.9868df63831beee1abbd90ca5ab1d130.js": "/orderby-app/precache-manifest.9868df63831beee1abbd90ca5ab1d130.js",
   "service-worker.js": "/orderby-app/service-worker.js",
   "static/css/2.8f395154.chunk.css.map": "/orderby-app/static/css/2.8f395154.chunk.css.map",
-  "static/css/main.8d2db14d.chunk.css.map": "/orderby-app/static/css/main.8d2db14d.chunk.css.map",
+  "static/css/main.ca13d6e9.chunk.css.map": "/orderby-app/static/css/main.ca13d6e9.chunk.css.map",
   "static/media/material-icons.css": "/orderby-app/static/media/MaterialIcons-Regular.d41ae58d.ttf",
   "static/media/asiento-orderby.svg": "/orderby-app/static/media/asiento-orderby.cc572f27.svg",
   "static/media/camarero.png": "/orderby-app/static/media/camarero.1eba1efe.png",
@@ -28,5 +28,6 @@
   "static/media/perritocalientecliente@2x.png": "/orderby-app/static/media/perritocalientecliente@2x.ebbd432e.png",
   "static/media/pinkshapebg.svg": "/orderby-app/static/media/pinkshapebg.a5fdc7b5.svg",
   "static/media/shape-menu.svg": "/orderby-app/static/media/shape-menu.b83d8710.svg",
-  "static/media/vectorpaint.svg": "/orderby-app/static/media/vectorpaint.ec6a3023.svg"
+  "static/media/vectorpaint.svg": "/orderby-app/static/media/vectorpaint.ec6a3023.svg",
+  "static/media/yellow-waiters.svg": "/orderby-app/static/media/yellow-waiters.d11c1002.svg"
 }
