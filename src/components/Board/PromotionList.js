@@ -54,7 +54,7 @@ class PromotionList extends Component {
         <h5>Promociones</h5>
           {renderCards}
           {this.state.modal.show && 
-            <ProductModalDetail {...this.state.modal.product} openMenu={this.props.orderVisibility} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}/>}
+            <ProductModalDetail classMargin={'margin-left-15'} {...this.state.modal.product} openMenu={this.props.orderVisibility} {...this.props} closeModal={this.closeModal} productDetail={this.state.modal.product}/>}
         </div>
       );
     }

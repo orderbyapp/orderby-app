@@ -160,7 +160,7 @@ class ProductModalDetail extends Component {
   render() {
     const { product } = this.state;
     return (      
-      <div className={`modal-detail ${this.state.class}`}>   
+      <div className={`modal-detail ${this.state.class} ${this.props.classMargin}`}>   
         <div className='div-image-detail' style={{backgroundImage: `url(${product.image0})`}}>
           <div className='bg-image-detail-color'>     
           </div>
