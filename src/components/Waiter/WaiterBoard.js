@@ -15,23 +15,23 @@ class WaiterBoard extends Component {
   userSubscription = undefined
 
   componentDidMount() {   
-      this.userSubscription = authService.onUserChange().subscribe(
-        user => this.setState({ 
-          waiter: user
-        })
-      )
-      tableService.getTables()
-      .then(response => this.setState({
-        tables: response.data
-      }))
-      // initializeFirebase();
-      // askForPermissioToReceiveNotifications();
-    }
-
-  componentWillUnmount() {   
-    this.userSubscription.unsubscribe();
+    this.userSubscription = authService.onUserChange().subscribe(
+      user => this.setState({ 
+        waiter: user
+      })
+    )
+    tableService.getTables()
+    .then(response => this.setState({
+      tables: response.data
+    }))
+    // initializeFirebase();
+    // askForPermissioToReceiveNotifications();
   }
-  
+
+componentWillUnmount() {   
+  this.userSubscription.unsubscribe();
+}
+
 
   render() {
 

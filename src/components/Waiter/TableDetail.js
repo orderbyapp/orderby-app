@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
 import './TableItem.css'
 
-// esta será para el detalle de la mesa con su order y tal
+
 
 class TableDetail extends Component {
-  
+// state = {
+//   table : {}
+// }
+//   componentDidMount() {   
+//     this.setState={
+//       table : this.props.table
+//     }
+//   }
+
+
 
   render() {
     const {table} = this.props.location.state;
+    const order = table.orders.filter(order => order.kitchenStatus !== 'pending')[0]
+    console.log(order)
     return (
       <div>
        
@@ -19,6 +30,7 @@ class TableDetail extends Component {
             <h4 className='pb-0 mb-0'>Mesa {table.tableNumber}</h4>
             <h4 className='pb-0 mb-0'>Comensales {table.diners}</h4>
             <p className="card-text">Position {table.position}</p>
+            <p>{order.bill}</p>
           </div>
         </div>
       </div>
