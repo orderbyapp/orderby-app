@@ -3,7 +3,7 @@ import { withTableConsumer } from '../contexts/TableStore';
 import { Redirect, Route } from 'react-router-dom';
 
 const TableRoute = ({component: Component, isTable, ...rest}) => {
-  if (!isTable()) return <Redirect to="/" />;
+  if (!isTable()) return <Redirect to="/instructions" />;
   return (
     <Route {...rest} render={ (props) => {
         return (<Component {...props} />);

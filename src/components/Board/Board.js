@@ -8,7 +8,7 @@ import Waiter  from '../WaiterInfo/Waiter'
 import ActionsButton from '../MenuSide/ActionButton'
 import Menu from '../MenuSide/Menu'
 import MenuTop from '../MenuTop/MenuTop'
-import { Link, withRouter } from 'react-router-dom'
+import { Link, withRouter, Redirect } from 'react-router-dom'
 import { withTableConsumer } from '../../contexts/TableStore'
 import { tableService } from '../../services'
 import { getWaiterById } from '../../services/waitersService'
@@ -73,6 +73,9 @@ class Board extends Component {
   }
 
   render() {
+    if(this.state.table === {}){
+        return (<Redirect to='/instructions'></Redirect>)
+    } else{
     return (
       <Fragment>
         {!this.state.waiterInfo && <Waiter blur={this.state.menuActive} {...this.state.waiter} waiterVisibility={this.waiterVisibility}/>}
@@ -111,7 +114,7 @@ class Board extends Component {
         </div>
         </div>
       </Fragment>      
-    );
+    )};
   }
 }
 export default withRouter(withTableConsumer(Board))
