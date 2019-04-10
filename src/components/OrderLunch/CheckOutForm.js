@@ -30,7 +30,8 @@ class CheckoutForm extends Component {
             const cleanTable = {
               ...this.state.table,
               orders : [],
-              orderId : ''
+              orderId : '',
+              payStatus : 'payed'
             }
             TableService.cleanTable(cleanTable)
             
@@ -75,7 +76,11 @@ class CheckoutForm extends Component {
       );
     }
     return (
-    <Redirect to='/thankyou'/>
+    <Redirect to={{
+      pathname: '/thankyou',
+      state: {
+        table: this.state.table
+      } }}/>
     );
   }
 }

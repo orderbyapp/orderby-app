@@ -18,6 +18,7 @@ class TableStore extends Component {
   componentDidMount() {
     this.tableChangeSubscription = tableService.onTableChange()
       .subscribe(table => this.setState({ table: table }));
+      console.log("did ", this.state)
   }
 
   componentWillUnmount() {
@@ -29,12 +30,14 @@ class TableStore extends Component {
   }
 
   isTable = () => this.state.table.id
+  isPayed = () => this.state.table.payStatus === "payed"
 
   render() {
     return (
       <TableContext.Provider value={{
         table: this.state.table,
-        isTable: this.isTable
+        isTable: this.isTable,
+        isPayed: this.isPayed
       }}>
         {this.props.children}
       </TableContext.Provider>
