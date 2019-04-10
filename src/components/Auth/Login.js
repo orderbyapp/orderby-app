@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import authService from '../../services/AuthService'
 import './Login.css'
+import svgTop from '../../sources/yellow-waiters.svg'
+
 
 //const EMAIL_PATTERN = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
@@ -95,9 +97,13 @@ class Login extends Component {
     }
 
     return (
+    <div>
+      <img className='waiters-top-yellow' src={svgTop}></img>
+      <div className='absolute-text-top-waiters text-center'>
+      </div>
       <div className="container">
       <div className="row justify-content-center">
-        <div className="col-xs-12 col-sm-8">
+        <div className="col-xs-12 col-sm-8 center-form-login">
           <p className="">¡Hola de nuevo!</p>
           <form onSubmit={this.handleSubmit}>
             <div className="mt-100">
@@ -128,14 +134,13 @@ class Login extends Component {
             </div>
 
             <div className="from-actions mt-5">
-              <button type="submit" className="box-btn" disabled={!this.isValid()}>Continuar</button>
+              <button type="submit" className="box-btn p-2" disabled={!this.isValid()}>Continuar</button>
             </div>
           </form>
-          {/* <hr />
-          <p className="text-center"> <Link to="">¿Olvidaste tu contraseña?</Link></p> */}
         </div>
       </div>
-      </div>
+    </div>
+  </div>
     )
   }
 }

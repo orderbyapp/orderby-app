@@ -5,6 +5,7 @@ import { authService } from '../../services'
 import TableItem from './TableItem';
 import { tableService } from '../../services'
 import { initializeFirebase, askForPermissioToReceiveNotifications } from '../../push-notification'
+import svgTop from '../../sources/yellow-waiters.svg'
 
 class WaiterBoard extends Component {
 
@@ -41,9 +42,13 @@ class WaiterBoard extends Component {
        })
        return (
          <div>
-         <h1>mesas</h1>
-         <div className='container-top-margin'>
-         <div className='container row mx-auto'>
+           <img className='waiters-top-yellow' src={svgTop}></img>
+<div className='absolute-text-top-waiters text-center'>
+<h3 className='mt-3'>MESAS</h3>
+
+</div>
+         <div className='container-top-margin mt-5'>
+         <div className='container row mx-auto mt-5'>
          {renderCards}
          </div> 
        </div>
