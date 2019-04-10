@@ -165,9 +165,9 @@ class ProductModalDetail extends Component {
           <div className='bg-image-detail-color'>     
           </div>
         </div>
-        <button className='button-close-modal' onClick={this.closeModal}>
+        <a className='button-close-modal mr-2' onClick={this.closeModal}>
           <span className="material-icons white close-menu-content">clear</span>
-        </button> 
+        </a> 
         <div className='mt-4'>
           <h5 className='product-title-modal'>{product.title}</h5>
         </div>
