@@ -30,7 +30,7 @@ class TableItem extends Component {
         <div className='status-sideBar'></div>
           <div className='ml-4 pt-2 info-table-top'>
           <i className="material-icons font-size-17">supervisor_account</i>
-          <div className='add-promotion-card'><div className='button-more-promotions'><span className="more-icon-promotions ">+</span></div></div>
+          <div className='add-costumer-card'><div className='button-more-promotions'><span className="more-icon-promotions ">+</span></div></div>
           <h2 className='numbertable'>{table.tableNumber}</h2>
           </div>
           <div>{table.title}</div>
