@@ -3,43 +3,33 @@
   "name":"bebidas",
   "description": "Las mejores cervezas artesanales tiradas",
   "key": 1,
-  "image0": "/categories/bebidas.jpg",
-  "image1": "/categories/bebidas@2x.jpg",
-  "image3": "/categories/bebidas@3x.jpg"
+  "image0": "https://res.cloudinary.com/dc94hgijj/image/upload/v1554912061/order-by/bebidas.jpg"
 },
 {
   "title": "Para picar",
   "name":"picar",
   "description": "Algo para compartir en la mejor compañía",
   "key": 2,
-  "image0": "/categories/parapicar.jpg",
-  "image1": "/categories/parapicar@2x.jpg",
-  "image3": "/categories/parapicar@3x.jpg"
+  "image0": "https://res.cloudinary.com/dc94hgijj/image/upload/v1554912061/order-by/parapicar.jpg"
 },
 {
   "title": "Platos healty",
   "name":"healty",
   "description": "Verde que te quiero verde, lo mejor para cuidarse",
   "key": 3,
-  "image0": "/categories/platosfrios.jpg",
-  "image1": "/categories/platosfrios@2x.jpg",
-  "image3": "/categories/platosfrios@3x.jpg"
+  "image0": "https://res.cloudinary.com/dc94hgijj/image/upload/v1554912061/order-by/platosfrios.jpg"
 },
 {
   "title": "Nuestros platos estrella",
   "name":"estrella",
   "description": "Los mejores platos solo para ti, a nuestra manera",
   "key": 4,
-  "image0": "/categories/burguer-menu.jpg",
-  "image1": "/categories/burguer-menu@2x.jpg",
-  "image3": "/categories/burguer-menu@3x.jpg"
+  "image0": "https://res.cloudinary.com/dc94hgijj/image/upload/v1554912061/order-by/burguer-menu.jpg"
 },
 {
   "title": "Happy ending",
   "name":"postres",
   "description": "Para terminar un toque dulce, endúlzate la vida",
   "key": 5,
-  "image0": "/categories/happyending.jpg",
-  "image1": "/categories/happyending@2x.jpg",
-  "image3": "/categories/happyending@3x.jpg"
+  "image0": "https://res.cloudinary.com/dc94hgijj/image/upload/v1554912061/order-by/happyending.jpg"
 }]
