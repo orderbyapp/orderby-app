@@ -2,7 +2,18 @@
   color: white;
   text-align: center;
 }
-.bg-payment{
+.btn-pink{
+  background-color:#fe3569;
+}
+
+.qr-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.bg-qr{
   background-color: #25273d;
   width: 100vw;
   height: 100vh;
@@ -13,5 +24,18 @@
   font-size: 18px;
   text-align: center;
   font-weight: 300;
+}
+
+.payment-item{
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  align-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  vertical-align: middle;
 }
 

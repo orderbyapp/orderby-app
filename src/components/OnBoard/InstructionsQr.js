@@ -14,9 +14,12 @@ class Instructions extends Component {
     // this.openImageDialog = this.openImageDialog.bind(this)
   }
   handleScan(data){
-    this.setState({
-      result: data,
-    })
+    if(data !== null){
+      this.setState({
+        result: data,
+      })
+    }
+   
   }
   handleError(err){
     console.error(err)
@@ -28,13 +31,14 @@ class Instructions extends Component {
     const previewStyle = {
       height: 240,
       width: 320,
+      marginBottom: 100,
     }
  
     return(
-      <div className='bg-payment'>
-      <div className='container payment-item'>
-        <h6 className='mt-4 mb-4 white enjoyed'>Escanea el código QR que hay en la mesa</h6>  
-        <div className='container payment-item'>   
+      <div className='bg-qr'>
+      <div className='container qr-item'>
+        <h6 className='pt-4 mb-4 white enjoyed'>Escanea el <strong>código QR</strong> que hay sobre la mesa para comenzar</h6>  
+        <div className='container '>   
         <QrReader
           ref="qrReader1"
           delay={this.state.delay}
@@ -44,11 +48,12 @@ class Instructions extends Component {
           // legacyMode="true"
           />
           
-
-        <a className='mt-4 mb-4 white enjoyed result-qr' href={this.state.result}>{this.state.result}</a>
+          <a className='btn w-100 btn-pink mt-4 mb-4 white enjoyed result-qr' href={this.state.result}>Empieza a pedir!</a>
+          <p className='white'>{this.state.result}</p>
           </div>
         {/* <input type="button" value="Submit QR Code" onClick={this.openImageDialog} /> */}
         </div>
+
     </div>
     )
   }
