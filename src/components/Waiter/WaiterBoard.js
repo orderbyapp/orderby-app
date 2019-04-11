@@ -10,13 +10,7 @@ class WaiterBoard extends Component {
 
   state = {
    waiter: {},
-   restaurant: {},
-   table0: {},
-   table1: {},
-   table2: {},
-   table3: {},
-   table4: {},
-   table5: {},
+   restaurant: {}
   }
   userSubscription = undefined
   restaurantSubscription = undefined

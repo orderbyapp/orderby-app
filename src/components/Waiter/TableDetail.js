@@ -17,6 +17,7 @@ class TableDetail extends Component {
       .then(response => {
         this.setState({ 
           restaurant: response.table,
+          table: response,
           quantity: response.diners })
       }
     )
@@ -68,9 +69,9 @@ class TableDetail extends Component {
           updateWaiterTableRest(this.state.table.id, newTable)
       }
     this.setState({ isBack : true})
-    const newRest = {...this.state}
-    console.log("rest ", newRest)
-    updateRestaurant(newRest)
+    // const newRest = {...this.state}
+    // console.log("rest ", newRest)
+    // updateRestaurant(newRest)
   }
 
 
