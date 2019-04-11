@@ -23,7 +23,7 @@ class WaiterIntro extends Component {
                   <img alt='boy-intro' src={boy} className="boy slide-in-blurred-bl"/>
                   <img alt='yellow-intro' src={yellow} className="path-6 scale-in-tr"/>
                   <img alt='blue-intro' src={blue} className="path-3 scale-in-left "/>
-                  <img alt='text-intro' src={text} className="text-intro-logo flip-in-diag-2-br"/>
+                  <img alt='text-intro-waiter' src={text} className="text-intro-logo flip-in-diag-2-br"/>
                 </div>
             </React.Fragment>
         );

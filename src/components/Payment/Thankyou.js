@@ -27,7 +27,7 @@ class Thankyou extends Component {
               <div className='w-100 text-center'>
               <img className='paymobile-image mb-3 mt-3 wobble-hor-bottom ' src={GoodBye} alt='image1'/>
               </div>
-                <h5 className='mt-4 white '>¡Esperamos volver a verte pronto!</h5>
+                <h5 className='mt-4 white text-center'>¡Esperamos volver a verte pronto!</h5>
                 <h5 className=' white enjoyed'>El pago se ha realizado correctamente</h5>
               </div>
             </div>
