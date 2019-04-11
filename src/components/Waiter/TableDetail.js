@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
 import './TableItem.css'
-import {getTableById, updateWaiterTable, updateOrder} from "../../services/TableService";
+import { getTableByIdRest, updateWaiterTableRest, 
+  updateOrderRest, updateRestaurant } from "../../services/RestaurantService";
 import { Redirect } from 'react-router-dom';
 
 class TableDetail extends Component {
   state = {
+    restaurant: {},
     table : {},
     quantity : '',
     isBack : false,
   }
 
   componentDidMount = () => {
-    getTableById(this.props.match.params.id)
+    getTableByIdRest(this.props.match.params.id)
       .then(response => {
         this.setState({ 
-          table: response,
+          restaurant: response.table,
           quantity: response.diners })
       }
     )
+    // const newRest = {...this.state}
+    // console.log("rest ", newRest)
+    // updateRestaurant(newRest)
   }
 
   handleQuantity = (e) => {
@@ -33,34 +38,44 @@ class TableDetail extends Component {
     }
   }
   onClickBack = () =>{
-    if( this.state.quantity === ""){
+    const {table} = this.state
+    if(this.state.quantity === 0 && table.orders.length === 0){
       this.setState({ isBack : true})
+      const newTable = { 
+        diners : this.state.quantity,
+        state : "Libre",
+      }
+      updateWaiterTableRest(table.id, newTable)
     }
     else if(this.state.quantity > 0){
       const newTable = {
-        state : "occupied",
+        state : "Ocupada",
         diners : this.state.quantity
       }
-      updateWaiterTable(this.state.table.id, newTable)
+      updateWaiterTableRest(table.id, newTable)
     } else {
           const orderDelivered = { 
             kitchenStatus : "delivered"
           }
-          const order = this.table.orders && 
-          this.table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+          const order = table.orders.length > 0 && 
+          table.orders.filter(order => order.kitchenStatus === 'pending')[0]
 
-          updateOrder(order.id, orderDelivered)
+          order && updateOrderRest(order.id, orderDelivered)
           const newTable = {
-            state : "free",
+            state : "Libre",
             diners : this.state.quantity
           }
-          updateWaiterTable(this.state.table.id, newTable)
+          updateWaiterTableRest(this.state.table.id, newTable)
       }
     this.setState({ isBack : true})
+    const newRest = {...this.state}
+    console.log("rest ", newRest)
+    updateRestaurant(newRest)
   }
 
 
   render() {
+    // console.log("detail ", this.state)
     if(this.state.isBack){
       return <Redirect to='/waiter'/>
     }
@@ -171,7 +186,6 @@ class TableDetail extends Component {
           <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion">
             <div className="card-body">
             {order && order.products.map(e => { if(e.instruction !== '') {return <h2 key={e.instruction}>{e.instruction}</h2>} })}
-
             </div>
           </div>
         </div>

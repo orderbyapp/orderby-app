@@ -41,7 +41,6 @@ class ContentOrder extends Component {
     })
   }
 
-
   deleteProduct = (name) => {
     const newTable = {
       ...this.state.table,
