@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
-
+import './InstructionsQr.css'
 class Instructions extends Component {
 
   constructor(props){
@@ -40,7 +40,10 @@ class Instructions extends Component {
           onScan={this.handleScan}
           // legacyMode="true"
           />
+          <div className="result-qr">
+
         <a href={this.state.result}>{this.state.result}</a>
+          </div>
         {/* <input type="button" value="Submit QR Code" onClick={this.openImageDialog} /> */}
       </div>
     )
