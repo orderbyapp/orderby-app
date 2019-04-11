@@ -8,7 +8,7 @@ import  Seat  from '../../sources/asiento-orderby.svg'
 class TableItem extends Component {
   render() {
     const {table} = this.props;
-    console.log("table ",table)
+    //console.log("table ",table)
     return (
       <div className='col-xl-6 col-lg-6 col-md-6 col-xs-12 center-table'>
         <Link to={{

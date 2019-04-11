@@ -9,11 +9,9 @@ class Instructions extends Component {
       delay: 100,
       result: 'No result',
       buttonActive: false,
-
     }
  
     this.handleScan = this.handleScan.bind(this)
-    // this.openImageDialog = this.openImageDialog.bind(this)
   }
   handleScan(data){
     if(data !== null){
@@ -23,14 +21,11 @@ class Instructions extends Component {
 
       })
     }
-   
   }
   handleError(err){
     console.error(err)
   }
-  // openImageDialog() {
-  //   this.refs.qrReader1.openImageDialog()
-  // }
+  
   render(){
     const previewStyle = {
       height: 240,
@@ -49,13 +44,11 @@ class Instructions extends Component {
           style={previewStyle}
           onError={this.handleError}
           onScan={this.handleScan}
-          // legacyMode="true"
           />
           
           <a className='btn w-100 btn-pink mt-4 mb-4 white enjoyed result-qr' href={this.state.buttonActive && this.state.result}>Empieza a pedir!</a>
          {this.state.buttonActive && <p className='white text-center message-qr'>Código QR leído correctamente!</p>}
           </div>
-        {/* <input type="button" value="Submit QR Code" onClick={this.openImageDialog} /> */}
         </div>
 
     </div>

@@ -24,13 +24,13 @@ class WaiterBoard extends Component {
     .then(response => this.setState({
       tables: response.data
     }))
-    initializeFirebase();
-    askForPermissioToReceiveNotifications();
+    // initializeFirebase();
+    // askForPermissioToReceiveNotifications();
   }
 
-componentWillUnmount() {   
-  this.userSubscription.unsubscribe();
-}
+  componentWillUnmount() {   
+    this.userSubscription.unsubscribe();
+  }
 
 
   render() {

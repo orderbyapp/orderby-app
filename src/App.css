@@ -7,7 +7,12 @@ body{
 .grey{
   color: #d8d8d8;
 }
-
+.green{
+  color: #abbb00;
+}
+.orange{
+  color: rgba(230, 152, 7, 0.918);
+}
 .t-d-none{
   text-decoration: none;
 }
