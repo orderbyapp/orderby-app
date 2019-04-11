@@ -18,6 +18,9 @@
   animation-delay: 0.8s !important;
   -webkit-animation-delay: 0.8s !important;
 }
+.black{
+  color: rgba(0,0,0,0.8) !important;
+}
 
 .path-3 {
   position: absolute;

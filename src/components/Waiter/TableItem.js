@@ -5,9 +5,7 @@ import {Link} from 'react-router-dom'
 import  Seat  from '../../sources/asiento-orderby.svg'
 
 class TableItem extends Component {
-  // state = {
-  //   table: {}
-  //  }
+
   //  tableSubscription = undefined
 
   // componentDidMount() {   

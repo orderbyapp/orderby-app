@@ -7,7 +7,7 @@ class TableDetail extends Component {
   state = {
     table : {},
     quantity : '',
-    isBack : false
+    isBack : false,
   }
 
   componentDidMount = () => {
@@ -33,36 +33,28 @@ class TableDetail extends Component {
     }
   }
   onClickBack = () =>{
-    const {table} = this.state
-    if( this.state.quantity === 0 && table.orders.length === 0){
-      this.setState({ 
-        isBack : true
-      })
-      const newTable = { 
-        diners : this.state.quantity,
-        state : "Libre",
-      }
-      updateWaiterTable(table.id, newTable)
+    if( this.state.quantity === ""){
+      this.setState({ isBack : true})
     }
     else if(this.state.quantity > 0){
       const newTable = {
-        state : "Ocupada",
+        state : "occupied",
         diners : this.state.quantity
       }
-      updateWaiterTable(table.id, newTable)
+      updateWaiterTable(this.state.table.id, newTable)
     } else {
           const orderDelivered = { 
             kitchenStatus : "delivered"
           }
-          const order = table.orders.length > 0 && 
-          table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+          const order = this.table.orders && 
+          this.table.orders.filter(order => order.kitchenStatus === 'pending')[0]
 
-          order && updateOrder(order.id, orderDelivered)
+          updateOrder(order.id, orderDelivered)
           const newTable = {
-            state : "Libre",
-            diners : this.state.quantity,
+            state : "free",
+            diners : this.state.quantity
           }
-          updateWaiterTable(table.id, newTable)
+          updateWaiterTable(this.state.table.id, newTable)
       }
     this.setState({ isBack : true})
   }
@@ -109,9 +101,8 @@ class TableDetail extends Component {
             </div>
               <hr></hr>
               <h5>Estado de pedido: 
-              {!order && " En proceso"}
               {(order && order.kitchenStatus === "pending") && " En cocina"}
-              
+              {(order && order.kitchenStatus === "delivered") && " En mesa"}
               </h5>
               <hr></hr>
               { table.state === "free" && <h5><i className="fa fa-circle green"></i> Libre</h5>}
@@ -131,8 +122,41 @@ class TableDetail extends Component {
           </div>
           <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
             <div className="card-body">
-            { order && order.products.map(e =>{ 
-              return <h2 key={e.title}>{e.quantity} x {e.title}</h2>} )}
+            { order && order.products.map(product =>{ 
+              return <div className={`${(this.state.currentTarget === product.title) ? this.state.fadeOut : ''} list-object-order`} key={product.id}>
+              <div className=" item-object-flex border-light">
+                <div>
+                  <div className=" white item-object-flex">
+                    <div className="image-product-order-item">
+                      <img
+                        className="image-product-order-item"
+                        alt={product.title}
+                        src={product.image0}
+                      />
+                    </div>
+                    <div className="quantity-product-order-item ml-3 black">
+                      x <span className='black'>{product.quantity}</span>
+                    </div>
+                    <div className="quantity-product-order-item ml-3 black">
+                      <span className="description-product-order black">
+                        {product.title}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {this.props.editing && 
+                <span className={`black ${'slide-in-blurred-right'} step-bg-2`}>
+                  <i data-name={product.title} className="material-icons black font-17 close-editing-button" onClick={this.handleClickDelete}>close</i>
+                 </span>}
+                {!this.props.editing && <div className="price-object-order black ">{product.price * product.quantity}€</div>}              </div>
+                <hr></hr>
+
+            </div>})
+
+          }
+
+
+          
             </div>
           </div>
         </div>
@@ -152,6 +176,7 @@ class TableDetail extends Component {
           </div>
         </div>
       </div>
+      
       </div>
     );
   } else { 
