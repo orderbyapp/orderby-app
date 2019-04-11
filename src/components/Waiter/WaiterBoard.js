@@ -4,7 +4,7 @@ import { withAuthConsumer } from '../../contexts/AuthStore'
 import { authService } from '../../services'
 import TableItem from './TableItem';
 import { tableService } from '../../services'
-import { initializeFirebase, askForPermissioToReceiveNotifications } from '../../push-notification'
+//import { initializeFirebase, askForPermissioToReceiveNotifications } from '../../push-notification'
 import svgTop from '../../sources/yellow-waiters.svg'
 
 class WaiterBoard extends Component {
@@ -39,7 +39,7 @@ class WaiterBoard extends Component {
     if(this.state.tables){
       const {tables} = this.state
       const renderCards =  tables.map( table => {
-        return <TableItem key={table.id} table={table}/>
+        return <TableItem key={table.id} table={table} status={table.state}/>
        })
        return (
          <div>

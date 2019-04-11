@@ -17,15 +17,7 @@
   position: absolute;
   width: 16px;
   height: 180px;
-  background-color: blue;
-}
-
-.occupied {
   background-color: #fe3569;
-}
-
-.free {
-  background-color: #abbb00;
 }
 
 .body-category-info {
@@ -60,7 +52,7 @@
   justify-content: row;
   justify-content: space-around;
 }
-.mesa {
+.mesa-ocupada {
   position: relative;
   border-radius: 4px;
   width: 300px;
@@ -70,6 +62,18 @@
   -moz-box-shadow: 0px 0px 23px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 23px -10px rgba(0, 0, 0, 0.75);
 }
+
+.mesa-libre {
+  position: relative;
+  border-radius: 4px;
+  width: 300px;
+  height: 180px;
+  background-color: rgb(187, 216, 238);
+  -webkit-box-shadow: 0px 0px 23px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 23px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 23px -10px rgba(0, 0, 0, 0.75);
+}
+
 .asiento-1 {
   width: 100px;
   height: 30px;

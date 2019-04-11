@@ -41,27 +41,41 @@ class TableItem extends Component {
         <img src={Seat}></img>
        </div>
         </div>
+            { this.props.status === "Ocupada" &&
+          
+          
+          <div className='mesa-ocupada'>
+          <div className='status-sideBar'></div>
+            <div className='ml-4 pt-2 info-table-top'>
+            <i className="material-icons font-size-17">supervisor_account</i>{table.diners}
+            <div className='add-costumer-card'><div className='button-more-promotions'><span className="more-icon-promotions ">+</span></div></div>
+            <h2 className='numbertable'>{table.tableNumber}</h2>
+            </div>
+            <div>{table.title}</div>
+            <div className='table-info-inside ml-4'>
+              <h6 className='t-d-none dark-blue mt-0 mb-0 pt-0'>Estado: 
+              <i>{table.orders && table.orders.kitchenStatus}</i></h6>
+              <p className='t-d-none dark-blue mt-0 pt-0'>{table.state}</p>
+              <span className='light-grey mt-0 pt-0'>14:06</span>
+            </div>
+         </div>
+          }
+          {
+            this.props.status === "Libre" &&    
+            <div className='mesa-libre'>
+              <div className='ml-4 pt-2 info-table-top'>
+              <h2 className='numbertable mt-3'>{table.tableNumber}</h2>
+              </div>
+              <div>{table.title}</div>
+              <div className='table-info-inside ml-4'>
+                <h6 className='t-d-none dark-blue mt-0 mb-0 pt-0'>Estado: 
+                <i>{table.orders && table.orders.kitchenStatus}</i></h6>
+                <p className='t-d-none dark-blue mt-0 pt-0'>{table.state}</p>
+              </div>
+           </div>
+          }
 
-        <div className='mesa'>
-          {table.state === "Libre" &&
-            <div className='status-sideBar free'></div>
-          }
-          {table.state === "Ocupada" &&
-            <div className='status-sideBar occupied'></div>
-          }
-          <div className='ml-4 pt-2 info-table-top'>
-          <i className="material-icons font-size-17">supervisor_account</i>{table.diners}
-          <div className='add-costumer-card'><div className='button-more-promotions'><span className="more-icon-promotions ">+</span></div></div>
-          <h2 className='numbertable'>{table.tableNumber}</h2>
-          </div>
-          <div>{table.title}</div>
-          <div className='table-info-inside ml-4'>
-            <h6 className='t-d-none dark-blue mt-0 mb-0 pt-0'>Estado: 
-            <i>{table.orders && table.orders.kitchenStatus}</i></h6>
-            <p className='t-d-none dark-blue mt-0 pt-0'>{table.state}</p>
-            <span className='light-grey mt-0 pt-0'>14:06</span>
-          </div>
-       </div>
+    
       
         <div className='asientos-bottom d-flex mb-5'>
         <div className='asiento asiento-1-down'>

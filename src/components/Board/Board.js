@@ -15,11 +15,13 @@ import { getWaiterById } from '../../services/waitersService'
 import Slidemenu from '../Slidemenu/Slidemenu'
 import OrderLunch from '../OrderLunch/OrderLunch'
 import ContentOrder from '../OrderLunch/ContentOrder'
+import WaiterCall from '../WaiterInfo/WaiterCall';
 
 class Board extends Component {
 
   state = {
     menuActive : false,
+    callActive : false,
     table: {},
     waiter: {},
     restaurant:{},
@@ -42,6 +44,13 @@ class Board extends Component {
     this.setState({
       menuActive: this.state.menuActive ? false : true
     })
+  }
+  showMessage = () => {
+    console.log("show")
+    this.setState({
+      callActive: this.state.callActive ? false : true
+    })
+    
   }
 
   waiterVisibility = () => {
@@ -79,13 +88,14 @@ class Board extends Component {
     return (
       <Fragment>
         {!this.state.waiterInfo && <Waiter blur={this.state.menuActive} {...this.state.waiter} waiterVisibility={this.waiterVisibility}/>}
+        {/* {this.state.show && <WaiterCall blur={this.state.callActive} {...this.state.waiter} />} */}
         <MenuTop colorFix />
         { this.state.menuActive && 
           <Fragment>
             <div className='black-blur' >
               <div onClick={this.changeBoard} className='wrap-close' >
               </div>
-              <Menu closeBoard={this.changeBoard}/>
+              <Menu closeBoard={this.changeBoard} showCall={this.showMessage}/>
             </div>
           </Fragment>
         }
