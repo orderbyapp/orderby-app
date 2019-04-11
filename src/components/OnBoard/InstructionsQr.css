@@ -1,3 +1,17 @@
 .result-qr{
-  margin-top:150px;
+  color: white;
+  text-align: center;
 }
+.bg-payment{
+  background-color: #25273d;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.enjoyed{
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+}
+

@@ -31,7 +31,10 @@ class Instructions extends Component {
     }
  
     return(
-      <div>
+      <div className='bg-payment'>
+      <div className='container payment-item'>
+        <h6 className='mt-4 mb-4 white enjoyed'>Escanea el código QR que hay en la mesa</h6>  
+        <div className='container payment-item'>   
         <QrReader
           ref="qrReader1"
           delay={this.state.delay}
@@ -40,12 +43,13 @@ class Instructions extends Component {
           onScan={this.handleScan}
           // legacyMode="true"
           />
-          <div className="result-qr">
+          
 
-        <a href={this.state.result}>{this.state.result}</a>
+        <a className='mt-4 mb-4 white enjoyed result-qr' href={this.state.result}>{this.state.result}</a>
           </div>
         {/* <input type="button" value="Submit QR Code" onClick={this.openImageDialog} /> */}
-      </div>
+        </div>
+    </div>
     )
   }
 }
