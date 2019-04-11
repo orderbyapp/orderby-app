@@ -10,7 +10,6 @@ class TableDetail extends Component {
     isBack : false
   }
 
-
   componentDidMount = () => {
     getTableById(this.props.match.params.id)
       .then(response => {
@@ -34,20 +33,29 @@ class TableDetail extends Component {
     }
   }
   onClickBack = () =>{
-    if(this.state.quantity > 0){
+    if( this.state.quantity === ""){
+      this.setState({ isBack : true})
+    }
+    else if(this.state.quantity > 0){
       const newTable = {
         state : "occupied",
         diners : this.state.quantity
       }
       updateWaiterTable(this.state.table.id, newTable)
     } else {
-      const newTable = {
-        state : "free",
-        diners : this.state.quantity
+          const orderDelivered = { 
+            kitchenStatus : "delivered"
+          }
+          const order = this.table.orders && 
+          this.table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+
+          updateOrder(order.id, orderDelivered)
+          const newTable = {
+            state : "free",
+            diners : this.state.quantity
+          }
+          updateWaiterTable(this.state.table.id, newTable)
       }
-      updateWaiterTable(this.state.table.id, newTable)
-      updateOrder(this.state.table.orderId, { kitchenStatus : "delivered"})
-    }
     this.setState({ isBack : true})
   }
 

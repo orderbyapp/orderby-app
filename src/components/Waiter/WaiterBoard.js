@@ -20,6 +20,7 @@ class WaiterBoard extends Component {
         waiter: user
       })
     )
+   
     tableService.getTables()
     .then(response => this.setState({
       tables: response.data
