@@ -21,9 +21,9 @@ class Instructions extends Component {
   handleError(err){
     console.error(err)
   }
-  openImageDialog() {
-    this.refs.qrReader1.openImageDialog()
-  }
+  // openImageDialog() {
+  //   this.refs.qrReader1.openImageDialog()
+  // }
   render(){
     const previewStyle = {
       height: 240,
@@ -38,10 +38,10 @@ class Instructions extends Component {
           style={previewStyle}
           onError={this.handleError}
           onScan={this.handleScan}
-          legacyMode="true"
+          // legacyMode="true"
           />
         <a href={this.state.result}>{this.state.result}</a>
-        <input type="button" value="Submit QR Code" onClick={this.openImageDialog} />
+        {/* <input type="button" value="Submit QR Code" onClick={this.openImageDialog} /> */}
       </div>
     )
   }
