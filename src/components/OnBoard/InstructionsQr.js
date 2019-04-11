@@ -11,7 +11,7 @@ class Instructions extends Component {
     }
  
     this.handleScan = this.handleScan.bind(this)
-    this.openImageDialog = this.openImageDialog.bind(this)
+    // this.openImageDialog = this.openImageDialog.bind(this)
   }
   handleScan(data){
     this.setState({
