@@ -33,28 +33,36 @@ class TableDetail extends Component {
     }
   }
   onClickBack = () =>{
-    if( this.state.quantity === ""){
-      this.setState({ isBack : true})
+    const {table} = this.state
+    if( this.state.quantity === 0 && table.orders.length === 0){
+      this.setState({ 
+        isBack : true
+      })
+      const newTable = { 
+        diners : this.state.quantity,
+        state : "Libre",
+      }
+      updateWaiterTable(table.id, newTable)
     }
     else if(this.state.quantity > 0){
       const newTable = {
-        state : "occupied",
+        state : "Ocupada",
         diners : this.state.quantity
       }
-      updateWaiterTable(this.state.table.id, newTable)
+      updateWaiterTable(table.id, newTable)
     } else {
           const orderDelivered = { 
             kitchenStatus : "delivered"
           }
-          const order = this.table.orders && 
-          this.table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+          const order = table.orders.length > 0 && 
+          table.orders.filter(order => order.kitchenStatus === 'pending')[0]
 
-          updateOrder(order.id, orderDelivered)
+          order && updateOrder(order.id, orderDelivered)
           const newTable = {
-            state : "free",
-            diners : this.state.quantity
+            state : "Libre",
+            diners : this.state.quantity,
           }
-          updateWaiterTable(this.state.table.id, newTable)
+          updateWaiterTable(table.id, newTable)
       }
     this.setState({ isBack : true})
   }
@@ -101,8 +109,9 @@ class TableDetail extends Component {
             </div>
               <hr></hr>
               <h5>Estado de pedido: 
+              {!order && " En proceso"}
               {(order && order.kitchenStatus === "pending") && " En cocina"}
-              {(order && order.kitchenStatus === "delivered") && " En mesa"}
+              
               </h5>
               <hr></hr>
               { table.state === "free" && <h5><i className="fa fa-circle green"></i> Libre</h5>}

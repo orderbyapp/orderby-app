@@ -20,6 +20,14 @@
   background-color: blue;
 }
 
+.occupied {
+  background-color: #fe3569;
+}
+
+.free {
+  background-color: #abbb00;
+}
+
 .body-category-info {
   z-index: 1000000;
   color: white;

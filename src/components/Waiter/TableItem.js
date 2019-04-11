@@ -43,7 +43,12 @@ class TableItem extends Component {
         </div>
 
         <div className='mesa'>
-        <div className='status-sideBar'></div>
+          {table.state === "Libre" &&
+            <div className='status-sideBar free'></div>
+          }
+          {table.state === "Ocupada" &&
+            <div className='status-sideBar occupied'></div>
+          }
           <div className='ml-4 pt-2 info-table-top'>
           <i className="material-icons font-size-17">supervisor_account</i>{table.diners}
           <div className='add-costumer-card'><div className='button-more-promotions'><span className="more-icon-promotions ">+</span></div></div>
