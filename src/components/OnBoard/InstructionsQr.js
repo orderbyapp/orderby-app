@@ -8,6 +8,8 @@ class Instructions extends Component {
     this.state = {
       delay: 100,
       result: 'No result',
+      buttonActive: false,
+
     }
  
     this.handleScan = this.handleScan.bind(this)
@@ -17,6 +19,8 @@ class Instructions extends Component {
     if(data !== null){
       this.setState({
         result: data,
+        buttonActive: true,
+
       })
     }
    
@@ -48,8 +52,8 @@ class Instructions extends Component {
           // legacyMode="true"
           />
           
-          <a className='btn w-100 btn-pink mt-4 mb-4 white enjoyed result-qr' href={this.state.result}>Empieza a pedir!</a>
-          <p className='white'>{this.state.result}</p>
+          <a className='btn w-100 btn-pink mt-4 mb-4 white enjoyed result-qr' href={this.state.buttonActive && this.state.result}>Empieza a pedir!</a>
+         {this.state.buttonActive && <p className='white text-center message-qr'>Código QR leído correctamente!</p>}
           </div>
         {/* <input type="button" value="Submit QR Code" onClick={this.openImageDialog} /> */}
         </div>

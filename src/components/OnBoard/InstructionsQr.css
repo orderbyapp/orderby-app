@@ -6,6 +6,11 @@
   background-color:#fe3569;
 }
 
+.message-qr{
+  width: calc(100% - 50px);
+  position: absolute;
+}
+
 .qr-item{
   display: flex;
   flex-direction: column;
