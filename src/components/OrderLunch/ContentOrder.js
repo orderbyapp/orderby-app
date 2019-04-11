@@ -16,7 +16,7 @@ class ContentOrder extends Component {
     editing: false,
     noProducts : false
   }
-  tableSubscription = undefined
+  // tableSubscription = undefined
 
   payCardVisibility = () => {
       this.setState({
