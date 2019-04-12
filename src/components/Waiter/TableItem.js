@@ -6,7 +6,7 @@ import  Seat  from '../../sources/asiento-orderby.svg'
 import occupiedTable from '../../sources/occupied-table.svg'
 import freeTable from '../../sources/free-table.svg'
 import occupiedSeat from '../../sources/asiento-orderby-ocupado.svg'
-
+import Moment from 'moment';
 
 
 class TableItem extends Component {
@@ -31,6 +31,9 @@ class TableItem extends Component {
 
   render() {
     const {table} = this.props;
+    const order = table.orders && 
+        table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+       
     return (
       <div className='col-xl-6 col-lg-6 col-md-6 col-xs-12 center-table'>
         <Link to={{
@@ -74,7 +77,9 @@ class TableItem extends Component {
                 <h6 className='t-d-none dark-blue mt-0 mb-0 pt-0'>Estado: 
                 <i>{table.orders && table.orders.kitchenStatus}</i></h6>
                 <p className='t-d-none dark-blue mt-0 pt-0'>{table.state}</p>
-                <span className='light-grey mt-0 pt-0'>14:06</span>
+                <span className='light-grey mt-0 pt-0'>
+                {order &&  Moment(order.updateAt).format('HH:mm')}
+                </span>
               </div>
           </div>
           <div className='asientos-bottom d-flex mb-5'>
