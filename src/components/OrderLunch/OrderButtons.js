@@ -45,7 +45,6 @@ class OrderButtons extends Component {
             redirect :  true
           })
         })
-    
     }
   
     componentDidMount = () => {

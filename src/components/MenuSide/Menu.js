@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './Menu.css'
 import TableService from "../../services/TableService";
+import {Redirect} from 'react-router-dom'
 
 class Menu extends Component {
   state = {
     table : {},
-    show: false
+    show: false,
+    redirect : false
   }
 
   closeCard = () => {
@@ -15,13 +17,15 @@ class Menu extends Component {
   showCard = () => {
     this.props.showCall()
   }
-
   updateOrder = () => {
     const order = {
       products : this.state.table.orders
     }
     TableService.updateOrder(this.state.table.orderId, order )
-      .then(response =>  response.data)
+      .then(response => response.data)
+      this.setState({
+        redirect :  true
+      })
   }
 
   postOrder = () => {
@@ -38,9 +42,11 @@ class Menu extends Component {
           }
         })
         TableService.updateTable(this.state.table);
+        this.setState({
+          redirect :  true
+        })
       })
   }
-  
 
   componentDidMount = () => {
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
@@ -52,6 +58,11 @@ class Menu extends Component {
   }
 
   render() {
+    if(this.state.redirect){
+      return(
+      <Redirect to='/payment'/>
+      )
+    } else {
     return (
       <div className='container '>
         <div className='row'>
@@ -61,8 +72,8 @@ class Menu extends Component {
             <li className="nav-item p-2 border-bottom" onClick={this.showMessage}>
               <div className="nav-link">Llamar al Camarero</div>
             </li>
-            <li className="nav-item p-2 border-bottom" >
-            
+            <li className="nav-item p-2 border-bottom" 
+            onClick={ !this.state.table.orderId ? this.postOrder : this.updateOrder }>
               <div className="nav-link" href="#">Pagar por la APP</div>
             </li>
             <li className="nav-item p-1  close-nav-tag">
@@ -78,6 +89,7 @@ class Menu extends Component {
         </div>
       </div>
     );
+    }
   }
 }
 
