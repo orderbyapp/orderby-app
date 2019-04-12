@@ -59,7 +59,11 @@ class TableDetail extends Component {
     this.setState({ isBack : true})
   }
 
-
+  totalCount = () => {
+    const props = this.props; 
+    const total = props.orders && props.orders.map(product => product.quantity * product.price).reduce((a, b) =>  a  + b)
+    return total
+  }
   render() {
     if(this.state.isBack){
       return <Redirect to='/waiter'/>
@@ -68,6 +72,8 @@ class TableDetail extends Component {
       const table = this.state.table;
       const order = table.orders && 
         table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+        console.log("oder ", order)
+      const total = order &&  order.products.map(product => product.quantity * product.price).reduce((a, b) =>  a  + b)
     return (
         <div className='container mt-5'>
         <div id="accordion">
@@ -148,15 +154,16 @@ class TableDetail extends Component {
                 <span className={`black ${'slide-in-blurred-right'} step-bg-2`}>
                   <i data-name={product.title} className="material-icons black font-17 close-editing-button" onClick={this.handleClickDelete}>close</i>
                  </span>}
-                {!this.props.editing && <div className="price-object-order black ">{product.price * product.quantity}€</div>}              </div>
+                {!this.props.editing && <div className="price-object-order black ">{product.price * product.quantity}€</div>}              
+                </div>
                 <hr></hr>
-
+                {this.props.editing && 
+                <span className={`black ${'slide-in-blurred-right'} step-bg-2`}>
+                  <i data-name={product.title} className="material-icons black font-17 close-editing-button" >Total</i>
+                 </span>}
+                 {!this.props.editing && <div className="price-object-order black item-object-flex">Total : {total}€</div>}              
             </div>})
-
           }
-
-
-          
             </div>
           </div>
         </div>
