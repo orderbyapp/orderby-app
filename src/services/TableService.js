@@ -9,6 +9,7 @@ const table$ = new BehaviorSubject(table);
 export const getTableById = (id) => http.get(`/tables/${id}`)
   .then(response => {
     table = response.data;
+    table.orders = [];
     localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(table));
     table$.next(table);
     return table;

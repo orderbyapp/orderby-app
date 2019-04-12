@@ -59,11 +59,6 @@ class TableDetail extends Component {
     this.setState({ isBack : true})
   }
 
-  totalCount = () => {
-    const props = this.props; 
-    const total = props.orders && props.orders.map(product => product.quantity * product.price).reduce((a, b) =>  a  + b)
-    return total
-  }
   render() {
     if(this.state.isBack){
       return <Redirect to='/waiter'/>

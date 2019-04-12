@@ -9,7 +9,9 @@ export default class Welcome extends Component {
 
   componentDidMount = () => {
     getTableById(this.props.match.params.id)
-      .then(response => {this.setState({ table: response })},
+      .then(response => {this.setState({ 
+        table: response
+      })},
       err => {if(err){  
         this.setState({
           error: true

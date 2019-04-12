@@ -71,6 +71,9 @@ class MenuTop extends Component {
     const { table } = this.state
     const getTableNum = () => {
       if (table) {
+      //   const orderProgress = table.orders.filter(order => order.payed === false )
+      //  console.log(orderProgress)
+      //   return orderProgress
         return table.orders.length
       } else {
         return 0;
