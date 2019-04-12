@@ -26,20 +26,22 @@
   position: absolute;
   width: 100%;
   top: 0;
+  z-index: 10000 !important;
+  position: absolute !important;
 }
 
 .waiters-top-yellow{
   width: 100%;
   top: 0;
-  z-index: -1;
+  z-index: -1000 !important;
   height: auto;
-  position: absolute;
+  position: absolute !important;
 }
 
 .waiters-top-pink{
   width: 100%;
   bottom: 0;
-  z-index: -1;
+  z-index: -1000000;
   height: auto;
   position: absolute;
   transform: rotate(180deg);

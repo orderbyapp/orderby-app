@@ -60,7 +60,7 @@ class WaiterBoard extends Component {
          <div>
            <img className='waiters-top-yellow' src={svgTop}></img>
             <div className='absolute-text-top-waiters text-center'>
-            <h3 className='mt-3'>MESAS</h3>
+            <h3 className='mt-3'>{this.state.restaurant.name}</h3>
           </div>
          <div className='container-top-margin mt-5'>
          <div className='container row mx-auto mt-5'>

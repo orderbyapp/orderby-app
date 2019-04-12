@@ -12,6 +12,11 @@
   height: 100%;
 }
 
+.icon-table-status{
+  max-width: 30px;
+
+}
+
 .status-sideBar {
   border-radius: 4px 0px 0px 4px;
   position: absolute;

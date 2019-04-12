@@ -3,7 +3,11 @@ import './TableItem.css'
 import {Link} from 'react-router-dom'
 //import { tableService } from '../../services'
 import  Seat  from '../../sources/asiento-orderby.svg'
-//import { restaurantService } from '../../services'
+import occupiedTable from '../../sources/occupied-table.svg'
+import freeTable from '../../sources/free-table.svg'
+import occupiedSeat from '../../sources/asiento-orderby-ocupado.svg'
+
+
 
 class TableItem extends Component {
 
@@ -35,22 +39,35 @@ class TableItem extends Component {
             table: table
           } 
       }}>
-       <div className='asientos-top d-flex'>
+     
+            { this.props.status === "Ocupada" &&
+          <div>
+             <div className='asientos-top d-flex'>
        <div className='asiento asiento-1'>
+       {table.diners >= 1 && 
+       <img src={occupiedSeat}></img> 
+        }
+         {table.diners < 1 && 
          <img src={Seat}></img>
+         }
+        
        </div>
        <div className='asiento asiento-2'>
-        <img src={Seat}></img>
+       {table.diners >= 2 && 
+       <img src={occupiedSeat}></img> 
+        }
+         {table.diners < 2 && 
+         <img src={Seat}></img>
+         }
        </div>
         </div>
-            { this.props.status === "Ocupada" &&
-          
             <div className='mesa-ocupada'>
             <div className='status-sideBar'></div>
               <div className='ml-4 pt-2 info-table-top'>
-              <i className="material-icons font-size-17">supervisor_account</i>{table.diners}
+              <img className='icon-table-status' src={occupiedTable}></img>
+              <span className='black ml-2'>{table.diners}</span>
               <div className='add-costumer-card'><div className='button-more-promotions'><span className="more-icon-promotions ">+</span></div></div>
-              <h2 className='numbertable'>{table.tableNumber}</h2>
+              <h2 className='numbertable pink'>{table.tableNumber}</h2>
               </div>
               <div>{table.title}</div>
               <div className='table-info-inside ml-4'>
@@ -60,12 +77,41 @@ class TableItem extends Component {
                 <span className='light-grey mt-0 pt-0'>14:06</span>
               </div>
           </div>
+          <div className='asientos-bottom d-flex mb-5'>
+        <div className='asiento asiento-1-down'>
+        {table.diners >= 3 && 
+       <img src={occupiedSeat}></img> 
+        }
+         {table.diners < 3 && 
+         <img src={Seat}></img>
+         }
+        </div>
+        <div className='asiento asiento-2-down'>
+        {table.diners >= 4 && 
+       <img src={occupiedSeat}></img> 
+        }
+         {table.diners < 4 && 
+         <img src={Seat}></img>
+         }
+        </div>
+        </div>
+          </div>
           }
           {
             this.props.status === "Libre" &&    
+            <div>
+               <div className='asientos-top d-flex'>
+       <div className='asiento asiento-1'>
+         <img src={Seat}></img>
+       </div>
+       <div className='asiento asiento-2'>
+        <img src={Seat}></img>
+       </div>
+        </div>
             <div className='mesa-libre'>
               <div className='ml-4 pt-2 info-table-top'>
-              <h2 className='numbertable mt-3'>{table.tableNumber}</h2>
+              <img className='icon-table-status' src={freeTable}></img>
+              <h2 className='numbertable'>{table.tableNumber}</h2>
               </div>
               <div>{table.title}</div>
               <div className='table-info-inside ml-4'>
@@ -74,11 +120,7 @@ class TableItem extends Component {
                 <p className='t-d-none dark-blue mt-0 pt-0'>{table.state}</p>
               </div>
            </div>
-          }
-
-    
-      
-        <div className='asientos-bottom d-flex mb-5'>
+           <div className='asientos-bottom d-flex mb-5'>
         <div className='asiento asiento-1-down'>
           <img src={Seat}></img>
         </div>
@@ -86,6 +128,13 @@ class TableItem extends Component {
         <img src={Seat}></img>
         </div>
         </div>
+           </div>
+           
+          }
+
+    
+      
+        
         </Link>
       </div>
      
