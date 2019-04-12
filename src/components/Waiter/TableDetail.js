@@ -21,62 +21,47 @@ class TableDetail extends Component {
           quantity: response.diners })
       }
     )
-    // const newRest = {...this.state}
-    // console.log("rest ", newRest)
-    // updateRestaurant(newRest)
   }
 
   handleQuantity = (e) => {
+    const {table} = this.state
+    
     const action = e.target.dataset.name
     if(action === 'less' && this.state.quantity > 0){
       this.setState({
         quantity : this.state.quantity - 1,
       })
+      const newTable = { 
+        diners : this.state.quantity - 1,
+        state : this.state.quantity  - 1 === 0 ? "Libre" : "Ocupada",
+      }
+      updateWaiterTableRest(table.id, newTable)
+      const delivered = this.state.quantity -1 === 0 && table.orders.length > 0 
+      const orderDelivered = { kitchenStatus : "delivered" }
+      const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+      order && updateOrderRest(order.id, orderDelivered)
+
     } else if (action === 'more'){
       this.setState({
         quantity : this.state.quantity + 1,
       })
+      const newTable = { 
+        diners : this.state.quantity + 1,
+        state : this.state.quantity + 1 === 0 ? "Libre" : "Ocupada",
+      }
+      updateWaiterTableRest(table.id, newTable)
+      const delivered = this.state.quantity + 1 === 0 && table.orders.length > 0 
+      const orderDelivered = { kitchenStatus : "delivered" }
+      const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+      order && updateOrderRest(order.id, orderDelivered)
     }
   }
   onClickBack = () =>{
-    const {table} = this.state
-    if(this.state.quantity === 0 && table.orders.length === 0){
-      this.setState({ isBack : true})
-      const newTable = { 
-        diners : this.state.quantity,
-        state : "Libre",
-      }
-      updateWaiterTableRest(table.id, newTable)
-    }
-    else if(this.state.quantity > 0){
-      const newTable = {
-        state : "Ocupada",
-        diners : this.state.quantity
-      }
-      updateWaiterTableRest(table.id, newTable)
-    } else {
-          const orderDelivered = { 
-            kitchenStatus : "delivered"
-          }
-          const order = table.orders.length > 0 && 
-          table.orders.filter(order => order.kitchenStatus === 'pending')[0]
-
-          order && updateOrderRest(order.id, orderDelivered)
-          const newTable = {
-            state : "Libre",
-            diners : this.state.quantity
-          }
-          updateWaiterTableRest(this.state.table.id, newTable)
-      }
     this.setState({ isBack : true})
-    // const newRest = {...this.state}
-    // console.log("rest ", newRest)
-    // updateRestaurant(newRest)
   }
 
 
   render() {
-    // console.log("detail ", this.state)
     if(this.state.isBack){
       return <Redirect to='/waiter'/>
     }
