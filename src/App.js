@@ -67,12 +67,17 @@ class App extends Component {
                     <ThanksRoute exact path='/thankyou' component={Thankyou}/> 
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/waiter" component={WaiterBoard}/>
-                    <AnimatedSwitch
+                    {/* <AnimatedSwitch
                         atEnter={bounceTransition.atEnter}
                         atLeave={bounceTransition.atLeave}
                         atActive={bounceTransition.atActive}
                         mapStyles={mapStyles}
-                        className="route-wrapper">
+                        className="route-wrapper"> */}
+                    <AnimatedSwitch
+                        atEnter={{ opacity: 0 }}
+                        atLeave={{ opacity: 0 }}
+                        atActive={{ opacity: 1 }}
+                        className="switch-wrapper">
                         <Route exact path="/waiterIntro" component={WaiterIntro}/>
                         <Route exact path='/waiter/:id' component={TableDetail}/>
                         <TableRoute exact path='/board' component={Board}/>
