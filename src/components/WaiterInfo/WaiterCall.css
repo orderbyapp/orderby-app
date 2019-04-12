@@ -1,7 +1,7 @@
-/* .color-black{
+.color-black{
   color: black;
 }
-.card-waiter{
+.card-waiterCall{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,21 +9,20 @@
   background-color: white;
   padding: 15px;
   border-radius: 6px;
+  text-align: center;
 }
 
-.waiter-blur {
+.waiterCall-blur {
   filter: blur(3px);
   -webkit-filter: blur(3px);
 }
-/* .image-waiter{
+.image-waiterCall{
   margin-top: 8px;
-  border: 3px solid #26273d;
   -webkit-box-shadow: 0px 0px 0px 3px rgb(255, 255, 255, 0.2);
   -moz-box-shadow: 0px 0px 0px 3px rgb(255, 255, 255, 0.2);
   box-shadow: 0px 0px 0px 3px rgb(255, 255, 255, 0.2);
-  width: 70px;
+  width: 105px;
   height: 70px;
-  border-radius: 150px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,7 +34,7 @@
   font-size: 20px;
   z-index: 1;
 }
-.animated-waiter{
+.animated-waiterCall{
   animation-duration: 0.5s !important;
 }
 .slide-in-blurred-top {
@@ -128,4 +127,4 @@
             filter: blur(40px);
     opacity: 0;
   }
-} */
+}

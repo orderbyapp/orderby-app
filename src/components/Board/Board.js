@@ -88,7 +88,7 @@ class Board extends Component {
     return (
       <Fragment>
         {!this.state.waiterInfo && <Waiter blur={this.state.menuActive} {...this.state.waiter} waiterVisibility={this.waiterVisibility}/>}
-        {/* {this.state.show && <WaiterCall blur={this.state.callActive} {...this.state.waiter} />} */}
+        {this.state.callActive && <WaiterCall blur={this.state.callActive} {...this.state.waiter} />}
         <MenuTop colorFix />
         { this.state.menuActive && 
           <Fragment>

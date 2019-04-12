@@ -14,8 +14,8 @@ class Menu extends Component {
     this.props.closeCard()
   }
 
-  showCard = () => {
-    this.props.showCall()
+  showMessage = () => {
+    this.props.showCall();
   }
   updateOrder = () => {
     const order = {
