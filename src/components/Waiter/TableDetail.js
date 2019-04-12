@@ -67,7 +67,6 @@ class TableDetail extends Component {
       const table = this.state.table;
       const order = table.orders && 
         table.orders.filter(order => order.kitchenStatus === 'pending')[0]
-        console.log("oder ", order)
       const total = order &&  order.products.map(product => product.quantity * product.price).reduce((a, b) =>  a  + b)
     return (
         <div className='container mt-5'>

@@ -55,7 +55,7 @@ class WaiterBoard extends Component {
       const {tables} = this.state.restaurant
       const renderCards =  tables.map( table => {
         return <TableItem key={table.id} table={table} status={table.state}/>
-       })
+       }).reverse()
        return (
          <div>
            <img className='waiters-top-yellow' src={svgTop}></img>
