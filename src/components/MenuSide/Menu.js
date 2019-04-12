@@ -58,6 +58,7 @@ class Menu extends Component {
   }
 
   render() {
+    
     if(this.state.redirect){
       return(
       <Redirect to='/payment'/>
@@ -72,10 +73,12 @@ class Menu extends Component {
             <li className="nav-item p-2 border-bottom" onClick={this.showMessage}>
               <div className="nav-link">Llamar al Camarero</div>
             </li>
+            { this.state.table.orders && this.state.table.orders.length > 0 &&
             <li className="nav-item p-2 border-bottom" 
             onClick={ !this.state.table.orderId ? this.postOrder : this.updateOrder }>
               <div className="nav-link" href="#">Pagar por la APP</div>
             </li>
+            }
             <li className="nav-item p-1  close-nav-tag">
             <div onClick={this.props.closeBoard}>
               <div className="nav-link disabled flex-close-nav" href="#" >
