@@ -106,8 +106,8 @@ class TableDetail extends Component {
               {(order && order.kitchenStatus === "delivered") && " En mesa"}
               </h5>
               <hr></hr>
-              { table.state === "free" && <h5><i className="fa fa-circle green"></i> Libre</h5>}
-              { table.state === "occupied" && <h5><i className="fa fa-circle pink"></i> Ocupada</h5>}
+              { table.state === "Libre" && <h5><i className="fa fa-circle green"></i> Libre</h5>}
+              { table.state === "Ocupada" && <h5><i className="fa fa-circle pink"></i> Ocupada</h5>}
             </div>
           </div>
         </div>
