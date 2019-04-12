@@ -8,13 +8,12 @@ import MenuTop from '../MenuTop/MenuTop'
 import '../Board/Board.css'
 import '../MenuSide/Menu.css'
 import PinkShapeBg from '../../sources/pinkshapebg.svg'
-
-// funciones para hacer la order y el menu ir llenando de productos
-// links para ir a para picar, comida, entrantes, postres...
+import WaiterCall from '../WaiterInfo/WaiterCall';
 
 class OrderBoard extends Component {
   state = {
     menuActive : false,
+    callActive : false,
     table: {},
     orders:{}
   }
@@ -23,6 +22,12 @@ class OrderBoard extends Component {
     this.setState({
       menuActive: this.state.menuActive ? false : true
     })
+  }
+  showMessage = () => {
+    this.setState({
+      callActive: this.state.callActive ? false : true
+    })
+    
   }
  
   render() {
@@ -33,13 +38,15 @@ class OrderBoard extends Component {
     return (
       <div className='order-board-bg'>
       <MenuTop/>
+      {this.state.callActive && <WaiterCall blur={this.state.callActive} {...this.state.waiter} />}
+
       <img alt='pinkshapebg' src={PinkShapeBg} className='pinkshapebg'></img>
       { this.state.menuActive && 
           <Fragment>
             <div className='black-blur margin-top-16' >
               <div onClick={this.changeBoard} className='wrap-close' >
               </div>
-              <Menu closeBoard={this.changeBoard}/>
+              <Menu closeBoard={this.changeBoard} showCall={this.showMessage}/>
             </div>
           </Fragment>
         }

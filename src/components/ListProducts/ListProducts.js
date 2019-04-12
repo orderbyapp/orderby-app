@@ -11,10 +11,12 @@ import OrderLunch from '../OrderLunch/OrderLunch'
 import ContentOrder from '../OrderLunch/ContentOrder';
 import '../MenuTop/MenuTop.css'
 import './Toast.css'
+import WaiterCall from '../WaiterInfo/WaiterCall';
 
 class ListProducts extends Component {
   state = {
     menuActive : false,
+    callActive : false,
     modal : {
       product : {},
       show : false
@@ -70,6 +72,13 @@ class ListProducts extends Component {
       menuActive: this.state.menuActive ? false : true
     })
   }
+  showMessage = () => {
+    this.setState({
+      callActive: this.state.callActive ? false : true
+    })
+    
+  }
+  
   
   render() {
     const { image, category } = this.props.location.state
@@ -88,12 +97,13 @@ class ListProducts extends Component {
             <div className='black-blur margin-top-16' >
               <div onClick={this.changeBoard} className='wrap-close' >
               </div>
-              <Menu closeBoard={this.changeBoard}/>
+              <Menu closeBoard={this.changeBoard} showCall={this.showMessage}/>
             </div>
           </Fragment>
         } 
         <MenuTop />
-      
+        {this.state.callActive && <WaiterCall blur={this.state.callActive} {...this.state.waiter} />}
+
         <div  className={this.state.menuActive ? 'blur' : ''} >
           <Slidemenu open={this.state.order.open} >
           <Fragment>

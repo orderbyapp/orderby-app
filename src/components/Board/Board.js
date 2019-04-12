@@ -46,7 +46,6 @@ class Board extends Component {
     })
   }
   showMessage = () => {
-    console.log("show")
     this.setState({
       callActive: this.state.callActive ? false : true
     })
