@@ -30,6 +30,7 @@ class TableDetail extends Component {
       this.setState({
         quantity : this.state.quantity - 1,
       })
+      
       const newTable = { 
         diners : this.state.quantity - 1,
         state : this.state.quantity  - 1 === 0 ? "Libre" : "Ocupada",
@@ -47,6 +48,34 @@ class TableDetail extends Component {
       const newTable = { 
         diners : this.state.quantity + 1,
         state : this.state.quantity + 1 === 0 ? "Libre" : "Ocupada",
+      }
+      updateWaiterTableRest(table.id, newTable)
+      const delivered = this.state.quantity + 1 === 0 && table.orders.length > 0 
+      const orderDelivered = { kitchenStatus : "delivered" }
+      const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+      order && updateOrderRest(order.id, orderDelivered)
+    } else if (action === 'free'){
+      this.setState({
+        quantity : 0,
+        state : "Libre",
+      })
+      const newTable = { 
+        diners : 0,
+        state : "Libre",
+      }
+      updateWaiterTableRest(table.id, newTable)
+      const delivered = this.state.quantity + 1 === 0 && table.orders.length > 0 
+      const orderDelivered = { kitchenStatus : "delivered" }
+      const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+      order && updateOrderRest(order.id, orderDelivered)
+    }  else if (action === 'ocupar'){
+      this.setState({
+        quantity : 0,
+        state : "Ocupada",
+      })
+      const newTable = { 
+        diners : 0,
+        state : "Ocupada",
       }
       updateWaiterTableRest(table.id, newTable)
       const delivered = this.state.quantity + 1 === 0 && table.orders.length > 0 
@@ -108,13 +137,25 @@ class TableDetail extends Component {
             </div>
             </div>
               <hr></hr>
-              <h5>Estado de pedido: 
+              <h5 >Estado de pedido: <span className='grey'>
               {(!order && table.state === "Ocupada") && " Mesa pidiendo"}
               {(order && order.kitchenStatus === "pending") && " En cocina"}
+              </span>
               </h5>
               <hr></hr>
-              { table.state === "Libre" && <h5><i className="fa fa-circle green"></i> Libre</h5>}
-              { table.state === "Ocupada" && <h5><i className="fa fa-circle pink"></i> Ocupada</h5>}
+              { table.state === "Libre" && 
+              <div className='free-table-div pt-2'>
+                <h5><i className="fa fa-circle green"></i> Libre</h5>
+               <button className='btn btn-danger border' data-name='ocupar' onClick={this.handleQuantity} >Ocupar </button>
+               </div>
+              }
+             
+              { table.state === "Ocupada" && 
+              <div className='free-table-div pt-2'>
+                <h5><i className="fa fa-circle pink"></i> Ocupada</h5>
+                <button className='btn btn-success border' data-name='free' onClick={this.handleQuantity} >Liberar </button>
+              </div>
+              }
             </div>
           </div>
         </div>
@@ -128,7 +169,7 @@ class TableDetail extends Component {
               </button>
             </h5>
           </div>
-          <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div id="collapseTwo" className="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
             <div className="card-body">
             { order && order.products.map(product =>{ 
               return <div className={`${(this.state.currentTarget === product.title) ? this.state.fadeOut : ''} list-object-order`} key={product.id}>
@@ -166,7 +207,7 @@ class TableDetail extends Component {
                 <span className={`black ${'slide-in-blurred-right'} step-bg-2`}>
                   <i  className="material-icons black font-17 close-editing-button" >Total</i>
                  </span>}
-                 {!this.props.editing && <div className="price-object-order black item-object-flex"><h5>Total</h5> <h5 className='pink'> {total}€</h5></div>} 
+                 {!this.props.editing && order && <div className="price-object-order black item-object-flex"><h5>Total</h5> <h5 className='pink'> {total}€</h5></div>} 
                  </div>
             </div>
           </div>

@@ -12,6 +12,12 @@
   height: 100%;
 }
 
+.free-table-div{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
 .total-table.detail{
   display: flex;
   justify-content: flex-end;
