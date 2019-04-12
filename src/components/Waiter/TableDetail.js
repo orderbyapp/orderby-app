@@ -82,6 +82,7 @@ class TableDetail extends Component {
       const orderDelivered = { kitchenStatus : "delivered" }
       const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
       order && updateOrderRest(order.id, orderDelivered)
+      
     }
   }
   onClickBack = () =>{
