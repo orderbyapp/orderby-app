@@ -3,6 +3,8 @@ import { Link, Redirect } from 'react-router-dom'
 import authService from '../../services/AuthService'
 import './Login.css'
 import svgTop from '../../sources/yellow-waiters.svg'
+import svgBottom from '../../sources/pink-waiters.svg'
+
 
 
 //const EMAIL_PATTERN = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -134,12 +136,14 @@ class Login extends Component {
             </div>
 
             <div className="from-actions mt-5">
-              <button type="submit" className="box-btn p-2" disabled={!this.isValid()}>Continuar</button>
+              <button type="submit" className="box-btn p-2 white" disabled={!this.isValid()}>Continuar</button>
             </div>
           </form>
         </div>
       </div>
     </div>
+    <img className='waiters-top-pink' src={svgBottom}></img>
+
   </div>
     )
   }

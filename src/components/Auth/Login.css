@@ -35,3 +35,13 @@
   height: auto;
   position: absolute;
 }
+
+.waiters-top-pink{
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+  height: auto;
+  position: absolute;
+  transform: rotate(180deg);
+}
+
