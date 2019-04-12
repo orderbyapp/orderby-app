@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './TableItem.css'
-import { getTableByIdRest, updateWaiterTableRest, 
-  updateOrderRest, updateRestaurant } from "../../services/RestaurantService";
+import { getTableByIdRest, updateWaiterTableRest, updateOrderRest} from "../../services/RestaurantService";
 import { Redirect } from 'react-router-dom';
 
 class TableDetail extends Component {
@@ -102,8 +101,8 @@ class TableDetail extends Component {
             </div>
               <hr></hr>
               <h5>Estado de pedido: 
+              {(!order && table.state === "Ocupada") && " Mesa pidiendo"}
               {(order && order.kitchenStatus === "pending") && " En cocina"}
-              {(order && order.kitchenStatus === "delivered") && " En mesa"}
               </h5>
               <hr></hr>
               { table.state === "Libre" && <h5><i className="fa fa-circle green"></i> Libre</h5>}
