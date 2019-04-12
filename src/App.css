@@ -20,6 +20,10 @@ body{
 .t-d-none{
   text-decoration: none;
 }
+.t-d-none:hover{
+  color: black;
+  text-decoration: none;
+}
 .dark-blue{
   color: #25273d;
 }
@@ -28,6 +32,9 @@ body{
 }
 .absolute{
   position: absolute;
+}
+.grey{
+  color: rgba(0,0,0,0.5)
 }
 .light-grey{
  color: #ccccd2;

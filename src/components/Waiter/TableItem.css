@@ -12,9 +12,36 @@
   height: 100%;
 }
 
+.total-table.detail{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message-waiter-count{
+  display: flex;
+  align-items: start;
+}
+
 .icon-table-status{
   max-width: 30px;
+}
 
+.table-name-menu-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.table-name-menu-top h5{
+  color: white !important;
+  font-size: 2rem;
+}
+
+.top-menu-table-detail{
+  height: 80px;
+  width: 100%;
+  background-color: #fe3569;
 }
 
 .status-sideBar {
