@@ -156,14 +156,14 @@ class TableDetail extends Component {
                  </span>}
                 {!this.props.editing && <div className="price-object-order black ">{product.price * product.quantity}€</div>}              
                 </div>
-                <hr></hr>
-                {this.props.editing && 
-                <span className={`black ${'slide-in-blurred-right'} step-bg-2`}>
-                  <i data-name={product.title} className="material-icons black font-17 close-editing-button" >Total</i>
-                 </span>}
-                 {!this.props.editing && <div className="price-object-order black item-object-flex">Total : {total}€</div>}              
+                <hr></hr>            
             </div>})
           }
+          {this.props.editing && 
+                <span className={`black ${'slide-in-blurred-right'} step-bg-2`}>
+                  <i  className="material-icons black font-17 close-editing-button" >Total</i>
+                 </span>}
+                 {!this.props.editing && <div className="price-object-order black item-object-flex">Total : {total}€</div>} 
             </div>
           </div>
         </div>
@@ -171,7 +171,7 @@ class TableDetail extends Component {
           <div className="card-header" id="headingThree">
             <h5 className="mb-0">
               <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Instructions
+              Instrucciones para cocina
               </button>
             </h5>
           </div>
