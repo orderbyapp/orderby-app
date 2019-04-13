@@ -67,6 +67,8 @@ class App extends Component {
                     <ThanksRoute exact path='/thankyou' component={Thankyou}/> 
                     <Route exact path="/login" component={Login}/>
                     <PrivateRoute exact path="/waiter" component={WaiterBoard}/>
+                    <PrivateRoute exact path='/waiter/:id' component={TableDetail}/>
+
                     {/* <AnimatedSwitch
                         atEnter={bounceTransition.atEnter}
                         atLeave={bounceTransition.atLeave}
@@ -79,7 +81,6 @@ class App extends Component {
                         atActive={{ opacity: 1 }}
                         className="switch-wrapper">
                         <Route exact path="/waiterIntro" component={WaiterIntro}/>
-                        <PrivateRoute exact path='/waiter/:id' component={TableDetail}/>
                         <TableRoute exact path='/board' component={Board}/>
                         <TableRoute exact path='/orderboard' component={OrderBoard}/>
                         <TableRoute exact path='/menulist/:name' component={ListProducts}/>

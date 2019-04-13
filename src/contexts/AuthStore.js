@@ -3,16 +3,18 @@ import { authService } from '../services/index'
 
 const AuthContext = React.createContext();
 
+const CURRENT_USER_KEY = 'current-user';
+
 class AuthStore extends Component {
   state = {
-    user: {}
+    user: JSON.parse(localStorage.getItem(CURRENT_USER_KEY) || '{}')
   }
 
   userChangeSubscription = {}
 
   componentDidMount() {
     this.userChangeSubscription = authService.onUserChange()
-      .subscribe(user => this.setState({ user: user }))
+      .subscribe(user => this.setState({ user: user }, () => console.log(this.state)))
   }
 
   componentWillUnmount() {
@@ -23,7 +25,9 @@ class AuthStore extends Component {
     this.setState({ user: user })
   }
 
-  isAuthenticated = () => this.state.user.username;
+  isAuthenticated = () => {
+    return this.state.user && this.state.user.username;
+  }
 
   render(){
     return(
