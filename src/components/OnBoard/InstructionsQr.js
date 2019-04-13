@@ -46,7 +46,7 @@ class Instructions extends Component {
           onScan={this.handleScan}
           />
           
-          <a className='btn w-100 btn-pink mt-4 mb-4 white enjoyed result-qr' href={this.state.buttonActive && this.state.result}>Empieza a pedir!</a>
+          <a className='btn w-100 btn-pink mt-4 mb-4 white enjoyed result-qr' href='https://orderbyapp.github.io/orderby-app/#/table/5cab7fda2f185f2ea8d45b7e'>Empieza a pedir!</a>
          {this.state.buttonActive && <p className='white text-center message-qr'>Código QR leído correctamente!</p>}
           </div>
         </div>
