@@ -22,7 +22,7 @@ class FoodTypeCard extends Component {
     if (this.state.loaded) {
     return (
       <div>
-        <Link to={{ 
+        <Link style={{ textDecoration: 'none' }} to={{ 
          pathname: `/menulist/${this.props.name}`,
          state: {
            image: this.props.image0,
