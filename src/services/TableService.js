@@ -22,7 +22,7 @@ export const getTables = () => http.get(`/tables`)
 
 export const newOrder = (id, order) => http.post(`/orders/${id}`, order)
   .then(response => response )
-export const callWaiter = (id, call) => http.post(`/tables/call/${id}`, call)
+export const callWaiter = (id) => http.post(`/tables/call/${id}`)
   .then(response => response )
 
 export const updateOrder = (id, order) => http.put(`/orders/${id}`, order)

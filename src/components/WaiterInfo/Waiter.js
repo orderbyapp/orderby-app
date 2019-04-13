@@ -15,6 +15,7 @@ class Waiter extends Component {
       classAnimated : 'slide-out-blurred-top' 
     })
     this.props.waiterVisibility()
+
   }
    
   render() { 

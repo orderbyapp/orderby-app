@@ -12,6 +12,7 @@ class Menu extends Component {
 
   closeCard = () => {
     this.props.closeCard()
+    TableService.callWaiter(this.state.table.restaurant.waiters[0])
   }
 
   showMessage = () => {
