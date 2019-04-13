@@ -58,10 +58,16 @@ class TableDetail extends Component {
       this.setState({
         quantity : 0,
         state : "Libre",
+        table : {
+          state : "Libre"
+        }
       })
       const newTable = { 
         diners : 0,
         state : "Libre",
+        table : {
+          state : "Libre"
+        }
       }
       updateWaiterTableRest(table.id, newTable)
       const delivered = this.state.quantity + 1 === 0 && table.orders.length > 0 
@@ -72,17 +78,22 @@ class TableDetail extends Component {
       this.setState({
         quantity : 0,
         state : "Ocupada",
+        table : {
+          state : "Ocupada"
+        }
       })
       const newTable = { 
         diners : 0,
         state : "Ocupada",
+        table : {
+          state : "Ocupada"
+        }
       }
       updateWaiterTableRest(table.id, newTable)
       const delivered = this.state.quantity + 1 === 0 && table.orders.length > 0 
       const orderDelivered = { kitchenStatus : "delivered" }
       const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
       order && updateOrderRest(order.id, orderDelivered)
-      
     }
   }
   onClickBack = () =>{
@@ -144,14 +155,14 @@ class TableDetail extends Component {
               </span>
               </h5>
               <hr></hr>
-              { table.state === "Libre" && 
+              { this.state.table.state === "Libre" && 
               <div className='free-table-div pt-2'>
                 <h5><i className="fa fa-circle green"></i> Libre</h5>
                <button className='btn btn-danger border' data-name='ocupar' onClick={this.handleQuantity} >Ocupar </button>
                </div>
               }
              
-              { table.state === "Ocupada" && 
+              { this.state.table.state === "Ocupada" && 
               <div className='free-table-div pt-2'>
                 <h5><i className="fa fa-circle pink"></i> Ocupada</h5>
                 <button className='btn btn-success border' data-name='free' onClick={this.handleQuantity} >Liberar </button>
