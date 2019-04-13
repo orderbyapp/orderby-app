@@ -55,6 +55,7 @@ class TableDetail extends Component {
       const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
       order && updateOrderRest(order.id, orderDelivered)
     } else if (action === 'free'){
+      console.log('entrasdlkvnadklsfvlkasdnfklasdndfklanslkdfnaslkfnlkandflkan')
       this.setState({
         quantity : 0,
         state : "Libre",
@@ -64,35 +65,12 @@ class TableDetail extends Component {
       })
       const newTable = { 
         diners : 0,
-        state : "Libre",
-        table : {
-          state : "Libre"
-        }
+        state : "Libre"
       }
+      console.log(this.state)
       updateWaiterTableRest(table.id, newTable)
-      const delivered = this.state.quantity + 1 === 0 && table.orders.length > 0 
       const orderDelivered = { kitchenStatus : "delivered" }
-      const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
-      order && updateOrderRest(order.id, orderDelivered)
-    }  else if (action === 'ocupar'){
-      this.setState({
-        quantity : 0,
-        state : "Ocupada",
-        table : {
-          state : "Ocupada"
-        }
-      })
-      const newTable = { 
-        diners : 0,
-        state : "Ocupada",
-        table : {
-          state : "Ocupada"
-        }
-      }
-      updateWaiterTableRest(table.id, newTable)
-      const delivered = this.state.quantity + 1 === 0 && table.orders.length > 0 
-      const orderDelivered = { kitchenStatus : "delivered" }
-      const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
+      const order = table.orders.filter(order => order.kitchenStatus === 'pending')[0]
       order && updateOrderRest(order.id, orderDelivered)
     }
   }
@@ -158,7 +136,6 @@ class TableDetail extends Component {
               { this.state.table.state === "Libre" && 
               <div className='free-table-div pt-2'>
                 <h5><i className="fa fa-circle green"></i> Libre</h5>
-               <button className='btn btn-danger border' data-name='ocupar' onClick={this.handleQuantity} >Ocupar </button>
                </div>
               }
              
