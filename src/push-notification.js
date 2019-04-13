@@ -29,7 +29,7 @@ export const askForPermissioToReceiveNotifications = async () => {
       token: token
     }
     console.log('token de usuario: ', token);
-    // firebaseWaiters(waiter);
+    firebaseWaiters(waiter);
     return token;
   } catch (error) {
     console.error(error);

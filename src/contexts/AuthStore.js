@@ -12,10 +12,10 @@ class AuthStore extends Component {
 
   componentDidMount() {
     this.userChangeSubscription = authService.onUserChange()
-      .subscribe(user => this.state({ user: user }))
+      .subscribe(user => this.setState({ user: user }))
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     this.userChangeSubscription.unsubscribe()
   }
 

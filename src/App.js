@@ -13,7 +13,7 @@ import Payment from './components/Payment/Payment';
 import Thankyou from './components/Payment/Thankyou'
 import TableRoute from './guards/TableRoute'
 import ThanksRoute from './guards/ThanksRoute'
-//import PrivateRoute from './guards/PrivateRoute'
+import PrivateRoute from './guards/PrivateRoute'
 import { spring, AnimatedRoute,AnimatedSwitch } from 'react-router-transition';
 import WaiterBoard from './components/Waiter/WaiterBoard';
 import TableDetail from './components/Waiter/TableDetail';
@@ -66,7 +66,7 @@ class App extends Component {
                     <TableRoute exact path='/payment' component={Payment}/>
                     <ThanksRoute exact path='/thankyou' component={Thankyou}/> 
                     <Route exact path="/login" component={Login}/>
-                    <Route exact path="/waiter" component={WaiterBoard}/>
+                    <PrivateRoute exact path="/waiter" component={WaiterBoard}/>
                     {/* <AnimatedSwitch
                         atEnter={bounceTransition.atEnter}
                         atLeave={bounceTransition.atLeave}
@@ -79,7 +79,7 @@ class App extends Component {
                         atActive={{ opacity: 1 }}
                         className="switch-wrapper">
                         <Route exact path="/waiterIntro" component={WaiterIntro}/>
-                        <Route exact path='/waiter/:id' component={TableDetail}/>
+                        <PrivateRoute exact path='/waiter/:id' component={TableDetail}/>
                         <TableRoute exact path='/board' component={Board}/>
                         <TableRoute exact path='/orderboard' component={OrderBoard}/>
                         <TableRoute exact path='/menulist/:name' component={ListProducts}/>

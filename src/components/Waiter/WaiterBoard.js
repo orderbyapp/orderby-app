@@ -40,8 +40,8 @@ class WaiterBoard extends Component {
       })
     )
     
-    // initializeFirebase();
-    // askForPermissioToReceiveNotifications();
+    initializeFirebase();
+    askForPermissioToReceiveNotifications();
   }
 
   componentWillUnmount() {   
