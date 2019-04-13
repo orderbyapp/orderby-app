@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/vectorpaint.ec6a3023.svg"
   },
   {
-    "revision": "98d020c5b707d75a53b2",
+    "revision": "97d862adb04461ba8fa5",
     "url": "/orderby-app/static/css/main.ac199d9f.chunk.css"
   },
   {
@@ -68,8 +68,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "98d020c5b707d75a53b2",
-    "url": "/orderby-app/static/js/main.cd25f612.chunk.js"
+    "revision": "97d862adb04461ba8fa5",
+    "url": "/orderby-app/static/js/main.84f53c2c.chunk.js"
   },
   {
     "revision": "a5fdc7b5e59c3838185a051781a749d6",
@@ -136,7 +136,7 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/css/2.8f395154.chunk.css"
   },
   {
-    "revision": "977556b3b8aa69b7b1c25b2d1188311d",
+    "revision": "9084351cbc609039fb286c03f837a25e",
     "url": "/orderby-app/index.html"
   }
 ];
