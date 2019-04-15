@@ -16,8 +16,8 @@ Le redirige a la pantalla de instrucciones y debe scanear este código QR:
 ![Alt text](public/mesa6.png)<br>
 **Nota: También puede utilizar la cámara de su móvil si esta interpreta códigos QR.**
 
-Accederá a la carta del restaurante y puede realizar su pedido, además puede llamar al camarero<br>
-y pagar la cuenta con tarjeta.<br> 
+Accederá a la carta del restaurante de la mesa 6 y puede realizar su pedido, además puede llamar<br>
+ al camarero y pagar la cuenta con tarjeta.<br> 
 
 * Introduzca la tarjeta de prueba 4242 4242 4242 4242 
 * MM/AA mes y año futuros
