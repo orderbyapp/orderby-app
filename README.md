@@ -1,7 +1,7 @@
 
 # OrderBy
 
-## ¿Que es?
+## ¿Qué es?
 
 OrderBy ha nacido para facilitar la experiencia de cliente en un restaurante y gestionar las<br> mesas por el camarero.<br>
 
@@ -29,6 +29,7 @@ Introduzca el siguiente enlace en el navegador de su tablet, ya que está diseñ
 ser utilizada en este tipo de dispositvos por el camarero.<br>
 
 [https://orderbyapp.github.io/orderby-app/#/waiterintro](https://orderbyapp.github.io/orderby-app/#/waiterintro)<br>
+
 Le redirige a la pantalla de login.<br>
 
 **Si desea el usuario y su contraseña puede solicitárnoslo.** 
