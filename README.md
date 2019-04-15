@@ -5,19 +5,20 @@ Order By
 
 ## ¿Que es?
 
-OrderBy ha nacido para facilitar la experiencia de cliente en un restaurante.
+OrderBy ha nacido para facilitar la experiencia de cliente en un restaurante y gestionar el<br>
+
 
 ### ¿Como funciona?
-Cliente:
-Para acceder a la app de cliente, debe introducir el siguiente enlace en el navegador de su móvil<br>
+`Cliente:`<br>
+Para acceder a la app de cliente, debe introducir el siguiente enlace en el navegador de su móvil.<br>
 [https://orderbyapp.github.io/orderby-app/#](https://orderbyapp.github.io/orderby-app/#)<br>
 Le redirige a la pantalla de instrucciones y debe scanear este código QR:
 
-![Alt text](public/mesa6.png)
+![Alt text](public/mesa6.png)<br>
 **Nota: También puede utilizar la cámara de su móvil si esta interpreta códigos QR**
 
 Accederá a la carta del restaurante y puede realizar su pedido, además puede llamar al camarero<br>
-y pagar la cuenta con tarjeta<br> 
+y pagar la cuenta con tarjeta.<br> 
 
 * Introduzca la tarjeta de prueba 4242 4242 4242 4242 
 * MM/AA mes y año futuros
@@ -26,11 +27,11 @@ y pagar la cuenta con tarjeta<br>
 
 **Nota: Para pagar el pedido la mesa debe estar ocupada, es el camarero quien gestiona las mesas.**
 
-Camarero:
+`Camarero:`<br>
 Introduzca la siguiente enlace en el navegador de su tablet, ya que está diseñada para<br> 
 ser utilizada en este tipo de dispositvos por el camarero.
 
-[https://orderbyapp.github.io/orderby-app/#/waiterintro](https://orderbyapp.github.io/orderby-app/#/waiterintro)
+[https://orderbyapp.github.io/orderby-app/#/waiterintro](https://orderbyapp.github.io/orderby-app/#/waiterintro)<br>
 Le redirige a la pantalla de login.<br>
 
 El camarero puede acceder a cada mesa e introducir el número de comensales y cuando hayan<br> terminado puede liberar la mesa<br>
