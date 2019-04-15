@@ -5,8 +5,10 @@
 
 OrderBy ha nacido para facilitar la experiencia de cliente en un restaurante y gestionar las<br> mesas por el camarero.<br>
 
-### ¿Como funciona?
-`Cliente:`<br>
+## ¿Cómo funciona?
+
+### Cliente
+
 Para acceder a la app de cliente, debe introducir el siguiente enlace en el navegador de su móvil.<br>
 [https://orderbyapp.github.io/orderby-app](https://orderbyapp.github.io/orderby-app)<br>
 Le redirige a la pantalla de instrucciones y debe scanear este código QR:
@@ -24,7 +26,8 @@ y pagar la cuenta con tarjeta.<br>
 
 **Nota: Para pagar el pedido la mesa debe estar ocupada, es el camarero quien gestiona las mesas.**
 
-`Camarero:`<br>
+### Camarero
+
 Introduzca el siguiente enlace en el navegador de su tablet, ya que está diseñada para<br> 
 ser utilizada en este tipo de dispositvos por el camarero.<br>
 
