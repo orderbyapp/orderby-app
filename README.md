@@ -1,10 +1,9 @@
 
-#Order by
+# OrderBy
 
 ## ¿Que es?
 
-OrderBy ha nacido para facilitar la experiencia de cliente en un restaurante y gestionar el<br>
-restaurante por el camarero.<br>
+OrderBy ha nacido para facilitar la experiencia de cliente en un restaurante y gestionar las<br> mesas por el camarero.<br>
 
 ### ¿Como funciona?
 `Cliente:`<br>
@@ -13,7 +12,7 @@ Para acceder a la app de cliente, debe introducir el siguiente enlace en el nave
 Le redirige a la pantalla de instrucciones y debe scanear este código QR:
 
 ![Alt text](public/mesa6.png)<br>
-**Nota: También puede utilizar la cámara de su móvil si esta interpreta códigos QR**
+**Nota: También puede utilizar la cámara de su móvil si esta interpreta códigos QR.**
 
 Accederá a la carta del restaurante y puede realizar su pedido, además puede llamar al camarero<br>
 y pagar la cuenta con tarjeta.<br> 
