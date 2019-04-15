@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './TableItem.css'
 import {Link} from 'react-router-dom'
-//import { tableService } from '../../services'
 import  Seat  from '../../sources/asiento-orderby.svg'
 import occupiedTable from '../../sources/occupied-table.svg'
 import freeTable from '../../sources/free-table.svg'
@@ -11,23 +10,7 @@ import Moment from 'moment';
 
 class TableItem extends Component {
 
-  // state = {
-  //   restaurant: {},
-  //  }
-
-  // restaurantSubscription = undefined
-
-  // componentDidMount() {   
-  //   this.restaurantSubscription = restaurantService.onRestaurantChange().subscribe(
-  //     response => this.setState({ 
-  //       restaurant: response
-  //     })
-  //   )
-  // }
-
-  // componentWillUnmount() {   
-  //   this.restaurantSubscription.unsubscribe();
-  // }
+ 
 
   render() {
     const {table} = this.props;

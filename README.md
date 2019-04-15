@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Order By 
 
-## Available Scripts
+![Alt text](public/orderby.png)
 
-In the project directory, you can run:
 
-### `npm start`
+## ¿Que es?
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+OrderBy ha nacido para facilitar la experiencia de cliente en un restaurante.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### ¿Como funciona?
+Cliente:
+Para acceder a la app de cliente, debe introducir el siguiente enlace en el navegador de su móvil<br>
+[https://orderbyapp.github.io/orderby-app/#](https://orderbyapp.github.io/orderby-app/#)<br>
+Le redirige a la pantalla de instrucciones y debe scanear este código QR:
 
-### `npm test`
+![Alt text](public/mesa6.png)
+**Nota: También puede utilizar la cámara de su móvil si esta interpreta códigos QR**
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Accederá a la carta del restaurante y puede realizar su pedido, además puede llamar al camarero<br>
+y pagar la cuenta con tarjeta<br> 
 
-### `npm run build`
+* Introduzca la tarjeta de prueba 4242 4242 4242 4242 
+* MM/AA mes y año futuros
+* CVC 3 números
+* CP 5 números
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Nota: Para pagar el pedido la mesa debe estar ocupada, es el camarero quien gestiona las mesas.**
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Camarero:
+Introduzca la siguiente enlace en el navegador de su tablet, ya que está diseñada para<br> 
+ser utilizada en este tipo de dispositvos por el camarero.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[https://orderbyapp.github.io/orderby-app/#/waiterintro](https://orderbyapp.github.io/orderby-app/#/waiterintro)
+Le redirige a la pantalla de login.<br>
 
-### `npm run eject`
+El camarero puede acceder a cada mesa e introducir el número de comensales y cuando hayan<br> terminado puede liberar la mesa<br>
+También puede ver la comanda y las instrucciones dadas por el cliente.<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
