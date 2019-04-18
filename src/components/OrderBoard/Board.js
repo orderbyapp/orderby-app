@@ -1,14 +1,14 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 import './Board.css'
-import FoodTypeCard from './FoodTypeCard';
+import FoodTypeCard from './FoodTypeCard'
 import Categories from  '../../data/categories.json'
-import ActionsButton from '../MenuSide/ActionButton';
+import ActionsButton from '../MenuSide/ActionButton'
 import Menu from '../MenuSide/Menu'
 import MenuTop from '../MenuTop/MenuTop'
 import '../Board/Board.css'
 import '../MenuSide/Menu.css'
 import PinkShapeBg from '../../sources/pinkshapebg.svg'
-import WaiterCall from '../WaiterInfo/WaiterCall';
+import WaiterCall from '../WaiterInfo/WaiterCall'
 
 class OrderBoard extends Component {
   state = {

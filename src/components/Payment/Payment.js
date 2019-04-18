@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PayItem from '../OrderLunch/PayItem';
 import PayMobile from '../../sources/payment-method.png'
-import TableService from "../../services/TableService";
+import TableService from '../../services/TableService'
 import './Payment.css'
-import { withRouter } from "react-router-dom";
+import { withRouter } from 'react-router-dom'
 
 
 class Payment extends Component {

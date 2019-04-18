@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import GoodBye from '../../sources/mano.svg'
-import { withRouter } from "react-router-dom";
+import { withRouter } from 'react-router-dom'
 import './Thankyou.css'
 
 class Thankyou extends Component {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { css } from 'glamor'
 
 toast.configure({
@@ -19,7 +19,7 @@ const Toast = () => {
       fontSize: '16px'
     }),
     progressClassName: css({
-      background: "repeating-radial-gradient(circle at center, red 0, blue, green 30px)"
+      background: 'repeating-radial-gradient(circle at center, red 0, blue, green 30px)'
     })
   });
   

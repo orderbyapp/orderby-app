@@ -1,8 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 import './MenuTop.css'
 import Slidemenu from '../Slidemenu/Slidemenu'
 import OrderLunch from '../OrderLunch/OrderLunch'
-import ContentOrder from '../OrderLunch/ContentOrder';
+import ContentOrder from '../OrderLunch/ContentOrder'
 
 class MenuTop extends Component {
   state = {

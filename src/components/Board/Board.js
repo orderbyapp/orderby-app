@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 import ButtonOrder from '../Utilities/Button'
 import pinkShape from '../../sources/shape-menu.svg'
 import RestaurantCard from './RestaurantCard'
@@ -15,7 +15,7 @@ import { getWaiterById } from '../../services/waitersService'
 import Slidemenu from '../Slidemenu/Slidemenu'
 import OrderLunch from '../OrderLunch/OrderLunch'
 import ContentOrder from '../OrderLunch/ContentOrder'
-import WaiterCall from '../WaiterInfo/WaiterCall';
+import WaiterCall from '../WaiterInfo/WaiterCall'
 
 class Board extends Component {
 
@@ -115,7 +115,7 @@ class Board extends Component {
             <RestaurantCard {...this.state.restaurant} tableNumber={this.state.table.tableNumber}/>
             
             <div className='container'>
-              <Link to={`/orderboard`}><ButtonOrder color='btn btn-order-by' width='w-100' border='border-pink' text='Ver carta'/></Link>
+              <Link to={'/orderboard'}><ButtonOrder color='btn btn-order-by' width='w-100' border='border-pink' text='Ver carta'/></Link>
               <PromotionList {...this.state} openMenu={this.orderVisibility}/>
             </div>
           </div>

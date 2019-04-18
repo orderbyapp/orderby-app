@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { withAuthConsumer } from '../../contexts/AuthStore'
-import TableItem from './TableItem';
+import TableItem from './TableItem'
 import { tableService, restaurantService, authService } from '../../services'
 import svgTop from '../../sources/yellow-waiters.svg'
 

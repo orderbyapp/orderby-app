@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './TableItem.css'
-import { getTableByIdRest, updateWaiterTableRest, updateOrderRest} from "../../services/RestaurantService";
+import { getTableByIdRest, updateWaiterTableRest, updateOrderRest} from '../../services/RestaurantService'
 import { Redirect } from 'react-router-dom';
 
 class TableDetail extends Component {
@@ -33,11 +33,11 @@ class TableDetail extends Component {
       
       const newTable = { 
         diners : this.state.quantity - 1,
-        state : this.state.quantity  - 1 === 0 ? "Libre" : "Ocupada",
+        state : this.state.quantity  - 1 === 0 ? 'Libre' : 'Ocupada',
       }
       updateWaiterTableRest(table.id, newTable)
       const delivered = this.state.quantity -1 === 0 && table.orders.length > 0 
-      const orderDelivered = { kitchenStatus : "delivered" }
+      const orderDelivered = { kitchenStatus : 'delivered' }
       const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
       order && updateOrderRest(order.id, orderDelivered)
 
@@ -47,29 +47,27 @@ class TableDetail extends Component {
       })
       const newTable = { 
         diners : this.state.quantity + 1,
-        state : this.state.quantity + 1 === 0 ? "Libre" : "Ocupada",
+        state : this.state.quantity + 1 === 0 ? 'Libre' : 'Ocupada',
       }
       updateWaiterTableRest(table.id, newTable)
       const delivered = this.state.quantity + 1 === 0 && table.orders.length > 0 
-      const orderDelivered = { kitchenStatus : "delivered" }
+      const orderDelivered = { kitchenStatus : 'delivered' }
       const order = delivered && table.orders.filter(order => order.kitchenStatus === 'pending')[0]
       order && updateOrderRest(order.id, orderDelivered)
     } else if (action === 'free'){
-      console.log('entrasdlkvnadklsfvlkasdnfklasdndfklanslkdfnaslkfnlkandflkan')
       this.setState({
         quantity : 0,
-        state : "Libre",
+        state : 'Libre',
         table : {
-          state : "Libre"
+          state : 'Libre'
         }
       })
       const newTable = { 
         diners : 0,
-        state : "Libre"
+        state : 'Libre'
       }
-      console.log(this.state)
       updateWaiterTableRest(table.id, newTable)
-      const orderDelivered = { kitchenStatus : "delivered" }
+      const orderDelivered = { kitchenStatus : 'delivered' }
       const order = table.orders.filter(order => order.kitchenStatus === 'pending')[0]
       order && updateOrderRest(order.id, orderDelivered)
     }
@@ -91,7 +89,7 @@ class TableDetail extends Component {
     <div>
       <div className='top-menu-table-detail'>
         <div className='container table-name-menu-top'>
-          {this.props.history.location.pathname !== "/waiter" ?  
+          {this.props.history.location.pathname !== '/waiter' ?  
               <div onClick={this.onClickBack} className='d-flex'><span className="material-icons white" >arrow_back</span></div> :
               <div><span className="material-icons white" >arrow_back</span></div>} 
           <h5 className=''>MESA {table.tableNumber} </h5>
@@ -128,18 +126,18 @@ class TableDetail extends Component {
             </div>
               <hr></hr>
               <h5 >Estado de pedido: <span className='grey'>
-              {(!order && table.state === "Ocupada") && " Mesa pidiendo"}
-              {(order && order.kitchenStatus === "pending") && " En cocina"}
+              {(!order && table.state === 'Ocupada') && ' Mesa pidiendo'}
+              {(order && order.kitchenStatus === 'pending') && ' En cocina'}
               </span>
               </h5>
               <hr></hr>
-              { this.state.table.state === "Libre" && 
+              { this.state.table.state === 'Libre' && 
               <div className='free-table-div pt-2'>
                 <h5><i className="fa fa-circle green"></i> Libre</h5>
                </div>
               }
              
-              { this.state.table.state === "Ocupada" && 
+              { this.state.table.state === 'Ocupada' && 
               <div className='free-table-div pt-2'>
                 <h5><i className="fa fa-circle pink"></i> Ocupada</h5>
                 <button className='btn btn-success border' data-name='free' onClick={this.handleQuantity} >Liberar </button>

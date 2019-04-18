@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import './FoodTypeCard.css'
 import { Link } from 'react-router-dom'
-import Skeleton from 'react-skeleton-loader';
+import Skeleton from 'react-skeleton-loader'
 
 class FoodTypeCard extends Component {
   state = {

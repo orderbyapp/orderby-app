@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 import './MenuTop.css'
 import Slidemenu from '../Slidemenu/Slidemenu'
 import OrderLunch from '../OrderLunch/OrderLunch'
-import ContentOrder from '../OrderLunch/ContentOrder';
-import { withRouter } from "react-router-dom";
-import TableService from '../../services/TableService';
+import ContentOrder from '../OrderLunch/ContentOrder'
+import { withRouter } from 'react-router-dom'
+import TableService from '../../services/TableService'
 
 class MenuTop extends Component {
 
@@ -82,15 +82,13 @@ class MenuTop extends Component {
       <div className={`container-menu ${this.state.color} ${this.props.colorFix ? 'pink-nav' : ''} margin-top-16`}>
         <div className='container padding-menu-nav'>
           <nav className='top-menu'>
-          {this.props.history.location.pathname !== "/board" ?  
+          {this.props.history.location.pathname !== '/board' ?  
           <div onClick={this.onClickBack} className='d-flex'><span className="material-icons white" >arrow_back</span></div> :
           <div><span className="material-icons pink" >arrow_back</span></div>}  
            <div className='flex-and-align'> 
            <span className="step-bg">{getTableNum()}</span> 
            <span className="material-icons white">
-           {
-              // eslint-disable-line
-            }<a onClick={this.orderVisibility}>shopping_cart</a></span></div>
+           <a onClick={this.orderVisibility}>shopping_cart</a></span></div>
           </nav>
         </div>
       </div>

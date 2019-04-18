@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Button from '../Utilities/Button';
+import React, { Component } from 'react'
+import Button from '../Utilities/Button'
 import { Redirect } from 'react-router-dom'
-import TableService from "../../services/TableService";
+import TableService from '../../services/TableService'
 
 class OrderButtons extends Component {
 

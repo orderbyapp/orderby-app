@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component} from 'react'
 import doggo from '../../sources/perritocalientecliente@2x.png'
 import orange from '../../sources/path-7.svg'
 import boy from '../../sources/camarero.png'

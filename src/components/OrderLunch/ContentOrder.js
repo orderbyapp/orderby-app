@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import OrderItem from './OrderItem';
-import TotalCount from './TotalCount';
-import OrderButtons from './OrderButtons';
-import TableService from "../../services/TableService";
+import React, { Component } from 'react'
+import OrderItem from './OrderItem'
+import TotalCount from './TotalCount'
+import OrderButtons from './OrderButtons'
+import TableService from '../../services/TableService'
 
 class ContentOrder extends Component {
   state = {

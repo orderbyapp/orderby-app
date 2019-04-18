@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Menu.css'
-import TableService from "../../services/TableService";
+import TableService from '../../services/TableService';
 import { Redirect } from 'react-router-dom'
 
 class Menu extends Component {
@@ -83,7 +83,7 @@ class Menu extends Component {
             <li className="nav-item p-1  close-nav-tag">
             <div onClick={this.props.closeBoard}>
               <div className="nav-link disabled flex-close-nav" href="#" >
-                <i className={`fa fa-times white-cross`} onClick={this.closeCard}></i>
+                <i className={'fa fa-times white-cross'} onClick={this.closeCard}></i>
                 <span className="close-text-nav">Cerrar</span>
               </div>
               </div>

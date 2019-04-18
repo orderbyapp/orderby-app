@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import './Input.css'
-import Button from '../Utilities/Button';
+import Button from '../Utilities/Button'
 import { tableService } from '../../services'
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import {css} from 'glamor'
-import CloseToast from './CloseToast';
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { css } from 'glamor'
+import CloseToast from './CloseToast'
 
 class ProductModalDetail extends Component {
   state = {
@@ -14,7 +14,6 @@ class ProductModalDetail extends Component {
     quantity : this.props.quantity || 1,
     table:{},
     instruction: this.props.instruction || '',
-
   }
 
   orderVisibilityModal = () => {
@@ -118,7 +117,7 @@ class ProductModalDetail extends Component {
     toast.configure({
       autoClose: 4000,
       draggable: true,
-      position: "top-center",
+      position: 'top-center',
       className: 'toaster',
       closeButton: <CloseToast/>
     
@@ -136,7 +135,7 @@ class ProductModalDetail extends Component {
           fontSize: '19px'
         }),
         progressClassName: css({
-          background: "#fe3569 !important"
+          background: '#fe3569 !important'
         })
       });
 

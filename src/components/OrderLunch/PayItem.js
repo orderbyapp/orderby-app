@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Elements, StripeProvider } from 'react-stripe-elements';
-import CheckoutForm from './CheckOutForm';
+import React, { Component } from 'react'
+import { Elements, StripeProvider } from 'react-stripe-elements'
+import CheckoutForm from './CheckOutForm'
 import './PayItem.css'
 
 class PayItem extends Component {

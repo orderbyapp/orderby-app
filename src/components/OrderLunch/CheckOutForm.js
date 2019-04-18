@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import { CardElement, injectStripe } from 'react-stripe-elements';
 import Button from '../Utilities/Button';
 import { Redirect } from 'react-router-dom'
-import TableService from "../../services/TableService";
-import PaymentService from "../../services/PaymentService";
+import TableService from '../../services/TableService'
+import PaymentService from '../../services/PaymentService'
 
 class CheckoutForm extends Component {
   state = {
@@ -18,9 +18,9 @@ class CheckoutForm extends Component {
         .then(({token}) => {
           if(token){
             const data = {
-              method: "POST",
+              method: 'POST',
               headers: {
-                "Content-Type": "application/json"
+                'Content-Type': 'application/json'
               },
               body: JSON.stringify({
                 token: token.id

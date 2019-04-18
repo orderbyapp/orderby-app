@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import './CardPromotion.css'
-import Skeleton from 'react-skeleton-loader';
-
+import Skeleton from 'react-skeleton-loader'
 
 class CardPromotion extends Component {
-
   state = {
     imageUrl : '',
     loaded : false,

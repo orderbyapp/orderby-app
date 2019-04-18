@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import Skeleton from 'react-skeleton-loader';
+import React, { Component, Fragment } from 'react'
+import Skeleton from 'react-skeleton-loader'
 
 class ProductItem extends Component {
   state = {

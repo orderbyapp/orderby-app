@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import "./TableItem.css";
-import { Link } from "react-router-dom";
-import Seat from "../../sources/asiento-orderby.svg";
-import occupiedTable from "../../sources/occupied-table.svg";
-import freeTable from "../../sources/free-table.svg";
-import occupiedSeat from "../../sources/asiento-orderby-ocupado.svg";
-import Moment from "moment";
+import React, { Component } from 'react'
+import './TableItem.css'
+import { Link } from 'react-router-dom'
+import Seat from '../../sources/asiento-orderby.svg'
+import occupiedTable from '../../sources/occupied-table.svg'
+import freeTable from '../../sources/free-table.svg'
+import occupiedSeat from '../../sources/asiento-orderby-ocupado.svg'
+import Moment from 'moment'
 
 class TableItem extends Component {
   render() {
     const { table } = this.props;
     const order =
       table.orders &&
-      table.orders.filter(order => order.kitchenStatus === "pending")[0];
+      table.orders.filter(order => order.kitchenStatus === 'pending')[0];
 
     return (
       <div className="col-xl-6 col-lg-6 col-md-6 col-xs-12 center-table">
@@ -24,39 +24,39 @@ class TableItem extends Component {
             }
           }}
         >
-          {this.props.status === "Ocupada" && (
+          {this.props.status === 'Ocupada' && (
             <div>
-              <div className="asientos-top d-flex">
-                <div className="asiento asiento-1">
+              <div className='asientos-top d-flex'>
+                <div className='asiento asiento-1'>
                   {table.diners >= 1 && <img src={occupiedSeat} />}
                   {table.diners < 1 && <img src={Seat} />}
                 </div>
-                <div className="asiento asiento-2">
+                <div className='asiento asiento-2'>
                   {table.diners >= 2 && <img src={occupiedSeat} />}
                   {table.diners < 2 && <img src={Seat} />}
                 </div>
               </div>
-              <div className="mesa-ocupada">
-                <div className="status-sideBar" />
-                <div className="ml-4 pt-2 info-table-top">
-                  <img className="icon-table-status" src={occupiedTable} />
-                  <span className="black ml-2">{table.diners}</span>
-                  <div className="add-costumer-card">
-                    <div className="button-more-promotions">
-                      <span className="more-icon-promotions ">+</span>
+              <div className='mesa-ocupada'>
+                <div className='status-sideBar' />
+                <div className='ml-4 pt-2 info-table-top'>
+                  <img className='icon-table-status' src={occupiedTable} />
+                  <span className='black ml-2'>{table.diners}</span>
+                  <div className='add-costumer-card'>
+                    <div className='button-more-promotions'>
+                      <span className='more-icon-promotions '>+</span>
                     </div>
                   </div>
-                  <h2 className="numbertable pink">{table.tableNumber}</h2>
+                  <h2 className='numbertable pink'>{table.tableNumber}</h2>
                 </div>
                 <div>{table.title}</div>
-                <div className="table-info-inside ml-4">
-                  <h6 className="t-d-none dark-blue mt-0 mb-0 pt-0">
+                <div className='table-info-inside ml-4'>
+                  <h6 className='t-d-none dark-blue mt-0 mb-0 pt-0'>
                     Estado:
                     <i>{table.orders && table.orders.kitchenStatus}</i>
                   </h6>
                   <p className="t-d-none dark-blue mt-0 pt-0">{table.state}</p>
                   <span className="light-grey mt-0 pt-0">
-                    {order && Moment(order.updateAt).format("HH:mm")}
+                    {order && Moment(order.updateAt).format('HH:mm')}
                   </span>
                 </div>
               </div>
@@ -72,7 +72,7 @@ class TableItem extends Component {
               </div>
             </div>
           )}
-          {this.props.status === "Libre" && (
+          {this.props.status === 'Libre' && (
             <div>
               <div className="asientos-top d-flex">
                 <div className="asiento asiento-1">

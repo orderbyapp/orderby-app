@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import CardPromotion from './CardPromotion';
+import React, { Component } from 'react'
+import CardPromotion from './CardPromotion'
 import './PromotionList.css'
 import './CardPromotion.css'
 import Promotions from '../../data/promotions.json'

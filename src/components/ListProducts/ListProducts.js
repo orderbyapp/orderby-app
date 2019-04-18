@@ -1,17 +1,17 @@
-import React, { Component, Fragment } from 'react';
-import MenuTop from '../MenuTop/MenuTop';
-import ProductItem from './ProductItem';
+import React, { Component, Fragment } from 'react'
+import MenuTop from '../MenuTop/MenuTop'
+import ProductItem from './ProductItem'
 import './Products.css'
 import Menu from '../MenuSide/Menu'
 import ActionsButton from '../MenuSide/ActionButton'
 import ProductModalDetail from './ProductModalDetail'
-import TableService from "../../services/TableService";
+import TableService from '../../services/TableService'
 import Slidemenu from '../Slidemenu/Slidemenu'
 import OrderLunch from '../OrderLunch/OrderLunch'
-import ContentOrder from '../OrderLunch/ContentOrder';
+import ContentOrder from '../OrderLunch/ContentOrder'
 import '../MenuTop/MenuTop.css'
 import './Toast.css'
-import WaiterCall from '../WaiterInfo/WaiterCall';
+import WaiterCall from '../WaiterInfo/WaiterCall'
 
 class ListProducts extends Component {
   state = {

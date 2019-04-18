@@ -1,24 +1,23 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import './App.css';
-import OrderBoard from './components/OrderBoard/Board';
+import OrderBoard from './components/OrderBoard/Board'
 import Intro from './components/Intro/Intro'
 import Board from './components/Board/Board'
 import Login from './components/Auth/Login'
-import ListProducts from './components/ListProducts/ListProducts';
+import ListProducts from './components/ListProducts/ListProducts'
 import {Switch, Route, Redirect} from 'react-router-dom'
 import Welcome from './components/OnBoard/Welcome'
 import Instructions from './components/OnBoard/InstructionsQr'
-import Toast from './components/Toasts/Toast';
-import Payment from './components/Payment/Payment';
+import Toast from './components/Toasts/Toast'
+import Payment from './components/Payment/Payment'
 import Thankyou from './components/Payment/Thankyou'
 import TableRoute from './guards/TableRoute'
 import ThanksRoute from './guards/ThanksRoute'
 import PrivateRoute from './guards/PrivateRoute'
-import { AnimatedSwitch } from 'react-router-transition';
-import WaiterBoard from './components/Waiter/WaiterBoard';
-import TableDetail from './components/Waiter/TableDetail';
+import { AnimatedSwitch } from 'react-router-transition'
+import WaiterBoard from './components/Waiter/WaiterBoard'
+import TableDetail from './components/Waiter/TableDetail'
 import WaiterIntro from './components/Waiter/IntroWaiter';
-
 class App extends Component {
     render() {
         return (
