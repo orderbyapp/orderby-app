@@ -1,12 +1,11 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {css} from 'glamor'
-// Call it once in your app. At the root of your app is the best place
+import { css } from 'glamor'
+
 toast.configure({
   autoClose: 4000,
   draggable: TextTrackCueList,
-  //etc you get the idea
 });
 
 const Toast = () => {

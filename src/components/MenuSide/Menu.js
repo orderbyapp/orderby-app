@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Menu.css'
 import TableService from "../../services/TableService";
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 class Menu extends Component {
   state = {

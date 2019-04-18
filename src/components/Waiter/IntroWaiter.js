@@ -1,7 +1,4 @@
 import React, { Component} from 'react';
-
-// Images imported from sources //
-
 import doggo from '../../sources/perritocalientecliente@2x.png'
 import orange from '../../sources/path-7.svg'
 import boy from '../../sources/camarero.png'
@@ -10,10 +7,6 @@ import blue from '../../sources/oval.svg'
 import text from '../../sources/group-32.png'
 import './Intro.css'
 import {Redirect} from 'react-router-dom'
-
-
-// Hay que crear un observable donde venga: Restaurante, Mesa, Menu y Camarero
-// Despues que se haya creado el observable, hay que hacer un set-time-out y que redirija a las promociones, al primer board.
 
 class WaiterIntro extends Component {
     state = {

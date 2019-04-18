@@ -7,4 +7,3 @@ export default {
   getWaiterById,
   firebaseWaiters
 }
-// cuando el camarero abra su pagina tenemos que guardar su token para las notificaciones push

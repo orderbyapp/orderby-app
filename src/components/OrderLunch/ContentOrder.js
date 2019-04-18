@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import OrderItem from './OrderItem';
-//import OrderPayed from './OrderIPayed';
 import TotalCount from './TotalCount';
 import OrderButtons from './OrderButtons';
 import TableService from "../../services/TableService";
-//import Slidemenu from '../Slidemenu/Slidemenu'
 
 class ContentOrder extends Component {
   state = {
@@ -16,7 +14,6 @@ class ContentOrder extends Component {
     editing: false,
     noProducts : false
   }
-  // tableSubscription = undefined
 
   payCardVisibility = () => {
       this.setState({
@@ -24,7 +21,6 @@ class ContentOrder extends Component {
           open: this.state.order.open ? false : true}
       })
   }
-
 
   componentDidMount = () => {
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
@@ -68,9 +64,6 @@ class ContentOrder extends Component {
           <div >
             <OrderButtons onClickEdit={this.onClickEdit} noProducts={this.state.noProducts}  visibilityMenuCard={this.payCardVisibility} editing={this.state.editing}></OrderButtons>
           </div>
-          {/* <div>
-            <OrderPayed></OrderPayed>
-          </div> */}
         </div>
       </div>
     );

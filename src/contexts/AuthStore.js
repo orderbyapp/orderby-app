@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { authService } from '../services/index'
 
 const AuthContext = React.createContext();
-
 const CURRENT_USER_KEY = 'current-user';
 
 class AuthStore extends Component {

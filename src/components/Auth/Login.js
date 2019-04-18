@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import authService from '../../services/AuthService'
 import './Login.css'
 import svgTop from '../../sources/yellow-waiters.svg'
 import svgBottom from '../../sources/pink-waiters.svg'
-
-
-
-//const EMAIL_PATTERN = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 const validations = {
   username: (value) => {

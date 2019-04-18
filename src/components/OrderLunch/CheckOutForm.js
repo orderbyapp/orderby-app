@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {CardElement, injectStripe} from 'react-stripe-elements';
+import { CardElement, injectStripe } from 'react-stripe-elements';
 import Button from '../Utilities/Button';
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import TableService from "../../services/TableService";
 import PaymentService from "../../services/PaymentService";
 

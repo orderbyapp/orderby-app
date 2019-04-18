@@ -41,7 +41,7 @@ class ListProducts extends Component {
     this.tableSubscription = TableService.onTableChange().subscribe(table =>
       this.setState({ table: table, orders: table.orders},
         () =>  TableService.getMenuList(this.props.match.params.name)
-        .then(response => this.setState({ list : response.data }))) //revisar esto
+        .then(response => this.setState({ list : response.data })))
       )};
 
   componentWillUnmount() {

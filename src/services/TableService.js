@@ -33,13 +33,6 @@ export const updateTable = (newTable) => {
   localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(newTable));
   table$.next(newTable);
 }
-// export const updateWaiterTable = (id, newTable) => http.put(`/tables/${id}`, newTable)
-//   .then(response => {
-//     table = response.data;
-//     localStorage.setItem(CURRENT_TABLE_KEY, JSON.stringify(table));
-//     table$.next(table);
-//     return table;
-//   });
 
 export const cleanTable = (table) => {
   const cleanTable = {
