@@ -1,0 +1,71 @@
+.box {
+  /* margin: 376px 100px; */
+  flex-wrap: wrap
+}
+
+.body-form-manager{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#25273d+26,25273d+70,181928+100 */
+background: #25273d; /* Old browsers */
+background: -moz-linear-gradient(top, #25273d 26%, #25273d 70%, #181928 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #25273d 26%,#25273d 70%,#181928 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #25273d 26%,#25273d 70%,#181928 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25273d', endColorstr='#181928',GradientType=0 ); /* IE6-9 */
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.box-btn-manager {
+  display: block;
+  width: 100%;
+  background-color: #fd3569 ;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+
+.center-form-login{
+  width: 100%;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.absolute-text-top-waiters{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10000 !important;
+  position: absolute !important;
+}
+
+.custom-size-form{
+  max-width: 400px !important;
+}
+
+.manager-input{
+  background-color: transparent !important;
+  border: 2px solid white;
+  color: white !important;
+}
+
+.manager-top-yellow{
+  width: 100%;
+  top: 0;
+  z-index: 10 !important;
+  
+  position: absolute !important;
+}
+
+.waiters-top-pink{
+  width: 100%;
+  bottom: 0;
+  z-index: -1000000;
+  height: auto;
+  position: absolute;
+  transform: rotate(180deg);
+}
+
