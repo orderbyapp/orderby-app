@@ -20,6 +20,7 @@ import TableDetail from './components/Waiter/TableDetail'
 import WaiterIntro from './components/Waiter/IntroWaiter';
 import ManagerIntro from './components/Managers/Intro'
 import ManagerLogin from './components/Managers/Login'
+import ManagmentIntro from './components/Managers/Managmentintro'
 
 
 
@@ -35,6 +36,7 @@ class App extends Component {
                     <ThanksRoute exact path='/thankyou' component={Thankyou}/> 
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/managerintro" component={ManagerIntro}/>
+                    <Route exact path="/management" component={ManagmentIntro}/>
                     <Route exact path="/managerlogin" component={ManagerLogin}/>
                     <PrivateRoute exact path="/waiter" component={WaiterBoard}/>
                     <PrivateRoute exact path='/waiter/:id' component={TableDetail}/>
