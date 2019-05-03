@@ -14,13 +14,19 @@ class MenuManagmnet extends Component {
  
     return (
       <div className='background-div-color'>
+      <div className='top-navbar-management'>
+      <div id="close-sidebar">
+                <i className="fas fa-times"></i>
+              </div>
+        <div>
+          <i class="fas fa-power-off white pl-4"></i>
+        </div>
+      </div>
         <nav id="sidebar" className="sidebar-wrapper">
           <div className="sidebar-content">
             <div className="sidebar-brand">
-              <a>pro sidebar</a>
-              <div id="close-sidebar">
-                <i className="fas fa-times"></i>
-              </div>
+              <a>restaurant.name</a>
+             
             </div>
             <div className="sidebar-header">
               <div className="user-pic">
@@ -42,7 +48,7 @@ class MenuManagmnet extends Component {
             <div className="sidebar-search">
               <div>
                 <div className="input-group">
-                  <input type="text" className="form-control search-menu" placeholder="Search..."></input>
+                  <input type="text" className="form-control search-menu" placeholder="Buscar..."></input>
                   <div className="input-group-append">
                     <span className="input-group-text">
                       <i className="fa fa-search" aria-hidden="true"></i>
@@ -59,31 +65,26 @@ class MenuManagmnet extends Component {
                 </li>
                 <li className="sidebar-dropdown">
                   <a>
-                    <i className="fa fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                    <span className="badge badge-pill badge-warning">New</span>
+                    <i className="fas fa-tachometer-alt"></i>
+                    <span>Escritorio</span>
                   </a>
-                  <div className="sidebar-submenu">
+                  {/* <div className="sidebar-submenu">
                     <ul>
                       <li>
-                        <a>Dashboard 1
-                          <span className="badge badge-pill badge-success">Pro</span>
+                        <a>Perfil
                         </a>
                       </li>
-                      <li>
-                        <a>Dashboard 2</a>
+                      <li className='grey-edit-li'>
+                        <a>Editar pefil</a>
                       </li>
-                      <li>
-                        <a>Dashboard 3</a>
-                      </li>
+                  
                     </ul>
-                  </div>
+                  </div> */}
                 </li>
                 <li className="sidebar-dropdown">
                   <a>
-                    <i className="fa fa-shopping-cart"></i>
-                    <span>E-commerce</span>
-                    <span className="badge badge-pill badge-danger">3</span>
+                    <i className="fa fa-user"></i>
+                    <span>Perfil</span>
                   </a>
                   <div className="sidebar-submenu">
                     <ul>
@@ -103,8 +104,8 @@ class MenuManagmnet extends Component {
                 </li>
                 <li className="sidebar-dropdown">
                   <a>
-                    <i className="far fa-gem"></i>
-                    <span>Components</span>
+                  <i class="fas fa-file-alt"></i>
+                     <span>Menús</span>
                   </a>
                   <div className="sidebar-submenu">
                     <ul>
@@ -129,7 +130,7 @@ class MenuManagmnet extends Component {
                 <li className="sidebar-dropdown">
                   <a>
                     <i className="fa fa-chart-line"></i>
-                    <span>Charts</span>
+                    <span>Métricas</span>
                   </a>
                   <div className="sidebar-submenu">
                     <ul>
@@ -171,7 +172,6 @@ class MenuManagmnet extends Component {
                   <a>
                     <i className="fa fa-book"></i>
                     <span>Documentation</span>
-                    <span className="badge badge-pill badge-primary">Beta</span>
                   </a>
                 </li>
                 <li>
@@ -189,23 +189,7 @@ class MenuManagmnet extends Component {
               </ul>
             </div>
           </div>
-          <div className="sidebar-footer">
-            <a>
-              <i className="fa fa-bell"></i>
-              <span className="badge badge-pill badge-warning notification">3</span>
-            </a>
-            <a>
-              <i className="fa fa-envelope"></i>
-              <span className="badge badge-pill badge-success notification">7</span>
-            </a>
-            <a>
-              <i className="fa fa-cog"></i>
-              <span className="badge-sonar"></span>
-            </a>
-            <a>
-              <i className="fa fa-power-off"></i>
-            </a>
-          </div>
+      
         </nav>
       </div>
     )
