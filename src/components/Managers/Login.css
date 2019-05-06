@@ -17,7 +17,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25273d', end
 .box-btn-manager {
   display: block;
   width: 100%;
-  background-color: #fd3569 ;
+  background-color: #9a91fd ;
   text-align: center;
   border: 1px solid transparent;
   padding: .375rem .75rem;
@@ -56,8 +56,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25273d', end
   width: 100%;
   top: 0;
   z-index: 10 !important;
-  
+  opacity: 0.4;
   position: absolute !important;
+}
+.manager-bottom-purple{
+  width: 100%;
+  bottom: 0;
+  z-index: 10 !important;
+  opacity: 0.4;
+  position: absolute !important;
+  transform: rotate(180deg);
 }
 
 .waiters-top-pink{

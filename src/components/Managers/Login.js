@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom'
 import authService from '../../services/AuthService'
 import './Login.css'
 import svgTop from '../../sources/yellow-waiters.svg'
-import svgBottom from '../../sources/pink-waiters-svg.svg'
+import svgBottom from '../../sources/pink-top-management-svg.svg'
 
 const validations = {
   username: (value) => {
@@ -95,21 +95,21 @@ class LoginManager extends Component {
     }
 
     return (
-    <div class='body-form-manager'>
+    <div class=''>
       <img className='manager-top-yellow' src={svgBottom}></img>
       <div className='absolute-text-top-waiters text-center'>
       </div>
       <div className="container ">
       <div className="row justify-content-center">
         <div className="col-xs-12 col-sm-8 center-form-login custom-size-form">
-          <h3 className="white">Welcome to <br></br>OrderBy-Managment</h3>
+          <h3 className="">Welcome to <br></br>OrderBy-Managment</h3>
           <form onSubmit={this.handleSubmit} className='mt-4'>
             <div className="mt-100">
               <div className="">
-                <label className='white'>Usuario</label>
+                <label className=''>Usuario</label>
               </div>
               <input type="text" 
-              className={`form-control manager-input ${touch.username && errors.username && 'is-invalid '}`} 
+              className={`form-control  ${touch.username && errors.username && 'is-invalid '}`} 
               name="username" 
               placeholder="Introduce tu nombre de usuario" 
               onChange={this.handleChange} 
@@ -119,10 +119,10 @@ class LoginManager extends Component {
             </div>
             <div className="mt-3">
               <div className="">
-                <label className='white'>Tu contraseña</label>
+                <label className=''>Tu contraseña</label>
               </div>
               <input type="password" 
-              className={`form-control manager-input ${touch.password && errors.password && 'is-invalid '}`} 
+              className={`form-control  ${touch.password && errors.password && 'is-invalid '}`} 
               name="password" 
               placeholder="Introduce tu contraseña" 
               onChange={this.handleChange} 
@@ -132,13 +132,13 @@ class LoginManager extends Component {
             </div>
 
             <div className="from-actions mt-5">
-              <button type="submit" className="box-btn-manager p-2 white " disabled={!this.isValid()}>Continuar</button>
+              <button type="submit" className="box-btn-manager p-2  white" disabled={!this.isValid()}>Continuar</button>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <img className='waiters-top-pink' src={svgBottom}></img>
+    <img className='manager-bottom-purple' src={svgBottom}></img>
 
   </div>
     )

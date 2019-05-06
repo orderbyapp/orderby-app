@@ -4,9 +4,17 @@ body{
 .dark-grey{
   color:#e0e2e7
 }
-
+.purple{
+  color: #9a91fd;
+}
+.orange{
+  color:#ff7929;
+}
 .pink{
   color:#fe3569;
+}
+.yellow{
+  color:#c4d601;
 }
 .grey{
   color: #d8d8d8;
@@ -52,5 +60,8 @@ body{
 
 .absolute{
   position: absolute !important;
+}
+.inside-div canvas {
+  width: 100%;
 }
 

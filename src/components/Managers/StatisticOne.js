@@ -1,13 +1,17 @@
 import React from "react";
 import { Chart } from "react-charts";
- 
+
 export default () => (
   // A react-chart hyper-responsively and continuusly fills the available
   // space of its parent element automatically
   <div
     style={{
-      width: "400px",
-      height: "300px"
+      width: "100%",
+      height: "300px",
+      padding: '25px',
+      background: 'white',
+      borderRadius: '4px',
+      boxShadow: '2px 2px 10px #DADADA',
     }}
   >
     <Chart

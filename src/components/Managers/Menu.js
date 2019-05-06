@@ -3,10 +3,14 @@ import './Login.css'
 import './Menuanimated'
 import './Menu.css'
 import svgBottom from '../../sources/pink-waiters-svg.svg'
+import $ from 'jquery'; 
 
 class MenuManagmnet extends Component {
   state = {
    
+  }
+  closeMenu = () => {
+      $(".page-wrapper").removeClass("toggled");
   }
 
 
@@ -15,18 +19,21 @@ class MenuManagmnet extends Component {
     return (
       <div className='background-div-color'>
       <div className='top-navbar-management'>
-      <div id="close-sidebar">
-                <i className="fas fa-times"></i>
-              </div>
-        <div>
-          <i class="fas fa-power-off white pl-4"></i>
-        </div>
+     <div> <h4 className='name-top-restaurant'>Restaurante 80 grados</h4></div>
+      <div className='flex-off'>
+        <span className='dark-grey'>15 - 04 - 2019</span>
+          <div>
+            <i class="fas fa-power-off pl-4"></i>
+          </div>
+      </div>
       </div>
         <nav id="sidebar" className="sidebar-wrapper">
           <div className="sidebar-content">
             <div className="sidebar-brand">
-              <a>restaurant.name</a>
-             
+               
+            <div id="close-sidebar" onClick={this.closeMenu}>
+                <i className="fas fa-times"> </i>
+              </div>
             </div>
             <div className="sidebar-header">
               <div className="user-pic">
@@ -151,8 +158,8 @@ class MenuManagmnet extends Component {
                 </li>
                 <li className="sidebar-dropdown">
                   <a>
-                    <i className="fa fa-globe"></i>
-                    <span>Maps</span>
+                  <i class="fas fa-users"></i>
+                    <span>Camareros</span>
                   </a>
                   <div className="sidebar-submenu">
                     <ul>
