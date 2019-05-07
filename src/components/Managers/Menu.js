@@ -13,13 +13,47 @@ class MenuManagmnet extends Component {
       $(".page-wrapper").removeClass("toggled");
   }
 
+  tagsOpen = () => {
+    $( document ).ready(function() {
+      $("#close-sidebar").click(function() {
+      $(".page-wrapper").removeClass("toggled");
+    });
+    $("#show-sidebar").click(function() {
+      $(".page-wrapper").addClass("toggled");
+    });
+    $(".sidebar-dropdown > a").click(function() {
+      $(".sidebar-submenu").slideUp(200);
+      if (
+        $(this)
+          .parent()
+          .hasClass("active")
+      ) {
+        $(".sidebar-dropdown").removeClass("active");
+        $(this)
+          .parent()
+          .removeClass("active");
+      } else {
+        $(".sidebar-dropdown").removeClass("active");
+        $(this)
+          .next(".sidebar-submenu")
+          .slideDown(200);
+        $(this)
+          .parent()
+          .addClass("active");
+      }
+    });
+    
+   
+  });
+  }
+
 
   render() {
  
     return (
-      <div className='background-div-color'>
-      <div className='top-navbar-management'>
-     <div> <h4 className='name-top-restaurant'>Restaurante 80 grados</h4></div>
+      <div >
+      <div className='top-navbar-management' ready={this.tagsOpen()}>
+     <div className='index-name-div'> <h4 className='name-top-restaurant'>Restaurante 80 grados</h4></div>
       <div className='flex-off'>
         <span className='dark-grey'>15 - 04 - 2019</span>
           <div>
@@ -70,23 +104,11 @@ class MenuManagmnet extends Component {
                 <li className="header-menu">
                   <span>General</span>
                 </li>
-                <li className="sidebar-dropdown">
+                <li>
                   <a>
                     <i className="fas fa-tachometer-alt"></i>
                     <span>Escritorio</span>
                   </a>
-                  {/* <div className="sidebar-submenu">
-                    <ul>
-                      <li>
-                        <a>Perfil
-                        </a>
-                      </li>
-                      <li className='grey-edit-li'>
-                        <a>Editar pefil</a>
-                      </li>
-                  
-                    </ul>
-                  </div> */}
                 </li>
                 <li className="sidebar-dropdown">
                   <a>
@@ -96,7 +118,7 @@ class MenuManagmnet extends Component {
                   <div className="sidebar-submenu">
                     <ul>
                       <li>
-                        <a>Products
+                        <a>Ver perfil
       
                         </a>
                       </li>

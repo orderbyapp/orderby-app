@@ -13,22 +13,17 @@ constructor(props){
     {
       label: 'Número de clientes',
       fill: false,
-      lineTension: 0.1,
-      backgroundColor: 'rgba(75,192,192,0.4)',
-
-      borderDash: [],
+      lineTension: 0.5,
+      backgroundColor: '#ff7929',
       borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      pointBorderColor: 'rgba(75,192,192,1)',
-      pointBackgroundColor: '#fff',
-      pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-      pointHoverBorderColor: 'rgba(220,220,220,1)',
-      pointHoverBorderWidth: 2,
+      pointBackgroundColor:'#ff7929',
+      pointBorderColor: '#ff7929',
+      pointBorderWidth: 7,
+      pointHoverRadius: 7,
+      pointHoverBackgroundColor: '#ff7929',
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [65, 59, 80, 81, 56, 55, 40]
+      data: [65, 59, 80, 81, 56, 55, 40,90],
     }
   ]
   },
@@ -48,7 +43,7 @@ constructor(props){
         paddingBottom: '65px',
         background: 'white',
         borderRadius: '4px',
-        boxShadow: '2px 2px 10px #DADADA',
+        boxShadow: '2px 2px 10px #00000021',
       }}>
       
         <div className='flex-top-charts'>

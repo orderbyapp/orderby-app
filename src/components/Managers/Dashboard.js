@@ -8,7 +8,7 @@ import './MainManagement.css'
 import StatisticsOne from './StatisticOne'
 import StatisticTwo from './ChartTwo'
 import Ratewaiters from './Ratingwaiters'
-
+import ProductsInfo from './ProductsInfo'
 class IntroCards  extends Component {
   constructor(){
     super();
@@ -116,7 +116,7 @@ class IntroCards  extends Component {
     <Ratewaiters></Ratewaiters>
     </div>
     <div className='bg-statistic-linear col-xl-12 col-lg-12 col-md-12 col-12'>
-     <StatisticTwo></StatisticTwo>
+     <ProductsInfo></ProductsInfo>
     </div>
   </div>
   </div>

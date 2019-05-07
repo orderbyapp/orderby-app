@@ -7,6 +7,17 @@
   width: 100%;
 }
 
+.oval1-dashboard{
+  position: absolute;
+    right: 0px;
+}
+
+.oval2-dashboard{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
 .list-group-item{
   border: none !important;
 }
@@ -43,7 +54,7 @@
 }
 
 .card-counter{
-  box-shadow: 2px 2px 10px #DADADA;
+  box-shadow: 2px 2px 10px #00000021;
 
   padding: 20px 10px;
   background-color: #fff;
@@ -53,7 +64,7 @@
 }
 
 .card-counter:hover{
-  box-shadow: 4px 4px 20px #DADADA;
+  box-shadow: 4px 4px 20px #00000021;
   transition: .3s linear all;
 }
 

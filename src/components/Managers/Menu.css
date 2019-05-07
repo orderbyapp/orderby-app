@@ -5,6 +5,7 @@
 }
 .flex-off{
   display: flex;
+  z-index:10;
 }
 @keyframes swing {
   0% {
@@ -127,6 +128,9 @@
 .dark-grey{
   color: #494949;
 }
+.index-name-div{
+  z-index: 1
+}
 
 .top-navbar-management{
   width: calc(100% - 260px);
@@ -138,6 +142,7 @@
   justify-content: space-between;
   align-items: center;
   padding-right: 40px;
+  z-index: 10;
 }
 
 #container {
@@ -741,6 +746,7 @@
   text-decoration: none;
   position: relative;
   padding: 8px 30px 8px 20px;
+  cursor: pointer;
 }
 
 .sidebar-wrapper .sidebar-menu ul li a i {
@@ -751,6 +757,7 @@
   line-height: 30px;
   text-align: center;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .sidebar-wrapper .sidebar-menu ul li a:hover > i::before {

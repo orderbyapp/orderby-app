@@ -8,13 +8,12 @@ constructor(props){
 
  this.state = {
   data :  {
-    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
     datasets: [
       {
         label: 'Ingresos',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        borderColor: 'rgba(255,99,132,1)',
-        borderWidth: 1,
+        backgroundColor: '#fe3569',
+        borderWidth: 0,
         hoverBackgroundColor: 'rgba(255,99,132,0.4)',
         hoverBorderColor: 'rgba(255,99,132,1)',
         data: [65, 59, 80, 81, 56, 55, 40, 20]
@@ -31,14 +30,14 @@ constructor(props){
     return (
       <div className="chart"     style={{
         width: "100%",
-        height: "300px",
-        maxHeight: '300px',
+        height: "320px",
+        maxHeight: '320px',
         padding: '25px',
         paddingTop: '20px',
-        paddingBottom: '65px',
+        paddingBottom: '70px',
         background: 'white',
         borderRadius: '4px',
-        boxShadow: '2px 2px 10px #DADADA',
+        boxShadow: '2px 2px 10px #00000021',
       }}>
 
 
