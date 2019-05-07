@@ -749,6 +749,7 @@
   cursor: pointer;
 }
 
+
 .sidebar-wrapper .sidebar-menu ul li a i {
   margin-right: 10px;
   font-size: 12px;
@@ -893,15 +894,15 @@
 /*------scroll bar---------------------*/
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 7px;
+  width: 3px;
+  height: 0px;
 }
 ::-webkit-scrollbar-button {
   width: 0px;
   height: 0px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #525965;
+  background: #9a91fd;
   border: 0px none #ffffff;
   border-radius: 0px;
 }

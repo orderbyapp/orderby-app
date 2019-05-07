@@ -39,6 +39,19 @@ class IntroManagment  extends Component {
   <div class="">
     <div class="row p-3 ">
       <div class="col-md-12 container-white-users p-4">
+      <div class="list-group list pl-3 pr-3 pb-2 pt-2">
+        <div className='row p-2 pt-0'>    
+         <div class="col-xl-10 pr-4 flex-image-users">
+             
+                <h4 class="list-group-item-heading name"> Usuarios</h4>
+              
+            </div>
+            <div class="col-xl-2 text-users-list-flex">
+              <p class="list-group-item-text title ">Puesto</p>
+            
+            </div>
+            </div>
+        </div>
 
       <div class="list-group list pl-3 pr-3 pb-2 pt-2">
         <div className='row p-2 pt-0'>    
