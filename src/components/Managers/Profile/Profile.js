@@ -33,11 +33,7 @@ class IntroManagment  extends Component {
         <MenuManagmnet></MenuManagmnet>
         <main className="page-content background-div-color">
           <div id="contentid" class="container-fluid">
-            <div className='row'>
-              <div className='col-xl-4  container-image-profile'>
-                <img src='https://via.placeholder.com/150' className='border-radius-100'></img>
-              </div>
-            </div>
+       
           </div>
         </main>
       </div>
