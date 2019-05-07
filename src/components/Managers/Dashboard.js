@@ -7,6 +7,7 @@ import svgBottom from '../../sources/pink-top-management.svg'
 import './MainManagement.css'
 import StatisticsOne from './StatisticOne'
 import StatisticTwo from './ChartTwo'
+import Ratewaiters from './Ratingwaiters'
 
 class IntroCards  extends Component {
   constructor(){
@@ -96,14 +97,28 @@ class IntroCards  extends Component {
  
       
   </div>
+  <div>
+    
+  </div>
+<div className='row'>
 
-  <div className='row'>
-    <div className='bg-statistic-linear col-xl-6 col-lg-12 col-md-12 col-12'>
+
+  <div className='col-xl-7 col-lg-8 col-md-12 col-12 pl-0 pr-0'>
+    <div className='bg-statistic-linear col-xl-12 col-lg-12 col-md-12 col-12'>
       <StatisticsOne></StatisticsOne>
     </div>
-    <div className='bg-statistic-linear col-xl-6 col-lg-12 col-md-12 col-12'>
+    <div className='bg-statistic-linear mb-4 col-xl-12 col-lg-12 col-md-12 col-12'>
+    <StatisticTwo></StatisticTwo>
+    </div>
+  </div>
+  <div className='col-xl-5 col-lg-4 col-md-12 col-12 pr-0 pl-0'>
+    <div className='bg-statistic-linear col-xl-12 col-lg-12 col-md-12 col-12'>
+    <Ratewaiters></Ratewaiters>
+    </div>
+    <div className='bg-statistic-linear col-xl-12 col-lg-12 col-md-12 col-12'>
      <StatisticTwo></StatisticTwo>
     </div>
+  </div>
   </div>
 </div>
 

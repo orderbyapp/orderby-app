@@ -30,7 +30,7 @@ class IntroManagment  extends Component {
           <i className="fas fa-bars white"></i>
         </a>
         <MenuManagmnet></MenuManagmnet>
-        <main class="page-content">
+        <main class="page-content background-div-color">
           <div id="contentid" class="container-fluid">
           <IntroCards></IntroCards>
           </div>

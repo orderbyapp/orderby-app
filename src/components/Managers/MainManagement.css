@@ -6,8 +6,12 @@
 .management-pink-top{
   width: 100%;
 }
-.bg-statistic-linear{
 
+.list-group-item{
+  border: none !important;
+}
+#contentid{
+  background-color:#f5f3f8;
 }
 .dark-grey{
   color: #494949;
