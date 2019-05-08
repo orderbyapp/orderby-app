@@ -4,6 +4,7 @@ import { withAuthConsumer } from '../../contexts/AuthStore'
 import TableItem from './TableItem'
 import { tableService, restaurantService, authService } from '../../services'
 import svgTop from '../../sources/yellow-waiters.svg'
+import { initializeFirebase, askForPermissioToReceiveNotifications } from '../../push-notification'
 
 class WaiterBoard extends Component {
 
@@ -38,6 +39,9 @@ class WaiterBoard extends Component {
         restaurant: response
       })
     )
+
+    initializeFirebase();
+    askForPermissioToReceiveNotifications();
   }
 
   componentWillUnmount() {   
