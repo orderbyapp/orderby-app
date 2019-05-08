@@ -31,10 +31,11 @@ class IntroManagment  extends Component {
     <img src={Oval2} className='oval2-dashboard'></img>
 
       <div className="page-wrapper chiller-theme toggled">
+      <MenuManagmnet></MenuManagmnet>
         <a   id="show-sidebar" className="btn btn-sm btn-dark" onClick={this.openMenu}>
           <i className="fas fa-bars white"></i>
         </a>
-        <MenuManagmnet></MenuManagmnet>
+        
         <main class="page-content background-div-color">
           <div id="contentid" class="container-fluid">
           <IntroCards></IntroCards>

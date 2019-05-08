@@ -34,7 +34,7 @@ class IntroManager extends Component {
 
         } else {
             return (
-                <Redirect to='/managerlogin'></Redirect>
+                <Redirect to='/manager/login'></Redirect>
             )
         }
        

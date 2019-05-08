@@ -21,8 +21,25 @@
 
 .list-group{
   padding: 30px;
- 
+}
 
+.opacity-50{
+  opacity: 0.2
+}
+.font1{
+  font-size: 1.2rem;
+}
+.font2{
+  font-size: 1.3rem;
+}
+.flex-icons-users{
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+}
+.flex-icons-users i {
+  cursor: pointer;
 }
 .expertise-label {
   display:block;
@@ -35,7 +52,14 @@
   margin-top: -15px;
 }
 
+.name-list-users{
+  font-size: 1.1rem;
+}
 
+.description-list-users{
+  font-size: 0.8rem;
+
+}
 
 .label {
   font-weight: normal;

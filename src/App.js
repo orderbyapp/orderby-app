@@ -50,7 +50,7 @@ class App extends Component {
                         atLeave={{ opacity: 0 }}
                         atActive={{ opacity: 1 }}
                         className="switch-wrapper">
-                        <Route exact path="/waiterIntro" component={WaiterIntro}/>
+                        <Route exact path="/waiterintro" component={WaiterIntro}/>
                         <TableRoute exact path='/board' component={Board}/>
                         <TableRoute exact path='/orderboard' component={OrderBoard}/>
                         <TableRoute exact path='/menulist/:name' component={ListProducts}/>

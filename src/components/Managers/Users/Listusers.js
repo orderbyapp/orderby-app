@@ -43,11 +43,12 @@ class IntroManagment  extends Component {
         <div className='row p-2 pt-0'>    
          <div class="col-xl-10 pr-4 flex-image-users">
              
-                <h4 class="list-group-item-heading name"> Usuarios</h4>
+          
+          <h4 class="list-group-item-heading name name-list-users">  <i class="fa fa-users calendar-chart"></i>Plantilla</h4>
               
             </div>
             <div class="col-xl-2 text-users-list-flex">
-              <p class="list-group-item-text title ">Puesto</p>
+              <small class="list-group-item-text title purple ">Puesto / Acciones</small>
             
             </div>
             </div>
@@ -59,17 +60,17 @@ class IntroManagment  extends Component {
               <img src="https://gravatar.com/avatar/ff3265b13420b9d301d0005ef494385a?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="pull-left photo">
               </img>
               <div className='text-users-list-flex'>
-                <h4 class="list-group-item-heading name">Dr. Kevin Schueller, PhD</h4>
-                <p class="list-group-item-text title">Professor of Witchcraft</p>
+                <h4 class="list-group-item-heading name name-list-users">Dr. Kevin Schueller, PhD</h4>
+                <p class="list-group-item-text title  description-list-users">Professor of Witchcraft</p>
               </div> 
             </div>
             <div class="col-xl-2 text-users-list-flex">
               <p class="list-group-item-text title ">Camarero</p>
-              <div className='pt-1'>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
+              <div className='pt-1 flex-icons-users'>
+                <i class="fas fa-pen-square font1 purple"></i>
+                <i class="fas fa-user orange"></i>
+                <i class="fas fa-times-circle font1 pink"></i>
+                <i class="fas fa-envelope-square font2 yellow"></i>
               </div>
             </div>
             </div>
@@ -80,17 +81,17 @@ class IntroManagment  extends Component {
               <img src="https://gravatar.com/avatar/ff3265b13420b9d301d0005ef494385a?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="pull-left photo">
               </img>
               <div className='text-users-list-flex'>
-                <h4 class="list-group-item-heading name">Dr. Kevin Schueller, PhD</h4>
-                <p class="list-group-item-text title">Professor of Witchcraft</p>
+                <h4 class="list-group-item-heading name name-list-users">Dr. Kevin Schueller, PhD</h4>
+                <p class="list-group-item-text title description-list-users">Professor of Witchcraft</p>
               </div> 
             </div>
             <div class="col-xl-2 text-users-list-flex">
               <p class="list-group-item-text title ">Camarero</p>
-              <div className='pt-1'>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
+              <div className='pt-1 flex-icons-users'>
+                <i class="fas fa-pen-square font1 purple"></i>
+                <i class="fas fa-user orange"></i>
+                <i class="fas fa-times-circle font1 pink"></i>
+                <i class="fas fa-envelope-square font2 yellow"></i>
               </div>
             </div>
             </div>
@@ -102,17 +103,17 @@ class IntroManagment  extends Component {
               <img src="https://gravatar.com/avatar/ff3265b13420b9d301d0005ef494385a?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="pull-left photo">
               </img>
               <div className='text-users-list-flex'>
-                <h4 class="list-group-item-heading name">Dr. Kevin Schueller, PhD</h4>
-                <p class="list-group-item-text title">Professor of Witchcraft</p>
+                <h4 class="list-group-item-heading name name-list-users">Dr. Kevin Schueller, PhD</h4>
+                <p class="list-group-item-text title description-list-users">Professor of Witchcraft</p>
               </div> 
             </div>
             <div class="col-xl-2 text-users-list-flex">
               <p class="list-group-item-text title ">Camarero</p>
-              <div className='pt-1'>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
+              <div className='pt-1 flex-icons-users'>
+                <i class="fas fa-pen-square font1 purple"></i>
+                <i class="fas fa-user orange"></i>
+                <i class="fas fa-times-circle font1 pink"></i>
+                <i class="fas fa-envelope-square font2 yellow"></i>
               </div>
             </div>
             </div>
@@ -126,17 +127,17 @@ class IntroManagment  extends Component {
               <img src="https://gravatar.com/avatar/ff3265b13420b9d301d0005ef494385a?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="pull-left photo">
               </img>
               <div className='text-users-list-flex'>
-                <h4 class="list-group-item-heading name">Dr. Kevin Schueller, PhD</h4>
-                <p class="list-group-item-text title">Professor of Witchcraft</p>
+                <h4 class="list-group-item-heading name name-list-users">Dr. Kevin Schueller, PhD</h4>
+                <p class="list-group-item-text title description-list-users">Professor of Witchcraft</p>
               </div> 
             </div>
             <div class="col-xl-2 text-users-list-flex">
               <p class="list-group-item-text title ">Camarero</p>
-              <div className='pt-1'>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
+              <div className='pt-1 flex-icons-users'>
+                <i class="fas fa-pen-square font1 purple"></i>
+                <i class="fas fa-user orange"></i>
+                <i class="fas fa-times-circle font1 pink"></i>
+                <i class="fas fa-envelope-square font2 yellow"></i>
               </div>
             </div>
             </div>
@@ -148,17 +149,17 @@ class IntroManagment  extends Component {
               <img src="https://gravatar.com/avatar/ff3265b13420b9d301d0005ef494385a?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="pull-left photo">
               </img>
               <div className='text-users-list-flex'>
-                <h4 class="list-group-item-heading name">Dr. Kevin Schueller, PhD</h4>
-                <p class="list-group-item-text title">Professor of Witchcraft</p>
+                <h4 class="list-group-item-heading name name-list-users">Dr. Kevin Schueller, PhD</h4>
+                <p class="list-group-item-text title description-list-users">Professor of Witchcraft</p>
               </div> 
             </div>
             <div class="col-xl-2 text-users-list-flex">
               <p class="list-group-item-text title ">Camarero</p>
-              <div className='pt-1'>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
+              <div className='pt-1 flex-icons-users'>
+                <i class="fas fa-pen-square font1 purple"></i>
+                <i class="fas fa-user orange"></i>
+                <i class="fas fa-times-circle font1 pink"></i>
+                <i class="fas fa-envelope-square font2 yellow"></i>
               </div>
             </div>
             </div>
@@ -170,17 +171,17 @@ class IntroManagment  extends Component {
               <img src="https://gravatar.com/avatar/ff3265b13420b9d301d0005ef494385a?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="pull-left photo">
               </img>
               <div className='text-users-list-flex'>
-                <h4 class="list-group-item-heading name">Dr. Kevin Schueller, PhD</h4>
-                <p class="list-group-item-text title">Professor of Witchcraft</p>
+                <h4 class="list-group-item-heading name name-list-users">Dr. Kevin Schueller, PhD</h4>
+                <p class="list-group-item-text title description-list-users">Professor of Witchcraft</p>
               </div> 
             </div>
             <div class="col-xl-2 text-users-list-flex">
               <p class="list-group-item-text title ">Camarero</p>
-              <div className='pt-1'>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
+              <div className='pt-1 flex-icons-users'>
+                <i class="fas fa-pen-square font1 purple"></i>
+                <i class="fas fa-user orange"></i>
+                <i class="fas fa-times-circle font1 pink"></i>
+                <i class="fas fa-envelope-square font2 yellow"></i>
               </div>
             </div>
             </div>
