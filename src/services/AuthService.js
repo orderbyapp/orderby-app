@@ -8,7 +8,6 @@ const user$ = new BehaviorSubject(user);
 
 const authenticate = (user) => http.post('waiters/authenticate', user)
   .then(response => {
-    console.log("res ", response.data)
     user = response.data;
     localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(user));
     user$.next(user);

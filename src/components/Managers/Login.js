@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import authService from '../../services/AuthService'
 import './Login.css'
-import svgTop from '../../sources/yellow-waiters.svg'
 import svgBottom from '../../sources/pink-top-management-svg.svg'
 
 const validations = {
@@ -19,6 +18,13 @@ const validations = {
       message = 'El password es requerido'
     }
     return message;
+  },
+  role: (value) => {
+    let message;
+    if(!value) {
+      message = 'El role no es correcto'
+    }
+    return message;
   }
 }
 
@@ -30,7 +36,8 @@ class LoginManager extends Component {
     },
     errors: {
       username: validations.username(),
-      password: validations.password()
+      password: validations.password(),
+      role: validations.role()
     },
     touch: {},
     isAuthenticated: false
@@ -65,7 +72,11 @@ class LoginManager extends Component {
     if (this.isValid()) {
       authService.authenticate(this.state.user)
         .then(
-          (user) => this.setState({ isAuthenticated: true }),
+          (user) => { user.role === 'admin' ?
+            this.setState({ isAuthenticated: true }) : this.setState({
+              errors: {
+                password: 'Tu role no está autorizado'
+              } })},
           (error) => {
             const { message, errors } = error.response.data;
             this.setState({
@@ -91,7 +102,7 @@ class LoginManager extends Component {
   render() {
     const { isAuthenticated, errors, user, touch } = this.state
     if(isAuthenticated) {
-      return (<Redirect to="/waiter" />)
+      return (<Redirect to="/management" />)
     }
 
     return (

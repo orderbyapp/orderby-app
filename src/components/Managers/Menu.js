@@ -7,7 +7,7 @@ import $ from 'jquery';
 
 class MenuManagmnet extends Component {
   state = {
-   
+    
   }
   closeMenu = () => {
       $(".page-wrapper").removeClass("toggled");
@@ -71,7 +71,7 @@ class MenuManagmnet extends Component {
             </div>
             <div className="sidebar-header">
               <div className="user-pic">
-                <img className="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                <img className="img-responsive img-rounded" src="https://res.cloudinary.com/dc94hgijj/image/upload/v1557314178/order-by/1557314178532-gerente.jpg.jpg"
                   alt="User picture"></img>
               </div>
               <div className="user-info">
