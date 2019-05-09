@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/pink-top-management.a944a718.svg"
   },
   {
-    "revision": "df4ad4811e77c2c4064b",
+    "revision": "01f2e7045c38a5dca1a9",
     "url": "/orderby-app/static/css/main.d5619c19.chunk.css"
   },
   {
@@ -84,8 +84,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "df4ad4811e77c2c4064b",
-    "url": "/orderby-app/static/js/main.f444d2e9.chunk.js"
+    "revision": "01f2e7045c38a5dca1a9",
+    "url": "/orderby-app/static/js/main.e65b289a.chunk.js"
   },
   {
     "revision": "ec6a302331a9618504721d004a4f88b7",
@@ -168,7 +168,7 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/css/2.b2fc3c67.chunk.css"
   },
   {
-    "revision": "42d6791aac95de2cde49f31469401a0e",
+    "revision": "18fbfceee85b0297623f7b7abdfbed44",
     "url": "/orderby-app/index.html"
   }
 ];
