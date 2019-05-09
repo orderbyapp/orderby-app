@@ -41,7 +41,6 @@ export default class MenusForm extends Component {
         }
       })
     }
-    
   }
 
   render() {
@@ -49,8 +48,8 @@ export default class MenusForm extends Component {
       <div>
       
     <form onSubmit={this.handleSubmit} className=' row  form-col'>
-    <h5 className='text-white p-0 m-0 d-none d-lg-block d-md-block'><strong>New</strong> Menu</h5>
-      <div className=" col-xl-2 col-md-3 col-5 w-100">
+      <div className="form-group">
+      <label>Nombre</label>
         <input
           type="text"
           name='title'
@@ -59,17 +58,19 @@ export default class MenusForm extends Component {
           value={this.state.menu.title}
           onChange={this.handleChange}/>
       </div> 
-      <div className=" col-xl-2 col-md-3 col-5 pl-0">
+      <div className="form-group">
+      <label>Descripción</label>
         <input
           type="text"
           name='description'
-          className="form-control "
+          className="form-control"
           placeholder="menu description"
           value={this.state.menu.description}
           onChange={this.handleChange}/>
       </div>
-      <div className="col-xl-2 col-md-3 col-5 pl-0">
-        <input type="file" className="custom-file-input" id="customFile" name='attachment'
+      <div className="form-group">
+      <label>Archivo</label>
+        <input type="file" className='form-control' id="customFile" name='attachment'
         onChange={this.handleChange}
         />
         <button type="submit" className="btn btn-primary w-100 mt-3 mb-4">Submit</button>
@@ -78,9 +79,7 @@ export default class MenusForm extends Component {
            <img src={URL.createObjectURL(this.state.menu.attachment)} alt='preview'></img>
         </div> 
         }  
-        <label className="custom-file-label" htmlFor="customFile">Elige foto</label>
       </div>
-      <button type="submit" className="btn btn-primary "> <i data-id={this.props.id} className="fas fa-plus" onClick={this.props.deleteColumn}></i></button>
     </form>
     </div>
     );
