@@ -16,7 +16,7 @@ export default class ColumnForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    newMenu({ ...this.state.column })
+    newMenu({ ...this.state.menu })
     .then(data => 
       this.props.refresh()
     )
@@ -24,8 +24,8 @@ export default class ColumnForm extends Component {
 
   handleChange = (e) => {
     this.setState({
-      column : {
-        ...this.state.column,
+      menu : {
+        ...this.state.menu,
         [e.target.name]: e.target.value
       }
     })
@@ -55,7 +55,7 @@ export default class ColumnForm extends Component {
           value={this.state.menu.description}
           onChange={this.handleChange}/>
       </div>
-      <div className="custom-file">
+      <div className="col-xl-2 col-md-3 col-5 pl-0">
         <input type="file" className="custom-file-input" id="customFile" name='photo'
         onChange={this.handleChange}
         />
@@ -66,9 +66,8 @@ export default class ColumnForm extends Component {
            <img src={URL.createObjectURL(this.state.menu.photo)} className='image-form-product' alt='preview'></img>
         </div>
         
-        
         }  
-        <label className="custom-file-label" htmlFor="customFile">Choose file</label>
+        <label className="custom-file-label" htmlFor="customFile">Elige foto</label>
       </div>
       <button type="submit" className="btn btn-primary "> <i data-id={this.props.id} className="fas fa-plus" onClick={this.props.deleteColumn}></i></button>
     </form>
