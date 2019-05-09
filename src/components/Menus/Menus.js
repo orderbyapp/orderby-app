@@ -40,7 +40,7 @@ export default class Column extends Component {
           </div>
         <div className='over-flow-card'>
         {this.productList()}
-            <Link to={{pathname: '/new-product', state: {position: (this.state.product.length) + 1, column:this.props.id}}}>Add New Card</Link>
+            <Link to={{pathname: '/new-product'}}>Add New Card</Link>
         </div>
         </div>
     );
