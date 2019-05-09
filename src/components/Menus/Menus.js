@@ -24,13 +24,14 @@ export default class Column extends Component {
       (error => console.log(error)))
   }
 
-  productList = () => (
+  productList = () => ( this.state.product &&
       this.state.product.map((product, index) => {
         return <Product deleteProduct={this.delete} id={product.id} {...product} key={index} />
       }).reverse()  
   )
 
   render() {
+    console.log("product ", this.state)
     return (
         <div className="w-costum p-2 column">
           <div className="rend-flex">
