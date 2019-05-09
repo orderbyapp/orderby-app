@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/pink-top-management.a944a718.svg"
   },
   {
-    "revision": "b3496358b742d5e71118",
+    "revision": "df4ad4811e77c2c4064b",
     "url": "/orderby-app/static/css/main.d5619c19.chunk.css"
   },
   {
@@ -72,20 +72,20 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "b06871f281fee6b241d60582ae9369b9",
-    "url": "/orderby-app/static/media/fontawesome-webfont.b06871f2.ttf"
-  },
-  {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
     "url": "/orderby-app/static/media/fontawesome-webfont.674f50d2.eot"
+  },
+  {
+    "revision": "b06871f281fee6b241d60582ae9369b9",
+    "url": "/orderby-app/static/media/fontawesome-webfont.b06871f2.ttf"
   },
   {
     "revision": "912ec66d7572ff821749319396470bde",
     "url": "/orderby-app/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "b3496358b742d5e71118",
-    "url": "/orderby-app/static/js/main.82c384d7.chunk.js"
+    "revision": "df4ad4811e77c2c4064b",
+    "url": "/orderby-app/static/js/main.f444d2e9.chunk.js"
   },
   {
     "revision": "ec6a302331a9618504721d004a4f88b7",
@@ -168,7 +168,7 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/css/2.b2fc3c67.chunk.css"
   },
   {
-    "revision": "362a013d17e173f13a4d6663833bd802",
+    "revision": "42d6791aac95de2cde49f31469401a0e",
     "url": "/orderby-app/index.html"
   }
 ];
