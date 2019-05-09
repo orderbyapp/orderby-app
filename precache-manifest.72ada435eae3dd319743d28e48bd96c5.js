@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/pink-top-management.a944a718.svg"
   },
   {
-    "revision": "1fd4f92efca9201c6f4a",
+    "revision": "0c5fbed8bb15314383bc",
     "url": "/orderby-app/static/css/main.d5619c19.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/MaterialIcons-Regular.d41ae58d.ttf"
   },
   {
-    "revision": "8e591b1b868e136611a1",
-    "url": "/orderby-app/static/js/2.04b0f4f9.chunk.js"
+    "revision": "e7781bb97170157727d2",
+    "url": "/orderby-app/static/js/2.40112fe6.chunk.js"
   },
   {
     "revision": "cc572f27bd5a4a22296b6b5908518719",
@@ -72,20 +72,20 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "674f50d287a8c48dc19ba404d20fe713",
-    "url": "/orderby-app/static/media/fontawesome-webfont.674f50d2.eot"
-  },
-  {
     "revision": "b06871f281fee6b241d60582ae9369b9",
     "url": "/orderby-app/static/media/fontawesome-webfont.b06871f2.ttf"
+  },
+  {
+    "revision": "674f50d287a8c48dc19ba404d20fe713",
+    "url": "/orderby-app/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
     "revision": "912ec66d7572ff821749319396470bde",
     "url": "/orderby-app/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "1fd4f92efca9201c6f4a",
-    "url": "/orderby-app/static/js/main.c565a34d.chunk.js"
+    "revision": "0c5fbed8bb15314383bc",
+    "url": "/orderby-app/static/js/main.e834c4f4.chunk.js"
   },
   {
     "revision": "ec6a302331a9618504721d004a4f88b7",
@@ -164,11 +164,11 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/MaterialIcons-Regular.c38ebd3c.woff"
   },
   {
-    "revision": "8e591b1b868e136611a1",
+    "revision": "e7781bb97170157727d2",
     "url": "/orderby-app/static/css/2.b2fc3c67.chunk.css"
   },
   {
-    "revision": "bc82cae071f8159c5c739de0816cdf35",
+    "revision": "19611a99bce7e3e5ef61863336249ee5",
     "url": "/orderby-app/index.html"
   }
 ];
