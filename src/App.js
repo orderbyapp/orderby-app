@@ -23,6 +23,8 @@ import ManagerLogin from './components/Managers/Login'
 import ManagmentIntro from './components/Managers/Managmentintro'
 import ManagmentProfile from './components/Managers/Profile/Profile'
 import UsersList from './components/Managers/Users/Listusers'
+import MenuBoard from './components/Menus/MenuBoard';
+import ProductForm from './components/Menus/ProductForm';
 
 
 class App extends Component {
@@ -42,6 +44,9 @@ class App extends Component {
                     <Route exact path="/manager/login" component={ManagerLogin}/>
                     <Route exact path="/manager/profile" component={ManagmentProfile}/>
                     <Route exact path="/manager/users" component={UsersList}/>
+                    
+                    <Route exact path="/manager/menus" component={MenuBoard} />
+                    <Route exact path="/manager/new-product" component={ProductForm} />
 
                     <PrivateRoute exact path="/waiter" component={WaiterBoard}/>
                     <PrivateRoute exact path='/waiter/:id' component={TableDetail}/>

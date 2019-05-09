@@ -17,7 +17,7 @@ export const getTableById = (id) => http.get(`/tables/${id}`)
 export const getMenuList = (name) => http.get(`/menulist/${name}`)
   .then(response => response )
 
-export const getTables = () => http.get(`/tables`)
+export const getTables = () => http.get('/tables')
   .then(response => response )
 
 export const newOrder = (id, order) => http.post(`/orders/${id}`, order)
