@@ -11,7 +11,7 @@ export default class ProductForm extends Component {
       product: {
         title: '',
         description: '',
-        photo: ''
+        attachment: ''
       },
       onSubmit: false
     }
@@ -35,7 +35,7 @@ export default class ProductForm extends Component {
         product : {
           ...this.state.product,
           [name]: e.target.value,
-          photo : e.target.files ? e.target.files[0] : e.target.value,
+          attachment : e.target.files ? e.target.files[0] : e.target.value,
         }
       })
     } else {
@@ -83,14 +83,14 @@ export default class ProductForm extends Component {
       <div className="form-group">
       <label>Add image</label>
       <div className="custom-file">
-        <input type="file" className="custom-file-input" id="customFile" name='photo'
+        <input type="file" className="custom-file-input" id="customFile" name='attachment'
         onChange={this.handleChange}
         />
         <button type="submit" className="btn btn-primary w-100 mt-3 mb-4">Submit</button>
-        {this.state.product.photo && 
+        {this.state.product.attachment && 
         
         <div className='image-div'>
-           <img src={URL.createObjectURL(this.state.product.photo)} className='image-form-product' alt='preview'></img>
+           <img src={URL.createObjectURL(this.state.product.attachment)} className='image-form-product' alt='preview'></img>
         </div>
         
         

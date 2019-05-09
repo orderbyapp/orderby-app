@@ -23,12 +23,25 @@ export default class MenusForm extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({
-      menu : {
-        ...this.state.menu,
-        [e.target.name]: e.target.value
-      }
-    })
+    const {name} = e.target;
+
+    if(e.target.files){
+      this.setState({
+        menu : {
+          ...this.state.menu,
+          [name]: e.target.value,
+          attachment : e.target.files ? e.target.files[0] : e.target.value,
+        }
+      })
+    } else {
+      this.setState({
+        menu : {
+          ...this.state.menu,
+          [e.target.name]: e.target.value
+        }
+      })
+    }
+    
   }
 
   render() {
@@ -60,11 +73,11 @@ export default class MenusForm extends Component {
         onChange={this.handleChange}
         />
         <button type="submit" className="btn btn-primary w-100 mt-3 mb-4">Submit</button>
-        {/* {this.state.menu.attachment && 
+        {this.state.menu.attachment && 
         <div className='image-div'>
            <img src={URL.createObjectURL(this.state.menu.attachment)} alt='preview'></img>
         </div> 
-        }   */}
+        }  
         <label className="custom-file-label" htmlFor="customFile">Elige foto</label>
       </div>
       <button type="submit" className="btn btn-primary "> <i data-id={this.props.id} className="fas fa-plus" onClick={this.props.deleteColumn}></i></button>

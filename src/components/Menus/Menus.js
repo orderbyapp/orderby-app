@@ -35,12 +35,12 @@ export default class Column extends Component {
     return (
         <div className="w-costum p-2 column">
           <div className="rend-flex">
-          <h4 className='ml-2'>{this.props.title}</h4>
-          <i data-id={this.props.id} class="fas fa-times mr-2" onClick={this.props.deleteMenu}></i>
+            <h4 className='ml-2'>{this.props.title}</h4>
+            <i data-id={this.props.id} class="fas fa-times mr-2" onClick={this.props.deleteMenu}></i>
           </div>
         <div className='over-flow-card'>
         {this.productList()}
-            <Link to={{pathname: '/new-product'}}>Add New Card</Link>
+            <Link to={{pathname: '/new-product', state: {menu:this.props.id}}}>Añade producto</Link>
         </div>
         </div>
     );
