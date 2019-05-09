@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { newMenu } from '../../services/MenuService';
 
-export default class ColumnForm extends Component {
+export default class MenusForm extends Component {
   constructor(props) {
     super(props);
 
@@ -9,7 +9,7 @@ export default class ColumnForm extends Component {
       menu: {
         title: '',
         description: '',
-        photo: ''
+        attachment: ''
       }
     }
   }
@@ -56,17 +56,15 @@ export default class ColumnForm extends Component {
           onChange={this.handleChange}/>
       </div>
       <div className="col-xl-2 col-md-3 col-5 pl-0">
-        <input type="file" className="custom-file-input" id="customFile" name='photo'
+        <input type="file" className="custom-file-input" id="customFile" name='attachment'
         onChange={this.handleChange}
         />
         <button type="submit" className="btn btn-primary w-100 mt-3 mb-4">Submit</button>
-        {this.state.menu.photo && 
-        
+        {/* {this.state.menu.attachment && 
         <div className='image-div'>
-           <img src={URL.createObjectURL(this.state.menu.photo)} className='image-form-product' alt='preview'></img>
-        </div>
-        
-        }  
+           <img src={URL.createObjectURL(this.state.menu.attachment)} alt='preview'></img>
+        </div> 
+        }   */}
         <label className="custom-file-label" htmlFor="customFile">Elige foto</label>
       </div>
       <button type="submit" className="btn btn-primary "> <i data-id={this.props.id} className="fas fa-plus" onClick={this.props.deleteColumn}></i></button>

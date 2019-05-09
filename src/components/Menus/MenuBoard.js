@@ -7,7 +7,6 @@ export default class MenuBoard extends Component {
   
     constructor(props) {
       super(props);
-  
       this.state = {
         menus: []
       }
