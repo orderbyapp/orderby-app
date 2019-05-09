@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { newProduct } from '../../services/MenuService';
 import { Redirect, Link } from 'react-router-dom';
-import MenuBoard from './MenuBoard';
 
 export default class ProductForm extends Component {
   constructor(props) {
@@ -11,6 +10,7 @@ export default class ProductForm extends Component {
       product: {
         title: '',
         description: '',
+        price: 1,
         attachment: ''
       },
       onSubmit: false
@@ -51,15 +51,14 @@ export default class ProductForm extends Component {
   render() {
     if (this.state.onSubmit) {
       return (
-      <Redirect to='/' />
+      <Redirect to='/menus' />
       )} else {
     return (
       <Fragment>
-        < MenuBoard />
         <div className='body-black'></div>
         <div className='absolute-form'>
         <form onSubmit={this.handleSubmit}>
-        <div className='text-right'> <Link to='/'><i data-id={this.props.id} className="fas fa-times mr-2" onClick={this.props.deleteColumn}></i></Link></div>
+        <div className='text-right'> <Link to='/menus'><i data-id={this.props.id} className="fas fa-times mr-2" onClick={this.props.deleteColumn}></i></Link></div>
         <div className="form-group">
         <label>Title</label>
         <input
@@ -81,6 +80,16 @@ export default class ProductForm extends Component {
           onChange={this.handleChange}/>
       </div>
       <div className="form-group">
+        <label>Precio</label>
+        <input
+          type="number"
+          name='price'
+          className="form-control"
+          placeholder="Introduce precio"
+          value={this.state.product.price}
+          onChange={this.handleChange}/>
+      </div>
+      <div className="form-group">
       <label>Add image</label>
       <div className="custom-file">
         <input type="file" className="custom-file-input" id="customFile" name='attachment'
@@ -92,7 +101,6 @@ export default class ProductForm extends Component {
         <div className='image-div'>
            <img src={URL.createObjectURL(this.state.product.attachment)} className='image-form-product' alt='preview'></img>
         </div>
-        
         
         }  
         <label className="custom-file-label" htmlFor="customFile">Choose file</label>
