@@ -20,20 +20,19 @@ class IntroManagment  extends Component {
   render() {
  
     return (
-    <div className='background-div-color page-content-management'>
-    <img src={Oval1} className='oval1-dashboard opacity-50'></img>
-    <img src={Oval2} className='oval2-dashboard opacity-50'></img>
+      <div>
+
+      
+    <div className='background-div-color page-content-management background-div-color'>
+    
 
       <div className="page-wrapper chiller-theme toggled">
         <a id="show-sidebar" className="btn btn-sm btn-dark" onClick={this.openMenu}>
           <i className="fas fa-bars white"></i>
         </a>
         <MenuManagmnet></MenuManagmnet>
-        <main className="page-content background-div-color">
-          <div id="contentid" class="container-fluid">
-       
-
-
+        <main className="page-content ">
+          <div id="contentid" class="container-fluid bg-transparent">      
 </div>
 <div id="users">
   <div class="">
@@ -195,14 +194,11 @@ class IntroManagment  extends Component {
     </div>
   </div>
 
-
-
-
-
           </div>
         </main>
       </div>
       
+    </div>
     </div>
     )
   }

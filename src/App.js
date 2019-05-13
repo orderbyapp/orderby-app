@@ -25,6 +25,7 @@ import ManagmentProfile from './components/Managers/Profile/Profile'
 import UsersList from './components/Managers/Users/Listusers'
 import MenuBoard from './components/Menus/MenuBoard';
 import ProductForm from './components/Menus/ProductForm';
+import Calendar from './components/Managers/Calendar/Calendar'
 
 
 class App extends Component {
@@ -38,6 +39,7 @@ class App extends Component {
                     <TableRoute exact path='/payment' component={Payment}/>
                     <ThanksRoute exact path='/thankyou' component={Thankyou}/> 
                     <Route exact path="/login" component={Login}/>
+                    <Route exact path="/manager/calendar" component={Calendar}/>
 
                     <Route exact path="/managerintro" component={ManagerIntro}/>
                     <Route exact path="/management" component={ManagmentIntro}/>

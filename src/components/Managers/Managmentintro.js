@@ -26,9 +26,8 @@ class IntroManagment  extends Component {
   render() {
  
     return (
-    <div className='background-div-color page-content-management'>
-    <img src={Oval1} className='oval1-dashboard'></img>
-    <img src={Oval2} className='oval2-dashboard'></img>
+    <div className=' page-content-management background-div-color'>
+
 
       <div className="page-wrapper chiller-theme toggled">
       <MenuManagmnet></MenuManagmnet>
@@ -36,8 +35,8 @@ class IntroManagment  extends Component {
           <i className="fas fa-bars white"></i>
         </a>
         
-        <main class="page-content background-div-color">
-          <div id="contentid" class="container-fluid">
+        <main class="page-content ">
+          <div id="contentid" class="container-fluid bg-transparent">
           <IntroCards></IntroCards>
           
           </div>

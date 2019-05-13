@@ -116,10 +116,13 @@
  
 }
 
-/* 
+
 .background-div-color{
-	background-color:#17181a;
-} */
+  background-image: url('../../sources/background-mg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .fa-power-off{
   cursor: pointer;
