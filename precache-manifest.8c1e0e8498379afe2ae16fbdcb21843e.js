@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a944a71853b314092e86f646b4fe6b2b",
-    "url": "/orderby-app/static/media/pink-top-management.a944a718.svg"
+    "revision": "912ec66d7572ff821749319396470bde",
+    "url": "/orderby-app/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "0c5fbed8bb15314383bc",
-    "url": "/orderby-app/static/css/main.d5619c19.chunk.css"
+    "revision": "a38f88e6cc823de651d6",
+    "url": "/orderby-app/static/css/main.eb97951a.chunk.css"
   },
   {
     "revision": "9c37281efdd1a1a84d4a",
@@ -16,12 +16,16 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/MaterialIcons-Regular.d41ae58d.ttf"
   },
   {
-    "revision": "e7781bb97170157727d2",
-    "url": "/orderby-app/static/js/2.40112fe6.chunk.js"
+    "revision": "92de1d34ae732211c3e4",
+    "url": "/orderby-app/static/js/2.2473ccb1.chunk.js"
   },
   {
     "revision": "cc572f27bd5a4a22296b6b5908518719",
     "url": "/orderby-app/static/media/asiento-orderby.cc572f27.svg"
+  },
+  {
+    "revision": "edd4bcf9db60c0cd2eacfe23d1dddeab",
+    "url": "/orderby-app/static/media/background-mg.edd4bcf9.jpg"
   },
   {
     "revision": "2378199d8bb8157627b2185ecead8de4",
@@ -56,6 +60,10 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/yellow-waiters.d11c1002.svg"
   },
   {
+    "revision": "ec6a302331a9618504721d004a4f88b7",
+    "url": "/orderby-app/static/media/vectorpaint.ec6a3023.svg"
+  },
+  {
     "revision": "096b1a143955417766649c44d69039ee",
     "url": "/orderby-app/static/media/clienteconpantalla@3x.096b1a14.png"
   },
@@ -72,24 +80,20 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "b06871f281fee6b241d60582ae9369b9",
-    "url": "/orderby-app/static/media/fontawesome-webfont.b06871f2.ttf"
-  },
-  {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
     "url": "/orderby-app/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
-    "revision": "912ec66d7572ff821749319396470bde",
-    "url": "/orderby-app/static/media/fontawesome-webfont.912ec66d.svg"
+    "revision": "b06871f281fee6b241d60582ae9369b9",
+    "url": "/orderby-app/static/media/fontawesome-webfont.b06871f2.ttf"
   },
   {
-    "revision": "0c5fbed8bb15314383bc",
-    "url": "/orderby-app/static/js/main.e834c4f4.chunk.js"
+    "revision": "a38f88e6cc823de651d6",
+    "url": "/orderby-app/static/js/main.af808180.chunk.js"
   },
   {
-    "revision": "ec6a302331a9618504721d004a4f88b7",
-    "url": "/orderby-app/static/media/vectorpaint.ec6a3023.svg"
+    "revision": "a944a71853b314092e86f646b4fe6b2b",
+    "url": "/orderby-app/static/media/pink-top-management.a944a718.svg"
   },
   {
     "revision": "a5fdc7b5e59c3838185a051781a749d6",
@@ -116,8 +120,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/payment-method.c3d0b798.png"
   },
   {
-    "revision": "69e1436e03fbc2142d1b9809bdfc7f13",
-    "url": "/orderby-app/static/media/mano.69e1436e.svg"
+    "revision": "36dce463bc523a49ebafe15f2bed82cd",
+    "url": "/orderby-app/static/media/chef.36dce463.svg"
   },
   {
     "revision": "da3c90bcbdca66fc77b8b30a63bacff8",
@@ -164,11 +168,11 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/MaterialIcons-Regular.c38ebd3c.woff"
   },
   {
-    "revision": "e7781bb97170157727d2",
-    "url": "/orderby-app/static/css/2.b2fc3c67.chunk.css"
+    "revision": "92de1d34ae732211c3e4",
+    "url": "/orderby-app/static/css/2.d776dfb3.chunk.css"
   },
   {
-    "revision": "19611a99bce7e3e5ef61863336249ee5",
+    "revision": "12abd6900c266897d2a7b166bfebad3f",
     "url": "/orderby-app/index.html"
   }
 ];
