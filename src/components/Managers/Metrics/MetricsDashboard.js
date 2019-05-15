@@ -12,6 +12,10 @@ import Tab from 'react-bootstrap/Tab'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
+import Income from './Income'
+import IncomePolar from './IncomePolar'
+import Donut from './IncomeDonut'
+import IncomeUsers from './IncomeSumary'
 
 
 
@@ -20,6 +24,24 @@ import TabContainer from 'react-bootstrap/TabContainer'
 
 
 class MetricsDashboard  extends Component {
+
+  renderIncome = () => {
+    return (
+      
+        <div className='row'>
+          <div className='col-12'>
+            <Income></Income>
+          </div>
+          <div className='col-xl-6 col-md-6 col-12'>
+             <Donut></Donut>
+          </div>
+          <div className='col-xl-6 col-md-6 col-12'>
+            <IncomeUsers></IncomeUsers>
+          </div>
+        </div>
+      
+    )
+  }
   
   render() {
  
@@ -34,17 +56,21 @@ class MetricsDashboard  extends Component {
         <main className="page-content ">
           <div id="contentid" class="container-fluid bg-transparent">      
           </div>
-          <div className=''>
-
-         
-            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+          <div className='bg-white p-4 ml-4 mr-4 mb-4 bx-sw charts-container '>
+            <Tabs defaultActiveKey="Ingresos" id="uncontrolled-tab-example">
+            <Tab eventKey="Ingresos" title="Ingresos">
+                {this.renderIncome()}
+              </Tab>
               <Tab eventKey="home" title="Home">
                 awdasfafsf
               </Tab>
-              <Tab eventKey="profile" title="Profile">
+              <Tab eventKey="contact" title="Contact" >
                 awdasfafsf
               </Tab>
-              <Tab eventKey="contact" title="Contact" disabled>
+              <Tab eventKey="contact2" title="Contact2" >
+                awdasfafsf
+              </Tab>
+              <Tab eventKey="contact3" title="Contact3" >
                 awdasfafsf
               </Tab>
             </Tabs>

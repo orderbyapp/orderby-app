@@ -59,7 +59,7 @@ renderUse = () => {
                   <div  class="star auto-adjust-button">
                     <div class="star-outer auto-adjust-button">
                     
-                      <i className='heartbeat  fa fa-star white star-to-rate'></i>
+                      <i className='heartbeat fa fa-star white star-to-rate'></i>
                     
                     </div>
                   </div>

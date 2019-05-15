@@ -1,6 +1,46 @@
 .nav-tabs .nav-link.active {
-  color: #495057 !important;
+  color: #9a91fd !important;
   background-color: #fff !important;
   border: none !important;
-  border-bottom: 1px solid grey !important;
+  border-bottom: 3px solid #9a91fd !important;
+}
+.charts-container{
+  border-radius: 5px;
+}
+
+.nav-link{
+  color: #ccccd2
+}
+.nav-tabs .nav-link:hover{
+  border: none;
+}
+.nav-tabs{
+  justify-content: space-between;
+}
+
+.user-rating{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.user-rating-info{
+  display: flex;
+ 
+}
+.waiters-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.product-rating{
+  align-items: center !important;
+}
+
+.text-product-dashboard{
+  width:80%;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
 }
