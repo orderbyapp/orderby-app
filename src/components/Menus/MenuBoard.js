@@ -51,9 +51,7 @@ export default class MenuBoard extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <div className='background-div-color page-content-management'>
-          <img src={Oval1} className='oval1-dashboard opacity-50' />
-          <img src={Oval2} className='oval2-dashboard opacity-50' />
+        <div className='background-div-color page-content-management background-div-color'>
 
           <div className='page-wrapper chiller-theme toggled'>
             <a
@@ -64,19 +62,19 @@ export default class MenuBoard extends Component {
               <i className='fas fa-bars white' />
             </a>
             <MenuManagmnet />
-            <main className='page-content background-div-color'> */}
+            <main className='page-content'>
               <MenusForm
                 currentPosition={this.state.menus.length + 1}
                 refresh={this.getMenus}
               />
               <div className='section trello-section'>
-                <div className='container-fluid'>
+                <div className='container-fluid '>
                   <div className='row mt-5'>{this.renderMenus()}</div>
                 </div>
               </div>
-            {/* </main>
+            </main>
           </div>
-        </div> */}
+        </div>
       </React.Fragment>
     );
   }

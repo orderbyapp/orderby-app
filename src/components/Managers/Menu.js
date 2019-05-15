@@ -53,9 +53,9 @@ class MenuManagmnet extends Component {
     return (
       <div >
       <div className='top-navbar-management' ready={this.tagsOpen()}>
-     <div className='index-name-div'> <h4 className='name-top-restaurant'>Restaurante 80 grados</h4></div>
+     <div className='index-name-div'> <h4 className='name-top-restaurant'>Restaurante Miralo's</h4></div>
       <div className='flex-off'>
-        <span className='dark-grey'>15 - 04 - 2019</span>
+        <span className='dark-grey'>17 - 05 - 2019</span>
           <div>
             <i class="fas fa-power-off pl-4"></i>
           </div>

@@ -79,16 +79,8 @@ class Calendar  extends Component {
             key={day}
             onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
           >
-       
-
             <span className="number">{formattedDate}</span>
             <span className="bg">{formattedDate}</span>
-            {
-              !dateFns.isSameMonth(day, monthStart)
-                ? console.log('kasjnfkajsf')
-                : dateFns.isSameDay(day, selectedDate) ? 
-                <input type='text'></input> : ''
-            }
           </div>
         );
         day = dateFns.addDays(day, 1);
