@@ -33,13 +33,13 @@ import './Rate.scss'
     const before = faces[from]
     const after = faces[to]
     return (
-      <svg width="150px" height="150px" viewBox="0 0 526 526">
+      <svg width="110px" height="110px" viewBox="0 0 526 526" className='pb-2'>
         <g transform="translate(13.000000, 13.000000)">
           <circle id="face" stroke="#fe3569" fill="none" strokeWidth="25" cx="250" cy="250" r="250"></circle>
-          <path id="left-eye" d={before && before.leftEye} stroke="#fe3569" >
+          <path id="left-eye" d={before && before.leftEye} fill="#fe3569" stroke="#fe3569" >
             <animate attributeName="d" dur="0.3s" to={after.leftEye} fill="freeze" />
           </path>
-          <path id="right-eye" d={before && before.rightEye} stroke="#fe3569">
+          <path id="right-eye" d={before && before.rightEye} fill="#fe3569" stroke="#fe3569">
             <animate attributeName="d" dur="0.3s" to={after.rightEye} fill="freeze" />
           </path>
           <path id="mouth" d={before && before.mouth} fill="none" stroke="#fe3569" strokeWidth="25" strokeLinecap="round">
@@ -91,8 +91,11 @@ export default class WaiterRate extends Component {
             <i className={'fa fa-times dark-grey  absolute right-cross'} onClick={this.closeCard}></i>
             <div className={`card-waiterCall ${this.props.blur && 'waiter-blurCall'}`}> 
             <Face from={this.state.from} to={this.state.to} key={this.state.to} />
+
             <Rater rating={this.state.rating} total={3} onRate={this.handleRate.bind(this)} />
-            {this.state.message > 0 && <h6 className="color-black">Gracias por tu valoración</h6>}
+            <p className='pt-1'>Gracias por usar <strong className='pink'>OrderBy</strong>, to opinion es realmente importante para nosotros</p>
+
+            {/* {this.state.message > 0 && <h6 className="color-black">Gracias por tu valoración</h6>} */}
             </div>
           </div>
         </div>
