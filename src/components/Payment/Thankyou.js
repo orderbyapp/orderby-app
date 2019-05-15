@@ -26,11 +26,11 @@ class Thankyou extends Component {
 
   animateStar = () => {
     setInterval(function(){ 
-      if ($('a.star').hasClass('starred')) {
-        $('a.star').removeClass('starred');
-        $('a.star').addClass('unstarred');
+      if ($('div.star').hasClass('starred')) {
+        $('div.star').removeClass('starred');
+        $('div.star').addClass('unstarred');
       } else {
-        $('a.star').addClass('starred');
+        $('div.star').addClass('starred');
       }
      }, 2000);
       
@@ -62,7 +62,7 @@ renderUse = () => {
                       ¡Pago realizado correctamente!</h5>
                 <h5 className=' white enjoyed scale-in-center'><br></br> 
                 Tu opinión es muy importante para nosotros, por favor valora el servicio recibido</h5>
-              <div className='w-100 text-center mt-4'>
+              <div className='w-100 text-center mt-4 auto-adjust-button'>
               <button onClick={this.showMessage} className='scale-in-center btn-pink-circle'>
                 <svg style={{ height: 0,display: 'none'}}  >
                   <symbol id="hipchat_star" preserveAspectRatio="xMidYMid" width="29" height="28" viewBox="0 0 29 28">
@@ -73,13 +73,13 @@ renderUse = () => {
                   </symbol>
                 </svg>
                 <div class="container" >
-                  <a  class="star">
+                  <div  class="star">
                     <div class="star-outer">
                     
                       {this.renderUse()} 
                     
                     </div>
-                  </a>
+                  </div>
                 </div>
                 </button>
               </div>

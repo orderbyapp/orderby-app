@@ -13,6 +13,12 @@
   text-align: center;
 }
 
+.auto-adjust-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .btn-pink-circle{
   width: 70px;
   height: 70px;
@@ -63,8 +69,8 @@ button:focus {outline:0 !important;}
 
 
 .scale-in-center {
-	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 20s both;
-	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 20s both;
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
 }
 
 .star use {
