@@ -57,8 +57,10 @@ renderUse = () => {
               <div className='w-100 text-center'>
               <img className='paymobile-image mb-3 mt-3 wobble-hor-bottom ' src={GoodBye} alt='image1'/>
               </div>
-                <h4 className='mt-4 white text-center'>¡Oído cocina!</h4>
+                <h3 className='mt-4 white text-center'>¡Oído cocina!</h3>
                 <h5 className=' white enjoyed'><br></br> 
+                      ¡Pago realizado correctamente!</h5>
+                <h5 className=' white enjoyed scale-in-center'><br></br> 
                 Tu opinión es muy importante para nosotros, por favor valora el servicio recibido</h5>
               <div className='w-100 text-center mt-4'>
               <button onClick={this.showMessage} className='scale-in-center btn-pink-circle'>

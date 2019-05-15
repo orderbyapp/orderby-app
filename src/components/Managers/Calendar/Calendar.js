@@ -26,6 +26,7 @@ class Calendar  extends Component {
         <div className="col col-center">
           <span>{dateFns.format(this.state.currentMonth, dateFormat)}</span>
         </div>
+      
         <div className="col col-end" onClick={this.nextMonth}>
           <div className="icon">chevron_right</div>
         </div>
@@ -79,7 +80,9 @@ class Calendar  extends Component {
             key={day}
             onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
           >
+
             <span className="number">{formattedDate}</span>
+            {formattedDate == 2 && <span className='reserva'>Juan x 2</span>} 
             <span className="bg">{formattedDate}</span>
           </div>
         );

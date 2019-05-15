@@ -39,7 +39,7 @@ class Ratingwaiters extends Component {
                 <i class="fa fa-star calendar-chart"></i>
                 <i class="fa fa-star calendar-chart"></i>
                 <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
+               
               </div>
             </div>   
           </div>
@@ -57,7 +57,7 @@ class Ratingwaiters extends Component {
                 <i class="fa fa-star calendar-chart"></i>
                 <i class="fa fa-star calendar-chart"></i>
                 <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
+               
               </div>
             </div>   
           </div>
@@ -74,8 +74,8 @@ class Ratingwaiters extends Component {
               <div className='pt-1'>
                 <i class="fa fa-star calendar-chart"></i>
                 <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
-                <i class="fa fa-star calendar-chart"></i>
+                
+               
               </div>
             </div>   
           </div>
