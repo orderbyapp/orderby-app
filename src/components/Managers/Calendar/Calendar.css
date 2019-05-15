@@ -67,7 +67,28 @@ header #logo .icon {
   margin-top: 5em;
   max-width: 50em;
 }
-
+.reserva{
+  position: absolute;
+  bottom: 0px;
+  font-size: 13px;
+  width: 100%;
+  background-color: rgba(154, 145, 253, 0.706);
+  left: 0px;
+  padding: 3px;
+  padding-left: 6px;
+  color: white;
+}
+.reserva2{
+  position: absolute;
+  bottom: 26px;
+  font-size: 13px;
+  width: 100%;
+  background-color: rgba(154, 145, 253, 0.706);
+  left: 0px;
+  padding: 3px;
+  padding-left: 6px;
+  color: white;
+}
 
 .row-calendar {
   margin: 0;

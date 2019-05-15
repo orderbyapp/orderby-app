@@ -16,7 +16,9 @@ import Income from './Income'
 import IncomePolar from './IncomePolar'
 import Donut from './IncomeDonut'
 import IncomeUsers from './IncomeSumary'
-
+import Products from './IncomeProducts'
+import ProductList from './Products'
+import ProductSumary from './ProductsSumary'
 
 
 import Tabs from 'react-bootstrap/Tabs'
@@ -42,6 +44,24 @@ class MetricsDashboard  extends Component {
       
     )
   }
+
+  renderProducts = () => {
+    return (
+      
+        <div className='row'>
+          <div className='col-12'>
+            <Products></Products>
+          </div>
+          <div className='col-xl-6 col-md-6 col-12'>
+             <ProductList></ProductList>
+          </div>
+          <div className='col-xl-6 col-md-6 col-12'>
+            <ProductSumary></ProductSumary>
+          </div>
+        </div>
+      
+    )
+  }
   
   render() {
  
@@ -61,8 +81,8 @@ class MetricsDashboard  extends Component {
             <Tab eventKey="Ingresos" title="Ingresos">
                 {this.renderIncome()}
               </Tab>
-              <Tab eventKey="home" title="Home">
-                awdasfafsf
+              <Tab eventKey="Products" title="Products">
+                {this.renderProducts()}
               </Tab>
               <Tab eventKey="contact" title="Contact" >
                 awdasfafsf

@@ -10,7 +10,8 @@ import dateFns from "date-fns";
 class Calendar  extends Component {
   state = {
     currentMonth: new Date(),
-    selectedDate: new Date()
+    selectedDate: new Date(),
+    currentDate: 17
   };
 
   renderHeader() {
@@ -77,12 +78,15 @@ class Calendar  extends Component {
                 ? "disabled"
                 : dateFns.isSameDay(day, selectedDate) ? "selected" : ""
             }`}
+           
             key={day}
             onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
           >
-
             <span className="number">{formattedDate}</span>
-            {formattedDate == 2 && <span className='reserva'>Juan x 2</span>} 
+            {formattedDate == 15 && <div className='reserva'>Juan x 2 / 14:00</div>} 
+            {formattedDate == 18 && <div className='reserva'>Carlos x 4 / 16:00</div>} 
+            {formattedDate == 21 && <div> <div className='reserva'>Roberto x 2 / 22:30</div> <div className='reserva2'>JoseMa x 6 / 22:00</div></div>} 
+            {formattedDate == 20 && <div className='reserva'>Moisés x 4 / 22:40</div>} 
             <span className="bg">{formattedDate}</span>
           </div>
         );
@@ -120,36 +124,47 @@ class Calendar  extends Component {
     $(".page-wrapper").addClass("toggled");
   }
 
-
   render() {
  
     return (
       <div>
-    <div className='background-div-color page-content-management background-div-color'>
-      <div className="page-wrapper chiller-theme toggled">
-        <a id="show-sidebar" className="btn btn-sm btn-dark" onClick={this.openMenu}>
-          <i className="fas fa-bars white"></i>
-        </a>
-        <MenuManagmnet></MenuManagmnet>
-        <main className="page-content ">
-          <div id="contentid" class="container-fluid bg-transparent">      
-          </div>
-
-
-          <div className='p-4'>
-            <div className="calendar">
-              {this.renderHeader()}
-              {this.renderDays()}
-              {this.renderCells()}
+        <div className='background-div-color page-content-management background-div-color'>
+          <div className="page-wrapper chiller-theme toggled">
+            <a id="show-sidebar" className="btn btn-sm btn-dark" onClick={this.openMenu}>
+              <i className="fas fa-bars white"></i>
+            </a>
+            <MenuManagmnet></MenuManagmnet>
+            <main className="page-content ">
+              <div id="contentid" class="container-fluid bg-transparent">      
+              </div>
+              <div className='p-4'>
+                <div className="calendar">
+                  {this.renderHeader()}
+                  {this.renderDays()}
+                  {this.renderCells()}
+                </div>
+                <div>
+                  <input type='text'></input>
+                  <div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
             </div>
+        </div>
+    </div>
+</div>
+                </div>
+              </div>
+            </main>
           </div>
-         
-
-        </main>
+        </div>
       </div>
-      
-    </div>
-    </div>
     )
   }
 }
