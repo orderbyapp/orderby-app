@@ -82,7 +82,7 @@ class MenuManagmnet extends Component {
                 </span>
                 <span className="user-role">Administrator</span>
                 <span className="user-status purple">
-                  <i className="fa fa-circle purple"></i>
+                  <i className="fa fa-circle green"></i>
                   <span>Online</span>
                 </span>
               </div>

@@ -29,7 +29,7 @@ constructor(props){
       <div className="chart mb-4"     style={{
         width: "100%",
         padding: '25px',
-        maxHeight: '550px',
+        maxHeight: '500px',
         paddingTop: '20px',
         paddingBottom: '65px',
         background: 'white',

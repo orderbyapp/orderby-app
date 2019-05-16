@@ -69,7 +69,7 @@ class IntroManagment  extends Component {
                 <i class="fas fa-pen-square font1 purple"></i>
                 <i class="fas fa-user orange"></i>
                 <i class="fas fa-times-circle font1 pink"></i>
-                <i class="fas fa-envelope-square font2 yellow"></i>
+                <i class="fas fa-envelope-square font2 yellow" data-toggle="modal" data-target="#emailModal"></i>
               </div>
             </div>
             </div>
@@ -90,7 +90,7 @@ class IntroManagment  extends Component {
                 <i class="fas fa-pen-square font1 purple"></i>
                 <i class="fas fa-user orange"></i>
                 <i class="fas fa-times-circle font1 pink"></i>
-                <i class="fas fa-envelope-square font2 yellow"></i>
+                <i class="fas fa-envelope-square font2 yellow" data-toggle="modal" data-target="#emailModal"></i>
               </div>
             </div>
             </div>
@@ -112,7 +112,7 @@ class IntroManagment  extends Component {
                 <i class="fas fa-pen-square font1 purple"></i>
                 <i class="fas fa-user orange"></i>
                 <i class="fas fa-times-circle font1 pink"></i>
-                <i class="fas fa-envelope-square font2 yellow"></i>
+                <i class="fas fa-envelope-square font2 yellow" data-toggle="modal" data-target="#emailModal"></i>
               </div>
             </div>
             </div>
@@ -136,7 +136,7 @@ class IntroManagment  extends Component {
                 <i class="fas fa-pen-square font1 purple"></i>
                 <i class="fas fa-user orange"></i>
                 <i class="fas fa-times-circle font1 pink"></i>
-                <i class="fas fa-envelope-square font2 yellow"></i>
+                <i class="fas fa-envelope-square font2 yellow" data-toggle="modal" data-target="#emailModal"></i>
               </div>
             </div>
             </div>
@@ -158,7 +158,7 @@ class IntroManagment  extends Component {
                 <i class="fas fa-pen-square font1 purple"></i>
                 <i class="fas fa-user orange"></i>
                 <i class="fas fa-times-circle font1 pink"></i>
-                <i class="fas fa-envelope-square font2 yellow"></i>
+                <i class="fas fa-envelope-square font2 yellow" data-toggle="modal" data-target="#emailModal"></i>
               </div>
             </div>
             </div>
@@ -174,6 +174,44 @@ class IntroManagment  extends Component {
       </div>
       
     </div>
+
+
+<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content border-none bx-sw">
+      <div class="modal-header bg-purple text-white">
+        <h5 class="modal-title" id="exampleModalLabel"> 
+        <i class="fas fa-envelope-square font2 white pr-3" ></i>
+          Escribir mail a María</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label"><i class="far fa-edit purple pr-2"></i> Asunto</label>
+            <input type="text" class="form-control" id="recipient-name"></input>
+          </div>
+          <div  className='row'>
+          <div class="form-group col-xl-12 col-md-12">
+            <label for="recipient-name" class="col-form-label">
+            <i class="far fa-file-alt purple pr-3"></i>
+            Mensaje</label>
+            <textarea type="text" height='300px' class="form-control text-area-email" id="recipient-name"></textarea>
+          </div>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-pink" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-outline-info">Enviar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     )
   }

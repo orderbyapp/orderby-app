@@ -68,7 +68,7 @@ export default class MenuBoard extends Component {
                 refresh={this.getMenus}
               />
               
-                  <div className='columns mt-5'>{this.renderMenus()}</div>
+                  <div className='row pt-0'>{this.renderMenus()}</div>
              
               
             </main>

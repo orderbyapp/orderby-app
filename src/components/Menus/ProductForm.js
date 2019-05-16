@@ -78,8 +78,8 @@ export default class ProductForm extends Component {
             <MenuManagmnet />
             <main className='page-content'>
                 <div className='body-black' />
-                <div className='absolute-form'>
-                  <form onSubmit={this.handleSubmit}>
+                <div className='absolute-form mx-auto'>
+                  <form onSubmit={this.handleSubmit} className='mx-auto p-4 w-75 bg-white br-5 bx-sw'>
                     <div className='text-right'>
                       {' '}
                       <Link to='/manager/menus'>
@@ -91,18 +91,18 @@ export default class ProductForm extends Component {
                       </Link>
                     </div>
                     <div className='form-group'>
-                      <label>Title</label>
+                      <label>Nombre</label>
                       <input
                         type='text'
                         name='title'
                         className='form-control'
-                        placeholder='Enter title'
+                        placeholder='Nombre del plato'
                         value={this.state.product.title}
                         onChange={this.handleChange}
                       />
                     </div>
                     <div className='form-group'>
-                      <label>Description</label>
+                      <label>Descripción</label>
                       <input
                         type='text'
                         name='description'
@@ -124,7 +124,7 @@ export default class ProductForm extends Component {
                       />
                     </div>
                     <div className='form-group'>
-                      <label>Add image</label>
+                      <label>Añadir Imagen</label>
                       <div className='custom-file'>
                         <input
                           type='file'
@@ -135,9 +135,9 @@ export default class ProductForm extends Component {
                         />
                         <button
                           type='submit'
-                          className='btn btn-primary w-100 mt-3 mb-4'
+                          className='btn btn-purple pt-2 pb-2  w-100 mt-4 mb-4'
                         >
-                          Submit
+                          Crear plato
                         </button>
                         {this.state.product.attachment && (
                           <div className='image-div'>
@@ -154,7 +154,7 @@ export default class ProductForm extends Component {
                           className='custom-file-label'
                           htmlFor='customFile'
                         >
-                          Choose file
+                          Elige archivo
                         </label>
                       </div>
                     </div>

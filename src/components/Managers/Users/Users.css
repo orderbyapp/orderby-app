@@ -11,7 +11,10 @@
   background-color: white;
   box-shadow: 2px 2px 10px #00000021;
   border-radius: 5px;
+}
 
+.text-area-email{
+  height: 170px !important;
 }
 
 

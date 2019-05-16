@@ -22,11 +22,33 @@ body{
 .orange{
   color:#ff7929;
 }
+.br-5{
+  border-radius: 5px;
+}
+
+.btn-outline-purple{
+  border: 1px  solid #9a91fd !important;
+  color: #9a91fd !important;
+}
+
+.btn-outline-purple:hover{
+  border: 1px  solid #9a91fd !important;
+  background-color: #9a91fd !important;
+  color: white!important;
+}
+.btn-purple{
+  border: 1px  solid #9a91fd !important;
+  background-color: #9a91fd !important;
+  color: white!important;
+}
 .bg-pink{
   background-color:#fe3569;
 }
 .pink{
   color:#fe3569;
+}
+.bg-yellow{
+  background-color:#c4d601;
 }
 .yellow{
   color:#c4d601;
