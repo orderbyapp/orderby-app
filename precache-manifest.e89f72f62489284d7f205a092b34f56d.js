@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "f3c4d1feb3f611ec8662",
-    "url": "/orderby-app/static/css/main.a8d5b6ff.chunk.css"
+    "revision": "86a3fc0fdbae93ffe931",
+    "url": "/orderby-app/static/css/main.cb411fcc.chunk.css"
   },
   {
     "revision": "9c37281efdd1a1a84d4a",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/MaterialIcons-Regular.d41ae58d.ttf"
   },
   {
-    "revision": "286596fae8797a49229a",
-    "url": "/orderby-app/static/js/2.fe50c5ae.chunk.js"
+    "revision": "7b49ef195e5e56ed0eb6",
+    "url": "/orderby-app/static/js/2.c56a7ed9.chunk.js"
   },
   {
     "revision": "edd4bcf9db60c0cd2eacfe23d1dddeab",
@@ -60,6 +60,10 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/yellow-waiters.d11c1002.svg"
   },
   {
+    "revision": "da3c90bcbdca66fc77b8b30a63bacff8",
+    "url": "/orderby-app/static/media/occupied-table.da3c90bc.svg"
+  },
+  {
     "revision": "ec6a302331a9618504721d004a4f88b7",
     "url": "/orderby-app/static/media/vectorpaint.ec6a3023.svg"
   },
@@ -88,8 +92,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/fontawesome-webfont.b06871f2.ttf"
   },
   {
-    "revision": "f3c4d1feb3f611ec8662",
-    "url": "/orderby-app/static/js/main.c04b2016.chunk.js"
+    "revision": "86a3fc0fdbae93ffe931",
+    "url": "/orderby-app/static/js/main.7dddc5ce.chunk.js"
   },
   {
     "revision": "a944a71853b314092e86f646b4fe6b2b",
@@ -124,10 +128,6 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/chef.36dce463.svg"
   },
   {
-    "revision": "da3c90bcbdca66fc77b8b30a63bacff8",
-    "url": "/orderby-app/static/media/occupied-table.da3c90bc.svg"
-  },
-  {
     "revision": "4015fae3e78b0170ec586a475e0c9736",
     "url": "/orderby-app/static/media/free-table.4015fae3.svg"
   },
@@ -146,6 +146,14 @@ self.__precacheManifest = [
   {
     "revision": "e2e0395802e0390b2fd41f969b3bc044",
     "url": "/orderby-app/static/media/gerentecarlos.e2e03958.png"
+  },
+  {
+    "revision": "0b624d1e29cc9ed3c91a78ae29b11811",
+    "url": "/orderby-app/static/media/occupied-table-svg.0b624d1e.svg"
+  },
+  {
+    "revision": "e74947eed5591c888781de4d8f9fd332",
+    "url": "/orderby-app/static/media/occupied-table-svg.e74947ee.png"
   },
   {
     "revision": "554f0d1ede0efda077c193b1d693286b",
@@ -168,11 +176,11 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/MaterialIcons-Regular.c38ebd3c.woff"
   },
   {
-    "revision": "286596fae8797a49229a",
-    "url": "/orderby-app/static/css/2.404e836d.chunk.css"
+    "revision": "7b49ef195e5e56ed0eb6",
+    "url": "/orderby-app/static/css/2.64be9a5a.chunk.css"
   },
   {
-    "revision": "5f97c216d2baaac04598dfcbcffc6946",
+    "revision": "b300ef7036fccaad73288a616f0bd97b",
     "url": "/orderby-app/index.html"
   }
 ];
