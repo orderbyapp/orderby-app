@@ -78,6 +78,11 @@ header #logo .icon {
   padding-left: 6px;
   color: white;
 }
+
+.flex-form{
+  display: flex;
+  justify-content: center;
+}
 .reserva2{
   position: absolute;
   bottom: 26px;

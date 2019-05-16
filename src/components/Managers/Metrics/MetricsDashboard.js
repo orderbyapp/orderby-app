@@ -23,6 +23,9 @@ import ChartsUsers from './IncomeUsers'
 import RatingWaiters from './Ratingwaiters'
 import Tabs from 'react-bootstrap/Tabs'
 import StaffSummary from './StaffSumary'
+import OtherIncome from './OtherIncome'
+import OtherReservations from './OtherIncomeReservations'
+import OtherPayments from './OtherIncomePayments'
 
 class MetricsDashboard  extends Component {
 
@@ -79,8 +82,26 @@ class MetricsDashboard  extends Component {
       
     )
   }
-  
-  
+
+
+  renderOther = () => {
+    return (
+      
+        <div className='row mt-4'>
+          <div className='col-xl-4 col-md-6 col-12'>
+            <OtherIncome></OtherIncome>
+          </div>
+          <div className='col-xl-4 col-md-6 col-12'>
+             <OtherReservations></OtherReservations>
+          </div>
+          <div className='col-xl-4 col-md-6 col-12'>
+             <OtherPayments></OtherPayments>
+          </div>
+        </div>
+      
+    )
+  }
+
   render() {
  
     return (
@@ -99,17 +120,14 @@ class MetricsDashboard  extends Component {
             <Tab eventKey="Ingresos" title="Ingresos">
                 {this.renderIncome()}
               </Tab>
-              <Tab eventKey="Products" title="Products">
+              <Tab eventKey="Productos" title="Productos">
                 {this.renderProducts()}
               </Tab>
-              <Tab eventKey="contact" title="Staff" >
+              <Tab eventKey="Staff" title="Staff" >
                 {this.renderStaff()}
               </Tab>
-              <Tab eventKey="contact2" title="Contact2" >
-                awdasfafsf
-              </Tab>
-              <Tab eventKey="contact3" title="Contact3" >
-                awdasfafsf
+              <Tab eventKey="other" title="other" >
+                {this.renderOther()}
               </Tab>
             </Tabs>
           </div>

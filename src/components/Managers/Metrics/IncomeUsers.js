@@ -36,7 +36,7 @@ class IncomeUsers  extends Component {
               
             </div>
             <div class="col-xl-2 text-users-list-flex">
-              <small class="list-group-item-text title purple "><i class="fa fa-star calendar-chart"> </i>Puesto / Acciones</small>
+              <small class="list-group-item-text title purple "><i class="fa fa-star calendar-chart"> </i>Valoración / Año</small>
             
             </div>
             </div>

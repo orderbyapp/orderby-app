@@ -18,7 +18,7 @@ class Ratingwaiters extends Component {
         <div className='flex-top-charts'>
         <div>
            <i class="fas fa-info-circle purple pr-3"></i>
-          <span>Compra según día</span> - <small>(Global)</small>
+          <span>Compra según día</span> - <small>(Semana Actual)</small>
         </div>
         <div>
         <small className='purple'>Balance / Rsto</small>

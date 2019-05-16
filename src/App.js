@@ -39,6 +39,7 @@ class App extends Component {
                     <TableRoute exact path='/payment' component={Payment}/>
                     <ThanksRoute exact path='/thankyou' component={Thankyou}/> 
                     <Route exact path="/login" component={Login}/>
+
                     <Route exact path="/manager/calendar" component={Calendar}/>
                     <Route exact path='/manager/charts' component={ManagerCharts}/>
                     <Route exact path="/managerintro" component={ManagerIntro}/>
@@ -46,7 +47,6 @@ class App extends Component {
                     <Route exact path="/manager/login" component={ManagerLogin}/>
                     <Route exact path="/manager/profile" component={ManagmentProfile}/>
                     <Route exact path="/manager/users" component={UsersList}/>
-                    
                     <Route exact path="/manager/menus" component={MenuBoard} />
                     <Route exact path="/manager/new-product" component={ProductForm} />
 

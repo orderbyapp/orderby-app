@@ -8,3 +8,16 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.imageother{
+  max-width: 200px;
+}
+
+.imageother2{
+  width: 100%;
+  max-width: 200px;
+  padding-left: 10px;
+  padding-right:10px;
+  padding-bottom: 20px;
+  
+}

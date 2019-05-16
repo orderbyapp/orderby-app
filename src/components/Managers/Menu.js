@@ -5,6 +5,8 @@ import './Menu.css'
 import svgBottom from '../../sources/pink-waiters-svg.svg'
 import $ from 'jquery'; 
 
+import {Link} from 'react-router-dom'
+
 class MenuManagmnet extends Component {
   state = {
     
@@ -105,12 +107,9 @@ class MenuManagmnet extends Component {
                   <span>General</span>
                 </li>
                 <li>
-                  <a>
-                    <i className="fas fa-tachometer-alt"></i>
-                    <span>Escritorio</span>
-                  </a>
+                    <Link to={'/management'}><i className="fas fa-tachometer-alt"></i> Escritorio</Link>
                 </li>
-                <li className="sidebar-dropdown">
+                <li>
                   <a>
                     <i className="fa fa-user"></i>
                     <span>Perfil</span>
@@ -131,11 +130,11 @@ class MenuManagmnet extends Component {
                     </ul>
                   </div>
                 </li>
-                <li className="sidebar-dropdown">
-                  <a>
-                  <i class="fas fa-file-alt"></i>
-                     <span>Menús</span>
-                  </a>
+                <li >
+               
+                  <Link to={'/manager/menus'}> <i class="fas fa-file-alt"></i>
+                     <span>Menús</span></Link>
+                  
                   <div className="sidebar-submenu">
                     <ul>
                       <li>
@@ -156,11 +155,12 @@ class MenuManagmnet extends Component {
                     </ul>
                   </div>
                 </li>
-                <li className="sidebar-dropdown">
-                  <a>
+                <li >
+                
+                  <Link to={'/manager/charts'}>
                     <i className="fa fa-chart-line"></i>
-                    <span>Métricas</span>
-                  </a>
+                    <span>Métricas</span></Link>
+              
                   <div className="sidebar-submenu">
                     <ul>
                       <li>
@@ -178,11 +178,10 @@ class MenuManagmnet extends Component {
                     </ul>
                   </div>
                 </li>
-                <li className="sidebar-dropdown">
-                  <a>
+                <li >
+                <Link to={'/manager/users'}>
                   <i class="fas fa-users"></i>
-                    <span>Camareros</span>
-                  </a>
+                    <span>Camareros</span></Link>
                   <div className="sidebar-submenu">
                     <ul>
                       <li>
@@ -197,17 +196,13 @@ class MenuManagmnet extends Component {
                 <li className="header-menu">
                   <span>Extra</span>
                 </li>
+               
                 <li>
-                  <a>
-                    <i className="fa fa-book"></i>
-                    <span>Documentation</span>
-                  </a>
-                </li>
-                <li>
-                  <a>
+                
+                  <Link to={'/manager/calendar'}>
                     <i className="fa fa-calendar"></i>
-                    <span>Calendar</span>
-                  </a>
+                    <span>Calendar</span></Link>
+                 
                 </li>
                 <li>
                   <a>

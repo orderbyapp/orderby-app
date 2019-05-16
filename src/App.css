@@ -10,11 +10,21 @@ body{
 .purple{
   color: #9a91fd;
 }
+.bg-purple{
+  background-color: #9a91fd;
+}
+
+.border-none{
+  border: none !important;
+}
 .light-purple{
   color: rgba(154, 145, 253, 0.406)
 }
 .orange{
   color:#ff7929;
+}
+.bg-pink{
+  background-color:#fe3569;
 }
 .pink{
   color:#fe3569;
