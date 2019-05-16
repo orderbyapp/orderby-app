@@ -145,12 +145,13 @@ class Calendar  extends Component {
                 </div>
                 <div>
                  
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+                <button type="button" class="btn btn-primary btn-custom-calendar" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <i class="far fa-plus-square text-white pr-3"></i>   Añadir Reserva</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content border-none bx-sw">
-      <div class="modal-header bg-pink text-white">
+      <div class="modal-header bg-purple text-white">
         <h5 class="modal-title" id="exampleModalLabel"> 
       <i class="far fa-calendar text-white pr-3"></i>
 Nueva Reserva - Mayo</h5>
@@ -161,18 +162,100 @@ Nueva Reserva - Mayo</h5>
       <div class="modal-body">
         <form>
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nombre de la reserva:</label>
+            <label for="recipient-name" class="col-form-label"><i class="far fa-edit purple pr-2"></i> Nombre de la reserva:</label>
             <input type="text" class="form-control" id="recipient-name"></input>
           </div>
+          <div  className='row'>
+          <div class="form-group col-xl-6 col-md-6">
+            <label for="recipient-name" class="col-form-label">
+            <i class="far fa-clock purple pr-3"></i>
+            Hora:</label>
+            <input type="text" class="form-control" id="recipient-name"></input>
+          </div>
+          <div class="form-group col-xl-6 col-md-6">
+            <label for="recipient-name" class="col-form-label">
+            <i class="fa fa-users purple pr-3"></i>
+            Comensales:</label>
+            <input type="number" class="form-control" id="recipient-name"></input>
+          </div>
+
+          </div>
+         
+          
           <div class="form-group">
-            <label for="message-text" class="col-form-label">Fecha:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+
+    <div id="calendar-container">
+      <h1 id="calendar-title">
+       
+        <span>Mayo, 2019</span>
+      
+      </h1>
+      <table id="calendar-table">
+        <tr>
+          <th>Lun</th>
+          <th>Mar</th>
+          <th>Mie</th>
+          <th>Jue</th>
+          <th>Vie</th>
+          <th>Sab</th>
+          <th>Dom</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>29</td>
+          <td>30</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+      </table>
+    </div>
+
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-pink" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-outline-info">Confirmar</button>
+
       </div>
     </div>
   </div>
