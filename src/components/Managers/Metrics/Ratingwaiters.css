@@ -1,0 +1,26 @@
+.user-rating{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.user-rating-info{
+  display: flex;
+ 
+}
+.waiters-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.product-rating{
+  align-items: center !important;
+}
+
+.text-product-dashboard{
+  width:80%;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}

@@ -19,11 +19,10 @@ import IncomeUsers from './IncomeSumary'
 import Products from './IncomeProducts'
 import ProductList from './Products'
 import ProductSumary from './ProductsSumary'
-
-
+import ChartsUsers from './IncomeUsers'
+import RatingWaiters from './Ratingwaiters'
 import Tabs from 'react-bootstrap/Tabs'
-import TabContainer from 'react-bootstrap/TabContainer'
-
+import StaffSummary from './StaffSumary'
 
 class MetricsDashboard  extends Component {
 
@@ -62,6 +61,25 @@ class MetricsDashboard  extends Component {
       
     )
   }
+
+  renderStaff = () => {
+    return (
+      
+        <div className='row mt-4'>
+          <div className='col-12'>
+            <ChartsUsers></ChartsUsers>
+          </div>
+          <div className='col-xl-6 col-md-6 col-12'>
+             <RatingWaiters></RatingWaiters>
+          </div>
+          <div className='col-xl-6 col-md-6 col-12'>
+            <StaffSummary></StaffSummary>
+          </div>
+        </div>
+      
+    )
+  }
+  
   
   render() {
  
@@ -84,8 +102,8 @@ class MetricsDashboard  extends Component {
               <Tab eventKey="Products" title="Products">
                 {this.renderProducts()}
               </Tab>
-              <Tab eventKey="contact" title="Contact" >
-                awdasfafsf
+              <Tab eventKey="contact" title="Staff" >
+                {this.renderStaff()}
               </Tab>
               <Tab eventKey="contact2" title="Contact2" >
                 awdasfafsf
