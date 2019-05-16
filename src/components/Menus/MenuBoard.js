@@ -67,11 +67,10 @@ export default class MenuBoard extends Component {
                 currentPosition={this.state.menus.length + 1}
                 refresh={this.getMenus}
               />
-              <div className='section trello-section'>
-                <div className='container-fluid '>
-                  <div className='row mt-5'>{this.renderMenus()}</div>
-                </div>
-              </div>
+              
+                  <div className='columns mt-5'>{this.renderMenus()}</div>
+             
+              
             </main>
           </div>
         </div>

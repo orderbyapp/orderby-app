@@ -93,7 +93,7 @@ export default class WaiterRate extends Component {
             <Face from={this.state.from} to={this.state.to} key={this.state.to} />
 
             <Rater rating={this.state.rating} total={3} onRate={this.handleRate.bind(this)} />
-            <p className='pt-1'>Gracias por usar <strong className='pink'>OrderBy</strong>, to opinion es realmente importante para nosotros</p>
+            <p className='pt-1'>Gracias por tu valoración, tu opinión es muy importante para nosotros</p>
 
             {/* {this.state.message > 0 && <h6 className="color-black">Gracias por tu valoración</h6>} */}
             </div>

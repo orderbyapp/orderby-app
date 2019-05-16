@@ -65,26 +65,24 @@ export default class ProductForm extends Component {
     } else {
       return (
         <React.Fragment>
-          {/* <div className='background-div-color page-content-management'>
-            <img src={Oval1} className='oval1-dashboard opacity-50' />
-            <img src={Oval2} className='oval2-dashboard opacity-50' />
+        <div className='background-div-color page-content-management background-div-color'>
 
-            <div className='page-wrapper chiller-theme toggled'>
-              <a
-                id='show-sidebar'
-                className='btn btn-sm btn-dark'
-                onClick={this.openMenu}
-              >
-                <i className='fas fa-bars white' />
-              </a>
-              <MenuManagmnet />
-              <main className='page-content background-div-color'> */}
+          <div className='page-wrapper chiller-theme toggled'>
+            <a
+              id='show-sidebar'
+              className='btn btn-sm btn-dark'
+              onClick={this.openMenu}
+            >
+              <i className='fas fa-bars white' />
+            </a>
+            <MenuManagmnet />
+            <main className='page-content'>
                 <div className='body-black' />
                 <div className='absolute-form'>
                   <form onSubmit={this.handleSubmit}>
                     <div className='text-right'>
                       {' '}
-                      <Link to='/menus'>
+                      <Link to='/manager/menus'>
                         <i
                           data-id={this.props.id}
                           className='fas fa-times mr-2'
@@ -162,10 +160,10 @@ export default class ProductForm extends Component {
                     </div>
                   </form>
                 </div>
-              {/* </main>
-            </div>
-          </div> */}
-        </React.Fragment>
+                </main>
+          </div>
+        </div>
+      </React.Fragment>
       );
     }
   }

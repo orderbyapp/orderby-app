@@ -18,7 +18,7 @@ class Ratingwaiters extends Component {
         <div className='flex-top-charts'>
         <div>
            <i class="fa fa-users calendar-chart"></i>
-          <span>Valoración empleados</span> - <small>(Global)</small>
+          <span>Valoración empleados</span>
         </div>
         <div>
         <small className='purple'>Nº</small>
@@ -32,9 +32,9 @@ class Ratingwaiters extends Component {
        <div className='column'>
         <div className='user-rating pt-3'>
           <div className='user-rating-info'>
-            <img className="image-product-order-item" src={'https://via.placeholder.com/150'} />
+            <img className="image-product-order-item" src={'https://res.cloudinary.com/dc94hgijj/image/upload/v1555053084/order-by/1555053083808-guy_rothblum_square.jpg.jpg'} />
             <div className='waiters-data'>
-              <h6 className='p-0 m-0'>Victor - Camarero</h6>
+              <h6 className='p-0 m-0'>Luis - Camarero</h6>
               <div className='pt-1'>
                 <i class="fa fa-star calendar-chart"></i>
                 <i class="fa fa-star calendar-chart"></i>
@@ -44,15 +44,15 @@ class Ratingwaiters extends Component {
             </div>   
           </div>
           <div>
-            <small className='purple'>12</small>
+            <small className='purple'>15</small>
           </div>
         </div>
 
         <div className='user-rating pt-3'>
           <div className='user-rating-info'>
-            <img className="image-product-order-item" src={'https://via.placeholder.com/150'} />
+            <img className="image-product-order-item" src={'https://www.zwettlers.com/typo3temp/pics/Mitzi_01_63cefd5127.jpg'} />
             <div className='waiters-data'>
-              <h6 className='p-0 m-0'>Victor - Camarero</h6>
+              <h6 className='p-0 m-0'>María - Camarera</h6>
               <div className='pt-1'>
                 <i class="fa fa-star calendar-chart"></i>
                 <i class="fa fa-star calendar-chart"></i>
@@ -62,15 +62,15 @@ class Ratingwaiters extends Component {
             </div>   
           </div>
           <div>
-            <small className='purple'>12</small>
+            <small className='purple'>15</small>
           </div>
         </div>
 
         <div className='user-rating pt-3'>
           <div className='user-rating-info'>
-            <img className="image-product-order-item" src={'https://via.placeholder.com/150'} />
+            <img className="image-product-order-item" src={'https://res.cloudinary.com/dc94hgijj/image/upload/v1553732498/order-by/1553732497061-waiter.jpg.jpg'} />
             <div className='waiters-data'>
-              <h6 className='p-0 m-0'>Victor - Camarero</h6>
+              <h6 className='p-0 m-0'>Paco - Camarero</h6>
               <div className='pt-1'>
                 <i class="fa fa-star calendar-chart"></i>
                 <i class="fa fa-star calendar-chart"></i>
@@ -80,7 +80,7 @@ class Ratingwaiters extends Component {
             </div>   
           </div>
           <div>
-            <small className='purple'>12</small>
+            <small className='purple'>9</small>
           </div>
         </div>
        </div>

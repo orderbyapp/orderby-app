@@ -51,7 +51,7 @@ renderUse = () => {
                 <h5 className=' white enjoyed'><br></br> 
                       ¡Pago realizado correctamente!</h5>
                 <h5 className=' white enjoyed scale-in-center'><br></br> 
-                Tu opinión es muy importante para nosotros, por favor valora el servicio recibido</h5>
+                Tu opinión es muy importante para nosotros, por favor valora el servicio recibido pulsando en la estrella</h5>
               <div className='w-100 text-center mt-4 auto-adjust-button'>
               <button onClick={this.showMessage} className='scale-in-center btn-pink-circle'>
                 

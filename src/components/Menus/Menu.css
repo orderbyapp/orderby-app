@@ -1,0 +1,10 @@
+.image-product{
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.box{
+  width: 45%
+}
