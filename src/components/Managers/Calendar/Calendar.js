@@ -87,6 +87,8 @@ class Calendar  extends Component {
             {formattedDate == 18 && <div className='reserva'>Carlos x 4 / 16:00</div>} 
             {formattedDate == 21 && <div> <div className='reserva'>Roberto x 2 / 22:30</div> <div className='reserva2'>JoseMa x 6 / 22:00</div></div>} 
             {formattedDate == 20 && <div className='reserva'>Moisés x 4 / 22:40</div>} 
+            {formattedDate == 17 && <div className='reserva'>Pedro x 3 / 20:40</div>} 
+
             <span className="bg">{formattedDate}</span>
           </div>
         );

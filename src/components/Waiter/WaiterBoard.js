@@ -5,6 +5,7 @@ import TableItem from './TableItem'
 import { tableService, restaurantService, authService } from '../../services'
 import svgTop from '../../sources/yellow-waiters.svg'
 //import { initializeFirebase, askForPermissioToReceiveNotifications } from '../../push-notification'
+import './WaiterBoard.css'
 
 class WaiterBoard extends Component {
 
@@ -61,6 +62,16 @@ class WaiterBoard extends Component {
            <img className='waiters-top-yellow' src={svgTop}></img>
             <div className='absolute-text-top-waiters text-center'>
             <h3 className='mt-3'>{this.state.restaurant.name}</h3>
+            <div className="waiter-pic slide-in-left bg-white p-3 br-5 bx-sw">
+                <img className="waiters-image-rounded bx-sw" src="https://res.cloudinary.com/dc94hgijj/image/upload/v1555053084/order-by/1555053083808-guy_rothblum_square.jpg.jpg"
+                  alt="User picture"></img>
+                  <div className='flex-waiter-name'>
+                  <h5 className='m-0 p-0'>Luis</h5>
+                  <p className='m-0 p-0'>Camarero</p>
+                  </div>
+                 
+                  
+              </div>
           </div>
          <div className='container-top-margin mt-5'>
          <div className='container row mx-auto mt-5'>
