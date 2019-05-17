@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "86a3fc0fdbae93ffe931",
-    "url": "/orderby-app/static/css/main.cb411fcc.chunk.css"
+    "revision": "025de44c496ff91dc77e",
+    "url": "/orderby-app/static/css/main.a4d21df9.chunk.css"
   },
   {
     "revision": "9c37281efdd1a1a84d4a",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/MaterialIcons-Regular.d41ae58d.ttf"
   },
   {
-    "revision": "7b49ef195e5e56ed0eb6",
-    "url": "/orderby-app/static/js/2.c56a7ed9.chunk.js"
+    "revision": "45dd83cdb28681bc07b4",
+    "url": "/orderby-app/static/js/2.0d281ebb.chunk.js"
   },
   {
     "revision": "edd4bcf9db60c0cd2eacfe23d1dddeab",
@@ -64,6 +64,10 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/occupied-table.da3c90bc.svg"
   },
   {
+    "revision": "b7f32ed2634ec61815024ac16f05b6d6",
+    "url": "/orderby-app/static/media/asiento-reservado.b7f32ed2.svg"
+  },
+  {
     "revision": "ec6a302331a9618504721d004a4f88b7",
     "url": "/orderby-app/static/media/vectorpaint.ec6a3023.svg"
   },
@@ -84,16 +88,16 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "674f50d287a8c48dc19ba404d20fe713",
-    "url": "/orderby-app/static/media/fontawesome-webfont.674f50d2.eot"
-  },
-  {
     "revision": "b06871f281fee6b241d60582ae9369b9",
     "url": "/orderby-app/static/media/fontawesome-webfont.b06871f2.ttf"
   },
   {
-    "revision": "86a3fc0fdbae93ffe931",
-    "url": "/orderby-app/static/js/main.7dddc5ce.chunk.js"
+    "revision": "674f50d287a8c48dc19ba404d20fe713",
+    "url": "/orderby-app/static/media/fontawesome-webfont.674f50d2.eot"
+  },
+  {
+    "revision": "025de44c496ff91dc77e",
+    "url": "/orderby-app/static/js/main.4ce7adf8.chunk.js"
   },
   {
     "revision": "a944a71853b314092e86f646b4fe6b2b",
@@ -130,6 +134,10 @@ self.__precacheManifest = [
   {
     "revision": "4015fae3e78b0170ec586a475e0c9736",
     "url": "/orderby-app/static/media/free-table.4015fae3.svg"
+  },
+  {
+    "revision": "b86077ba9075ac49f824da475aaec0a5",
+    "url": "/orderby-app/static/media/reservation-svg.b86077ba.svg"
   },
   {
     "revision": "1eba1efe0eb3c36075eafe1e358d6976",
@@ -176,11 +184,11 @@ self.__precacheManifest = [
     "url": "/orderby-app/static/media/MaterialIcons-Regular.c38ebd3c.woff"
   },
   {
-    "revision": "7b49ef195e5e56ed0eb6",
+    "revision": "45dd83cdb28681bc07b4",
     "url": "/orderby-app/static/css/2.64be9a5a.chunk.css"
   },
   {
-    "revision": "b300ef7036fccaad73288a616f0bd97b",
+    "revision": "b8cede4e3c48f846a1f303239e0a93b1",
     "url": "/orderby-app/index.html"
   }
 ];
