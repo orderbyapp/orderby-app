@@ -4,7 +4,14 @@
   background-repeat: no-repeat;
   background-size: cover
 }
+.max-size-image-list{
+  max-width: 60px;
+}
+.overflow-hidden-listproduct{
+  overflow-y:scroll;
+  height:400px;
 
+}
 .box{
   width: 45%
 }

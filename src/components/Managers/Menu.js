@@ -181,7 +181,7 @@ class MenuManagmnet extends Component {
                 <li >
                 <Link to={'/manager/users'}>
                   <i class="fas fa-users"></i>
-                    <span>Camareros</span></Link>
+                    <span>Plantilla</span></Link>
                   <div className="sidebar-submenu">
                     <ul>
                       <li>
