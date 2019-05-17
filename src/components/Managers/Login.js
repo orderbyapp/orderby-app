@@ -113,7 +113,7 @@ class LoginManager extends Component {
       <div className="container ">
       <div className="row justify-content-center">
         <div className="col-xs-12 col-sm-8 center-form-login custom-size-form">
-          <h3 className="">Welcome to <br></br>OrderBy-Managment</h3>
+          <h3 className="">Welcome to <br></br>OrderBy - Managers</h3>
           <form onSubmit={this.handleSubmit} className='mt-4'>
             <div className="mt-100">
               <div className="">

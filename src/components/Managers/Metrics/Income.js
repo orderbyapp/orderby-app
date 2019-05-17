@@ -8,7 +8,7 @@ constructor(props){
 
  this.state = {
   data :  {
-    labels: ['2010','2011','2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'],
+    labels: ['Ago','Sep','Oct', 'Nov', 'Dic', 'En', 'Feb', 'Mar', 'Abr', 'May'],
     datasets: [
       {
         label: 'Datos en Ks €',
@@ -51,7 +51,7 @@ constructor(props){
             <span>Progreso Anual</span> - <small>(Ingresos)</small>
           </div>
           <div>
-            <small className='purple'>  2012 - 2019</small>
+            <small className='purple'>  2018 - 2019</small>
           </div>
         </div>
         <hr></hr>

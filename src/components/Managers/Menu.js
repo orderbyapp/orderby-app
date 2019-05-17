@@ -110,10 +110,10 @@ class MenuManagmnet extends Component {
                     <Link to={'/management'}><i className="fas fa-tachometer-alt"></i> Escritorio</Link>
                 </li>
                 <li>
-                  <a>
-                    <i className="fa fa-user"></i>
-                    <span>Perfil</span>
-                  </a>
+                <Link to={'/manager/calendar'}>
+                    <i className="fa fa-calendar"></i>
+                    <span>Calendar</span></Link>
+                 
                   <div className="sidebar-submenu">
                     <ul>
                       <li>
@@ -192,24 +192,7 @@ class MenuManagmnet extends Component {
                       </li>
                     </ul>
                   </div>
-                </li>
-                <li className="header-menu">
-                  <span>Extra</span>
-                </li>
-               
-                <li>
-                
-                  <Link to={'/manager/calendar'}>
-                    <i className="fa fa-calendar"></i>
-                    <span>Calendar</span></Link>
-                 
-                </li>
-                <li>
-                  <a>
-                    <i className="fa fa-folder"></i>
-                    <span>Examples</span>
-                  </a>
-                </li>
+                </li>          
               </ul>
             </div>
           </div>

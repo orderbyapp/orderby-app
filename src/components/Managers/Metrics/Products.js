@@ -28,43 +28,42 @@ class Ratingwaiters extends Component {
         </div>
 
         <hr></hr>
-
-       <div className='column'>
+        <div className='column'>
         <div className='user-rating pt-3 product-rating'>
           <div className='user-rating-info'>
-            <img className="image-product-order-item" src={'https://via.placeholder.com/150'} />
+            <img className="image-product-order-item" src={'https://res.cloudinary.com/dc94hgijj/image/upload/v1558005185/order-by/1558005185123-burguer-menu.jpg.jpg'} />
             <div className='waiters-data'>
-              <span className='p-0 m-0 text-product-dashboard'>Producto y su descripción</span>
-          
-            </div>   
-          </div>
-          <div>
-            <small className='purple'>252</small>
-          </div>
-        </div>
-
-        <div className='user-rating pt-3 product-rating'>
-          <div className='user-rating-info'>
-            <img className="image-product-order-item" src={'https://via.placeholder.com/150'} />
-            <div className='waiters-data'>
-              <span className='p-0 m-0 text-product-dashboard'>Producto y su descripción</span>
+              <span className='p-0 m-0 text-product-dashboard'>Burger XXL</span>
          
             </div>   
           </div>
           <div>
-            <small className='purple'>122</small>
+            <small className='purple'>52</small>
           </div>
         </div>
 
         <div className='user-rating pt-3 product-rating'>
           <div className='user-rating-info'>
-            <img className="image-product-order-item" src={'https://via.placeholder.com/150'} />
+            <img className="image-product-order-item" src={'https://res.cloudinary.com/dc94hgijj/image/upload/v1558005484/order-by/1558005484096-tartaqueso.jpg.jpg'} />
             <div className='waiters-data'>
-              <span className='p-0 m-0 text-product-dashboard'>Producto y su descripción</span>  
+              <span className='p-0 m-0 text-product-dashboard'>Tarta de queso</span>
+          
             </div>   
           </div>
           <div>
-            <small className='purple'>122</small>
+            <small className='purple'>36</small>
+          </div>
+        </div>
+
+        <div className='user-rating pt-3 product-rating'>
+          <div className='user-rating-info'>
+            <img className="image-product-order-item" src={'https://res.cloudinary.com/dc94hgijj/image/upload/v1558005232/order-by/1558005232282-lapizzamasfina.jpg.jpg'} />
+            <div className='waiters-data'>
+              <span className='p-0 m-0 text-product-dashboard'>La pizza mas fina</span>  
+            </div>   
+          </div>
+          <div>
+            <small className='purple'>12</small>
           </div>
         </div>
        </div>
