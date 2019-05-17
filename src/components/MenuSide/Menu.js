@@ -72,12 +72,12 @@ class Menu extends Component {
           <div className='col-9 menu-absolute slide-in-blurred-right'>
           <ul className="nav flex-column list-menu">
             <li className="nav-item p-2 border-bottom" onClick={this.showMessage}>
-              <div className="nav-link">Llamar al Camarero</div>
+              <div className="nav-link text-dark">Llamar al Camarero</div>
             </li>
             { this.state.table.orders && this.state.table.orders.length > 0 &&
             <li className="nav-item p-2 border-bottom" 
             onClick={ !this.state.table.orderId ? this.postOrder : this.updateOrder }>
-              <div className="nav-link" href="#">Pagar por la APP</div>
+              <div className="nav-link text-dark" href="#">Pagar por la APP</div>
             </li>
             }
             <li className="nav-item p-1  close-nav-tag">
