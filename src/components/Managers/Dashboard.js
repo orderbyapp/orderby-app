@@ -63,7 +63,7 @@ class IntroCards  extends Component {
     <div className="col-xl-3 col-md-6 col-12 mb-3">
       <div className="card-counter ">
       <i className="fa fa-database "></i>
-        <span className="count-numbers purple">12</span>
+        <span className="count-numbers purple">873,50 €</span>
         <span className="count-name">Caja</span>
       </div>
     </div>
@@ -71,7 +71,7 @@ class IntroCards  extends Component {
     <div className="col-xl-3 col-md-6 col-12 mb-3">
       <div className="card-counter">
       <i className="fa fa-users"></i>
-        <span className="count-numbers orange">599</span>
+        <span className="count-numbers orange">112</span>
         <span className="count-name">Clientes</span>
       </div>
     </div>
@@ -79,7 +79,7 @@ class IntroCards  extends Component {
     <div className="col-xl-3 col-md-6 col-12 mb-3">
       <div className="card-counter">
       <i class="fas fa-hourglass-end"></i>
-        <span className="count-numbers yellow">6875</span>
+        <span className="count-numbers yellow">42 min</span>
         <span className="count-name">Promedio</span>
       </div>
     </div>
@@ -87,7 +87,7 @@ class IntroCards  extends Component {
     <div className="col-xl-3 col-md-6 col-12 mb-3">
       <div className="card-counter">
       <i class="far fa-star"></i>
-        <span className="count-numbers pink">35</span>
+        <span className="count-numbers pink">93</span>
         <span className="count-name">Valoración</span>
       </div>
     </div>
